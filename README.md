@@ -12,6 +12,9 @@
 
 ### Python教程
 
+视频课程地址: <https://ke.qq.com/course/275274>
+
+
 * [Python极简教程（一）](https://mp.weixin.qq.com/s/9BNrq8Lu7hjtO2BAKOIXOA)
 * [Python极简教程（二）](https://mp.weixin.qq.com/s/UyohxmUILG_0smL3cd62xg)
 * [Python极简教程（三）](https://mp.weixin.qq.com/s/H-WexJvXsS93al9UyO8_mw)
