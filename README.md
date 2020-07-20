@@ -12,7 +12,6 @@
 
 ### Python教程
 
-视频课程地址: <https://ke.qq.com/course/275274>
 
 
 * [Python极简教程（一）](https://mp.weixin.qq.com/s/9BNrq8Lu7hjtO2BAKOIXOA)
@@ -45,3 +44,6 @@
 * [Python语法糖之：列表解析、集合解析和字典解析](https://mp.weixin.qq.com/s/5r_nBSOxC-XvOeZakXsOsw)
 * [入门课的入门课，微软推出Python零基础教程，基于原生VS Code](https://mp.weixin.qq.com/s/F2DQpAE8FO0X9PLLiTptvw)
 
+![](Python_course.png)
+
+视频课程地址: <https://ke.qq.com/course/275274>
