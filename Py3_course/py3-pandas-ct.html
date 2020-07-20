@@ -1,0 +1,2846 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Python3学习教程</title>
+  <meta name="description" content="Python3学习教程">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Python3学习教程" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Python3学习教程" />
+  
+  
+  
+
+<meta name="author" content="易生信培训团队">
+<meta name="author" content="联系我们: train@ehbio.com">
+<meta name="author" content="抱歉，转成PDF后部分格式问题还未解决，会继续更新调整">
+
+
+<meta name="date" content="2018-05-09">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="Py3-pratcise-ct.html">
+<link rel="next" href="numpy-scipy.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://www.ehbio.com"><img src="http://www.ehbio.com/logos/ehbio_gitbook_logo.png" width="95%"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>EHBIO Gene Technology</a></li>
+<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a><ul>
+<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
+<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#pythonintfloatstr"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
+<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
+<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
+<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#helloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
+<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
+<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
+<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
+<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.4"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 控制流</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
+<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
+<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
+<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#breakcontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
+<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for--range"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
+<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.8"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
+<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#printlen-input-intstr"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.10"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
+<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#global"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
+<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.12"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
+<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.13"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
+<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.14"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
+<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.15"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
+<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#--"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
+<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.17"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a><ul>
+<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvaluesitems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
+</ul></li>
+<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.18"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="py3-ct.html"><a href="py3-ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a><ul>
+<li class="chapter" data-level="2.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
+<li class="chapter" data-level="2.1.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
+<li class="chapter" data-level="2.1.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
+<li class="chapter" data-level="2.1.4" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
+<li class="chapter" data-level="2.1.6" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
+<li class="chapter" data-level="2.1.7" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
+<li class="chapter" data-level="2.1.8" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
+<li class="chapter" data-level="2.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3</b> Python语法</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
+<li class="chapter" data-level="2.3.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
+<li class="chapter" data-level="2.3.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.1"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
+<li class="chapter" data-level="2.4.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
+<li class="chapter" data-level="2.5.2" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6.1"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="py3-ct.html"><a href="py3-ct.html#section-2.7"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
+<li class="chapter" data-level="2.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8.1"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.1"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
+<li class="chapter" data-level="2.9.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.2"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
+<li class="chapter" data-level="2.9.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.3"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
+<li class="chapter" data-level="2.9.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.4"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
+<li class="chapter" data-level="2.9.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.5"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
+<li class="chapter" data-level="2.9.6" data-path="py3-ct.html"><a href="py3-ct.html#lambda-map-filer-reduce-"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
+<li class="chapter" data-level="2.9.7" data-path="py3-ct.html"><a href="py3-ct.html#exec-eval-python-"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
+<li class="chapter" data-level="2.9.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.8"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
+<li class="chapter" data-level="2.11" data-path="py3-ct.html"><a href="py3-ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a><ul>
+<li class="chapter" data-level="3.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#figuresubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#subplot-1"><i class="fa fa-check"></i><b>3.1.2</b> 调整subplot周围间距</a></li>
+<li class="chapter" data-level="3.1.3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#--1"><i class="fa fa-check"></i><b>3.1.3</b> 颜色 标记和线型</a></li>
+<li class="chapter" data-level="3.1.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.4</b> 刻度、标签和图例</a></li>
+<li class="chapter" data-level="3.1.5" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#legend-1"><i class="fa fa-check"></i><b>3.1.5</b> 添加图例legend</a></li>
+<li class="chapter" data-level="3.1.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.6</b> 注解</a></li>
+<li class="chapter" data-level="3.1.7" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.7</b> 图片保存</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
+<li class="chapter" data-level="3.2.2" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
+<li class="chapter" data-level="3.2.3" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
+<li class="chapter" data-level="3.2.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
+<li class="chapter" data-level="3.2.5" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
+<li class="chapter" data-level="3.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
+<li class="chapter" data-level="3.2.7" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2.7"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.1</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#id"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.2"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.3"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a><ul>
+<li class="chapter" data-level="5.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
+<li class="chapter" data-level="5.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.1"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
+<li class="chapter" data-level="5.2.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
+<li class="chapter" data-level="5.2.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.3"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
+<li class="chapter" data-level="5.2.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.4"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
+<li class="chapter" data-level="5.2.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.5"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
+<li class="chapter" data-level="5.2.6" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.6"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
+<li class="chapter" data-level="5.2.7" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.7"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
+<li class="chapter" data-level="5.2.8" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.8"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
+<li class="chapter" data-level="5.2.9" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.9"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
+<li class="chapter" data-level="5.2.10" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#meta-data"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
+<li class="chapter" data-level="5.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#seaborn"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numpy-scipy.html"><a href="numpy-scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a><ul>
+<li class="chapter" data-level="6.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
+<li class="chapter" data-level="6.1.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
+<li class="chapter" data-level="6.1.3" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpymath"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.1"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
+<li class="chapter" data-level="6.2.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Py3-test.html"><a href="Py3-test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a><ul>
+<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#section-8.1.1"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
+<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
+<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#section-8.1.3"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
+<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#section-8.1.4"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
+<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#section-8.1.5"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
+<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#section-8.1.6"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
+<li class="chapter" data-level="8.1.7" data-path="references.html"><a href="references.html#linux"><i class="fa fa-check"></i><b>8.1.7</b> Linux</a></li>
+<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
+<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
+<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#section-8.1.10"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
+<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#section-8.1.11"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
+<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#section-8.1.13"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
+<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python-1"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
+<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
+<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
+<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#section-8.1.17"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
+<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#section-8.1.18"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
+<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#section-8.1.19"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
+<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#section-8.1.20"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
+<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#section-8.1.21"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
+<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
+<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#section-8.2.3"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
+<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#section-8.2.4"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
+<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#section-8.2.5"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
+<li class="chapter" data-level="8.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
+<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#section-8.2.8"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
+<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#section-8.2.9"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
+<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#section-8.2.10"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
+<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#section-8.2.11"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
+<li class="chapter" data-level="8.2.12" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
+<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#section-8.2.13"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="company-intro.html"><a href="company-intro.html"><i class="fa fa-check"></i><b>9</b> 公司简介</a></li>
+<li class="divider"></li>
+<li><a href="mailto:ct@ehbio.com" target="blank">ct@ehbio.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python3学习教程</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="py3_pandas_ct" class="section level1">
+<h1><span class="header-section-number">5</span> Pandas 学习教程</h1>
+<p>陈同 <a href="mailto:chentong_biology@163.com">chentong_biology@163.com</a></p>
+<p>欢迎访问我们的视频课程 <a href="https://bioinfo.ke.qq.com" class="uri">https://bioinfo.ke.qq.com</a>。</p>
+<div id="what-is-pandas" class="section level2">
+<h2><span class="header-section-number">5.1</span> What is pandas</h2>
+<p>Pandas是python中用于处理矩阵样数据的功能强大的包，提供了R中的<code>dataframe</code>和<code>vector</code>的操作，使得我们在使用python时，也可以方便、简单、快捷、高效地进行矩阵数据处理。</p>
+<p>具体介绍详见<a href="http://pandas.pydata.org/" class="uri">http://pandas.pydata.org/</a>。</p>
+<ul>
+<li>A fast and efficient <strong>DataFrame</strong> object for data manipulation with integrated indexing;</li>
+<li>Tools for reading and writing data between in-memory data structures and different formats: CSV and text files, Microsoft Excel, SQL databases, and the fast <strong>HDF5</strong> format;</li>
+<li>Intelligent <strong>data alignment</strong> and integrated handling of missing data: gain automatic label-based alignment in computations and easily manipulate <strong>messy data into an orderly form</strong>;</li>
+<li>Flexible <strong>reshaping</strong> and <strong>pivoting</strong> of data sets;</li>
+<li>Intelligent label-based slicing, fancy indexing, and subsetting of large data sets;</li>
+<li>Columns can be inserted and deleted from data structures for size mutability;</li>
+<li>Aggregating or transforming data with a powerful group by engine allowing split-apply-combine operations on data sets;</li>
+<li>High performance <strong>merging</strong> and <strong>joining</strong> of data sets;</li>
+<li>Hierarchical axis indexing provides an intuitive way of working with high-dimensional data in a lower-dimensional data structure;</li>
+<li>Time series-functionality: date range generation and frequency conversion, moving window statistics, moving window linear regressions, date shifting and lagging. Even create domain-specific time offsets and join time series without losing data;</li>
+<li>Highly optimized for performance, with critical code paths written in Cython or C.</li>
+<li>Python with pandas is in use in a wide variety of academic and commercial domains, including Finance, Neuroscience, Economics, Statistics, Advertising, Web Analytics, and more.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>matplotlib inline
+
+<span class="co">#import plotly</span>
+<span class="co">#plotly.offline.init_notebook_mode()</span>
+
+<span class="im">import</span> matplotlib
+matplotlib.style.use(<span class="st">&#39;ggplot&#39;</span>)
+<span class="im">import</span> numpy <span class="im">as</span> np
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+<span class="im">import</span> pandas <span class="im">as</span> pd
+<span class="im">import</span> os
+<span class="im">from</span> glob <span class="im">import</span> glob</code></pre></div>
+</div>
+<div id="pandas" class="section level2">
+<h2><span class="header-section-number">5.2</span> Pandas读取文件</h2>
+<div id="section-5.2.1" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> 获取目标文件</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">dir_1 <span class="op">=</span> <span class="st">&quot;py_data/&quot;</span>
+glob(dir_1<span class="op">+</span><span class="st">&#39;*&#39;</span>)</code></pre></div>
+<pre><code>[&#39;py_data/ENCFF060LPA.tsv&#39;,
+ &#39;py_data/ENCFF262OBL.tsv&#39;,
+ &#39;py_data/ENCFF289HGQ.tsv&#39;,
+ &#39;py_data/ENCFF673KYR.tsv&#39;,
+ &#39;py_data/gencode.v24.ENS2SYN&#39;,
+ &#39;py_data/meta.tsv&#39;,
+ &#39;py_data/gencode.gene.gtf&#39;,
+ &#39;py_data/gencode.gene.bed12&#39;,
+ &#39;py_data/ensm.id&#39;,
+ &#39;py_data/GRCh38.idmap&#39;]</code></pre>
+</div>
+<div id="section-5.2.2" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> 查看目标文件内容和格式</h3>
+<p>Ipython中可以通过在Linux命令前加<code>!</code>调用系统命令，更多使用见 <a href="http://ipython.org/ipython-doc/3/interactive/reference.html#system-shell-access" class="uri">http://ipython.org/ipython-doc/3/interactive/reference.html#system-shell-access</a>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span>head <span class="op">-</span>n <span class="dv">4</span> py_data<span class="op">/</span>gencode.v24.ENS2SYN</code></pre></div>
+<pre><code>gene_id gene_symbol
+ENSG00000001460.17  STPG1
+ENSG00000001461.16  NIPAL3
+ENSG00000000938.12  FGR</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">!</span>head <span class="op">-</span>n <span class="dv">4</span> py_data<span class="op">/</span>ENCFF060LPA.tsv</code></pre></div>
+<pre><code>gene_id transcript_id(s)    length  effective_length    expected_count  TPM FPKM
+ENSG00000000003.14  ENST00000373020.8,ENST00000494424.1,ENST00000496771.5,ENST00000612152.4,ENST00000614008.4   2240.53 2020.49 5126.00 6.64    18.24
+ENSG00000000005.5   ENST00000373031.4,ENST00000485971.1 940.50  720.47  0.00    0.00    0.00
+ENSG00000000419.12  ENST00000371582.8,ENST00000371584.8,ENST00000371588.9,ENST00000413082.1,ENST00000466152.5,ENST00000494752.1 1072.03 851.99  3222.00 9.91    27.19</code></pre>
+</div>
+<div id="section-5.2.3" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> 读取两列文件</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn_file <span class="op">=</span> dir_1<span class="op">+</span><span class="st">&quot;/gencode.v24.ENS2SYN&quot;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># pandas中的计数都是从0开始的</span>
+<span class="co"># header=0: 指定第一行包含列的名字</span>
+<span class="co"># index_col=0: 指定第一列为行的名字</span>
+ens2syn <span class="op">=</span> pd.read_table(ens2syn_file, header<span class="op">=</span><span class="dv">0</span>, index_col<span class="op">=</span><span class="dv">0</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn.head()</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001461.16</th>
+      <td>NIPAL3</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000938.12</th>
+      <td>FGR</td>
+    </tr>
+    <tr>
+      <th>ENSG00000004455.16</th>
+      <td>AK2</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000460.16</th>
+      <td>C1orf112</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.4" class="section level3">
+<h3><span class="header-section-number">5.2.4</span> 数据表的索引</h3>
+<pre><code>* 数值索引和布尔值索引是按行选取
+* 字符串索引是按列选取
+* 行和列是等效的，应用于行的选取函数也可应用于列，反之亦然</code></pre>
+<div id="section-5.2.4.1" class="section level4">
+<h4><span class="header-section-number">5.2.4.1</span> 按行选取数据</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn[:<span class="dv">3</span>]</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001461.16</th>
+      <td>NIPAL3</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000938.12</th>
+      <td>FGR</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.4.2" class="section level4">
+<h4><span class="header-section-number">5.2.4.2</span> 取出索引中包含特定值的行</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn[ens2syn.index<span class="op">==</span><span class="st">&quot;ENSG00000001460.17&quot;</span>]</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.4.3" class="section level4">
+<h4><span class="header-section-number">5.2.4.3</span> 取出某列包含特定值列表的行</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn[ens2syn[<span class="st">&#39;gene_symbol&#39;</span>].isin([<span class="st">&#39;STPG1&#39;</span>,<span class="st">&#39;FGR&#39;</span>])]</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000938.12</th>
+      <td>FGR</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.4.4" class="section level4">
+<h4><span class="header-section-number">5.2.4.4</span> 使用正则表达式选取符合要求的行</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># head: 只展示部分数据</span>
+ens2syn[ens2syn.index.<span class="bu">str</span>.contains(<span class="vs">r&#39;ENSG000000014&#39;</span>)].head()</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001461.16</th>
+      <td>NIPAL3</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001497.16</th>
+      <td>LAS1L</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
+<div id="section-5.2.5" class="section level3">
+<h3><span class="header-section-number">5.2.5</span> 读取多列文件</h3>
+<p><code>gzip</code>, <code>bzip</code>压缩的文件也可以直接读取，但是需要保证文件后缀的正确。 <code>read_table</code>默认参数可以自动检测文件的格式，根据文件的后缀 ‘.gz’, ‘.bz2’, ‘.zip’, or ’xz’分别使用 gzip, bz2, zip or xz读取。</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">tsvL <span class="op">=</span> glob(dir_1<span class="op">+</span><span class="st">&#39;ENC*.tsv&#39;</span>)
+tsvL</code></pre></div>
+<pre><code>[&#39;py_data/ENCFF060LPA.tsv&#39;,
+ &#39;py_data/ENCFF262OBL.tsv&#39;,
+ &#39;py_data/ENCFF289HGQ.tsv&#39;,
+ &#39;py_data/ENCFF673KYR.tsv&#39;]</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">index <span class="op">=</span> <span class="dv">0</span>
+tsvFile <span class="op">=</span> tsvL[index]
+expr <span class="op">=</span> pd.read_table(tsvFile, header<span class="op">=</span><span class="dv">0</span>, index_col<span class="op">=</span><span class="dv">0</span>)
+expr.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>transcript_id(s)</th>
+      <th>length</th>
+      <th>effective_length</th>
+      <th>expected_count</th>
+      <th>TPM</th>
+      <th>FPKM</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>ENST00000373020.8,ENST00000494424.1,ENST000004...</td>
+      <td>2240.53</td>
+      <td>2020.49</td>
+      <td>5126.0</td>
+      <td>6.64</td>
+      <td>18.24</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>ENST00000373031.4,ENST00000485971.1</td>
+      <td>940.50</td>
+      <td>720.47</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>ENST00000371582.8,ENST00000371584.8,ENST000003...</td>
+      <td>1072.03</td>
+      <td>851.99</td>
+      <td>3222.0</td>
+      <td>9.91</td>
+      <td>27.19</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.6" class="section level3">
+<h3><span class="header-section-number">5.2.6</span> 选取多列数据</h3>
+<p>列的输出顺序与给定的列名字的顺序一致</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">expr[[<span class="st">&#39;FPKM&#39;</span>,<span class="st">&#39;TPM&#39;</span>]].head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FPKM</th>
+      <th>TPM</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>18.24</td>
+      <td>6.64</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>27.19</td>
+      <td>9.91</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.7" class="section level3">
+<h3><span class="header-section-number">5.2.7</span> 重命名列名字</h3>
+<p>从Dataframe中只选取一列时，数据框会被转换成<strong>Series</strong>，因此需要使用<code>pd.loc[:,[column_name]]</code>(虽然内部的方括号内只有一个值，但写法是必须的)索引。</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">tsvFile
+os.path.split(tsvFile)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]</code></pre></div>
+<pre><code>&#39;ENCFF060LPA&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 因为要把多个文件的同一类型表达值合并到一个文件，我们使用文件名作为列的名字</span>
+name <span class="op">=</span> os.path.split(tsvFile)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]
+<span class="bu">print</span>(name)
+expr_tpm <span class="op">=</span> expr.loc[:,[<span class="st">&#39;TPM&#39;</span>]] <span class="co"># 取出所有的行和名字为TPM的列</span>
+<span class="co">#expr_tpm.head()</span>
+<span class="co"># 给列重命名</span>
+expr_tpm.columns<span class="op">=</span>[name]  
+expr_tpm[:<span class="dv">3</span>]</code></pre></div>
+<pre><code>ENCFF060LPA</code></pre>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.8" class="section level3">
+<h3><span class="header-section-number">5.2.8</span> 合并矩阵</h3>
+<div id="section-5.2.8.1" class="section level4">
+<h4><span class="header-section-number">5.2.8.1</span> 定义函数简化文件读取</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 为了读取多个文件，定义一个函数简化操作</span>
+<span class="kw">def</span> readExpr_1(tsvFileL, typeL<span class="op">=</span>[<span class="st">&#39;TPM&#39;</span>,<span class="st">&#39;FPKM&#39;</span>]):
+    <span class="co">&#39;&#39;&#39;</span>
+<span class="co">    tsvFileL: lists of files waiting for reading</span>
+<span class="co">    resultD: a dictionary to save data matrix</span>
+<span class="co">            {&#39;TPM&#39;:[mat1, mat2,...]</span>
+<span class="co">             &#39;FPKM&#39;:[mat1, mat2, ...]}</span>
+<span class="co">    typeL; list of names for columns to be extracted</span>
+<span class="co">    &#39;&#39;&#39;</span>
+    resultD <span class="op">=</span> {}
+    <span class="cf">for</span> _type <span class="op">in</span> typeL: resultD[_type] <span class="op">=</span> []
+    
+    <span class="cf">for</span> tsvFile <span class="op">in</span> tsvFileL:
+        expr <span class="op">=</span> pd.read_table(tsvFile, header<span class="op">=</span><span class="dv">0</span>, index_col<span class="op">=</span><span class="dv">0</span>)
+        name <span class="op">=</span> os.path.split(tsvFile)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]  <span class="co">#this option is very arbitary</span>
+        <span class="cf">for</span> _type <span class="op">in</span> typeL: 
+            <span class="co"># add _ to type to avoid override Python inner function `type` </span>
+            expr_type <span class="op">=</span> expr.loc[:,[_type]]
+            expr_type.columns <span class="op">=</span> [name]
+            resultD[_type].append(expr_type)
+    <span class="cf">return</span> resultD
+<span class="co">#-----------------------------------------------------</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">exprD <span class="op">=</span> readExpr_1(tsvL)
+TPM_mat <span class="op">=</span> exprD[<span class="st">&#39;TPM&#39;</span>]
+FPKM_mat <span class="op">=</span> exprD[<span class="st">&#39;FPKM&#39;</span>]</code></pre></div>
+</div>
+<div id="pd.merge" class="section level4">
+<h4><span class="header-section-number">5.2.8.2</span> 使用pd.merge合并矩阵示例</h4>
+<p>先从刚才读取的矩阵中选出2个测试下pandas中的矩阵合并方法和效果</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 选取第一个矩阵</span>
+_idL <span class="op">=</span> [<span class="st">&#39;ENSG00000000003.14&#39;</span>, <span class="st">&#39;ENSG00000000005.5&#39;</span>,<span class="st">&#39;ENSG00000000419.12&#39;</span>,
+        <span class="co">&#39;ENSG00000000457.13&#39;</span>]
+mat1 <span class="op">=</span> TPM_mat[<span class="dv">0</span>]
+mat1 <span class="op">=</span> mat1[mat1.index.isin(_idL)]
+mat1</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 选取第二个矩阵</span>
+_idL <span class="op">=</span> [<span class="st">&#39;ENSG00000001561.6&#39;</span>,<span class="st">&#39;ENSG00000000003.14&#39;</span>, <span class="st">&#39;ENSG00000000419.12&#39;</span>,<span class="st">&#39;ENSG00000001036.13&#39;</span>]
+mat2 <span class="op">=</span> TPM_mat[<span class="dv">1</span>]
+mat2 <span class="op">=</span> mat2[mat2.index.isin(_idL)]
+mat2</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001036.13</th>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001561.6</th>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>基于索引(index)的合并 * outer: 合并所有的索引，缺失值填充NA * inner：保留共有的索引 * left：使用第一个矩阵的索引 * right：使用第二个矩阵的索引</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">pd.merge(mat1, mat2, left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">&quot;outer&quot;</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001036.13</th>
+      <td>NaN</td>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001561.6</th>
+      <td>NaN</td>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">pd.merge(mat1, mat2, left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">&quot;inner&quot;</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">pd.merge(mat1, mat2, left_index<span class="op">=</span><span class="va">True</span>, right_index<span class="op">=</span><span class="va">True</span>, how<span class="op">=</span><span class="st">&quot;left&quot;</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="pd.concat" class="section level4">
+<h4><span class="header-section-number">5.2.8.3</span> 使用pd.concat合并矩阵示例</h4>
+<p>对于较多的数据表合并操作时，<code>concat</code>比<code>merge</code>要简单快速很多。</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">pd.concat([mat1, mat2], axis<span class="op">=</span><span class="dv">1</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001036.13</th>
+      <td>NaN</td>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001561.6</th>
+      <td>NaN</td>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">pd.concat([mat1, mat2], axis<span class="op">=</span><span class="dv">1</span>, join<span class="op">=</span><span class="st">&quot;inner&quot;</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="pd.join" class="section level4">
+<h4><span class="header-section-number">5.2.8.4</span> 使用pd.join合并矩阵示例</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mat3 <span class="op">=</span> mat1.join(mat2, how<span class="op">=</span><span class="st">&quot;outer&quot;</span>)
+mat3</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001036.13</th>
+      <td>NaN</td>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001561.6</th>
+      <td>NaN</td>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>替换NA值为0</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mat3 <span class="op">=</span> mat3.fillna(<span class="dv">0</span>)
+mat3</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000005.5</th>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001036.13</th>
+      <td>0.00</td>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001561.6</th>
+      <td>0.00</td>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>去除所有值都为0的行</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#Both works well here</span>
+<span class="co">#mat3[(mat3&gt;0).any(axis=1)]</span>
+mat3.loc[(mat3<span class="op">&gt;</span><span class="dv">0</span>).<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)]</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001036.13</th>
+      <td>0.00</td>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001561.6</th>
+      <td>0.00</td>
+      <td>2.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.8.5" class="section level4">
+<h4><span class="header-section-number">5.2.8.5</span> 测试三种方法使用的内存和速度比较</h4>
+<p>速度：<code>concat</code>&gt;<code>join</code>&gt;&gt;<code>merge</code></p>
+<p>内存：相当</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 不错的reduce教程</span>
+<span class="im">from</span> functools <span class="im">import</span> <span class="bu">reduce</span>
+<span class="op">%</span>timeit test_merge <span class="op">=</span> <span class="bu">reduce</span>(<span class="kw">lambda</span> left,right: pd.merge(left,right,left_index<span class="op">=</span><span class="va">True</span>,right_index<span class="op">=</span><span class="va">True</span>,how<span class="op">=</span><span class="st">&#39;outer&#39;</span>), TPM_mat)</code></pre></div>
+<pre><code>3.04 ms ± 52.4 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>timeit test_merge <span class="op">=</span> pd.concat(TPM_mat, axis<span class="op">=</span><span class="dv">1</span>)</code></pre></div>
+<pre><code>1.29 ms ± 30.5 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>timeit TPM_mat[<span class="dv">0</span>].join(TPM_mat[<span class="dv">1</span>:], how<span class="op">=</span><span class="st">&quot;outer&quot;</span>)</code></pre></div>
+<pre><code>1.31 ms ± 11.2 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 首先安装memory_profiler,加载插件</span>
+<span class="op">%</span>load_ext memory_profiler</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>memit test_merge <span class="op">=</span> <span class="bu">reduce</span>(<span class="kw">lambda</span> left,right: pd.merge(left,right,left_index<span class="op">=</span><span class="va">True</span>,right_index<span class="op">=</span><span class="va">True</span>,how<span class="op">=</span><span class="st">&#39;outer&#39;</span>), TPM_mat)</code></pre></div>
+<pre><code>peak memory: 101.27 MiB, increment: 0.02 MiB</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>memit test_merge <span class="op">=</span> pd.concat(TPM_mat, axis<span class="op">=</span><span class="dv">1</span>)</code></pre></div>
+<pre><code>peak memory: 101.28 MiB, increment: 0.00 MiB</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>memit TPM_mat[<span class="dv">0</span>].join(TPM_mat[<span class="dv">1</span>:], how<span class="op">=</span><span class="st">&quot;outer&quot;</span>)</code></pre></div>
+<pre><code>peak memory: 101.28 MiB, increment: 0.00 MiB</code></pre>
+</div>
+<div id="section-5.2.8.6" class="section level4">
+<h4><span class="header-section-number">5.2.8.6</span> 重写函数完成文件的读写和矩阵的合并</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 读取多个文件，并且合并矩阵，定义一个函数简化操作</span>
+<span class="kw">def</span> concatExpr(tsvFileL, typeL<span class="op">=</span>[<span class="st">&#39;TPM&#39;</span>,<span class="st">&#39;FPKM&#39;</span>]):
+    <span class="co">&#39;&#39;&#39;</span>
+<span class="co">    tsvFileL: lists of files waiting for reading</span>
+<span class="co">    resultD: a dictionary to save data matrix</span>
+<span class="co">            {&#39;TPM&#39;:[mat1, mat2,...]</span>
+<span class="co">             &#39;FPKM&#39;:[mat1, mat2, ...]}</span>
+<span class="co">    typeL; list of names for columns to be extracted</span>
+<span class="co">    &#39;&#39;&#39;</span>
+    resultD <span class="op">=</span> {}
+    <span class="cf">for</span> _type <span class="op">in</span> typeL: resultD[_type] <span class="op">=</span> []
+    
+    <span class="cf">for</span> tsvFile <span class="op">in</span> tsvFileL:
+        expr <span class="op">=</span> pd.read_table(tsvFile, header<span class="op">=</span><span class="dv">0</span>, index_col<span class="op">=</span><span class="dv">0</span>)
+        name <span class="op">=</span> os.path.split(tsvFile)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]  <span class="co">#this options is very arbitary</span>
+        <span class="cf">for</span> _type <span class="op">in</span> typeL: <span class="co"># add _ to type to avoid override Python inner function `type` </span>
+            expr_type <span class="op">=</span> expr.loc[:,[_type]]
+            expr_type.columns <span class="op">=</span> [name]
+            resultD[_type].append(expr_type)
+    <span class="co">#-------------------------------------------</span>
+    mergeD <span class="op">=</span> {}
+    <span class="cf">for</span> _type <span class="op">in</span> typeL:
+        mergeM <span class="op">=</span> pd.concat(resultD[_type], axis<span class="op">=</span><span class="dv">1</span>)
+        mergeM <span class="op">=</span> mergeM.fillna(<span class="dv">0</span>) <span class="co"># Substitute all NA with 0</span>
+        mergeM <span class="op">=</span> mergeM.loc[(mergeM<span class="op">&gt;</span><span class="dv">0</span>).<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">1</span>)] <span class="co"># Delete aoo zero rows.</span>
+        mergeD[_type] <span class="op">=</span> mergeM
+    <span class="cf">return</span> mergeD
+<span class="co">#-----------------------------------------------------</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">typeL <span class="op">=</span> [<span class="st">&#39;TPM&#39;</span>,<span class="st">&#39;FPKM&#39;</span>]
+exprD <span class="op">=</span> concatExpr(tsvL, typeL)
+TPM_mat <span class="op">=</span> exprD[<span class="st">&#39;TPM&#39;</span>]
+FPKM_mat <span class="op">=</span> exprD[<span class="st">&#39;FPKM&#39;</span>]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">TPM_mat.head()</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+      <th>ENCFF289HGQ</th>
+      <th>ENCFF673KYR</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+      <td>1.03</td>
+      <td>2.42</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+      <td>1.45</td>
+      <td>1.80</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>2.48</td>
+      <td>0.24</td>
+      <td>0.38</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000460.16</th>
+      <td>1.51</td>
+      <td>5.36</td>
+      <td>0.26</td>
+      <td>0.16</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000938.12</th>
+      <td>0.01</td>
+      <td>0.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
+<div id="section-5.2.9" class="section level3">
+<h3><span class="header-section-number">5.2.9</span> 矩阵数据提取</h3>
+<p>只保留表达矩阵中存储的基因的<code>ID</code>和<code>Symbol</code>对照表</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 回顾下数据格式</span>
+ens2syn.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001461.16</th>
+      <td>NIPAL3</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000938.12</th>
+      <td>FGR</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn.shape</code></pre></div>
+<pre><code>(48, 1)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn <span class="op">=</span> ens2syn[ens2syn.index.isin(TPM_mat.index)]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn.shape</code></pre></div>
+<pre><code>(48, 1)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001460.17</th>
+      <td>STPG1</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001461.16</th>
+      <td>NIPAL3</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000938.12</th>
+      <td>FGR</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="meta-data" class="section level3">
+<h3><span class="header-section-number">5.2.10</span> 读取META data文件</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">meta <span class="op">=</span> <span class="st">&quot;data/meta.tsv&quot;</span>
+metaM <span class="op">=</span> pd.read_table(meta, header<span class="op">=</span><span class="dv">0</span>, index_col<span class="op">=</span><span class="dv">0</span>)
+<span class="co"># 重名了列的名字</span>
+oriColnames <span class="op">=</span> metaM.columns.values
+nameD <span class="op">=</span> <span class="bu">dict</span>([(i,i.replace(<span class="st">&#39; &#39;</span>,<span class="st">&#39;_&#39;</span>)) <span class="cf">for</span> i <span class="op">in</span> oriColnames])
+metaM.rename(columns<span class="op">=</span>nameD, inplace<span class="op">=</span><span class="va">True</span>)
+metaM.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Biosample_term_id</th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+      <th>Biosample_organism</th>
+      <th>Biosample_treatments</th>
+      <th>Biosample_subcellular_fraction_term_name</th>
+      <th>Biosample_phase</th>
+      <th>Biosample_synchronization_stage</th>
+      <th>Biosample_Age</th>
+    </tr>
+    <tr>
+      <th>File accession</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>CL:0000650</td>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52 year</td>
+    </tr>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23 year</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div id="4" class="section level4">
+<h4><span class="header-section-number">5.2.10.1</span> 只保留前面提到的4个样品的数据</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">sampleL <span class="op">=</span> TPM_mat.columns.values
+metaM <span class="op">=</span> metaM[metaM.index.isin(sampleL)]
+<span class="co"># 同时索引行和列</span>
+metaM.iloc[:<span class="dv">4</span>,:<span class="dv">5</span>]</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Biosample_term_id</th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+    </tr>
+    <tr>
+      <th>File accession</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>CL:0000650</td>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>CL:0002558</td>
+      <td>fibroblast of villous mesenchyme</td>
+      <td>primary cell</td>
+      <td>newborn</td>
+      <td>male, female</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+<div id="section-5.2.10.2" class="section level4">
+<h4><span class="header-section-number">5.2.10.2</span> 提取目标列信息</h4>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 假如只提取`Biosample`开头的列</span>
+<span class="co">#meta_colL = [&#39;Biosample term id&#39;, &#39;Biosample term name&#39;]</span>
+
+<span class="co"># Extract columns matching specific patterns</span>
+<span class="co"># Both works well, filter is more simple</span>
+<span class="co">#metaM.loc[:,metaM.columns.str.contains(r&#39;^Biosample&#39;)]</span>
+metaM <span class="op">=</span> metaM.<span class="bu">filter</span>(regex<span class="op">=</span>(<span class="st">&quot;^Biosample&quot;</span>))
+metaM</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Biosample_term_id</th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+      <th>Biosample_organism</th>
+      <th>Biosample_treatments</th>
+      <th>Biosample_subcellular_fraction_term_name</th>
+      <th>Biosample_phase</th>
+      <th>Biosample_synchronization_stage</th>
+      <th>Biosample_Age</th>
+    </tr>
+    <tr>
+      <th>File accession</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>CL:0000650</td>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52 year</td>
+    </tr>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23 year</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>CL:0002558</td>
+      <td>fibroblast of villous mesenchyme</td>
+      <td>primary cell</td>
+      <td>newborn</td>
+      <td>male, female</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">metaM.fillna(<span class="st">&#39;&#39;</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Biosample_term_id</th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+      <th>Biosample_organism</th>
+      <th>Biosample_treatments</th>
+      <th>Biosample_subcellular_fraction_term_name</th>
+      <th>Biosample_phase</th>
+      <th>Biosample_synchronization_stage</th>
+      <th>Biosample_Age</th>
+    </tr>
+    <tr>
+      <th>File accession</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>CL:0000650</td>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+      <td>Homo sapiens</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>52 year</td>
+    </tr>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>23 year</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>CL:0002558</td>
+      <td>fibroblast of villous mesenchyme</td>
+      <td>primary cell</td>
+      <td>newborn</td>
+      <td>male, female</td>
+      <td>Homo sapiens</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+</div>
+</div>
+<div id="pandas" class="section level2">
+<h2><span class="header-section-number">5.3</span> Pandas写入文件</h2>
+<div id="section-5.3.1" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> 写入文本文件</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">metaM.to_csv(<span class="st">&quot;pandas_data/meta2.tsv&quot;</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ens2syn.to_csv(<span class="st">&quot;pandas_data/gencode.v24.ENS2SYN&quot;</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">TPM_mat.to_csv(<span class="st">&quot;pandas_data/TPM&quot;</span>, sep<span class="op">=</span><span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>, float_format<span class="op">=</span><span class="st">&quot;</span><span class="sc">%.2f</span><span class="st">&quot;</span>)</code></pre></div>
+</div>
+</div>
+<div id="pandas" class="section level2">
+<h2><span class="header-section-number">5.4</span> PANDAS矩阵的小应用</h2>
+<p>利用上面的矩阵操作，选取这两个基因相关的信息并绘制表达谱</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">targetL <span class="op">=</span> [<span class="st">&#39;KRIT1&#39;</span>,<span class="st">&#39;AK2&#39;</span>]</code></pre></div>
+<p>Gene_symbol转换为Gene_id</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ensID <span class="op">=</span> ens2syn[ens2syn[<span class="st">&quot;gene_symbol&quot;</span>].isin(targetL)]
+ensID</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_symbol</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000004455.16</th>
+      <td>AK2</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001631.14</th>
+      <td>KRIT1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>提取目标基因的表达</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">targetExpr <span class="op">=</span> TPM_mat[TPM_mat.index.isin(ensID.index)]
+targetExpr</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+      <th>ENCFF289HGQ</th>
+      <th>ENCFF673KYR</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000001631.14</th>
+      <td>6.21</td>
+      <td>13.36</td>
+      <td>1.15</td>
+      <td>1.37</td>
+    </tr>
+    <tr>
+      <th>ENSG00000004455.16</th>
+      <td>15.57</td>
+      <td>37.62</td>
+      <td>2.31</td>
+      <td>8.95</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>重命名矩阵的索引</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ensID_dict <span class="op">=</span> ensID.to_dict()
+ensID_dict</code></pre></div>
+<pre><code>{&#39;gene_symbol&#39;: {&#39;ENSG00000001631.14&#39;: &#39;KRIT1&#39;, &#39;ENSG00000004455.16&#39;: &#39;AK2&#39;}}</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">targetExpr <span class="op">=</span> targetExpr.rename(index<span class="op">=</span>ensID_dict[<span class="st">&#39;gene_symbol&#39;</span>])
+targetExpr</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+      <th>ENCFF289HGQ</th>
+      <th>ENCFF673KYR</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>KRIT1</th>
+      <td>6.21</td>
+      <td>13.36</td>
+      <td>1.15</td>
+      <td>1.37</td>
+    </tr>
+    <tr>
+      <th>AK2</th>
+      <td>15.57</td>
+      <td>37.62</td>
+      <td>2.31</td>
+      <td>8.95</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>转置矩阵以增加META信息</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">targetExpr_t <span class="op">=</span> targetExpr.T
+targetExpr_t</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>gene_id</th>
+      <th>KRIT1</th>
+      <th>AK2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>6.21</td>
+      <td>15.57</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>13.36</td>
+      <td>37.62</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>1.15</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>1.37</td>
+      <td>8.95</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>从meta矩阵中提取4列信息</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">metaM.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Biosample_term_id</th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+      <th>Biosample_organism</th>
+      <th>Biosample_treatments</th>
+      <th>Biosample_subcellular_fraction_term_name</th>
+      <th>Biosample_phase</th>
+      <th>Biosample_synchronization_stage</th>
+      <th>Biosample_Age</th>
+    </tr>
+    <tr>
+      <th>File accession</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>CL:0000650</td>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52 year</td>
+    </tr>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>CL:1001568</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+      <td>Homo sapiens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23 year</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">meta_type <span class="op">=</span> [<span class="st">&quot;Biosample_term_name&quot;</span>,<span class="st">&quot;Biosample_type&quot;</span>, <span class="st">&quot;Biosample_life_stage&quot;</span>, 
+             <span class="co">&quot;Biosample_sex&quot;</span>]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">meta <span class="op">=</span> metaM[meta_type]
+meta</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+    </tr>
+    <tr>
+      <th>File accession</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>fibroblast of villous mesenchyme</td>
+      <td>primary cell</td>
+      <td>newborn</td>
+      <td>male, female</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">target_expr_meta <span class="op">=</span> targetExpr_t.join(meta, how<span class="op">=</span><span class="st">&quot;left&quot;</span>)
+target_expr_meta</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>KRIT1</th>
+      <th>AK2</th>
+      <th>Biosample_term_name</th>
+      <th>Biosample_type</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>6.21</td>
+      <td>15.57</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>13.36</td>
+      <td>37.62</td>
+      <td>pulmonary artery endothelial cell</td>
+      <td>primary cell</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>1.15</td>
+      <td>2.31</td>
+      <td>fibroblast of villous mesenchyme</td>
+      <td>primary cell</td>
+      <td>newborn</td>
+      <td>male, female</td>
+    </tr>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>1.37</td>
+      <td>8.95</td>
+      <td>mesangial cell</td>
+      <td>primary cell</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">target_expr_meta.drop([<span class="st">&quot;Biosample_term_name&quot;</span>, <span class="st">&quot;Biosample_type&quot;</span>], axis<span class="op">=</span><span class="dv">1</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>KRIT1</th>
+      <th>AK2</th>
+      <th>Biosample_life_stage</th>
+      <th>Biosample_sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENCFF060LPA</th>
+      <td>6.21</td>
+      <td>15.57</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF262OBL</th>
+      <td>13.36</td>
+      <td>37.62</td>
+      <td>adult</td>
+      <td>male</td>
+    </tr>
+    <tr>
+      <th>ENCFF289HGQ</th>
+      <td>1.15</td>
+      <td>2.31</td>
+      <td>newborn</td>
+      <td>male, female</td>
+    </tr>
+    <tr>
+      <th>ENCFF673KYR</th>
+      <td>1.37</td>
+      <td>8.95</td>
+      <td>unknown, fetal</td>
+      <td>unknown, female</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>绘制散点图</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">target_expr_meta.plot.scatter(x<span class="op">=</span><span class="st">&#39;KRIT1&#39;</span>, y<span class="op">=</span><span class="st">&#39;AK2&#39;</span>)</code></pre></div>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fbf95322390&gt;</code></pre>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_103_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>绘制箱线图</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">a <span class="op">=</span> target_expr_meta.boxplot([<span class="st">&quot;KRIT1&quot;</span>, <span class="st">&quot;AK2&quot;</span>])</code></pre></div>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_105_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>绘制每个样品的基因表达分布</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ax <span class="op">=</span> TPM_mat.boxplot(<span class="bu">list</span>(TPM_mat.columns))
+ax.set_ylim(<span class="dv">0</span>,<span class="dv">100</span>)
+ax.set_ylabel(<span class="st">&quot;TPM&quot;</span>)
+ax.set_xlabel(<span class="st">&quot;Samples&quot;</span>)
+ax.set_title(<span class="st">&quot;Gene expression distribution for all samples&quot;</span>)</code></pre></div>
+<pre><code>Text(0.5,1,&#39;Gene expression distribution for all samples&#39;)</code></pre>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_107_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>更多坐标轴调整见 <a href="https://matplotlib.org/api/axes_api.html#axis-labels-title-and-legend" class="uri">https://matplotlib.org/api/axes_api.html#axis-labels-title-and-legend</a></p>
+</div>
+<div id="seaborn" class="section level2">
+<h2><span class="header-section-number">5.5</span> Seaborn绘图</h2>
+<p><code>Seaborn</code>是基于<code>matplotlib</code>的python可视化库，提供更高级的接口和更好的定制性，支持<code>numpy</code>和<code>pandas</code>数据结构，和<code>scipy</code>和<code>statsmodels</code>的统计计算。</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 导入seaborn库，并给予一个更简短的名字，方便后续引用</span>
+<span class="im">import</span> seaborn <span class="im">as</span> sns</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">TPM_mat.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+      <th>ENCFF289HGQ</th>
+      <th>ENCFF673KYR</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+      <td>1.03</td>
+      <td>2.42</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+      <td>1.45</td>
+      <td>1.80</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>2.48</td>
+      <td>0.24</td>
+      <td>0.38</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Pandas绘图</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">TPM_mat.plot(kind<span class="op">=</span><span class="st">&quot;scatter&quot;</span>, x<span class="op">=</span><span class="st">&quot;ENCFF060LPA&quot;</span>, y<span class="op">=</span><span class="st">&quot;ENCFF262OBL&quot;</span>)</code></pre></div>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fbf84af0a20&gt;</code></pre>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_114_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Seaborn绘图 (还可以直接显示直方图，计算相关性)</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">sns.jointplot(x<span class="op">=</span><span class="st">&quot;ENCFF060LPA&quot;</span>, y<span class="op">=</span><span class="st">&quot;ENCFF262OBL&quot;</span>, data<span class="op">=</span>TPM_mat, size<span class="op">=</span><span class="dv">4</span>)</code></pre></div>
+<pre><code>&lt;seaborn.axisgrid.JointGrid at 0x7fbf9531a1d0&gt;</code></pre>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_116_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">sp <span class="op">=</span> sns.heatmap(TPM_mat)</code></pre></div>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_117_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">TPM_mat_cor <span class="op">=</span> TPM_mat.corr()
+sns.heatmap(TPM_mat_cor)</code></pre></div>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fbf8494a2b0&gt;</code></pre>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_118_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ax <span class="op">=</span> TPM_mat.boxplot(<span class="bu">list</span>(TPM_mat.columns))
+ax.set_ylim(<span class="dv">0</span>,<span class="dv">100</span>)
+ax.set_ylabel(<span class="st">&quot;TPM&quot;</span>)
+ax.set_xlabel(<span class="st">&quot;Samples&quot;</span>)
+ax.set_title(<span class="st">&quot;Gene expression distribution for all samples&quot;</span>)</code></pre></div>
+<pre><code>Text(0.5,1,&#39;Gene expression distribution for all samples&#39;)</code></pre>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_119_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">TPM_mat[<span class="st">&#39;gene_id&#39;</span>] <span class="op">=</span> TPM_mat.index
+TPM_mat.head(<span class="dv">4</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ENCFF060LPA</th>
+      <th>ENCFF262OBL</th>
+      <th>ENCFF289HGQ</th>
+      <th>ENCFF673KYR</th>
+      <th>gene_id</th>
+    </tr>
+    <tr>
+      <th>gene_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003.14</th>
+      <td>6.64</td>
+      <td>17.13</td>
+      <td>1.03</td>
+      <td>2.42</td>
+      <td>ENSG00000000003.14</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000419.12</th>
+      <td>9.91</td>
+      <td>18.86</td>
+      <td>1.45</td>
+      <td>1.80</td>
+      <td>ENSG00000000419.12</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000457.13</th>
+      <td>0.86</td>
+      <td>2.48</td>
+      <td>0.24</td>
+      <td>0.38</td>
+      <td>ENSG00000000457.13</td>
+    </tr>
+    <tr>
+      <th>ENSG00000000460.16</th>
+      <td>1.51</td>
+      <td>5.36</td>
+      <td>0.26</td>
+      <td>0.16</td>
+      <td>ENSG00000000460.16</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#http://pandas.pydata.org/pandas-docs/stable/generated/pandas.wide_to_long.html</span>
+TPM_melt <span class="op">=</span> pd.melt(TPM_mat, id_vars<span class="op">=</span>[<span class="st">&#39;gene_id&#39;</span>])
+
+TPM_melt.head(<span class="dv">3</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene_id</th>
+      <th>variable</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ENSG00000000003.14</td>
+      <td>ENCFF060LPA</td>
+      <td>6.64</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ENSG00000000419.12</td>
+      <td>ENCFF060LPA</td>
+      <td>9.91</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ENSG00000000457.13</td>
+      <td>ENCFF060LPA</td>
+      <td>0.86</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ax <span class="op">=</span> sns.boxplot(x<span class="op">=</span><span class="st">&quot;variable&quot;</span>, y<span class="op">=</span><span class="st">&quot;value&quot;</span>, data<span class="op">=</span>TPM_melt)</code></pre></div>
+<p><img src="06_CT_Pandas_files/06_CT_Pandas_122_0.png" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Py3-pratcise-ct.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="numpy-scipy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Py3_course.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

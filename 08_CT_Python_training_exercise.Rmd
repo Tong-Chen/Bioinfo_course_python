@@ -1,0 +1,706 @@
+# 易生信Python培训练习和考核题目 {#Py3_test}
+
+欢迎访问我们的视频课程 <https://bioinfo.ke.qq.com>。
+
+1. `3*2**2`的输出是多少？(1分)
+2. `8 % 4`的输出是多少？(1分)
+3. `32 + '32'`的输出是什么？(1分)
+4. `32 > '32'`的输出是什么？(1分)
+5. `'Sheng Xin Bao Dian'.find('x')`和`'Sheng Xin Bao Dian'.find('X')`的输出分别是？(2分)
+6. 一句话计算`'Sheng Xin Bao Dian'`字符串中`n`的数目？(1分)
+7. 写出下面10段程序的输出？(1分/段)
+   
+   ```
+   aList = [1, 2, 3]
+   bList = aList
+   bList.append(4)
+   aList
+   ```
+   
+   ```
+   aList = [1, 2, 3]
+   cList = aList[:]
+   cList.append(4)
+   aList
+   ``` 
+   
+   ```
+   aList = [1,1,2,2,3,5,4,3]
+   aSet = set(aList)
+   aSet
+   ```
+   
+   ```
+   [1, 2, 3] * 2
+   ```
+   
+   ```
+   [i**2 for i in [1,2,3]]
+   ```
+   
+   ```
+   dict([(i, i**2) for i in range(5)])
+   ```
+   
+   ```
+   import re
+   re.findall("[Ii]mageGP", "www.ehbio.com/ImageGP")
+   ```
+   
+   ```
+   ' '.join(["Sheng", "Xin", "Bao", "Dian"])
+   ```
+   
+   ```
+   def sumNumber(a, b):
+       return a + b
+   sumNumber(2,3)
+   ```
+   
+   ```
+   def sumNumber(a, b):
+       return a + b
+   print(sumNumber(2,3))
+   ```
+
+10. 写程序以下面列表中每个元素为`key`，元素出现的次数为`value`，构建一个字典，并遍历字典按元素的ASCII码顺序输出？(5分)
+
+    ```
+    aList = ['a', 'b', 'c', 'a', 'd','e', 'A']
+    ```
+    
+11. 对教案中脑筋急转弯问题的解法进行优化; 问题是：`现有100元钱，需要买100个物品，其中铅笔盒单价5元，笔单价3元，橡皮单价0.5元，怎么组合可以把100元花完，同时三种物品的个数和为100，请用编程解决。` (3分)
+12. 写程序用高斯的计算方式计算`1+2+3+...+100`的加和。(3分)
+13. 指出下面每个程序运行时可能会出现的错误。(1分/段)
+
+    ```
+    aList = [1,2,3]
+    aDict = {}
+    aDict[aList] = 1
+    b = aDict['a']
+    ```
+    
+    ```
+    if 1:
+    print("Sheng xin bao dian great!")
+    ```
+    
+    ```
+    32 + '32'
+    ```
+    
+    ```
+    aList = [1, 2, 3]
+    aList.add(4)
+    ```
+    
+    ```
+    aList = [1, 2, 3]
+    ''.join(aList)
+    ```
+    
+    ```
+    int('a')
+    ```
+    
+    ```
+    3 / 0
+    ```
+    
+    ```
+    for i in range(10)
+    print(L)
+    ```
+    
+    ```
+    'Sheng Xin * 3
+    ```
+    
+    ```
+    type = 1
+    ```
+    
+14. Python文件读写函数`open`的`mode`参数中`r`, `w`, `a`, `t`, `b`, `x`分别是什么意思？(3分)
+15. Python中如何获取当前所在的工作目录? 如何修改工作目录？(3分)
+16. Python中连接多个字符串的方法有哪些？优缺点是什么？(3分)
+17. `print("%.2f%%" % (1/3))`的输出是什么？(2分)
+18. 描述下语句`import pandas as pd`做了什么操作？(2分)
+20. 教案中IDmap程序用pandas实现 (`GRCh38.idmap`,`ensm.id`)。(5分)
+21. Jupyter中`%%writefile`, `%%run` 宏命令的用途是什么？(2分)
+22. 找出教案中TP53 mRNA序列中的ORF (`human_TP53_mRNA.fa`)。(5分)
+23. 列出教案中大肠杆菌基因组中限制性内切酶SecI的切割位置 (`Ecoli.fa`)。(5分)
+24. 计算`data/test1.fa`中每条序列的GC含量。(5分)
+25. 不使用pandas，写Python脚本处理Pandas教案中的TPM表达矩阵的提取和合并？(ENCFF060LPA.tsv, ENCFF262OBL.tsv, ENCFF289HGQ.tsv,  ENCFF673KYR.tsv) (8分)
+1. 给定FASTA格式的文件(test1.fa 和 test2.fa)，写一个程序 `cat.py` 读入文件，并输出到屏幕 (2分)
+    * 用到的知识点
+        * open(file)
+        * for .. in loop
+        * print()
+        * strip() function
+2. 给定FASTQ格式的文件(test1.fq), 写一个程序 `cat.py` 读入文件，并输出到屏幕 (2分)
+    * 用到的知识点
+        * 同上
+3. 写程序 `splitName.py`, 读入test2.fa, 并取原始序列名字第一个空格前的名字为处理后的序列名字，输出到屏幕 (2分)
+    * 用到的知识点
+        * split
+        * 字符串的索引
+    * 输出格式为：
+```
+>NM_001011874
+gcggcggcgggcgagcgggcgctggagtaggagctg.......
+```
+
+4. 写程序 `formatFasta.py`, 读入test2.fa，把每条FASTA序列连成一行然后输出 (2分)
+    * 用到的知识点
+        * join
+        * strip    
+    * 输出格式为:
+```
+    >NM_001011874
+    gcggcggcgggc......TCCGCTG......GCGTTCACC......CGGGGTCCGGAG
+```
+4. 写程序 `formatFasta-2.py`, 读入test2.fa，把每条FASTA序列分割成80个字母一行的序列 (2分)
+    * 用到的知识点
+        * 字符串切片操作
+        * range
+    * 输出格式为
+```    
+    >NM_001011874
+    gcggcggcgc.(60个字母).TCCGCTGACG #(每行80个字母)
+    acgtgctacg.(60个字母).GCGTTCACCC
+    ACGTACGATG(最后一行可不足80个字母)
+```     
+4. 写程序 `sortFasta.py`, 读入test2.fa, 并取原始序列名字第一个空格前的名字为处理后的序列名字，排序后输出 (2分)
+    * 用到的知识点
+        * sort
+        * dict
+        * aDict[key] = []
+        * aDict[key].append(value)
+        
+5. 提取给定名字的序列 (2分)
+    * 写程序 `grepFasta.py`, 提取fasta.name中名字对应的test2.fa的序列，并输出到屏幕。
+    * 写程序 `grepFastq.py`, 提取fastq.name中名字对应的test1.fq的序列，并输出到文件。
+        * 用到的知识点
+            * print >>fh, or fh.write()
+            * 取模运算，4 % 2 == 0
+    
+6. 写程序 `screenResult.py`, 筛选test.expr中foldChange大于2的基因并且padj小于0.05的基，可以输出整行或只输出基因名字。(4分)
+    * 用到的知识点
+        * 逻辑与操作符 and 
+        * 文件中读取的内容都为字符串，需要用int转换为整数，float转换为浮点数
+
+6. 写程序 `transferMultipleColumToMatrix.py` 将文件(multipleColExpr.txt)中基因在多个组织中的表达数据转换为矩阵形式，并绘制热图。(6分)
+    * 用到的知识点
+        * aDict['key'] = {}
+        * aDict['key']['key2'] = value
+        * if key not in aDict
+        * aDict = {'ENSG00000000003': {"A-431": 21.3, "A-549", 32.5,...},"ENSG00000000003":{},}
+    * 输入格式(只需要前3列就可以)
+```
+Gene    Sample  Value   Unit    Abundance
+ENSG00000000003 A-431   21.3    FPKM    Medium
+ENSG00000000003 A-549   32.5    FPKM    Medium
+ENSG00000000003 AN3-CA  38.2    FPKM    Medium
+ENSG00000000003 BEWO    31.4    FPKM    Medium
+ENSG00000000003 CACO-2  63.9    FPKM    High
+ENSG00000000005 A-431   0.0     FPKM    Not detected
+ENSG00000000005 A-549   0.0     FPKM    Not detected
+ENSG00000000005 AN3-CA  0.0     FPKM    Not detected
+ENSG00000000005 BEWO    0.0     FPKM    Not detected
+ENSG00000000005 CACO-2  0.0     FPKM    Not detected
+```
+    * 输出格式
+```
+Name	A-431	A-549	AN3-CA	BEWO	CACO-2
+ENSG00000000460	25.2	14.2	10.6	24.4	14.2
+ENSG00000000938	0.0	0.0	0.0	0.0	0.0
+ENSG00000001084	19.1	155.1	24.4	12.6	23.5
+ENSG00000000457	2.8	3.4	3.8	5.8	2.9
+```
+
+6. 写程序 `reverseComplementary.py`计算序列 `ACGTACGTACGTCACGTCAGCTAGAC`的反向互补序列。(2分)
+    * 用到的知识点
+        * reverse
+        * list(seq)
+7. 写程序 `collapsemiRNAreads.py`转换smRNA-Seq的测序数据。(5分)
+    * 输入文件格式(mir.collapse, tab-分割的两列文件，第一列为序列，第二列为序列被测到的次数)
+```
+        ID_REF        VALUE
+        ACTGCCCTAAGTGCTCCTTCTGGC        2
+        ATAAGGTGCATCTAGTGCAGATA        25
+        TGAGGTAGTAGTTTGTGCTGTTT        100
+        TCCTACGAGTTGCATGGATTC        4
+```
+    * 输出文件格式 (mir.collapse.fa, 名字的前3个字母为样品的特异标示，中间的数字表示第几条序列，是序列名字的唯一标示，第三部分是x加每个reads被测到的次数。三部分用下划线连起来作为fasta序列的名字。)
+```        
+        >ESB_1_x2
+        ACTGCCCTAAGTGCTCCTTCTGGC
+        >ESB_2_x25
+        ATAAGGTGCATCTAGTGCAGATA
+        >ESB_3_x100
+        TGAGGTAGTAGTTTGTGCTGTTT
+        >ESB_4_x4
+        TCCTACGAGTTGCATGGATTC
+```
+8. 简化的短序列匹配程序 (map.py) 把short.fa中的序列比对到ref.fa, 输出短序列匹配到ref.fa文件中哪些序列的哪些位置。(10分)
+    * 用到的知识点
+        * find
+    * 输出格式 (输出格式为bed格式，第一列为匹配到的染色体，第二列和第三列为匹配到染色体序列的起始终止位置（位置标记以0为起始，代表第一个位置；终止位置不包含在内，第一个例子中所示序列的位置是(199,208](前闭后开，实际是chr1染色体第199-206的序列，0起始). 第4列为短序列自身的序列.)。
+    * 附加要求：可以只匹配到给定的模板链，也可以考虑匹配到模板链的互补链。这时第5列可以为短序列的名字，第六列为链的信息，匹配到模板链为'+'，匹配到互补链为'-'。注意匹配到互补链时起始位置也是从模板链的5'端算起的。
+``` 
+    chr1	199	208	TGGCGTTCA
+    chr1	207	216	ACCCCGCTG
+    chr2	63	70	AAATTGC
+    chr3	0	7	AATAAAT
+```
+
+10. 备注：
+    * 每个提到提到的“用到的知识点”为相对于前面的题目新增的知识点，请综合考虑。此外，对于不同的思路并不是所有提到的知识点都会用着，而且也可能会用到未提到的知识点。但是所有知识点都在前面的讲义部分有介绍。
+    * 每个程序对于你身边会写的人来说都很简单，因此你一定要克制住，独立去把答案做出，多看错误提示，多比对程序输出结果和预期结果的差异。
+    * 学习锻炼“读程序”，即对着文件模拟整个的读入、处理过程来发现可能的逻辑问题。
+    * 程序运行没有错误不代表你写的程序完成了你的需求，你要去查验输出结果是不是你想要的。
+11. 关于程序调试
+    * 在初写程序时，可能会出现各种各样的错误，常见的有缩进不一致，变量名字拼写错误，丢失冒号，文件名未加引号等，这时要根据错误提示查看错误类型是什么，出错的是哪一行来定位错误。当然，有的时候报错的行自身不一定有错，可能是其前面或后面的行出现了错误。
+    * **用脑袋运行程序**：当程序写作完成后，自己尝试对着数据文件，一行一行的执行程序，来看程序的运行是否与自己想干的活一致，有没有纰漏。
+    * 当结果不符合预期时，要学会**使用print来查看每步的操作是否正确**，比如我读入了字典，我就打印下字典，看看读入的是不是我想要的，是否含有不该存在的字符；或者**在每个判断句、函数调入的情况下打印个字符，来跟踪程序的运行轨迹**
+ 
+12. 如果视频或文档中没有答案的或者有错误的，请提交题目和自己的答案到 http://www.ehbio.com/Esx 提问寻求解答。
+
+
+```python
+import re
+re.findall("[Ii]mageGP", "www.ehbio.com/ImageGP")
+```
+
+
+
+
+    ['ImageGP']
+
+
+
+
+```python
+' '.join(["Sheng", "Xin", "Bao", "Dian"])
+```
+
+
+
+
+    'Sheng Xin Bao Dian'
+
+
+
+
+```python
+# 写程序以下面列表中每个元素为key，元素出现的次数为value，
+# 构建一个字典，并遍历字典按元素的ASCII码顺序输出？
+aList = ['a', 'b', 'c', 'a', 'd','e', 'A']
+aDict = {}
+uniqList = list(set(aList))
+aDict = dict([(i,aList.count(i)) for i in uniqList])
+uniqList.sort()
+
+for key in uniqList:
+    print(key, aDict[key], sep="-->")
+#for item in uniqList:
+#    aDict[item] = aDict.get(item,0) + 1
+```
+
+    A-->1
+    a-->2
+    b-->1
+    c-->1
+    d-->1
+    e-->1
+
+
+
+```python
+# 写程序以下面列表中每个元素为key，元素出现的次数为value，
+# 构建一个字典，并遍历字典按元素的ASCII码顺序输出？
+aList = ['a', 'b', 'c', 'a', 'd','e', 'A']
+aDict = {}
+for item in aList:
+    aDict[item] = aDict.get(item,0) + 1
+
+keyL = list(aDict.keys())
+keyL.sort()
+
+for key in keyL:
+    print(key, aDict[key], sep="\t")
+```
+
+    A	1
+    a	2
+    b	1
+    c	1
+    d	1
+    e	1
+
+
+
+```python
+aList = ['a', 'b', 'c', 'a', 'd', 'e', 'A']
+aDict = {}
+for i in aList:
+    aDict.setdefault(i, 0)
+    aDict[i] += 1
+print(aDict)
+```
+
+    {'a': 2, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'A': 1}
+
+
+
+```python
+aDict = {}
+aList = ['a', 'b', 'c', 'a', 'd','e', 'A']
+#uniL = list(set(aList))
+for i in aList:
+    aDict[i] = aDict.get(i,0)+1
+    #aDict += 1 
+    #break
+print(aDict)
+
+```
+
+    {'a': 2, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'A': 1}
+
+
+
+```python
+aList = ['a', 'b', 'c', 'a', 'd','e', 'A']
+aSet = set(aList)
+aSet
+for i in aSet:
+    print (i,aList.count(i))
+```
+
+    a 2
+    d 1
+    A 1
+    b 1
+    e 1
+    c 1
+
+
+
+```python
+list = ['a', 'b', 'c', 'a', 'd','e', 'A']
+dic = {}
+for i in list:
+    dic[i] = list.count(i)
+print(dic)
+```
+
+
+```python
+#写程序用高斯的计算方式计算1+2+3+...+100的加和
+n = 100
+(1+n) * (n/2)
+```
+
+
+
+
+    5050.0
+
+
+
+
+```python
+n = 99
+(1+n) * (n/2)
+```
+
+
+
+
+    4950.0
+
+
+
+
+```python
+import pandas as pd
+idmap = pd.read_table("data/GRCh38.idmap", 
+                      header=0, index_col=0)
+ensmL = [line.strip() for line in open("data/ensm.id")]
+idmap = idmap[idmap.index.isin(ensmL)]
+idmap["Associated Gene Name"]
+```
+
+
+
+
+    Gene ID
+    ENSG00000252303          RNU6-280P
+    ENSG00000281771              Y_RNA
+    ENSG00000281256       RP11-222G7.2
+    ENSG00000283272    Clostridiales-1
+    ENSG00000280864      RP11-654C22.2
+    ENSG00000280792      RP11-315F22.1
+    ENSG00000282878       RP11-399E6.1
+    ENSG00000283276     ABBA01000934.1
+    ENSG00000281822           RNU1-62P
+    ENSG00000281384         AC093802.1
+    ENSG00000280505      RP11-654C22.1
+    ENSG00000281764       RP11-399E6.2
+    ENSG00000281316            DPPA2P2
+    ENSG00000280963        SERTAD4-AS1
+    ENSG00000280775          RNA5SP136
+    ENSG00000281876       RP11-399E6.4
+    ENSG00000281766               RYBP
+    ENSG00000281518              FOXO6
+    ENSG00000281614             INPP5D
+    ENSG00000280584              OBP2B
+    ENSG00000281230            SERTAD4
+    ENSG00000281917            SLC16A1
+    Name: Associated Gene Name, dtype: object
+
+
+
+
+```python
+mRNA = []
+for line in open("data/human_TP53_mRNA.fa"):
+    if line[0] == ">":
+        continue
+    else:
+        mRNA.append(line.strip())
+#--------------------------------
+mRNA = ''.join(mRNA)
+orf = re.compile("(A[TU]G(...){99,}?([TU]AA|[TU]AG|[TU]GA))")
+for i in orf.findall(mRNA):
+    print(i[0])
+    
+```
+
+    ATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCGACATAGTGTGGTGGTGCCCTATGAGCCGCCTGAGGTTGGCTCTGACTGTACCACCATCCACTACAACTACATGTGTAACAGTTCCTGCATGGGCGGCATGAACCGGAGGCCCATCCTCACCATCATCACACTGGAAGACTCCAGTGGTAATCTACTGGGACGGAACAGCTTTGAGGTGCGTGTTTGTGCCTGTCCTGGGAGAGACCGGCGCACAGAGGAAGAGAATCTCCGCAAGAAAGGGGAGCCTCACCACGAGCTGCCCCCAGGGAGCACTAAGCGAGCACTGCCCAACAACACCAGCTCCTCTCCCCAGCCAAAGAAGAAACCACTGGATGGAGAATATTTCACCCTTCAGATCCGTGGGCGTGAGCGCTTCGAGATGTTCCGAGAGCTGAATGAGGCCTTGGAACTCAAGGATGCCCAGGCTGGGAAGGAGCCAGGGGGGAGCAGGGCTCACTCCAGCCACCTGAAGTCCAAAAAGGGTCAGTCTACCTCCCGCCATAAAAAACTCATGTTCAAGACAGAAGGGCCTGACTCAGACTGA
+    ATGGGGAGTAGGACATACCAGCTTAGATTTTAAGGTTTTTACTGTGAGGGATGTTTGGGAGATGTAAGAAATGTTCTTGCAGTTAAGGGTTAGTTTACAATCAGCCACATTCTAGGTAGGGGCCCACTTCACCGTACTAACCAGGGAAGCTGTCCCTCACTGTTGAATTTTCTCTAACTTCAAGGCCCATATCTGTGAAATGCTGGCATTTGCACCTACCTCACAGAGTGCATTGTGAGGGTTAATGAAATAATGTACATCTGGCCTTGAAACCACCTTTTATTACATGGGGTCTAGAACTTGACCCCCTTGAGGGTGCTTGTTCCCTCTCCCTGTTGGTCGGTGGGTTGGTAG
+    ATGATGATCTGGATCCACCAAGACTTGTTTTATGCTCAGGGTCAATTTCTTTTTTCTTTTTTTTTTTTTTTTTTCTTTTTCTTTGAGACTGGGTCTCGCTTTGTTGCCCAGGCTGGAGTGGAGTGGCGTGATCTTGGCTTACTGCAGCCTTTGCCTCCCCGGCTCGAGCAGTCCTGCCTCAGCCTCCGGAGTAGCTGGGACCACAGGTTCATGCCACCATGGCCAGCCAACTTTTGCATGTTTTGTAGAGATGGGGTCTCACAGTGTTGCCCAGGCTGGTCTCAAACTCCTGGGCTCAGGCGATCCACCTGTCTCAGCCTCCCAGAGTGCTGGGATTACAATTGTGAGCCACCACGTCCAGCTGGAAGGGTCAACATCTTTTACATTCTGCAAGCACATCTGCATTTTCACCCCACCCTTCCCCTCCTTCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAA
+
+
+
+```python
+#SecI识别CCNNGG
+ecoli = []
+for line in open("data/Ecoli.fa"):
+    if line[0] != '>':
+        ecoli.append(line.strip())
+    #print(line.strip())
+#---------------
+ecoli = ''.join(ecoli)
+    
+secI = re.compile("CC..GG")
+for i in secI.finditer(ecoli):
+    print(i.start())
+```
+
+    174
+    299
+    556
+
+
+
+```python
+lineL = []
+for line in open("data/Ecoli.fa"):
+    line = line.strip()
+    if line[0] == ">":
+        continue
+    else:
+        lineL.append(line)
+#---------------------------
+seq = ''.join(lineL)
+
+seci = re.compile("CC[ATGC]GG")
+print(seci)
+```
+
+    re.compile('CC[ATGC]GG')
+
+
+
+```python
+help(re.finditer)
+```
+
+    Help on function finditer in module re:
+    
+    finditer(pattern, string, flags=0)
+        Return an iterator over all non-overlapping matches in the
+        string.  For each match, the iterator returns a match object.
+        
+        Empty matches are included in the result.
+    
+
+
+
+```python
+gc_cnt = 0
+seqLen = 0
+for line in open("data/test1.fa"):
+    if line[0] == '>':
+        if seqLen:
+            gc_percent = gc_cnt / seqLen * 100
+            print(key, round(gc_percent,2),"%")
+            gc_cnt = seqLen = 0
+        key = line.split()[0][1:]
+    else:
+        line = line.strip().upper()
+        gc_cnt += line.count('C') + line.count('G')
+        seqLen += len(line)
+#-------------------------------
+if seqLen:
+    gc_percent = gc_cnt / seqLen * 100
+    print(key, round(gc_percent,2),"%")
+```
+
+    NM_001011874 81.43 %
+    NM_001195662 42.86 %
+    NM_0112835 37.14 %
+    NM_011283 37.14 %
+
+
+
+```python
+for line in open("data/test1.fa"):
+    if line[0] == ">":
+        continue
+    else:
+        line = line.strip().upper()
+        gc_cnt = line.count("G") + line.count("C")
+        total_len = len(line)
+        gc_per = gc_cnt / total_len * 100
+        print(round(gc_per,2))
+```
+
+    81.43
+    42.86
+    37.14
+    37.14
+
+
+
+```python
+count = 5
+for line in open("data/ENCFF060LPA.tsv"):
+    if count == 0:
+        break
+    print(line)
+    count -= 1
+```
+
+    gene_id	transcript_id(s)	length	effective_length	expected_count	TPM	FPKM
+    
+    ENSG00000000003.14	ENST00000373020.8,ENST00000494424.1,ENST00000496771.5,ENST00000612152.4,ENST00000614008.4	2240.53	2020.49	5126.00	6.64	18.24
+    
+    ENSG00000000005.5	ENST00000373031.4,ENST00000485971.1	940.50	720.47	0.00	0.00	0.00
+    
+    ENSG00000000419.12	ENST00000371582.8,ENST00000371584.8,ENST00000371588.9,ENST00000413082.1,ENST00000466152.5,ENST00000494752.1	1072.03	851.99	3222.00	9.91	27.19
+    
+    ENSG00000000457.13	ENST00000367770.5,ENST00000367771.10,ENST00000367772.8,ENST00000423670.1,ENST00000470238.1	3527.59	3307.55	1092.00	0.86	2.37
+    
+
+
+
+```python
+fileL = ["data/ENCFF060LPA.tsv", "data/ENCFF262OBL.tsv", 
+         "data/ENCFF289HGQ.tsv", "data/ENCFF673KYR.tsv"]
+'''
+aDict = {
+    'ENCFF060LPA': {'a': 5, 'b': 3},
+    'ENCFF289HGQ': {'a': 3, 'c': 5},
+}
+
+aDict = {
+    'a': {'ENCFF060LPA': 5, 'ENCFF289HGQ':3},
+    'b': {'ENCFF060LPA': 3},
+    'c': {'ENCFF289HGQ': 5}
+}
+'''
+aDict = {}
+labelL = []
+
+for file_name in fileL:
+    label = file_name.replace('data/','')
+    label = label.replace('.tsv','')
+    labelL.append(label)
+    #print(label)
+    header = 1
+    count = 3
+    #print(label)
+    for line in open(file_name):
+        if header == 1:
+            header -= 1
+            continue
+        #--------------------
+        lineL = line.strip().split('\t')
+        gene  = lineL[0]
+        FPKM  = lineL[-1]
+        aDict.setdefault(gene, {})
+        aDict[gene][label] = FPKM
+        #if count:
+        #    print("\t",aDict)
+        #    count -= 1
+#--------------------------------------
+print("GeneName", '\t'.join(labelL), sep="\t")
+
+count = 5
+for gene,exprD in list(aDict.items()):
+    exprL = [exprD.get(label, '0') for label in labelL]
+    exprL = [gene] + exprL
+    #if count:
+    print('\t'.join(exprL))
+    #    count -= 1
+```
+
+    GeneName	ENCFF060LPA	ENCFF262OBL	ENCFF289HGQ	ENCFF673KYR
+    ENSG00000000003.14	18.24	26.74	10.84	15.07
+    ENSG00000000005.5	0.00	0.00	0.00	0.00
+    ENSG00000000419.12	27.19	29.44	15.23	11.17
+    ENSG00000000457.13	2.37	3.87	2.53	2.37
+    ENSG00000000460.16	4.14	8.37	2.70	0.98
+
+
+
+```python
+for line in open("data/test2.fa"):
+    if line[0] == '>':
+```
+
+    >NM_001011874 gene=Xkr4 CDS=151-2091
+    gcggcggcgggcgagcgggcgctggagtaggagctggggagcggcgcggccggggaaggaagccagggcg
+    aggcgaggaggtggcgggaggaggagacagcagggacaggTGTCAGATAAAGGAGTGCTCTCCTCCGCTG
+    CCGAGGCATCATGGCCGCTAAGTCAGACGGGAGGCTGAAGATGAAGAAGAGCAGCGACGTGGCGTTCACC
+    CCGCTGCAGAACTCGGACAATTCGGGCTCTGTGCAAGGACTGGCTCCAGGCTTGCCGTCGGGGTCCGGAG
+    >NM_001195662 gene=Rp1 CDS=55-909
+    AAGCTCAGCCTTTGCTCAGATTCTCCTCTTGATGAAACAAAGGGATTTCTGCACATGCTTGAGAAATTGC
+    AGGTCTCACCCAAAATGAGTGACACACCTTCTACTAGTTTCTCCATGATTCATCTGACTTCTGAAGGTCA
+    AGTTCCTTCCCCTCGCCATTCAAATATCACTCATCCTGTAGTGGCTAAACGCATCAGTTTCTATAAGAGT
+    GGAGACCCACAGTTTGGCGGCGTTCGGGTGGTGGTCAACCCTCGTTCCTTTAAGACTTTTGACGCTCTGC
+    TGGACAGTTTATCCAGGAAGGTACCCCTGCCCTTTGGGGTAAGGAACATCAGCACGCCCCGTGGACGACA
+    CAGCATCACCAGGCTGGAGGAGCTAGAGGACGGCAAGTCTTATGTGTGCTCCCACAATAAGAAGGTGCTG
+    >NM_011283 gene=Rp1 CDS=128-6412
+    AATAAATCCAAAGACATTTGTTTACGTGAAACAAGCAGGTTGCATATCCAGTGACGTTTATACAGACCAC
+    ACAAACTATTTACTCTTTTCTTCGTAAGGAAAGGTTCAACTTCTGGTCTCACCCAAAATGAGTGACACAC
+    CTTCTACTAGTTTCTCCATGATTCATCTGACTTCTGAAGGTCAAGTTCCTTCCCCTCGCCATTCAAATAT
+    CACTCATCCTGTAGTGGCTAAACGCATCAGTTTCTATAAGAGTGGAGACCCACAGTTTGGCGGCGTTCGG
+    GTGGTGGTCAACCCTCGTTCCTTTAAGACTTTTGACGCTCTGCTGGACAGTTTATCCAGGAAGGTACCCC
+    TGCCCTTTGGGGTAAGGAACATCAGCACGCCCCGTGGACGACACAGCATCACCAGGCTGGAGGAGCTAGA
+    GGACGGCAAGTCTTATGTGTGCTCCCACAATAAGAAGGTGCTGCCAGTTGACCTGGACAAGGCCCGCAGG
+    CGCCCTCGGCCCTGGCTGAGTAGTCGCTCCATAAGCACGCATGTGCAGCTCTGTCCTGCAACTGCCAATA
+    TGTCCACCATGGCACCTGGCATGCTCCGTGCCCCAAGGAGGCTCGTGGTCTTCCGGAATGGTGACCCGAA
+    >NM_0112835 gene=Rp1 CDS=128-6412
+    AATAAATCCAAAGACATTTGTTTACGTGAAACAAGCAGGTTGCATATCCAGTGACGTTTATACAGACCAC
+    ACAAACTATTTACTCTTTTCTTCGTAAGGAAAGGTTCAACTTCTGGTCTCACCCAAAATGAGTGACACAC
+    CTTCTACTAGTTTCTCCATGATTCATCTGACTTCTGAAGGTCAAGTTCCTTCCCCTCGCCATTCAAATAT
+    CACTCATCCTGTAGTGGCTAAACGCATCAGTTTCTATAAGAGTGGAGACCCACAGTTTGGCGGCGTTCGG
+    GTGGTGGTCAACCCTCGTTCCTTTAAGACTTTTGACGCTCTGCTGGACAGTTTATCCAGGAAGGTACCCC
+    TGCCCTTTGGGGTAAGGAACATCAGCACGCCCCGTGGACGACACAGCATCACCAGGCTGGAGGAGCTAGA
+    GGACGGCAAGTCTTATGTGTGCTCCCACAATAAGAAGGTGCTGCCAGTTGACCTGGACAAGGCCCGCAGG
+    CGCCCTCGGCCCTGGCTGAGTAGTCGCTCCATAAGCACGCATGTGCAGCTCTGTCCTGCAACTGCCAATA
+    TGTCCACCATGGCACCTGGCATGCTCCGTGCCCCAAGGAGGCTCGTGGTCTTCCGGAATGGTGACCCGAA
+

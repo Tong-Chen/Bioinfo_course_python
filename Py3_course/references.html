@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Python3学习教程</title>
+  <meta name="description" content="Python3学习教程">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Python3学习教程" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Python3学习教程" />
+  
+  
+  
+
+<meta name="author" content="易生信培训团队">
+<meta name="author" content="联系我们: train@ehbio.com">
+<meta name="author" content="抱歉，转成PDF后部分格式问题还未解决，会继续更新调整">
+
+
+<meta name="date" content="2018-05-09">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="Py3-test.html">
+<link rel="next" href="company-intro.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://www.ehbio.com"><img src="http://www.ehbio.com/logos/ehbio_gitbook_logo.png" width="95%"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>EHBIO Gene Technology</a></li>
+<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a><ul>
+<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
+<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#pythonintfloatstr"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
+<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
+<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
+<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#helloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
+<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
+<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
+<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
+<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.4"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 控制流</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
+<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
+<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
+<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#breakcontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
+<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for--range"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
+<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.8"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
+<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#printlen-input-intstr"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.10"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
+<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#global"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
+<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.12"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
+<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.13"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
+<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.14"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
+<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.15"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
+<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#--"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
+<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.17"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a><ul>
+<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvaluesitems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
+</ul></li>
+<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.18"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="py3-ct.html"><a href="py3-ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a><ul>
+<li class="chapter" data-level="2.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
+<li class="chapter" data-level="2.1.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
+<li class="chapter" data-level="2.1.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
+<li class="chapter" data-level="2.1.4" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
+<li class="chapter" data-level="2.1.6" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
+<li class="chapter" data-level="2.1.7" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
+<li class="chapter" data-level="2.1.8" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
+<li class="chapter" data-level="2.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3</b> Python语法</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
+<li class="chapter" data-level="2.3.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
+<li class="chapter" data-level="2.3.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.1"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
+<li class="chapter" data-level="2.4.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
+<li class="chapter" data-level="2.5.2" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6.1"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="py3-ct.html"><a href="py3-ct.html#section-2.7"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
+<li class="chapter" data-level="2.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8.1"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.1"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
+<li class="chapter" data-level="2.9.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.2"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
+<li class="chapter" data-level="2.9.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.3"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
+<li class="chapter" data-level="2.9.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.4"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
+<li class="chapter" data-level="2.9.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.5"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
+<li class="chapter" data-level="2.9.6" data-path="py3-ct.html"><a href="py3-ct.html#lambda-map-filer-reduce-"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
+<li class="chapter" data-level="2.9.7" data-path="py3-ct.html"><a href="py3-ct.html#exec-eval-python-"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
+<li class="chapter" data-level="2.9.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.8"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
+<li class="chapter" data-level="2.11" data-path="py3-ct.html"><a href="py3-ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a><ul>
+<li class="chapter" data-level="3.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#figuresubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#subplot-1"><i class="fa fa-check"></i><b>3.1.2</b> 调整subplot周围间距</a></li>
+<li class="chapter" data-level="3.1.3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#--1"><i class="fa fa-check"></i><b>3.1.3</b> 颜色 标记和线型</a></li>
+<li class="chapter" data-level="3.1.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.4</b> 刻度、标签和图例</a></li>
+<li class="chapter" data-level="3.1.5" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#legend-1"><i class="fa fa-check"></i><b>3.1.5</b> 添加图例legend</a></li>
+<li class="chapter" data-level="3.1.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.6</b> 注解</a></li>
+<li class="chapter" data-level="3.1.7" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.7</b> 图片保存</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
+<li class="chapter" data-level="3.2.2" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
+<li class="chapter" data-level="3.2.3" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
+<li class="chapter" data-level="3.2.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
+<li class="chapter" data-level="3.2.5" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
+<li class="chapter" data-level="3.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
+<li class="chapter" data-level="3.2.7" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2.7"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.1</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#id"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.2"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.3"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a><ul>
+<li class="chapter" data-level="5.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
+<li class="chapter" data-level="5.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.1"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
+<li class="chapter" data-level="5.2.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
+<li class="chapter" data-level="5.2.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.3"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
+<li class="chapter" data-level="5.2.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.4"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
+<li class="chapter" data-level="5.2.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.5"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
+<li class="chapter" data-level="5.2.6" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.6"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
+<li class="chapter" data-level="5.2.7" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.7"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
+<li class="chapter" data-level="5.2.8" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.8"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
+<li class="chapter" data-level="5.2.9" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.9"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
+<li class="chapter" data-level="5.2.10" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#meta-data"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
+<li class="chapter" data-level="5.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#seaborn"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numpy-scipy.html"><a href="numpy-scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a><ul>
+<li class="chapter" data-level="6.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
+<li class="chapter" data-level="6.1.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
+<li class="chapter" data-level="6.1.3" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpymath"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.1"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
+<li class="chapter" data-level="6.2.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Py3-test.html"><a href="Py3-test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a><ul>
+<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#section-8.1.1"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
+<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
+<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#section-8.1.3"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
+<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#section-8.1.4"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
+<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#section-8.1.5"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
+<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#section-8.1.6"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
+<li class="chapter" data-level="8.1.7" data-path="references.html"><a href="references.html#linux"><i class="fa fa-check"></i><b>8.1.7</b> Linux</a></li>
+<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
+<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
+<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#section-8.1.10"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
+<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#section-8.1.11"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
+<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#section-8.1.13"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
+<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python-1"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
+<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
+<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
+<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#section-8.1.17"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
+<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#section-8.1.18"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
+<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#section-8.1.19"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
+<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#section-8.1.20"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
+<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#section-8.1.21"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
+<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
+<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#section-8.2.3"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
+<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#section-8.2.4"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
+<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#section-8.2.5"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
+<li class="chapter" data-level="8.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
+<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#section-8.2.8"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
+<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#section-8.2.9"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
+<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#section-8.2.10"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
+<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#section-8.2.11"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
+<li class="chapter" data-level="8.2.12" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
+<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#section-8.2.13"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="company-intro.html"><a href="company-intro.html"><i class="fa fa-check"></i><b>9</b> 公司简介</a></li>
+<li class="divider"></li>
+<li><a href="mailto:ct@ehbio.com" target="blank">ct@ehbio.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python3学习教程</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="references" class="section level1">
+<h1><span class="header-section-number">8</span> 生信教程文章集锦</h1>
+<div id="section-8.1" class="section level2">
+<h2><span class="header-section-number">8.1</span> 生信宝典</h2>
+<p>生信的作用越来越大，想学的人越来越多，不管是为了以后发展，还是为了解决眼下的问题。但生信学习不是一朝一夕就可以完成的事情，也许你可以很短时间学会一个交互式软件的操作，却不能看完程序教学视频后就直接写程序。也许你可以跟着一个测序分析流程完成操作，但不懂得背后的原理，不知道什么参数需要修改，结果可以出来，却把我不住对还是错。</p>
+<p>学习生信从来就不是一个简单的事，需要做好持久战的心理准备。</p>
+<p>在学习时，我们都希望由浅入深的逐步深入，不断地练习和实践，这就是为什么我们需要一本书，因为书很系统。但生信发展的历史短于计算机编程的历史，如果想要一门程序设计的入门数据，每种语言都可以找到几本。但想要一个囊括生信的书，就有些难了。本身生信跨领域，需要多学科的知识，而其内部又有不少分子，都囊括了太大，包括的少又有些隔靴搔痒的感觉。</p>
+<p>我们当时都是零基础下自学Linux, 自学Python，自学R，自学高通量测序；这些学习经历，之前都零星地记录在博客里。现在回头去看几年前自己记录的东西，觉得好简单，而当时却费了很大的力气。这些零星的随手记，当时也只是为了自己看，到现在确实只有自己能看得懂，不便惠及更多的人。</p>
+<p>因此我们创建了生信宝典，希望从不同的角度传播知识。这个不同有三点含义，一是形式上的不同，摒弃之前主编们单人作战想写啥就写啥，而是有组织有计划的内容聚合，提供一系列的教程，由入门到提高。二是内容的不同，不去用网上现有教程的通用数据做例子，而是拿实际生物数据，讲述如何解释生信中普遍碰到的问题，讲述如何处理自己的数据。三是立足点不同。在写作时，我们回到了当年，在回忆中用整个阶段的学习去指导当初的那个小白，从那些会了的人觉得微不足道而不会的人又迈不过的坎入手，直击痛点。知识点的收录依据不是是否炫酷，是否难，而是是否必要。如果必要，再简单，也要提及；如果不必要，再炫酷，也暂不纳入。</p>
+<p>通过大量的生信例子、关键的注释和浓缩的语句形成下面的一系列学习教程。每一篇内容都不多，可以当做小说阅读，也可以跟着去练，反复几遍，每读一次都会有不同的收获和体会。</p>
+<div id="section-8.1.1" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> 系列教程</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/xoLBg0pI9seEksa0hMXi0A">生物信息之程序</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483955&amp;idx=1&amp;sn=946438376f94af6e8861b2b42701914e&amp;chksm=ec0dc7b9db7a4eafbef28fac1fb260f6f876f0ba674828784ac827dd23f9317f5a2d59d38bc0#rd">如何优雅的提问</a></li>
+<li><a href="http://mp.weixin.qq.com/s/C4EBufEtFF6bhBKrH8NXng">生信宝典视频教程</a></li>
+<li><a href="https://mp.weixin.qq.com/s/bsvB1k17Izom2ldgdwXrdg">好色之旅-画图三字经</a></li>
+<li><a href="http://mp.weixin.qq.com/s/Kx0gaU2x4pWjBq2I2Ffe6Q">转录组分析的正确姿势</a></li>
+<li><a href="https://mp.weixin.qq.com/s/VguRtaGpEcaNzmZEi48gLg">生信的系列教程</a></li>
+<li><a href="http://mp.weixin.qq.com/s/IiehgNu3JGVTDa079ll1SQ">生信的系列书籍</a></li>
+<li><a href="https://mp.weixin.qq.com/s/IJNyhinakY0lSXgCN7b9ug">文章用图的修改和排版 (1)</a></li>
+<li><a href="http://mp.weixin.qq.com/s/HTsufk71U3wf14OOWSKEeQ">文章用图的修改和排版 (2)</a></li>
+<li><a href="http://mp.weixin.qq.com/s/Ld2dNcaWR-jIzolHw_tkHA">简单强大的在线绘图</a></li>
+<li><a href="http://mp.weixin.qq.com/s/pTHHqxuf0y1MCCCBaZjt9A">简单强大的在线绘图-升级版</a></li>
+<li><a href="http://mp.weixin.qq.com/s/SCT4oso_vI0UNIJZTaG95g">论文图表基本规范</a></li>
+<li><a href="http://mp.weixin.qq.com/s/hq5p8Lqzn9Km2qVRLW2dVQ">学术图表的基本配色方法</a></li>
+<li><a href="https://mp.weixin.qq.com/s/37dMnfA6RTSybzkzKnambw">英语写作常见错误总结和学习视频</a></li>
+<li><a href="http://mp.weixin.qq.com/s/JKn4kRiXYz6RKzQbTMVYlg">教育部推出首批490门“国家精品在线开放课程</a></li>
+</ul>
+</div>
+<div id="ngs" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> NGS分析工具评估</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484106&amp;idx=1&amp;sn=687a0def51f6ea91a335754eb3dc9ca9&amp;chksm=ec0dc740db7a4e564e5b1e93a36e5d9447581e262eec9c2983d1d4e76788d673c9c07dec8f8e#rd">39个转录组分析工具，120种组合评估(转录组分析工具哪家强-导读版)</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484106&amp;idx=2&amp;sn=a09fa127d625c4072ae0343795346c56&amp;chksm=ec0dc740db7a4e56821f32f60700027c85db46e81089721d1bbe23ceefa86160d9661c2f2d4c#rd">39个转录组分析工具，120种组合评估(转录组分析工具大比拼 （完整翻译版）)</a></li>
+<li><a href="http://mp.weixin.qq.com/s/4HANWJY4oL7jGziroHfEpQ">无参转录组分析工具评估和流程展示</a></li>
+</ul>
+</div>
+<div id="section-8.1.3" class="section level3">
+<h3><span class="header-section-number">8.1.3</span> 宏基因组教程</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/sQyl5EctXFB95Oxg8YIasg">微生物组入门必读+宏基因组实操课程</a></li>
+<li><a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">扩增子图表解读-理解文章思路</a></li>
+<li><a href="http://mp.weixin.qq.com/s/KrYyy3jjzAL0rQzVfV6h4A">扩增子分析流程-把握分析细节</a></li>
+<li><a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">扩增子统计绘图-冲击高分文章</a></li>
+<li><a href="http://mp.weixin.qq.com/s/bcyvhFrNr6niqD13rQfZeg">宏基因组分析教程</a></li>
+<li><a href="http://mp.weixin.qq.com/s/li7SdZVaCEyFQF8h6MMh2A">4500元的微生物组培训资料</a></li>
+</ul>
+</div>
+<div id="section-8.1.4" class="section level3">
+<h3><span class="header-section-number">8.1.4</span> 系列宣传</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/Kx0gaU2x4pWjBq2I2Ffe6Q">转录组分析的正确姿势</a></li>
+<li><a href="http://mp.weixin.qq.com/s/BmtIOcIzIutufFilbJIgEA">120分的转录组考题，你能得多少</a></li>
+<li><a href="http://mp.weixin.qq.com/s/x-DInL34BbKUR-2UD2Ec3g">生物信息作图系列R、Cytoscape及图形排版和Python编程培训研讨班开课了</a></li>
+<li><a href="http://mp.weixin.qq.com/s/4mWms-r5kg8kN7kJ60zZDQ">维密摔倒不可怕，关键时有人搀一把，坚持走下去</a></li>
+<li><a href="http://mp.weixin.qq.com/s/IS3uVvulYsCbyuV64bcdLg">生物信息作图系列 - R、网络图及文章图形排版</a></li>
+<li><a href="http://mp.weixin.qq.com/s/TLxzWyKImJhMINkNxLk6Yg">易生信转录组培训总结和优惠分享</a></li>
+<li><a href="http://mp.weixin.qq.com/s/aRuaX-qXlHkF2vme9QqWag">生物信息9天速成班 — 你也可以成为团队不可或缺的人</a></li>
+<li><a href="http://mp.weixin.qq.com/s/vDAHTitasAUphWsrS2Uzlg">Python没有捷径，但可以加速，零基础九天你也可以会编程</a></li>
+<li><a href="http://mp.weixin.qq.com/s/1JlAROpOCBwaG574EwvkVw">小学生都学Python了，你还不知道怎么开始-资源帖</a></li>
+<li><a href="http://mp.weixin.qq.com/s/VTVVfpNSGgOJLNxeIqmFiw">一个月学会Python的Quora指南和资料放送</a></li>
+<li><a href="http://mp.weixin.qq.com/s/cCW7HKjU8IetBgMoiYUeCQ">扩增子分析基本流程和结果解读</a></li>
+<li><a href="http://mp.weixin.qq.com/s/y_KFJZlKSCJFmbuvNJQyAw">微生物组——扩增子分析专题实战开课啦</a></li>
+<li><a href="http://mp.weixin.qq.com/s/V7vmnOv9rwKMoHtlPMo5nQ">如何入门生信Linux</a></li>
+<li><a href="https://mp.weixin.qq.com/s/kD-x7K4hI5KMgGXikyLt0Q">3分和30分文章差距在哪里？</a></li>
+</ul>
+</div>
+<div id="section-8.1.5" class="section level3">
+<h3><span class="header-section-number">8.1.5</span> 生信生物知识</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/JQBZv6snTkZzFwEG12riWw">生物研究中不可缺少的数字概念，多少，多大，多快</a></li>
+</ul>
+</div>
+<div id="section-8.1.6" class="section level3">
+<h3><span class="header-section-number">8.1.6</span> 文献精读</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/brx-i-Bbgp-XYwn5SkQLwA">CRISPR-CAS9发展历程小记</a></li>
+<li><a href="http://mp.weixin.qq.com/s/T9Q6CUCt-wBoUCEwSBZALg">一场大病引起的诺贝尔2017年生理学奖角逐</a></li>
+<li><a href="https://mp.weixin.qq.com/s/zymhxusKNDZ9XynNGAlRcA">Science搞反狗脑 - 人脑和狗脑一样？</a></li>
+<li><a href="http://mp.weixin.qq.com/s/OgAhb_UGUp7tZvQARbmLLg">一篇压根不存在的文献被引用400次？！揭开&quot; 幽灵文献&quot; 的真面目</a></li>
+<li><a href="http://mp.weixin.qq.com/s/ikU0mVyX6BQNgljD1jCrRA">基于人工智能的文献检索，导师查找，更聪明</a></li>
+<li><a href="http://mp.weixin.qq.com/s/hc8g64aHN7qv8YhVfrsuvQ">GeenMedical：文献查询、筛选、引用排序、相似文献、全文下载、杂志分区、影响因子、结果导出、杂志评述、直接投稿，一站服务</a></li>
+<li><a href="http://mp.weixin.qq.com/s/fZ2Nm7Wck5mZLiESHcPusA">YANDEX搜索，不翻墙稳定使用近谷歌搜索</a></li>
+<li><a href="http://mp.weixin.qq.com/s/NMpqbKfXy002eMz9b9y1zg">Nature我的研究对后人毫无用途：21%的学术论文自发布后从未被引用</a></li>
+<li><a href="https://mp.weixin.qq.com/s/NGsFlVb0fN1O37ecaYwxsA">SCI-HUB镜像, SSH隧道访问学校内网</a></li>
+<li><a href="http://mp.weixin.qq.com/s/fFO6MX6Ttijx0bfYS5eQ-Q">为了速成生物学，一位程序员探索了“爆款”基因背后的秘密</a></li>
+</ul>
+</div>
+<div id="linux" class="section level3">
+<h3><span class="header-section-number">8.1.7</span> Linux</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/hEYU80fPf1eD5OWL3fO4Bg">Linux-总目录</a></li>
+<li><a href="http://mp.weixin.qq.com/s/yKP1Kboji9N4p2Sl1Ovj0Q">Linux-文件和目录</a></li>
+<li><a href="http://mp.weixin.qq.com/s/4bYMzJclf_xHpqdrlbvAdA">Linux-文件操作</a></li>
+<li><a href="http://mp.weixin.qq.com/s/QFgINAYcQA9kYYSA28wK-Q">Linux文件内容操作</a></li>
+<li><a href="http://mp.weixin.qq.com/s/poFpNHQgHDr0qr2wqfVNdw">Linux-环境变量和可执行属性</a></li>
+<li><a href="http://mp.weixin.qq.com/s/zL9Mw_2ig48gHrIjKM0CMw">Linux - 管道、标准输入输出</a></li>
+<li><a href="http://mp.weixin.qq.com/s/TNU7X2mhfVVffaJ7NRBuNA">Linux - 命令运行监测和软件安装</a></li>
+<li><a href="http://mp.weixin.qq.com/s/cDIN4_R4nETEB5irmIGFAQ">Linux-常见错误和快捷操作</a></li>
+<li><a href="http://mp.weixin.qq.com/s/1QaroFE7AH1pREuq-k2YAw">Linux-文件列太多，很难识别想要的信息在哪列；别焦急，看这里。</a></li>
+<li><a href="http://mp.weixin.qq.com/s/R1OHRhZoDJuAdyVdJr2xHg">Linux-文件排序和FASTA文件操作</a></li>
+<li><a href="http://mp.weixin.qq.com/s/HLHiWMLaWtB7SOJe_jP3mA">Linux-应用Docker安装软件</a></li>
+<li><a href="http://mp.weixin.qq.com/s/c2cspK5b4sQScWYMBtG63g">Linux服务器数据定期同步和备份方式</a></li>
+<li><a href="https://mp.weixin.qq.com/s/4lUiZ60-aXLilRk9--iQhA">VIM的强大文本处理方法</a></li>
+<li><a href="http://mp.weixin.qq.com/s/A4_j8ZbyprMr1TT_wgisQQ">Linux - Conda软件安装方法</a></li>
+<li><a href="http://mp.weixin.qq.com/s/xq0JfkHJJeHQk1acjOAJUQ">查看服务器配置信息</a></li>
+<li><a href="http://mp.weixin.qq.com/s/cywkIeRbhkYTZvkwTeIVSA">Linux - SED操作，awk的姊妹篇</a></li>
+<li><a href="http://mp.weixin.qq.com/s/8wD14FXt7fLDo1BjJyT0ew">Linux - 常用和不太常用的实用awk命令</a></li>
+<li><a href="http://mp.weixin.qq.com/s/lWNp_6W_jLiogmtlk9nO2A">Bash概论 - Linux系列教程补充篇</a></li>
+</ul>
+</div>
+<div id="circos" class="section level3">
+<h3><span class="header-section-number">8.1.8</span> CIRCOS系列</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/OEBJU3BiQdQOeN_tD2o7sA">CIRCOS圈图绘制 - circos安装</a></li>
+<li><a href="http://mp.weixin.qq.com/s/2E1Y5-cEdptkQGVm0bxKbQ">CIRCOS圈图绘制 - 最简单绘图和解释</a></li>
+<li><a href="https://mp.weixin.qq.com/s/o_3DyYdSubWCh5FfoVKBOg">CIRCOS圈图绘制 - 染色体信息展示和调整</a></li>
+<li><a href="http://mp.weixin.qq.com/s/6L8wmsy0eOxtiAEs3hYgCA">CIRCOS增加热图、点图、线图和区块属性</a></li>
+</ul>
+</div>
+<div id="r" class="section level3">
+<h3><span class="header-section-number">8.1.9</span> R统计和作图</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/x3tWrQPriLRFXO8ZaD93EQ">在R中赞扬下努力工作的你，奖励一份CheatShet</a></li>
+<li><a href="http://mp.weixin.qq.com/s/u8WfC4xQ562Uekhs4WVBoQ">别人的电子书，你的电子书，都在bookdown</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483882&amp;idx=1&amp;sn=e16903b4b745a1ef51855be3824149f6&amp;chksm=ec0dc460db7a4d76a70bd4ca2d250f147225252ee963d3e577affaebeeb81dea1ff639d5e9aa#rd">R语言 - 入门环境Rstudio</a></li>
+<li><a href="http://mp.weixin.qq.com/s/mNSkf1rjWTCtE1pIOuI2rA">R语言 - 热图绘制 (heatmap)</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483891&amp;idx=1&amp;sn=40daf6435398c4d9a41f332e9bba4915&amp;chksm=ec0dc479db7a4d6fec413bfb90a4660eb035b440d2bbee998114f7af29e3b3338a8adf62540a#rd">R语言 - 基础概念和矩阵操作</a></li>
+<li><a href="https://mp.weixin.qq.com/s/_9LKs6t6rcjzokF_0gneSA">R语言 - 热图简化</a></li>
+<li><a href="http://mp.weixin.qq.com/s/lKrhvYrwn93esC6MA3bHWw">R语言 - 热图美化</a></li>
+<li><a href="http://mp.weixin.qq.com/s/YB-9tE4ut9RN0yfS8qBhtQ">R语言 - 线图绘制</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483947&amp;idx=1&amp;sn=7cf0252efff5433447507b977fcaff97&amp;chksm=ec0dc7a1db7a4eb77a269709bdf2c8ab51bcad89aa780ec0be171a333e1cb8f3cc27eff277a1#rd">R语言 - 线图一步法</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483964&amp;idx=1&amp;sn=ee52ac37fb9a919f5c75c0abe2a49ad4&amp;chksm=ec0dc7b6db7a4ea0a51306347fc43265c41fda3eeaf4764ddc3795546371327579676cd74a38#rd">R语言 - 箱线图（小提琴图、抖动图、区域散点图）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483971&amp;idx=1&amp;sn=1b40a1137ccb8b2fa1ab3eb1d0f05de9&amp;chksm=ec0dc7c9db7a4edf16ea4966b9acb7f23cd23bd6a2e59450ae11bdac899fa2fceb124264dcf4#rd">R语言 - 箱线图一步法</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483996&amp;idx=1&amp;sn=9a29d52e78e9acffeb0a78077a14f9f2&amp;chksm=ec0dc7d6db7a4ec0163259e81e4ded54875a5dd8adaafbc6975a86c71223d863627ba37801e5#rd">R语言 - 火山图</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483978&amp;idx=1&amp;sn=e0c158c0e92375553036cc37f4987e40&amp;chksm=ec0dc7c0db7a4ed6ac593493b7d8b52f11f2feb92d24fa00d19527fbb6f95b24f7e313ef9440#rd">R语言 - 富集分析泡泡图 （文末有彩蛋）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484056&amp;idx=1&amp;sn=f9b2b4f7495b432e9294b7cbf42eaf33&amp;chksm=ec0dc712db7a4e04769d322558364b4b401b0a8153097c7252e83170e9201a31c2a7abbaf101#rd">R语言 - 散点图绘制</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484036&amp;idx=1&amp;sn=22ee356d0c9680d56dada1b777985ed2&amp;chksm=ec0dc70edb7a4e182a21475e9ddcde35b907c291549cc8c2e767be260af445ff5455aa358b04#rd">一文看懂PCA主成分分析</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484063&amp;idx=1&amp;sn=f4e93d428e4910b4abbee9c0430cd170&amp;chksm=ec0dc715db7a4e0318b388ba2ab3d51677741421c42ada474a0ac6046a0699283014eae84b6f#rd">富集分析DotPlot，可以服</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484076&amp;idx=1&amp;sn=fa5af19a2a4db4b0c5c7f145bf93ca57&amp;chksm=ec0dc726db7a4e30fe7a0492ed9ea8eb5fa1c34641b1442a2da003efde0546b30c48fde3f118#rd">R语言 - 韦恩图</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484134&amp;idx=1&amp;sn=ffb41298eae74834af2f5dad05d37921&amp;chksm=ec0dc76cdb7a4e7a852ac0670532c12c690399f140a2335f640eaf01f7da26bc5480941686a9#rd">R语言 - 柱状图</a></li>
+<li><a href="http://mp.weixin.qq.com/s/NAwyvtTS7t5rRU7KKBwHTA">R语言 - 图形设置中英字体</a></li>
+<li><a href="http://mp.weixin.qq.com/s/_Dy9Yn8fc8I0rASGxH5x9A">R语言 - 非参数法生存分析</a></li>
+<li><a href="http://mp.weixin.qq.com/s/ST2SAmfKOptpJOHS8podmQ">基因共表达聚类分析和可视化</a></li>
+<li><a href="http://mp.weixin.qq.com/s/N7oLvJ1oPIImgybJVVSxXg">R中1010个热图绘制方法</a></li>
+<li><a href="http://mp.weixin.qq.com/s/alBfj3Y08qCnZoz5JwVdaw">还在用PCA降维？快学学大牛最爱的t-SNE算法吧, 附Python/R代码</a></li>
+<li><a href="http://mp.weixin.qq.com/s/rYjcsfHrbcAhaFpQI5Yc6g">一个函数抓取代谢组学权威数据库HMDB的所有表格数据</a></li>
+<li><a href="https://mp.weixin.qq.com/s/IJNyhinakY0lSXgCN7b9ug">文章用图的修改和排版</a></li>
+<li><a href="http://mp.weixin.qq.com/s/3okqP0viU3EVML9p1bkQlw">network3D: 交互式桑基图</a></li>
+<li><a href="https://mp.weixin.qq.com/s/rK5SolI0xGisvBCIcb448A">network3D 交互式网络生成</a></li>
+</ul>
+</div>
+<div id="section-8.1.10" class="section level3">
+<h3><span class="header-section-number">8.1.10</span> 扩增子三步曲</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">1图表解读-理解文章思路</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/KrYyy3jjzAL0rQzVfV6h4A">2分析流程-把握分析细节</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/SxWl0qBJgg8ziZUFDmKvpQ">扩展1：视频教程-夯实分析思路</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/wkn-91BVOSWZLRvlcaaEgg">扩展2：QIIME2教程-了解分析趋势</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">3统计绘图-冲击高分文章</a></li>
+</ul>
+</div>
+<div id="section-8.1.11" class="section level3">
+<h3><span class="header-section-number">8.1.11</span> 宏基因组分析专题</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/jASOBPzpwYCL-fWNUJJp8g">1背景知识-Shell入门与本地blast实战</a></li>
+<li><a href="http://mp.weixin.qq.com/s/3O01eNMe79J_kUTaJjP6ag">2数据质控fastqc, Trimmomatic, MultiQC, khmer</a></li>
+<li><a href="http://mp.weixin.qq.com/s/NMKX0iDuR_qOzmLXxC8MEQ">3组装拼接MEGAHIT和评估quast</a></li>
+<li><a href="http://mp.weixin.qq.com/s/1TM61IrzrpVb5KhZ5A0kZQ">4基因注释Prokka</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Rmx-z1zxj7GF9ivJGWVvLg">5基于Kmer比较数据集sourmash</a></li>
+<li><a href="http://mp.weixin.qq.com/s/2fwEtnEsBi5cJ65xyeoXxw">6不比对快速估计基因丰度Salmon</a></li>
+<li><a href="http://mp.weixin.qq.com/s/rdTFTFg0rZOIa2_tuFEOUA">7bwa序列比对, samtools查看, bedtools丰度统计</a></li>
+<li><a href="http://mp.weixin.qq.com/s/rZitcvykAlxnsNEzsW5JRg">8分箱宏基因组binning, MaxBin, MetaBin, VizBin</a></li>
+<li><a href="http://mp.weixin.qq.com/s/FesH_mCunpZLpKC2pIg1UQ">9组装assembly和分箱bin结果可视化—Anvio</a></li>
+<li><a href="http://mp.weixin.qq.com/s/FJlKY3kU5Fm6bYkjtwRkEw">10绘制圈图-Circos安装与使用</a></li>
+<li><a href="http://mp.weixin.qq.com/s/xSjFGwcr1XIAZKdByJAWmQ">MetaPhlAn2分析有参宏基因组</a></li>
+</ul>
+</div>
+<div id="ngs" class="section level3">
+<h3><span class="header-section-number">8.1.12</span> NGS基础</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484047&amp;idx=1&amp;sn=3e2a79d9f56040a57ac2e16cf1923b54&amp;chksm=ec0dc705db7a4e133e6e91de9ac11a6c0690f03d7b3b760b358e9b0d1a2d57974599419d9fff#rd">NGS基础 - FASTQ格式解释和质量评估</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484034&amp;idx=1&amp;sn=e7680ee935f8603214227b37eeb2c567&amp;chksm=ec0dc708db7a4e1eca4e38845381f328c49c84a90ad6580c3ba3761511772636e5ec0f185931#rd">NGS基础 - 高通量测序原理</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484148&amp;idx=1&amp;sn=525233898721a9c3ebdf275babf14944&amp;chksm=ec0dc77edb7a4e686440e0cbe5fbf39f554c4183dc30e7870ab7584e285f4e018dd94b680f79#rd">NGS基础 - 参考基因组和基因注释文件</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484166&amp;idx=1&amp;sn=417e155672bd718def86003b16bf0078&amp;chksm=ec0dc68cdb7a4f9a6bcb62c18797a69040173e2b0af20f1cf87d3e0d75e3adee03c7ff524dc5#rd">NGS基础 - GTF/GFF文件格式解读和转换</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484167&amp;idx=1&amp;sn=ef9699899164d23013d92b61331c6562&amp;chksm=ec0dc68ddb7a4f9bfb83b9942196622f8b8f52b041d3f4a12786e6464752fbeaf64c9a640e39#rd">本地安装UCSC基因组浏览器</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483946&amp;idx=1&amp;sn=3f95769229f28a91ed8bf5889e2181be&amp;chksm=ec0dc7a0db7a4eb64d08c7799cfe698a1662e6d0d935a8b91c6c969aae86900df4decc469a0d#rd">测序数据可视化 (一)</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483843&amp;idx=1&amp;sn=43770d21f6c2da2393c31cd55fdbe31e&amp;chksm=ec0dc449db7a4d5f723842286bf7feab7830eba5d9778d351569810a069e5ace76040f94a6bd#rd">测序文章数据上传找哪里</a></li>
+<li><a href="http://mp.weixin.qq.com/s/d1KCETQZ88yaOLGwAtpWYg">GO、GSEA富集分析一网打进</a></li>
+<li><a href="http://mp.weixin.qq.com/s/3Nd3urhfRGkw-F0LGZrlZQ">GSEA富集分析 - 界面操作</a></li>
+<li><a href="https://mp.weixin.qq.com/s/l6j2encDfEQkt2UeNCMFhg">去东方，最好用的在线GO富集分析工具</a></li>
+<li><a href="http://mp.weixin.qq.com/s/4a5U8GdBoNFXkykL6m2EeA">生信软件系列 - NCBI使用</a></li>
+</ul>
+</div>
+<div id="section-8.1.13" class="section level3">
+<h3><span class="header-section-number">8.1.13</span> 癌症数据库</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484383&amp;idx=1&amp;sn=09c58de206f409fa375fb7af94d0084c&amp;chksm=ec0dc655db7a4f438cb7e53f281cb5c6bf2484619b3c72d7eafe064ea6a342f69587353531af#rd">UCSC XENA - 集大成者(TCGA, ICGC)</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484378&amp;idx=1&amp;sn=eb6a0f890326898b2fb0867c58f0cf90&amp;chksm=ec0dc650db7a4f46a0a265ec96b73f367d45f86318087507eef7dde117a369cb7ad427bebb1e#rd">ICGC数据库使用</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484304&amp;idx=1&amp;sn=6ad44dafdc7613e33e13aac48edb32aa&amp;chksm=ec0dc61adb7a4f0c504f3aeb207132aef479572ea756ce15868cbc57f88e9ea25102752b646a#rd">TCGA数据库在线使用</a></li>
+</ul>
+</div>
+<div id="python-1" class="section level3">
+<h3><span class="header-section-number">8.1.14</span> Python</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/zhr251PCTDGBO1YxYB-P6Q">Python学习 - 可视化变量赋值、循环、程序运行过程</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=1&amp;sn=310341a1c8d348958c304df03dfd06a0&amp;chksm=ec0dc450db7a4d46e369637cd2867b0e56389bf4f2e1d0dce409bba38882e61e5063308a13af#rd">Python极简教程 （一）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=2&amp;sn=bf3c07ee1b2936c7ea06b5d4ca820545&amp;chksm=ec0dc450db7a4d469f4f625babfb595b068137ea2b25a7682f9fb58ff771db6543f43def7950#rd">Python教程（二）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=3&amp;sn=dec66c5f3f12919ce1b0bfbb545e3935&amp;chksm=ec0dc450db7a4d46e91b65446d6a192056ab6ff27c019fe3770cc32816b0ae3f16659ebba0a5#rd">Python教程（三）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=4&amp;sn=3a0b0c5c0f736ddeadc4524bae8b2a91&amp;chksm=ec0dc450db7a4d465602b74e0fa968519a3a085a1901b5cca97ff886163422a24089378ff8f0#rd">Python教程 （四）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=5&amp;sn=fd3526e11c4adf8194e1f92cd6d1749c&amp;chksm=ec0dc450db7a4d468c7d114352153eecbaedd7d37065f681caa28b74258a92038d1d2030056b#rd">Python教程（五）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=6&amp;sn=ef7a0972abc002cfeba27815020e83aa&amp;chksm=ec0dc450db7a4d46f61328946fe257a1516785fb9a1f7c1663e86e4255ae6b616e3c07ac1cb0#rd">Python教程 （六）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483865&amp;idx=1&amp;sn=a2e1474bbebce343ff4262e38653f4c4&amp;chksm=ec0dc453db7a4d45349076b1627eff5e292abceada59e832a46553f4ca614d62df96e097f871#rd">Pandas，让Python像R一样处理数据，但快</a></li>
+<li><a href="http://mp.weixin.qq.com/s/BN6u2aJkoMzffPv7rvbm8g">Python解析psiBlast输出的JSON文件结果</a></li>
+<li><a href="http://mp.weixin.qq.com/s/-0UTgmdRQbF7I4fib62ooA">为啥我的Python这么慢 - 项查找 (二)</a></li>
+<li><a href="https://mp.weixin.qq.com/s/n5kkZfC8FGlzeBODarLHcw">为啥我的Python这么慢 (一)</a></li>
+<li><a href="http://mp.weixin.qq.com/s/1JlAROpOCBwaG574EwvkVw">Python资源</a></li>
+<li><a href="http://mp.weixin.qq.com/s/JHDvdqq3Z-7uDmsyroblNQ">关于Python中的__main__和编程模板</a></li>
+</ul>
+</div>
+<div id="ngs" class="section level3">
+<h3><span class="header-section-number">8.1.15</span> NGS软件</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/5OIRHA22ZLr5Z8bEhDiBqg">Rfam 12.0+本地使用 （最新版教程）</a></li>
+<li><a href="http://mp.weixin.qq.com/s/zn654JqG9OeO71rJUTDr2Q">轻松绘制各种Venn图</a></li>
+<li><a href="http://mp.weixin.qq.com/s/DD1nZnx5mYxWGrohNgdPvQ">ETE构建、绘制进化树</a></li>
+<li><a href="http://mp.weixin.qq.com/s/kWkEQOX-6SKMAUQmAuc86w">psRobot：植物小RNA分析系统</a></li>
+<li><a href="http://mp.weixin.qq.com/s/4a5U8GdBoNFXkykL6m2EeA">生信软件系列 - NCBI使用</a></li>
+<li><a href="https://mp.weixin.qq.com/s/l6j2encDfEQkt2UeNCMFhg">去东方，最好用的在线GO富集分析工具</a></li>
+</ul>
+</div>
+<div id="cytoscape" class="section level3">
+<h3><span class="header-section-number">8.1.16</span> Cytoscape网络图</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/m9uJm8GwSXb3xaRxtod08Q">Cytoscape教程1</a></li>
+<li><a href="http://mp.weixin.qq.com/s/ZSoW7-qWs3BuSB7bkDnfmA">Cytoscape之操作界面介绍</a></li>
+<li><a href="http://mp.weixin.qq.com/s/sKEy_Pn9qnWw4W-aXraA5g">新出炉的Cytoscape视频教程</a></li>
+</ul>
+</div>
+<div id="section-8.1.17" class="section level3">
+<h3><span class="header-section-number">8.1.17</span> 分子对接</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/asAJDttAvsCLGd3PPU2agQ">来一场蛋白和小分子的风花雪月</a></li>
+<li><a href="http://mp.weixin.qq.com/s/VDN1qAZGIMol6prwQW4umw">不是原配也可以-对接非原生配体</a></li>
+<li><a href="http://mp.weixin.qq.com/s/P62sjqhSTxmWVicrEAk-RQ">简单可视化-送你一双发现美的眼睛</a></li>
+<li><a href="http://mp.weixin.qq.com/s/5a5-6pXHfvyDc2Kfp4xDeQ">你需要知道的那些前奏</a></li>
+</ul>
+</div>
+<div id="section-8.1.18" class="section level3">
+<h3><span class="header-section-number">8.1.18</span> 生信宝典之傻瓜式</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/5bNdHkl3QDFmCNmrht3VWA">生信宝典之傻瓜式 (一) 如何提取指定位置的基因组序列</a></li>
+<li><a href="http://mp.weixin.qq.com/s/LPWaxbKuS-XlvzkSE-MupQ">生信宝典之傻瓜式 (二) 如何快速查找指定基因的调控网络</a></li>
+<li><a href="http://mp.weixin.qq.com/s/0Yvhn5Tlb-zvOXM0cU16Zg">生信宝典之傻瓜式 (三) 我的基因在哪里发光 - 如何查找基因在发表研究中的表达</a></li>
+<li><a href="http://mp.weixin.qq.com/s/JO1J66BtzuY-9a20x0XQcg">生信宝典之傻瓜式 (四) 蛋白蛋白互作网络在线搜索</a></li>
+<li><a href="http://mp.weixin.qq.com/s/DQ4fjCL777D2iEcPTnd-rA">生信宝典之傻瓜式 (五) 文献挖掘查找指定基因调控网络</a></li>
+</ul>
+</div>
+<div id="section-8.1.19" class="section level3">
+<h3><span class="header-section-number">8.1.19</span> 生信人写程序</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483837&amp;idx=1&amp;sn=660358a38b7fa6d3de2c95280f7a4535&amp;chksm=ec0dc437db7a4d21368b312ac43ceae552e1544570639c949e96bf488113a55f67fa2306008e#rd">生信人写程序1. Perl语言模板及配置</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483910&amp;idx=1&amp;sn=7813eaa4841d90b0bfc3982bb901de81&amp;chksm=ec0dc78cdb7a4e9a866f3e0cade3096a13366cac18c873820434f066fdba9bd22a7b5b3d210d#rd">生信人写程序2. Editplus添加Perl, Shell, R, markdown模板和语法高亮</a></li>
+</ul>
+</div>
+<div id="section-8.1.20" class="section level3">
+<h3><span class="header-section-number">8.1.20</span> 小技巧系列</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/Diwevx-TVe0Vq_rdgzIkrw">参考文献中杂志名字格式混乱问题一次解决</a></li>
+</ul>
+</div>
+<div id="section-8.1.21" class="section level3">
+<h3><span class="header-section-number">8.1.21</span> 招聘</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484036&amp;idx=5&amp;sn=bb1007d2c3d60e7a2bcf2d6fc7a9a2bb&amp;chksm=ec0dc70edb7a4e185bafd0f49440bf1a032915c7e8d8fc2cb37c70a81ce3446a4ae990df89a5#rd">易汉博欢迎您加入</a></li>
+</ul>
+</div>
+</div>
+<div id="section-8.2" class="section level2">
+<h2><span class="header-section-number">8.2</span> 宏基因组</h2>
+<p><a href="http://mp.weixin.qq.com/s/5jQspEvH5_4Xmart22gjMA" class="uri">http://mp.weixin.qq.com/s/5jQspEvH5_4Xmart22gjMA</a></p>
+<p>宏基因组/微生物组是当今世界科研最热门的研究领域之一，为加强本领域的技术交流与传播，推动中国微生物组计划发展，中科院青年科研人员创立“宏基因组”公众号，目标为打造本领域纯干货技术及思想交流平台。</p>
+<p>本公众号每日推送，工作日分享宏基因组领域科研思路、实验和分析技术，理论过硬实战强；周末科普和生活专栏，轻松读文看片涨姿势。目前经过近半年发展，分享过百篇原创文章，已有14000+小伙伴在这里一起交流学习，感兴趣的赶快关注吧。</p>
+<div id="section-8.2.1" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> 精选文章推荐</h3>
+<p><strong>5000+</strong></p>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/sQyl5EctXFB95Oxg8YIasg">微生物组入门必读+宏基因组实操课程</a></li>
+<li><a href="http://mp.weixin.qq.com/s/2b3_8Vvv7McqCkEfUszW3A">你想要的生信知识全在这—生信宝典</a></li>
+<li><a href="http://mp.weixin.qq.com/s/1nf7vwyvC3oemkTq_pu87A">生物信息9天速成班—成为团队不可或缺的人</a></li>
+<li><a href="http://mp.weixin.qq.com/s/kD-x7K4hI5KMgGXikyLt0Q">3分和30分文章差距在哪里？</a></li>
+<li><a href="http://mp.weixin.qq.com/s/3T768LA6MWujF4yuzK4MKQ">肠道菌群在人体中的作用</a></li>
+<li><a href="http://mp.weixin.qq.com/s/_DUI6tOYTEq0Wu7K7iRTxw">看完此片我想把身上的细菌寄生虫供起来</a></li>
+<li><a href="http://mp.weixin.qq.com/s/O_0Il0G_v_aSwkUH_noZVA">岛国科普—生命大跃进</a></li>
+<li><a href="https://mp.weixin.qq.com/s/l141ggt2c-h7Eymc0UQnfQ">我们的未来在哪里？</a></li>
+<li><a href="http://mp.weixin.qq.com/s/SCT4oso_vI0UNIJZTaG95g">论文图表基本规范</a></li>
+<li><a href="http://mp.weixin.qq.com/s/lO5uiMjixJ6aYTjPX-IyaQ">DNA提取发Nature</a></li>
+<li><a href="http://mp.weixin.qq.com/s/cL_IAoPFfmelKMPMgltrfA">实验vs数据分析，谁对结果影响大?</a></li>
+</ul>
+<p><strong>3000+</strong></p>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">扩增子图表解读-理解文章思路</a></li>
+<li><a href="http://mp.weixin.qq.com/s/KrYyy3jjzAL0rQzVfV6h4A">扩增子分析流程-把握分析细节</a></li>
+<li><a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">扩增子统计绘图-冲击高分文章</a></li>
+<li><a href="http://mp.weixin.qq.com/s/bcyvhFrNr6niqD13rQfZeg">宏基因组分析教程</a></li>
+<li><a href="http://mp.weixin.qq.com/s/li7SdZVaCEyFQF8h6MMh2A">4500元的微生物组培训资料</a></li>
+<li><a href="http://mp.weixin.qq.com/s/s-Si_s5pk7EF5gueqruBRQ">Co-occurrence网络图在R中的实现</a></li>
+<li><a href="http://mp.weixin.qq.com/s/hq5p8Lqzn9Km2qVRLW2dVQ">学术图表的基本配色方法</a></li>
+<li><a href="https://mp.weixin.qq.com/s/GV8rU3FZdc8Y-x931k_yrQ">一文读懂进化树</a></li>
+<li><a href="http://mp.weixin.qq.com/s/JL-n2nD6YL8vwuRtTVmQlQ">自学生信-biostar handbook</a></li>
+<li><a href="http://mp.weixin.qq.com/s/NxNcDljhyvubbYzVgggHfw">漱口水增加糖尿病，高血压风险</a></li>
+</ul>
+<p><strong>1000+</strong></p>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/xxBC2VMpB7uz_rJFBSb5mQ">微生物组——扩增子分析专题培训开课啦！！！</a></li>
+<li><a href="http://mp.weixin.qq.com/s/O0QAQyfxnrXlFLw268B7lg">最简单漂亮的免费在线生信绘图工具</a></li>
+<li><a href="http://mp.weixin.qq.com/s/RaxOgjq4hyr-RNGSB-RGzg">小学生都学Python了，你还不知道怎么开始</a></li>
+<li><a href="http://mp.weixin.qq.com/s/yWzFAS8Nk6fpTuAJzbG6nA">五彩进化树与热图更配-ggtree美颜进化树</a></li>
+<li><a href="http://mp.weixin.qq.com/s/D3qKT7mYEg52nCfQWF75wg">扩增子分析还聚OTU就真OUT了</a></li>
+<li><a href="http://mp.weixin.qq.com/s/hU4AavhMQcebNhBtMUg1tw">主流非聚类方法dada2,deblur和unoise3介绍与比较</a></li>
+<li>16S预测微生物群落功能 <a href="http://mp.weixin.qq.com/s/sztbvfdf9wa-3HJXc_m8TQ">0概述</a> <a href="https://mp.weixin.qq.com/s/LWtiwBbUCAadMZPaKKDMag">1KO通路PICRUSt</a> <a href="http://mp.weixin.qq.com/s/J8EwJD_PTDhqRaD7kXlK1A">2元素循环FAPROTAX</a> <a href="https://mp.weixin.qq.com/s/1WdysPZWo0H6NSYiNpcMUQ">3表型bugbase</a> <a href="http://mp.weixin.qq.com/s/dzsh44ue93xnAs7gTde7wg">4KO通路Tax4Fun</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/KT4hJFbJFnGPQQYgQUd8fg">一文读懂微生物组</a></li>
+<li><a href="https://mp.weixin.qq.com/s/9sUOcZTsfOXBjj03OHGy6Q">2017年发展简史和十大热文盘点</a></li>
+</ul>
+</div>
+<div id="section-8.2.2" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> 培训、会议、征稿、招聘</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/xxBC2VMpB7uz_rJFBSb5mQ">3月10-19日，北京，微生物组——扩增子分析专题培训</a></li>
+<li><a href="http://mp.weixin.qq.com/s/b_ron-vL6n-0CDJW87l2rQ">5月11-13日，北京，中国肠道大会</a></li>
+</ul>
+</div>
+<div id="section-8.2.3" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> 科研经验</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/H9gkepap0hy3NNskOkO44w">如何优雅的提问</a></li>
+<li><a href="http://mp.weixin.qq.com/s/wn2bqIPgT5UD-GP1qzkJFA">公众号搜索方法大全</a></li>
+<li><strong>科研团队成长三部曲</strong>：<a href="http://mp.weixin.qq.com/s/OnwhWlq3cTycf-W1rxgV7g">1云笔记</a> <a href="http://mp.weixin.qq.com/s/W5By9mZ5PI57_xFfZ_JXiw">2云协作</a> <a href="http://mp.weixin.qq.com/s/hd0sdBDAMqMJsXQs0pIjUg">3公众号</a></li>
+<li>文献阅读 <a href="http://mp.weixin.qq.com/s/1uBeAQ0utxuzTTtfUx_UXA">1热心肠</a> <a href="https://mp.weixin.qq.com/s/gaQiUrRqLpfTXzjyfbua6A">2SemanticScholar</a> <a href="https://mp.weixin.qq.com/s/hc8g64aHN7qv8YhVfrsuvQ">3geenmedical</a></li>
+<li>生信编程模板 <a href="http://mp.weixin.qq.com/s/u2ZmTo-z6cbN-L6KVLYNwg">Perl</a> <a href="http://mp.weixin.qq.com/s/YevGR79NnBAF-xtrqL8gAA">Shell</a> <a href="http://mp.weixin.qq.com/s/OQiE882jM6pVwqTiIjyZ1Q">R</a></li>
+<li><a href="http://mp.weixin.qq.com/s/xoLBg0pI9seEksa0hMXi0A">生物信息之程序学习</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/SPblPs5ByPdb2C400kIK3w">Endnote X8云同步：有网随时读文献</a></li>
+<li><a href="http://mp.weixin.qq.com/s/UQtKZ14_6WTyFYGZgiC00g">论文Figures，你不能不知道的秘密</a></li>
+<li><a href="http://mp.weixin.qq.com/s/sTzluM0EMNYLnwYa5JaKLg">转录组分析的正确姿势</a></li>
+<li><a href="http://mp.weixin.qq.com/s/9Sj5tI8RRa3uv2BgNarhxw">整个世界都是你的已知条件</a></li>
+</ul>
+</div>
+<div id="section-8.2.4" class="section level3">
+<h3><span class="header-section-number">8.2.4</span> 软件和数据库使用</h3>
+<ul>
+<li>SILVAngs:16S/18S在线分析<a href="http://mp.weixin.qq.com/s/R4fzOl1JX097rxi18vfePw">1</a> <a href="http://mp.weixin.qq.com/s/2mv_w-RG50v54iojii7kuA">2</a></li>
+<li><a href="http://mp.weixin.qq.com/s/kVrMGI8mtkJkltCpAbwUiw">METAGENassist帮你搞定宏基因分析的所有图形需求</a></li>
+<li><a href="http://mp.weixin.qq.com/s/GYa5_0bcZO6Pfq-qim5vyA">Windows不用虚拟机或双系统，轻松实现linux shell环境：gitforwindows</a></li>
+<li><a href="http://mp.weixin.qq.com/s/EvlnWBI5OZOudWd0cieGJg">一条命令轻松绘制CNS顶级配图-ggpubr</a></li>
+<li><a href="http://mp.weixin.qq.com/s/GGCPxQEe_DXefdp-veQtag">ggbiplot-最好看的PCA图</a></li>
+<li><a href="https://mp.weixin.qq.com/s/F9c_ISpOpjHyiCNahoYTqQ">LDA分析、作图及添加置信-ggord</a></li>
+<li><a href="http://mp.weixin.qq.com/s/hxBAlnK_1ZSGJQg1mwsssw">ggrepel-解决散点图样品标签重叠，方便筛选样品</a></li>
+<li><a href="http://mp.weixin.qq.com/s/pQluUR7MYSZCheqVvAaNWA">Alpha多样性稀释曲线rarefraction curve</a></li>
+<li><a href="http://mp.weixin.qq.com/s/f02mPAXCobPQijkIis-c2w">微生物组间差异分析神器-STAMP</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/oJDfShs7gXCkOzYfa_winQ">扩增子分析神器USEARCH</a></li>
+<li><a href="http://mp.weixin.qq.com/s/DL7e6ihq6QppyW-87COiBg">微生物扩增子数据库大全</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/0MkmAw7f8uVQihrbUA2Z9Q">antiSMASH：微生物次生代谢物基因簇预测</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/YPZar_aDmKE4W9s45NvhgQ">微生物网络构建：MENA, LSA, SparCC和CoNet</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/jGHuP1ikCX0n3vKfS3VXPQ">Cytoscape: MCODE增强包的网络模块化分析</a></li>
+<li><a href="http://mp.weixin.qq.com/s/pO3VCMLwEFLlcEgMQsUjDg">FUNGuild：真菌功能注释</a></li>
+<li><a href="http://mp.weixin.qq.com/s/AWfT2szILVrCr25g0EdgvA">在线RaxML构建系统发育树</a></li>
+<li><a href="https://mp.weixin.qq.com/s/mHBH-ooJ9vBpv0nvRFuF3A">Genevestigator: 查找基因在发表研究中的表达</a></li>
+<li><a href="http://mp.weixin.qq.com/s/drpMN55hfbVwHbLYXC0oUw">psRobot：植物小RNA分析系统</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/vVamtB4mBAauqjpEFBg70A">RepeatMasker：基因组重复序列注释</a></li>
+</ul>
+</div>
+<div id="section-8.2.5" class="section level3">
+<h3><span class="header-section-number">8.2.5</span> 扩增子学习三步曲</h3>
+<div id="-" class="section level4">
+<h4><span class="header-section-number">8.2.5.1</span> <a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">1图表解读-理解文章思路</a></h4>
+</div>
+<div id="-" class="section level4">
+<h4><span class="header-section-number">8.2.5.2</span> <a href="http://mp.weixin.qq.com/s/KrYyy3jjzAL0rQzVfV6h4A">2分析流程-把握分析细节</a></h4>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/SxWl0qBJgg8ziZUFDmKvpQ">扩展1：视频教程-夯实分析思路</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/wkn-91BVOSWZLRvlcaaEgg">扩展2：QIIME2教程-了解分析趋势</a></li>
+</ul>
+</div>
+<div id="-" class="section level4">
+<h4><span class="header-section-number">8.2.5.3</span> <a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">3统计绘图-冲击高分文章</a></h4>
+</div>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">8.2.6</span> 宏基因组分析专题</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/jASOBPzpwYCL-fWNUJJp8g">1背景知识-Shell入门与本地blast实战</a></li>
+<li><a href="http://mp.weixin.qq.com/s/3O01eNMe79J_kUTaJjP6ag">2数据质控fastqc, Trimmomatic, MultiQC, khmer</a></li>
+<li><a href="http://mp.weixin.qq.com/s/NMKX0iDuR_qOzmLXxC8MEQ">3组装拼接MEGAHIT和评估quast</a></li>
+<li><a href="http://mp.weixin.qq.com/s/1TM61IrzrpVb5KhZ5A0kZQ">4基因注释Prokka</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Rmx-z1zxj7GF9ivJGWVvLg">5基于Kmer比较数据集sourmash</a></li>
+<li><a href="http://mp.weixin.qq.com/s/2fwEtnEsBi5cJ65xyeoXxw">6不比对快速估计基因丰度Salmon</a></li>
+<li><a href="http://mp.weixin.qq.com/s/rdTFTFg0rZOIa2_tuFEOUA">7bwa序列比对, samtools查看, bedtools丰度统计</a></li>
+<li><a href="http://mp.weixin.qq.com/s/rZitcvykAlxnsNEzsW5JRg">8分箱宏基因组binning, MaxBin, MetaBin, VizBin</a></li>
+<li><a href="http://mp.weixin.qq.com/s/FesH_mCunpZLpKC2pIg1UQ">9组装assembly和分箱bin结果可视化—Anvi’o</a></li>
+<li><a href="http://mp.weixin.qq.com/s/FJlKY3kU5Fm6bYkjtwRkEw">10绘制圈图-Circos安装与使用</a></li>
+<li><a href="http://mp.weixin.qq.com/s/xSjFGwcr1XIAZKdByJAWmQ">MetaPhlAn2分析有参宏基因组</a></li>
+</ul>
+</div>
+<div id="r" class="section level3">
+<h3><span class="header-section-number">8.2.7</span> R统计绘图</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/XOZD4ftYLPZjM2IVLYgUpA">视频教程：R语言recharts包绘制交互式图形</a></li>
+<li><a href="https://mp.weixin.qq.com/s/9EChqbVmFrNWi_Siu4hdqQ">R语言聚类分析–cluster, factoextra</a></li>
+<li><a href="https://mp.weixin.qq.com/s/FZWinr14RTs6YSUE_juaug">堆叠柱状图各成分连线画法：突出展示组间物种丰度变化</a></li>
+<li><a href="http://mp.weixin.qq.com/s/AEfPqWO3S0mRnDZ_Ws9fnw">R相关矩阵可视化包ggcorrplot</a></li>
+</ul>
+</div>
+<div id="section-8.2.8" class="section level3">
+<h3><span class="header-section-number">8.2.8</span> 实验设计与技术</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/L1XxsGDFt9wKk-4pSRwUUQ">微生物样本取样及微生物基因组DNA提取建议</a></li>
+<li>样品生物学重复数据选择 <a href="https://mp.weixin.qq.com/s/_qqeKbncKZmovajvPbskpA">1必要性</a> <a href="http://mp.weixin.qq.com/s/_qqeKbncKZmovajvPbskpA">2需要多少重复？</a></li>
+<li>样品命名 <a href="http://mp.weixin.qq.com/s/3-UlDWEwCvU5TUlu-_ezmg">注意事项</a></li>
+<li>扩增子引物选择 <a href="http://mp.weixin.qq.com/s/pBzh1LcdEy-EJop44z0mwA">16S结构</a> <a href="http://mp.weixin.qq.com/s/hMlfNQmXkt8o-ew_iSV30Q">16S单V4区是最佳选择?</a></li>
+<li><a href="http://mp.weixin.qq.com/s/-0eqsE5slOyEcXFfjY7NNw">海洋可培养微生物的鉴定与分类</a></li>
+<li><a href="http://mp.weixin.qq.com/s/fHwd2pc-E314JO_Ya4QEvQ">怎么取粪便样品</a></li>
+<li><a href="http://mp.weixin.qq.com/s/6hOd-NV1TNXGQdxL0k9l0g">Rhizosphere、Rhizoplane根际土如何取</a></li>
+<li><a href="http://mp.weixin.qq.com/s/vUtQmuj1vIoH9L0J-YT5fQ">Nat. Biotechnol.扩增子测序革命—用16S及18S rRNA全长进行微生物多样性研究</a></li>
+</ul>
+</div>
+<div id="section-8.2.9" class="section level3">
+<h3><span class="header-section-number">8.2.9</span> 基础知识</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/kBbWD6ircc4UHE-ma-6a1Q">Microbiota, metagenome, microbiome区别</a></li>
+<li><a href="http://mp.weixin.qq.com/s/yDmUgRzgJDtxdiJqwpGM1A">16S测序，不知道OTU你就out了！</a></li>
+<li><a href="http://mp.weixin.qq.com/s/cDq1vwMig2V0lJrswP3gcA">计量宏基因组学数据分析的方法及进展</a></li>
+<li><a href="http://mp.weixin.qq.com/s/juMOVzZfdUD4w9M2l1Bh6g">排序方法比较大全PCA、PCoA、NMDS、CCA</a></li>
+<li><a href="http://mp.weixin.qq.com/s/5K8OTMee6CwDZz51YWJEDg">LEfSe分析，你真的懂了么</a></li>
+<li><a href="http://mp.weixin.qq.com/s/d-cmrrnFlI8gOBQtKLHxWw">宏基因组基础知识梳理</a></li>
+<li>扩增子SCI套路<a href="http://mp.weixin.qq.com/s/tRc4PBS-PZh6ghxX1nlNcw">1微群落结构差异</a> <a href="http://mp.weixin.qq.com/s/yI1KlyluNyoPM0DE5LOAfg">2组间差异分析</a> <a href="http://mp.weixin.qq.com/s/V4VCrJU4cSSpof2QDoDKNQ">3系统总结</a></li>
+<li><a href="http://mp.weixin.qq.com/s/8D4vlBIhyYg0ZHtsdGn_kA">环境因子关联分析——我应该选择CCA还是RDA分析？</a></li>
+<li><a href="http://mp.weixin.qq.com/s/lKkvJ7s8dshe7mvDOnl6_w">“P值”背后那些不可不知的事儿</a></li>
+<li><a href="http://mp.weixin.qq.com/s/b2kjedvI-8hYSkTQxKUalA">Adonis和ANOSIM方法组间整体差异评估原理</a></li>
+<li><a href="http://mp.weixin.qq.com/s/sU__UxDDmhs-4pMGX-5rSQ">轻松看懂机器学习十大常用算法</a></li>
+<li><a href="http://mp.weixin.qq.com/s/58VAF03uO3nBPfp7eboqUA">一文读懂“随机森林”在微生态中的应用</a></li>
+<li><a href="http://mp.weixin.qq.com/s/wRISqBabnFrtWD4TrCgBOg">你想知道的“ROC曲线”</a></li>
+<li><a href="https://mp.weixin.qq.com/s/DYykdQ8DtBRIG7rzEK9Xug">人体对微生物的管控</a></li>
+<li><a href="http://mp.weixin.qq.com/s/p7PMqo2Ld0Kbm8_3IgRuuQ">简单读懂微生物基因组的泛基因组学</a></li>
+</ul>
+</div>
+<div id="section-8.2.10" class="section level3">
+<h3><span class="header-section-number">8.2.10</span> 必读综述</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/CcDuohwezquBRhBW3FvMSg">Nature：宏基因组关联分析</a></li>
+<li><a href="http://mp.weixin.qq.com/s/K3t7BpJ3LZvi4RNf69cJeA">Nature：肠道菌群如何划分肠型</a></li>
+<li><a href="http://mp.weixin.qq.com/s/8ltHVYeYksKLCs70FUctpg">Nature: 来自细菌的通告——群感效应简介</a></li>
+<li><a href="http://mp.weixin.qq.com/s/DBYuQh4Pz2ZNpFXW71dD_Q">Nature：呼吸道菌群—呼吸道健康的守门人</a></li>
+<li><a href="http://mp.weixin.qq.com/s/Ff1s8SzMkfHKmM2vbcI7mw">Nature: 拥抱未知-解析土壤微生物组的复杂性</a></li>
+<li><a href="http://mp.weixin.qq.com/s/cwElaRsaInfabuz0VF60gA">Cell：代谢控制中的脑肠轴</a></li>
+<li><a href="http://mp.weixin.qq.com/s/OuK8frQaXPUoeFqXazkEgw">研究微生物，只靠多组学根本不够</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/Ssy1Rq8bWrBzymWI-Xslmw">中国微生物组计划—农作物微生物组</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/rx2ae4BcXqqkeX5LDi0h-Q">Annu Rev：植物微生物组—系统见解与展望</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/DVJSY3zKKI3IDV9vW3khJw">Annual Reviews|微生物组与人</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Bba4ddqyvj2C0Mdx6cUm8A">微生物组学与植物病害微生物防治</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/qpK28hjqvtPSCKKB9lWtYg">组学重建真菌现有分类系统</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/zCk85qBaY5u5IHHHr99NNQ">微生物应用|农业废弃物资源化利用</a><br />
+</li>
+<li>宏基因组学入门<a href="http://mp.weixin.qq.com/s/xVJtplV6LLofrt5DKqA9vA">1初识</a> <a href="http://mp.weixin.qq.com/s/Otz6Kk_g4N_pu5vHWaJCfA">2进一步</a> <a href="http://mp.weixin.qq.com/s/a1b-4bdjushFn1PqJ6NU2Q">3拼接</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/KposoZo9X1TYxRCHYlLbtw">肠道微生物与人类密切相关的方方面面</a></li>
+<li><a href="http://mp.weixin.qq.com/s/H-LF6dax0uYeJ-H1gDwycQ">Nature: 测序技术的前世今生</a></li>
+<li><a href="http://mp.weixin.qq.com/s/hMImkvaugXD6Jkv9i0SvTQ">Nature Reviews：全新的益生元定义和范围</a></li>
+<li><a href="http://mp.weixin.qq.com/s/MwEHXbPdpkKO5tuNKjqI8Q">原核转录组非编码RNA研究</a></li>
+</ul>
+</div>
+<div id="section-8.2.11" class="section level3">
+<h3><span class="header-section-number">8.2.11</span> 高分文章套路解读</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/_xaxicmV5cyKfnYoKHQQbg">Nature: 培养组学—高通量细菌分离培养鉴定</a></li>
+<li><a href="https://mp.weixin.qq.com/s/_DjxjlXH3URKpZN50zPqWQ">SR: 真菌培养组学同揭示人类肠道真菌群落结构</a></li>
+<li><a href="http://mp.weixin.qq.com/s/q9Tqbd8VITkYtZIFbByLtg">Nature: 地球微生物组计划首发成果—揭示地球多尺度微生物多样性</a></li>
+<li><a href="http://mp.weixin.qq.com/s/tiBLevKw9HNAW9I0A_Of8A">Nature：如何做一篇肠道菌群免疫的顶级文章</a></li>
+<li><a href="http://mp.weixin.qq.com/s/j9HolFL4bqbjcLHrp4OJAA">Nat Biotech: 宏表观组—DNA甲基化辅助宏基因组binning</a></li>
+<li><a href="http://mp.weixin.qq.com/s/45L9UNx7eqkMxFbckoTEYQ">Nature: 甘露糖苷选择性抑制致病性大肠杆菌</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/OlFgv-ttRnFdIGXxYjoisw">Nature: 拟南芥根微生物组的结构和组成</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/uth0BFcvAePl4dSGzv-psQ">Nature: 地球上最古老的热液喷口发现早期生命迹象</a></li>
+<li><a href="http://mp.weixin.qq.com/s/kDYiFfJ8egosETwLpKCFLQ">Nature Method: 宏基因组软件评估—人工重组宏基因组基准数据集</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/rYyeVFp_ss9lITCytc9LUw">Nature Genetics：微生物基因组如何适应植物？(news &amp; views)</a></li>
+<li><a href="http://mp.weixin.qq.com/s/K8PwcuyWs3gnUEGwYEMceA">NC：降低微生物群落复杂度突破组装难题</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/kZ-_TsNcsrLJPaxqUex0Cg">NC：自体免疫水泡皮肤病中鉴定基因与微生物组互作</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/TNCos80soqLAbhxHptRUhA">GigaScience:植物MWAS研究—谷子产量与微生物组关联分析</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/m1znPpGR6NbewL2AtJkKPw">Microbiome：微生物组研究中你必须注意的细节</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/E1qMskVQ64y6MKE8zDvNmQ">Microbiome：HiSeq平台16S扩增子文库构建方法</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/Zod4Ca1tk3y5lIdI6RCiQQ">Microbiome: 简单套路发高分文章–杨树微生物组</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/n5u-Vm5e53x7XcxwYDbTRQ">Microbiome：肠道菌群失衡促进高血压</a><br />
+</li>
+<li><a href="http://mp.weixin.qq.com/s/jiQsN3sPgbJcdVa-SuSvGQ">Microbiome：重新定义“卫生”概念</a></li>
+<li><a href="http://mp.weixin.qq.com/s/649mjxr62v9RHp3AGWLzpg">ME：网络分析揭示微生物群落应对环境扰动的稳定性机制</a></li>
+<li><a href="http://mp.weixin.qq.com/s/ipBhAagpEPn1EIKXDUlGRw">SR: 土壤细菌定量方法结合相对丰度分析揭示种群的真实变化</a></li>
+</ul>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">8.2.12</span> 科普视频-寓教于乐</h3>
+<ul>
+<li><a href="http://mp.weixin.qq.com/s/M35ebWAelDIK5Iqib06JzA">BBC人体奥秘之细胞的暗战</a></li>
+<li><a href="https://mp.weixin.qq.com/s/xlCdN8il1hcutkYK-42fAQ">BBC人体奥秘 Inside.the.Human.Body</a></li>
+<li><a href="http://mp.weixin.qq.com/s/xqgolgPlRDYQDkDiWu8zOA">NG人体内旅行Inside.the.Living.Body</a></li>
+<li><a href="http://mp.weixin.qq.com/s/XZ5yNW56Bf4NFkcbuxgQYw">NG子宫日记 Womb</a><br />
+</li>
+<li><a href="https://mp.weixin.qq.com/s/IHN4O5xk6ySV5EC8QpBjDw">NHK: 再造人类生命的神奇细胞</a></li>
+<li><a href="http://mp.weixin.qq.com/s/sHTTd_Rb7XibV4CoCVzcAQ">CCTV9让尸体说话-法医密档</a></li>
+<li><a href="http://mp.weixin.qq.com/s/nR2EiQYcEYH3VeR3RDlT5w">豆瓣8.9，惹哭亿万中国人的纪录片-本草中华</a></li>
+<li><a href="http://mp.weixin.qq.com/s/qul0uhcLY3xS4Dyxbd7GaA">2分钟视频回顾植物学家钟扬的贡献</a></li>
+<li><a href="https://mp.weixin.qq.com/s/hX0K9TOLPnrZ6f8lUoSYag">一顿“寄生虫大餐”，或能治好干净引来的免疫病</a></li>
+<li><a href="http://mp.weixin.qq.com/s/SXmXlu7XFnO9fIgejSWdtA">只要11天，浓度1000倍的抗生素也无效——超级细菌</a></li>
+<li><a href="http://mp.weixin.qq.com/s/CAh-hYRCfvQbyDeh6xlyYA">致命病毒为何疯狂袭击人类？都怪我们那群会飞的远房亲戚</a></li>
+<li><a href="http://mp.weixin.qq.com/s/jv2ZKWqDTB_IyLeMImHvDw">土豆上的小霉菌引发百万人死亡和逃难，却造就全球7千万后裔</a></li>
+<li><a href="http://mp.weixin.qq.com/s/P2od51617RZGxrmLBMSKZw">看完这些能控制大脑的寄生虫，你会怀疑人类！</a></li>
+<li><a href="http://mp.weixin.qq.com/s/XfeuKLLg3ruXUCFnFAisog">梅毒狂想曲</a></li>
+</ul>
+</div>
+<div id="section-8.2.13" class="section level3">
+<h3><span class="header-section-number">8.2.13</span> 友军文章汇总推荐</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/VguRtaGpEcaNzmZEi48gLg">学习生信的系列教程</a>——纯生信一作发IF&gt;20的大神</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Py3-test.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="company-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Py3_course.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

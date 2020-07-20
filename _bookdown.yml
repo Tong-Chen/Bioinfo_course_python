@@ -1,0 +1,6 @@
+book_filename: "Py3_course"
+output_dir: "Py3_course"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: ""

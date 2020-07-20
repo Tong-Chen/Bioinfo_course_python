@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Python3学习教程</title>
+  <meta name="description" content="Python3学习教程">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Python3学习教程" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Python3学习教程" />
+  
+  
+  
+
+<meta name="author" content="易生信培训团队">
+<meta name="author" content="联系我们: train@ehbio.com">
+<meta name="author" content="抱歉，转成PDF后部分格式问题还未解决，会继续更新调整">
+
+
+<meta name="date" content="2018-05-09">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="py3-ct.html">
+<link rel="next" href="Py3-pratcise-ct.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://www.ehbio.com"><img src="http://www.ehbio.com/logos/ehbio_gitbook_logo.png" width="95%"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>EHBIO Gene Technology</a></li>
+<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a><ul>
+<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
+<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#pythonintfloatstr"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
+<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
+<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
+<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#helloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
+<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
+<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
+<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
+<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.4"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 控制流</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
+<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
+<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
+<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#breakcontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
+<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for--range"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
+<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.8"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
+<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#printlen-input-intstr"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.10"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
+<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#global"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
+<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.12"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
+<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.13"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
+<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.14"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
+<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.15"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
+<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#--"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
+<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.17"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a><ul>
+<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvaluesitems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
+</ul></li>
+<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.18"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="py3-ct.html"><a href="py3-ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a><ul>
+<li class="chapter" data-level="2.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
+<li class="chapter" data-level="2.1.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
+<li class="chapter" data-level="2.1.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
+<li class="chapter" data-level="2.1.4" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
+<li class="chapter" data-level="2.1.6" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
+<li class="chapter" data-level="2.1.7" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
+<li class="chapter" data-level="2.1.8" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
+<li class="chapter" data-level="2.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3</b> Python语法</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
+<li class="chapter" data-level="2.3.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
+<li class="chapter" data-level="2.3.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.1"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
+<li class="chapter" data-level="2.4.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
+<li class="chapter" data-level="2.5.2" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6.1"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="py3-ct.html"><a href="py3-ct.html#section-2.7"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
+<li class="chapter" data-level="2.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8.1"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.1"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
+<li class="chapter" data-level="2.9.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.2"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
+<li class="chapter" data-level="2.9.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.3"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
+<li class="chapter" data-level="2.9.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.4"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
+<li class="chapter" data-level="2.9.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.5"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
+<li class="chapter" data-level="2.9.6" data-path="py3-ct.html"><a href="py3-ct.html#lambda-map-filer-reduce-"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
+<li class="chapter" data-level="2.9.7" data-path="py3-ct.html"><a href="py3-ct.html#exec-eval-python-"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
+<li class="chapter" data-level="2.9.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.8"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
+<li class="chapter" data-level="2.11" data-path="py3-ct.html"><a href="py3-ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a><ul>
+<li class="chapter" data-level="3.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#figuresubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#subplot-1"><i class="fa fa-check"></i><b>3.1.2</b> 调整subplot周围间距</a></li>
+<li class="chapter" data-level="3.1.3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#--1"><i class="fa fa-check"></i><b>3.1.3</b> 颜色 标记和线型</a></li>
+<li class="chapter" data-level="3.1.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.4</b> 刻度、标签和图例</a></li>
+<li class="chapter" data-level="3.1.5" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#legend-1"><i class="fa fa-check"></i><b>3.1.5</b> 添加图例legend</a></li>
+<li class="chapter" data-level="3.1.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.6</b> 注解</a></li>
+<li class="chapter" data-level="3.1.7" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.7</b> 图片保存</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
+<li class="chapter" data-level="3.2.2" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
+<li class="chapter" data-level="3.2.3" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
+<li class="chapter" data-level="3.2.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
+<li class="chapter" data-level="3.2.5" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
+<li class="chapter" data-level="3.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
+<li class="chapter" data-level="3.2.7" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2.7"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.1</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#id"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.2"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.3"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a><ul>
+<li class="chapter" data-level="5.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
+<li class="chapter" data-level="5.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.1"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
+<li class="chapter" data-level="5.2.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
+<li class="chapter" data-level="5.2.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.3"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
+<li class="chapter" data-level="5.2.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.4"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
+<li class="chapter" data-level="5.2.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.5"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
+<li class="chapter" data-level="5.2.6" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.6"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
+<li class="chapter" data-level="5.2.7" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.7"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
+<li class="chapter" data-level="5.2.8" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.8"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
+<li class="chapter" data-level="5.2.9" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.9"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
+<li class="chapter" data-level="5.2.10" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#meta-data"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
+<li class="chapter" data-level="5.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#seaborn"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numpy-scipy.html"><a href="numpy-scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a><ul>
+<li class="chapter" data-level="6.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
+<li class="chapter" data-level="6.1.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
+<li class="chapter" data-level="6.1.3" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpymath"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.1"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
+<li class="chapter" data-level="6.2.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Py3-test.html"><a href="Py3-test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a><ul>
+<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#section-8.1.1"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
+<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
+<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#section-8.1.3"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
+<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#section-8.1.4"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
+<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#section-8.1.5"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
+<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#section-8.1.6"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
+<li class="chapter" data-level="8.1.7" data-path="references.html"><a href="references.html#linux"><i class="fa fa-check"></i><b>8.1.7</b> Linux</a></li>
+<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
+<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
+<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#section-8.1.10"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
+<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#section-8.1.11"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
+<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#section-8.1.13"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
+<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python-1"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
+<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
+<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
+<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#section-8.1.17"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
+<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#section-8.1.18"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
+<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#section-8.1.19"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
+<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#section-8.1.20"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
+<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#section-8.1.21"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
+<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
+<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#section-8.2.3"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
+<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#section-8.2.4"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
+<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#section-8.2.5"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
+<li class="chapter" data-level="8.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
+<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#section-8.2.8"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
+<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#section-8.2.9"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
+<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#section-8.2.10"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
+<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#section-8.2.11"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
+<li class="chapter" data-level="8.2.12" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
+<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#section-8.2.13"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="company-intro.html"><a href="company-intro.html"><i class="fa fa-check"></i><b>9</b> 公司简介</a></li>
+<li class="divider"></li>
+<li><a href="mailto:ct@ehbio.com" target="blank">ct@ehbio.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python3学习教程</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Python_plot_WXN" class="section level1">
+<h1><span class="header-section-number">3</span> Python作图</h1>
+<div id="section-3.1" class="section level2">
+<h2><span class="header-section-number">3.1</span> 绘图基础</h2>
+<div id="figuresubplot-1" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Figure和Subplot</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+<span class="im">import</span> numpy <span class="im">as</span> np
+<span class="im">import</span> pandas <span class="im">as</span> pd
+<span class="im">from</span> numpy.random <span class="im">import</span> randn</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">23</span>, <span class="dv">45</span>, <span class="dv">45</span>, <span class="dv">56</span>]
+y <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">23</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">78</span>]
+
+
+fig <span class="op">=</span> plt.figure()  <span class="co"># 创建一个Figure</span>
+ax1 <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>)  <span class="co"># 创建4个图的Figure对象，最后的1为选中第一个</span>
+ax2 <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)
+ax3 <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>)
+ax4 <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>)
+
+ax1.hist(x, y)  <span class="co"># 在第一图中绘制直方图</span>
+ax2.scatter(x, y)  <span class="co"># 散点图</span>
+ax4.plot(x, y)  <span class="co"># 线图</span>
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_4_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>)  <span class="co"># 创建一个Figure 绘制2 X3 图</span>
+fig</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_5_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">axes</code></pre></div>
+<pre><code>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f8436a71780&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f842f2438d0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f842f27d9e8&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f842f236978&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f842f1f19b0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x7f842f199710&gt;]], dtype=object)</code></pre>
+<p><code>创建2 X 3图像，可以相当于对二维数组进行索引 参数            说明 nrows           subplot行数 ncols           subplot列数 sharex          所有图使用相同的x轴 sharey          所有图使用相同的y轴 subplot_kw      用于创建各subplot的关键字字典</code>|</p>
+</div>
+<div id="subplot-1" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> 调整subplot周围间距</h3>
+<pre><code>subplots_ajust(left=None,bottom=None,right=None,top=None,wspace=None,hspace=None)
+wspace和hspace控制宽度和高度</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>)
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">2</span>):
+    <span class="cf">for</span> j <span class="op">in</span> <span class="bu">range</span>(<span class="dv">2</span>):
+        axes[i, j].hist(randn(<span class="dv">500</span>), bins<span class="op">=</span><span class="dv">50</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)
+plt.subplots_adjust(wspace<span class="op">=</span><span class="dv">0</span>, hspace<span class="op">=</span><span class="dv">0</span>)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_9_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_9_1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>)
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">2</span>):
+    <span class="cf">for</span> j <span class="op">in</span> <span class="bu">range</span>(<span class="dv">2</span>):
+        axes[i, j].hist(randn(<span class="dv">500</span>), bins<span class="op">=</span><span class="dv">50</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)
+plt.subplots_adjust(wspace<span class="op">=</span><span class="dv">2</span>, hspace<span class="op">=</span><span class="fl">0.5</span>)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_10_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_11_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="--1" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> 颜色 标记和线型</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">&quot;&quot;&quot;</span>
+<span class="co">绘制绿色虚线</span>
+<span class="co">ax.plot(x,y,&#39;g--&#39;)</span>
+<span class="co">另一种方式</span>
+<span class="co">ax.plot(x,y,linestyle=&#39;--&#39;,color=&#39;g&#39;)</span>
+<span class="co">标记点（maker）</span>
+<span class="co">&quot;&quot;&quot;</span>
+fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>)
+
+axes[<span class="dv">0</span>].plot(randn(<span class="dv">10</span>), <span class="st">&#39;g--&#39;</span>)  <span class="co"># green ---</span>
+axes[<span class="dv">1</span>].plot(randn(<span class="dv">10</span>), <span class="st">&#39;ko--&#39;</span>)  <span class="co"># k：black o：圆点</span>
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_13_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<pre><code>character   description
+&#39;-&#39; solid line style
+&#39;--&#39;    dashed line style
+&#39;-.&#39;    dash-dot line style
+&#39;:&#39; dotted line style
+&#39;.&#39; point marker
+&#39;,&#39; pixel marker
+&#39;o&#39; circle marker
+&#39;v&#39; triangle_down marker
+&#39;^&#39; triangle_up marker
+&#39;&lt;&#39; triangle_left marker
+&#39;&gt;&#39; triangle_right marker
+&#39;1&#39; tri_down marker
+&#39;2&#39; tri_up marker
+&#39;3&#39; tri_left marker
+&#39;4&#39; tri_right marker
+&#39;s&#39; square marker
+&#39;p&#39; pentagon marker
+&#39;*&#39; star marker
+&#39;h&#39; hexagon1 marker
+&#39;H&#39; hexagon2 marker
+&#39;+&#39; plus marker
+&#39;x&#39; x marker
+&#39;D&#39; diamond marker
+&#39;d&#39; thin_diamond marker
+&#39;|&#39; vline marker
+&#39;_&#39; hline marker
+
+The following color abbreviations are supported:
+
+character   color
+‘b’ blue
+‘g’ green
+‘r’ red
+‘c’ cyan(青色)
+‘m’ magenta（紫红色）
+‘y’ yellow
+‘k’ black
+‘w’ white
+
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot</code></pre>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> 刻度、标签和图例</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig <span class="op">=</span> plt.figure()  <span class="co"># 创建一个Figure</span>
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+ax.plot(randn(<span class="dv">100</span>))
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_16_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">&quot;&quot;&quot;修改上图的轴&quot;&quot;&quot;</span>
+
+fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+ax.plot(randn(<span class="dv">100</span>))
+
+ticks <span class="op">=</span> ax.set_xticks([<span class="dv">0</span>, <span class="dv">25</span>, <span class="dv">50</span>, <span class="dv">75</span>, <span class="dv">100</span>])  <span class="co"># 设置刻度</span>
+labels <span class="op">=</span> ax.set_xticklabels(
+    [<span class="st">&#39;first&#39;</span>, <span class="st">&#39;second&#39;</span>, <span class="st">&#39;third&#39;</span>, <span class="st">&#39;forth&#39;</span>, <span class="st">&#39;fifth&#39;</span>], rotation<span class="op">=</span><span class="dv">30</span>, fontsize<span class="op">=</span><span class="st">&#39;small&#39;</span>)  <span class="co"># 设置x轴标签</span>
+
+ax.set_title(<span class="st">&#39;my first matplot plot&#39;</span>)  <span class="co"># 设置图片标题</span>
+
+ax.set_xlabel(<span class="st">&#39;Stages&#39;</span>)  <span class="co"># 设置x轴名称</span>
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_17_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="legend-1" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> 添加图例legend</h3>
+<pre><code>https://matplotlib.org/api/legend_api.html?highlight=legend#module-matplotlib.legend
+‘best’          0
+‘upper right’   1
+‘upper left’    2
+‘lower left’    3
+‘lower right’   4
+‘right’         5
+‘center left’   6
+‘center right’  7
+‘lower center’  8
+‘upper center’  9
+‘center’        10
+bbox_to_anchor=（0.5,0.8）
+bbox_to_anchor被赋予的元组中，第一个数值用于控制legend的左右移动，值越大越向右边移动，
+第二个数值用于控制legend的上下移动，值越大，越向上移动
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+
+ax.plot(randn(<span class="dv">10</span>), <span class="st">&#39;k&#39;</span>, label<span class="op">=</span><span class="st">&#39;one&#39;</span>)  <span class="co"># 画一条线，k黑色</span>
+ax.plot(randn(<span class="dv">10</span>), <span class="st">&#39;g--&#39;</span>, label<span class="op">=</span><span class="st">&#39;two&#39;</span>)  <span class="co"># 画第二条线，g绿色 - -类型</span>
+ax.plot(randn(<span class="dv">10</span>), <span class="st">&#39;ro--&#39;</span>, label<span class="op">=</span><span class="st">&#39;three&#39;</span>)  <span class="co"># 画第三条线红色 ，类型 ...</span>
+
+ax.legend(loc<span class="op">=</span><span class="dv">0</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>))
+
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_19_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.1.6</span> 注解</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">12</span>]
+y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>]
+fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+ax.plot(x, y, <span class="st">&#39;r--&#39;</span>)
+
+ax.text(<span class="dv">2</span>, <span class="dv">4</span>, <span class="st">&#39;hello python&#39;</span>)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_21_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">ax <span class="op">=</span> plt.subplot(<span class="dv">111</span>)
+
+t <span class="op">=</span> np.arange(<span class="fl">0.0</span>, <span class="fl">5.0</span>, <span class="fl">0.01</span>)
+s <span class="op">=</span> np.cos(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t)
+line, <span class="op">=</span> plt.plot(t, s, lw<span class="op">=</span><span class="dv">2</span>)
+
+plt.annotate(<span class="st">&#39;local max&#39;</span>, xy<span class="op">=</span>(<span class="dv">2</span>, <span class="dv">1</span>), xytext<span class="op">=</span>(<span class="dv">3</span>, <span class="fl">1.5</span>),
+             arrowprops<span class="op">=</span><span class="bu">dict</span>(facecolor<span class="op">=</span><span class="st">&#39;blue&#39;</span>)  <span class="co"># xy=（要注释的点），xytext=(注释在图中的位置)</span>
+             )
+
+plt.ylim(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_22_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.1.7</span> 图片保存</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>, <span class="dv">12</span>]
+y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>]
+fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+ax.plot(x, y, <span class="st">&#39;r--&#39;</span>)
+
+ax.text(<span class="dv">2</span>, <span class="dv">4</span>, <span class="st">&#39;hello python&#39;</span>)
+
+<span class="co"># bbox_inches减除当前图片周围空白部分</span>
+plt.savefig(<span class="st">&#39;figpath.jpg&#39;</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">&#39;tight&#39;</span>)</code></pre></div>
+</div>
+</div>
+<div id="section-3.2" class="section level2">
+<h2><span class="header-section-number">3.2</span> 绘图实例</h2>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> 绘制散点图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]
+y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>]
+plt.scatter(x,  <span class="co"># x轴数据</span>
+            y,  <span class="co"># y轴数据</span>
+            s<span class="op">=</span><span class="dv">20</span>,  <span class="co"># 设置点的大小</span>
+            c<span class="op">=</span><span class="st">&#39;green&#39;</span>,  <span class="co"># 设置点的颜色</span>
+            marker<span class="op">=</span><span class="st">&#39;s&#39;</span>,  <span class="co"># 设置点的形状</span>
+            alpha<span class="op">=</span><span class="fl">0.9</span>,  <span class="co"># 设置点的透明度</span>
+            linewidths<span class="op">=</span><span class="fl">0.8</span>,  <span class="co"># 设置散点边界的粗细</span>
+            edgecolors<span class="op">=</span><span class="st">&#39;red&#39;</span>  <span class="co"># 设置散点边界的颜色</span>
+            )
+
+plt.title(<span class="st">&#39;simple scatter plot&#39;</span>)
+plt.xlabel(<span class="st">&#39;X&#39;</span>)  <span class="co"># x轴名称</span>
+plt.ylabel(<span class="st">&#39;Y&#39;</span>)
+
+plt.show()  <span class="co"># 展示绘图</span></code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_27_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> 折线图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]
+y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>]
+
+plt.plot(x,  <span class="co"># x轴数据</span>
+         y,  <span class="co"># y轴数据</span>
+         linestyle<span class="op">=</span><span class="st">&#39;-&#39;</span>,  <span class="co"># 折线类型</span>
+         linewidth<span class="op">=</span><span class="dv">2</span>,  <span class="co"># 折线宽度</span>
+         color<span class="op">=</span><span class="st">&#39;blue&#39;</span>,  <span class="co"># 折线颜色</span>
+         marker<span class="op">=</span><span class="st">&#39;o&#39;</span>,  <span class="co"># 点的形状</span>
+         markersize<span class="op">=</span><span class="dv">8</span>,  <span class="co"># 点的大小</span>
+         markeredgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>,  <span class="co"># 点的边框色</span>
+         markerfacecolor<span class="op">=</span><span class="st">&#39;red&#39;</span>)  <span class="co"># 点的填充色</span>
+
+
+<span class="co"># 添加标题和坐标轴标签</span>
+plt.title(<span class="st">&#39;line plot&#39;</span>)
+plt.xlabel(<span class="st">&#39;X&#39;</span>)
+plt.ylabel(<span class="st">&#39;Y&#39;</span>)
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_29_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+
+
+t <span class="op">=</span> np.arange(<span class="dv">0</span>., <span class="dv">5</span>., <span class="fl">0.2</span>)
+
+t</code></pre></div>
+<pre><code>array([ 0. ,  0.2,  0.4,  0.6,  0.8,  1. ,  1.2,  1.4,  1.6,  1.8,  2. ,
+        2.2,  2.4,  2.6,  2.8,  3. ,  3.2,  3.4,  3.6,  3.8,  4. ,  4.2,
+        4.4,  4.6,  4.8])</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># red dashes, blue squares and green triangles</span>
+plt.plot(t, t, <span class="st">&#39;r--&#39;</span>, t, t<span class="op">**</span><span class="dv">2</span>, <span class="st">&#39;bs&#39;</span>, t, t<span class="op">**</span><span class="dv">3</span>, <span class="st">&#39;g&#39;</span>)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_31_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 同一效果</span>
+fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+ax.plot(t, t, <span class="st">&#39;r--&#39;</span>)
+ax.plot(t, t<span class="op">**</span><span class="dv">2</span>, <span class="st">&#39;bs&#39;</span>)  <span class="co"># &#39;bs&#39;表示blue square marker</span>
+ax.plot(t, t<span class="op">**</span><span class="dv">3</span>, <span class="st">&#39;g&#39;</span>)
+fig</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_32_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> 直方图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+<span class="im">import</span> pandas <span class="im">as</span> pd
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+
+plt.hist(np.random.randn(<span class="dv">50</span>),  <span class="co"># 绘图数据</span>
+         bins<span class="op">=</span><span class="dv">50</span>,  <span class="co"># 指定直方图的条形数</span>
+         color<span class="op">=</span><span class="st">&#39;red&#39;</span>,  <span class="co"># 指定填充色</span>
+         edgecolor<span class="op">=</span><span class="st">&#39;k&#39;</span>)  <span class="co"># 指定直方图的边界色k :black</span>
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_34_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> 直条图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]
+y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>]
+
+plt.bar(x, y,
+        color<span class="op">=</span><span class="st">&#39;steelblue&#39;</span>,
+        alpha<span class="op">=</span><span class="fl">0.8</span>)
+
+plt.title(<span class="st">&#39;bar plot&#39;</span>)
+
+plt.ylim([<span class="dv">0</span>, <span class="dv">40</span>])
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_36_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]
+y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>]
+
+plt.barh(x, y,
+         color<span class="op">=</span><span class="st">&#39;steelblue&#39;</span>,
+         alpha<span class="op">=</span><span class="fl">0.8</span>)
+
+plt.title(<span class="st">&#39;bar plot&#39;</span>)
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_37_0.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> 箱线图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]
+plt.boxplot(x,
+            patch_artist<span class="op">=</span><span class="va">True</span>,  <span class="co"># 箱体添加颜色</span>
+            labels<span class="op">=</span>[<span class="st">&#39;boxplot&#39;</span>],  <span class="co"># 添加具体的标签名称</span>
+            showmeans<span class="op">=</span><span class="va">True</span>)
+
+<span class="co"># 显示图形</span>
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_39_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">np.random.seed(<span class="dv">2</span>)  <span class="co"># 设置随机种子</span>
+df <span class="op">=</span> pd.DataFrame(np.random.rand(<span class="dv">5</span>, <span class="dv">4</span>),
+                  columns<span class="op">=</span>([<span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;C&#39;</span>, <span class="st">&#39;D&#39;</span>]))
+df</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.435995</td>
+      <td>0.025926</td>
+      <td>0.549662</td>
+      <td>0.435322</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.420368</td>
+      <td>0.330335</td>
+      <td>0.204649</td>
+      <td>0.619271</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.299655</td>
+      <td>0.266827</td>
+      <td>0.621134</td>
+      <td>0.529142</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.134580</td>
+      <td>0.513578</td>
+      <td>0.184440</td>
+      <td>0.785335</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.853975</td>
+      <td>0.494237</td>
+      <td>0.846561</td>
+      <td>0.079645</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">data <span class="op">=</span> []
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">4</span>):
+    data.append(df.iloc[:, i])
+data</code></pre></div>
+<pre><code>[0    0.435995
+ 1    0.420368
+ 2    0.299655
+ 3    0.134580
+ 4    0.853975
+ Name: A, dtype: float64, 0    0.025926
+ 1    0.330335
+ 2    0.266827
+ 3    0.513578
+ 4    0.494237
+ Name: B, dtype: float64, 0    0.549662
+ 1    0.204649
+ 2    0.621134
+ 3    0.184440
+ 4    0.846561
+ Name: C, dtype: float64, 0    0.435322
+ 1    0.619271
+ 2    0.529142
+ 3    0.785335
+ 4    0.079645
+ Name: D, dtype: float64]</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">plt.boxplot(data)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_42_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<pre><code>plt.boxplot(x, notch=None, sym=None, vert=None, 
+             whis=None, positions=None, widths=None, 
+             patch_artist=None, meanline=None, showmeans=None, 
+             showcaps=None, showbox=None, showfliers=None, 
+             boxprops=None, labels=None, flierprops=None, 
+             medianprops=None, meanprops=None, 
+             capprops=None, whiskerprops=None)
+
+x：指定要绘制箱线图的数据；
+notch：是否凹口的形式展现箱线图，默认非凹口；
+sym：指定异常点的形状，默认为+号显示；
+vert：是否需要将箱线图垂直摆放，默认垂直摆放；
+whis：指定上下须与上下四分位的距离，默认为1.5倍的四分位差；
+positions：指定箱线图的位置，默认为[0,1,2…]；
+widths：指定箱线图的宽度，默认为0.5；
+patch_artist：是否填充箱体的颜色；
+meanline：是否用线的形式表示均值，默认用点来表示；
+showmeans：是否显示均值，默认不显示；
+showcaps：是否显示箱线图顶端和末端的两条线，默认显示；
+showbox：是否显示箱线图的箱体，默认显示；
+showfliers：是否显示异常值，默认显示；
+boxprops：设置箱体的属性，如边框色，填充色等；
+labels：为箱线图添加标签，类似于图例的作用；
+filerprops：设置异常值的属性，如异常点的形状、大小、填充色等；
+medianprops：设置中位数的属性，如线的类型、粗细等；
+meanprops：设置均值的属性，如点的大小、颜色等；
+capprops：设置箱线图顶端和末端线条的属性，如颜色、粗细等；
+whiskerprops：设置须的属性，如颜色、粗细、线的类型等；</code></pre>
+</div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> 饼图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">data <span class="op">=</span> [<span class="fl">0.2</span>, <span class="fl">0.3</span>, <span class="fl">0.4</span>, <span class="fl">0.1</span>]
+plt.pie(data)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_45_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<pre><code>plt.pie(x, explode=None, labels=None, colors=None, 
+        autopct=None, pctdistance=0.6, shadow=False, 
+        labeldistance=1.1, startangle=None, 
+        radius=None, counterclock=True, wedgeprops=None, 
+        textprops=None, center=(0, 0), frame=False)
+        
+x：指定绘图的数据；
+explode：指定饼图某些部分的突出显示，即呈现爆炸式；
+labels：为饼图添加标签说明，类似于图例说明；
+colors：指定饼图的填充色；
+autopct：自动添加百分比显示，可以采用格式化的方法显示；
+pctdistance：设置百分比标签与圆心的距离；
+shadow：是否添加饼图的阴影效果；
+labeldistance：设置各扇形标签（图例）与圆心的距离；
+startangle：设置饼图的初始摆放角度；
+radius：设置饼图的半径大小；
+counterclock：是否让饼图按逆时针顺序呈现；
+wedgeprops：设置饼图内外边界的属性，如边界线的粗细、颜色等；
+textprops：设置饼图中文本的属性，如字体大小、颜色等；
+center：指定饼图的中心点位置，默认为原点
+frame：是否要显示饼图背后的图框，如果设置为True的话，需要同时控制图框x轴、y轴的范围和饼图的中心位置；</code></pre>
+</div>
+<div id="section-3.2.7" class="section level3">
+<h3><span class="header-section-number">3.2.7</span> 绘制基因矩阵的热图</h3>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 来源于百度经验</span>
+<span class="im">import</span> numpy <span class="im">as</span> np
+<span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt
+<span class="im">from</span> matplotlib <span class="im">import</span> cm
+<span class="im">from</span> matplotlib <span class="im">import</span> axes
+
+
+<span class="kw">def</span> draw_heatmap(data, xlabels, ylabels):  <span class="co"># 自定义函数，3个参数</span>
+    cmap <span class="op">=</span> cm.Blues
+    figure <span class="op">=</span> plt.figure(facecolor<span class="op">=</span><span class="st">&#39;w&#39;</span>)
+    ax <span class="op">=</span> figure.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, position<span class="op">=</span>[<span class="fl">0.1</span>, <span class="fl">0.15</span>, <span class="fl">0.8</span>, <span class="fl">0.8</span>])
+    ax.set_yticks(<span class="bu">range</span>(<span class="bu">len</span>(ylabels)))
+    ax.set_yticklabels(ylabels)
+    ax.set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(xlabels)))
+    ax.set_xticklabels(xlabels)
+    vmax <span class="op">=</span> data[<span class="dv">0</span>][<span class="dv">0</span>]
+    vmin <span class="op">=</span> data[<span class="dv">0</span>][<span class="dv">0</span>]
+    <span class="cf">for</span> i <span class="op">in</span> data:
+        <span class="cf">for</span> j <span class="op">in</span> i:
+            <span class="cf">if</span> j <span class="op">&gt;</span> vmax:
+                vmax <span class="op">=</span> j
+            <span class="cf">if</span> j <span class="op">&lt;</span> vmin:
+                vmin <span class="op">=</span> j
+    <span class="bu">map</span> <span class="op">=</span> ax.imshow(data, interpolation<span class="op">=</span><span class="st">&#39;nearest&#39;</span>, cmap<span class="op">=</span>cmap, aspect<span class="op">=</span><span class="st">&#39;auto&#39;</span>,
+                    vmin<span class="op">=</span>vmin, vmax<span class="op">=</span>vmax)  <span class="co"># interpolation插值，cmap:colormap</span>
+    cb <span class="op">=</span> plt.colorbar(mappable<span class="op">=</span><span class="bu">map</span>, cax<span class="op">=</span><span class="va">None</span>, ax<span class="op">=</span><span class="va">None</span>, shrink<span class="op">=</span><span class="fl">0.5</span>)  <span class="co"># 绘制颜色条</span>
+    plt.show()
+
+
+a <span class="op">=</span> np.random.rand(<span class="dv">10</span>, <span class="dv">10</span>)
+xlabels <span class="op">=</span> [<span class="st">&#39;A&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="st">&#39;C&#39;</span>, <span class="st">&#39;D&#39;</span>, <span class="st">&#39;E&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;G&#39;</span>, <span class="st">&#39;H&#39;</span>, <span class="st">&#39;I&#39;</span>, <span class="st">&#39;J&#39;</span>]
+ylabels <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>, <span class="st">&#39;e&#39;</span>, <span class="st">&#39;f&#39;</span>, <span class="st">&#39;g&#39;</span>, <span class="st">&#39;h&#39;</span>, <span class="st">&#39;i&#39;</span>, <span class="st">&#39;j&#39;</span>]
+draw_heatmap(a, xlabels, ylabels)</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_48_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
+<span class="im">import</span> numpy <span class="im">as</span> np
+df <span class="op">=</span> pd.DataFrame(np.random.randn(<span class="dv">5</span>, <span class="dv">6</span>))
+df</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.596967</td>
+      <td>0.080979</td>
+      <td>-1.890122</td>
+      <td>-0.629949</td>
+      <td>-1.187113</td>
+      <td>-0.002018</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.264042</td>
+      <td>0.044216</td>
+      <td>-1.669342</td>
+      <td>0.805476</td>
+      <td>-0.173634</td>
+      <td>-0.051918</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.793684</td>
+      <td>1.746997</td>
+      <td>0.785712</td>
+      <td>-0.157126</td>
+      <td>0.072688</td>
+      <td>0.310271</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.988716</td>
+      <td>0.404472</td>
+      <td>0.967111</td>
+      <td>-0.612160</td>
+      <td>-0.259917</td>
+      <td>-0.067299</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.033911</td>
+      <td>1.177149</td>
+      <td>-0.914153</td>
+      <td>-0.579912</td>
+      <td>-0.100110</td>
+      <td>0.747296</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">plt.imshow(df)
+
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_50_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>读入基因表达数据，绘制某基因的箱线图</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">%</span>cd F: <span class="op">\</span>mega<span class="op">\</span>ehbio<span class="op">\</span>python<span class="op">\</span>python课程包<span class="op">\</span>merge
+<span class="im">import</span> os
+os.getcwd()</code></pre></div>
+<pre><code>F:\mega\ehbio\python\python课程包\merge
+
+
+
+
+
+&#39;F:\\mega\\ehbio\\python\\python课程包\\merge&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
+df <span class="op">=</span> pd.read_table(<span class="st">&quot;ehbio.xls&quot;</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, index_col<span class="op">=</span><span class="dv">0</span>, header<span class="op">=</span><span class="dv">0</span>)
+df.head(<span class="dv">5</span>)</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MCF10F</th>
+      <th>MCF12A</th>
+      <th>T47DKBluc</th>
+      <th>UACC812</th>
+      <th>UACC893</th>
+      <th>ZR751</th>
+      <th>ZR7530</th>
+      <th>ZR75B</th>
+    </tr>
+    <tr>
+      <th>EnsEMBL_Gene_ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003</th>
+      <td>91.574061</td>
+      <td>13.040870</td>
+      <td>73.387310</td>
+      <td>26.579280</td>
+      <td>50.676579</td>
+      <td>31.812999</td>
+      <td>121.459918</td>
+      <td>2.293898</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001167</th>
+      <td>164.221408</td>
+      <td>170.101403</td>
+      <td>106.114416</td>
+      <td>138.140311</td>
+      <td>106.342032</td>
+      <td>68.458022</td>
+      <td>73.910964</td>
+      <td>61.625519</td>
+    </tr>
+    <tr>
+      <th>ENSG00000005471</th>
+      <td>0.000000</td>
+      <td>0.073680</td>
+      <td>0.536226</td>
+      <td>0.440649</td>
+      <td>0.066213</td>
+      <td>0.548865</td>
+      <td>0.611036</td>
+      <td>0.556531</td>
+    </tr>
+    <tr>
+      <th>ENSG00000066629</th>
+      <td>24.630773</td>
+      <td>18.627459</td>
+      <td>34.619613</td>
+      <td>79.187879</td>
+      <td>0.058835</td>
+      <td>25.493800</td>
+      <td>25.917323</td>
+      <td>32.528112</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154258</th>
+      <td>0.896612</td>
+      <td>0.214261</td>
+      <td>0.000000</td>
+      <td>0.040907</td>
+      <td>0.021120</td>
+      <td>0.000000</td>
+      <td>0.033571</td>
+      <td>0.177808</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">df.shape</code></pre></div>
+<pre><code>(36953, 8)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">df.size
+df.ndim
+df.values</code></pre></div>
+<pre><code>array([[  9.15740610e+01,   1.30408701e+01,   7.33873101e+01, ...,
+          3.18129988e+01,   1.21459918e+02,   2.29389818e+00],
+       [  1.64221408e+02,   1.70101403e+02,   1.06114416e+02, ...,
+          6.84580224e+01,   7.39109636e+01,   6.16255191e+01],
+       [  0.00000000e+00,   7.36800986e-02,   5.36226145e-01, ...,
+          5.48864965e-01,   6.11036013e-01,   5.56531115e-01],
+       ..., 
+       [  2.71701826e+00,   5.55925621e+00,   2.93123839e+00, ...,
+          3.71765369e+00,   2.42540639e+00,   4.56656068e+00],
+       [  1.74266818e+01,   3.72964028e+00,   3.49013629e+01, ...,
+          5.04982802e+01,   3.75784692e+01,   4.79996494e+01],
+       [  0.00000000e+00,   0.00000000e+00,   3.52988338e+00, ...,
+          8.15259649e+00,   6.08178979e-01,   3.25252710e+00]])</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">control <span class="op">=</span> []
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>):
+    control.append(df.iloc[<span class="dv">0</span>, i])
+control</code></pre></div>
+<pre><code>[91.574060981100004, 13.0408701074, 73.387310079800002]</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">test <span class="op">=</span> []
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>, <span class="dv">8</span>):
+    test.append(df.iloc[<span class="dv">0</span>, i])
+test</code></pre></div>
+<pre><code>[26.579280359299997,
+ 50.676578905299998,
+ 31.812998762600003,
+ 121.4599177489,
+ 2.2938981847999997]</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">gene <span class="op">=</span> [control, test]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fig <span class="op">=</span> plt.figure()
+ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)
+ax.boxplot(gene, patch_artist<span class="op">=</span><span class="va">True</span>,  <span class="co"># 箱体添加颜色</span>
+           labels<span class="op">=</span>[<span class="st">&#39;test&#39;</span>, <span class="st">&#39;control&#39;</span>],  <span class="co"># 添加具体的标签名称</span>
+           showmeans<span class="op">=</span><span class="va">True</span>, )
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_59_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>热图</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">df2 <span class="op">=</span> df.head(<span class="dv">10</span>)  <span class="co"># 取部分数据</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">df2</code></pre></div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MCF10F</th>
+      <th>MCF12A</th>
+      <th>T47DKBluc</th>
+      <th>UACC812</th>
+      <th>UACC893</th>
+      <th>ZR751</th>
+      <th>ZR7530</th>
+      <th>ZR75B</th>
+    </tr>
+    <tr>
+      <th>EnsEMBL_Gene_ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ENSG00000000003</th>
+      <td>91.574061</td>
+      <td>13.040870</td>
+      <td>73.387310</td>
+      <td>26.579280</td>
+      <td>50.676579</td>
+      <td>31.812999</td>
+      <td>121.459918</td>
+      <td>2.293898</td>
+    </tr>
+    <tr>
+      <th>ENSG00000001167</th>
+      <td>164.221408</td>
+      <td>170.101403</td>
+      <td>106.114416</td>
+      <td>138.140311</td>
+      <td>106.342032</td>
+      <td>68.458022</td>
+      <td>73.910964</td>
+      <td>61.625519</td>
+    </tr>
+    <tr>
+      <th>ENSG00000005471</th>
+      <td>0.000000</td>
+      <td>0.073680</td>
+      <td>0.536226</td>
+      <td>0.440649</td>
+      <td>0.066213</td>
+      <td>0.548865</td>
+      <td>0.611036</td>
+      <td>0.556531</td>
+    </tr>
+    <tr>
+      <th>ENSG00000066629</th>
+      <td>24.630773</td>
+      <td>18.627459</td>
+      <td>34.619613</td>
+      <td>79.187879</td>
+      <td>0.058835</td>
+      <td>25.493800</td>
+      <td>25.917323</td>
+      <td>32.528112</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154258</th>
+      <td>0.896612</td>
+      <td>0.214261</td>
+      <td>0.000000</td>
+      <td>0.040907</td>
+      <td>0.021120</td>
+      <td>0.000000</td>
+      <td>0.033571</td>
+      <td>0.177808</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154262</th>
+      <td>3.431313</td>
+      <td>2.481636</td>
+      <td>0.000000</td>
+      <td>0.383060</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.105758</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154263</th>
+      <td>0.859071</td>
+      <td>0.936069</td>
+      <td>0.589547</td>
+      <td>0.259898</td>
+      <td>0.083258</td>
+      <td>0.476794</td>
+      <td>0.526162</td>
+      <td>0.221172</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154265</th>
+      <td>2.453971</td>
+      <td>1.480553</td>
+      <td>9.884425</td>
+      <td>2.076723</td>
+      <td>1.118819</td>
+      <td>5.864268</td>
+      <td>10.180796</td>
+      <td>4.383174</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154269</th>
+      <td>0.216739</td>
+      <td>0.000000</td>
+      <td>0.854111</td>
+      <td>0.970053</td>
+      <td>0.738803</td>
+      <td>0.521094</td>
+      <td>4.648410</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>ENSG00000154274</th>
+      <td>2.980792</td>
+      <td>0.217999</td>
+      <td>276.123679</td>
+      <td>82.820443</td>
+      <td>34.664053</td>
+      <td>106.350607</td>
+      <td>94.854069</td>
+      <td>14.976808</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">i <span class="op">=</span> plt.imshow(df2)
+plt.colorbar(i)
+plt.show()</code></pre></div>
+<p><img src="03_WXN_matplotlib_files/03_WXN_matplotlib_63_0.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><a href="https://matplotlib.org/api/pyplot_api.html#所有函数的详细参数" class="uri">https://matplotlib.org/api/pyplot_api.html#所有函数的详细参数</a>。</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="py3-ct.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Py3-pratcise-ct.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Py3_course.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

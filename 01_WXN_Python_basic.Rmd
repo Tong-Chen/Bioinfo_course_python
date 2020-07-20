@@ -1,0 +1,3421 @@
+# Python基础 {#pythonbasic}
+
+王绪宁制作
+
+欢迎访问我们的视频课程 <https://bioinfo.ke.qq.com>。
+
+## 交互模式下表达式
+
+
+```python
+#表达式： 值、操作符优先级
+2 + 2 
+```
+
+
+
+
+    4
+
+
+
+
+```python
+2 + 3 * 5
+```
+
+
+
+
+    17
+
+
+
+
+```python
+( 2 + 3 ) * 5
+```
+
+
+
+
+    25
+
+
+
+
+```python
+23 % 7 #取余数，判断数据是奇数还是偶数时应用
+```
+
+
+
+
+    2
+
+
+
+
+```python
+23 // 7 #
+```
+
+
+
+
+    3
+
+
+
+
+```python
+#示例报错，语法要符合规则，像英语语法规则一样。
+2+
+```
+
+
+      File "<ipython-input-9-d066253e063d>", line 2
+        2+
+          ^
+    SyntaxError: invalid syntax
+
+
+
+## Python中的数据类型：整数（int）、浮点（float）和字符串（str）
+
+
+```python
+type(2)
+```
+
+
+
+
+    int
+
+
+
+
+```python
+type(2.5)
+```
+
+
+
+
+    float
+
+
+
+
+```python
+int(2.4)
+```
+
+
+
+
+    2
+
+
+
+
+```python
+type('Hello, world！') #字符串用成对的引号（单引号、双引号、三引号）
+```
+
+
+
+
+    str
+
+
+
+
+```python
+#如果字符串没有引号，则报错
+‘hello，world
+```
+
+
+      File "<ipython-input-16-874a8e2fccea>", line 2
+        ‘hello，world
+                   ^
+    SyntaxError: invalid character in identifier
+
+
+
+## 字符串的连接和复制
+
+
+```python
+'Hello' + 'world!'
+```
+
+
+
+
+    'helloworld!'
+
+
+
+
+```python
+'hello' + 21 #错误示例，两个字符串才能相加
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-18-2f37c7cd8411> in <module>()
+    ----> 1 'hello'+21
+    
+
+    TypeError: must be str, not int
+
+
+
+```python
+'hello' + '21'
+```
+
+
+
+
+    'hello21'
+
+
+
+
+```python
+'Hello' * 5 #必须是整数,才可复制
+```
+
+
+
+
+    'HelloHelloHelloHelloHello'
+
+
+
+
+```python
+'hello'*5.0 #错误示例
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-21-8dc053398ad8> in <module>()
+    ----> 1 'hello'*5.0
+    
+
+    TypeError: can't multiply sequence by non-int of type 'float'
+
+
+多个字符串的合并使用`+`不是最好的方式，大家想想为什么？ 有什么更好的方式呢？ 参见文章[为啥我的Python这么慢 (一)](https://mp.weixin.qq.com/s/n5kkZfC8FGlzeBODarLHcw)。
+
+## 变量
+
+
+```python
+#变量就像一个盒子一样
+a = 5
+a
+```
+
+
+
+
+    5
+
+
+
+
+```python
+b = 3
+b
+```
+
+
+
+
+    3
+
+
+
+
+```python
+a + b
+```
+
+
+
+
+    8
+
+
+
+
+```python
+#第一次赋值为变量的初始化，再次赋值则被覆写
+a = 30
+a
+```
+
+
+
+
+    30
+
+
+
+
+```python
+c = 'hello'
+c
+```
+
+
+
+
+    'hello'
+
+
+
+
+```python
+c = 'goodbye'
+c
+```
+
+
+
+
+    'goodbye'
+
+
+
+
+```python
+# 变量名命名:为清晰表达，驼峰式，下划线式
+LookLikeThis = 1
+look_like_this = 'a'
+```
+
+## 第一小程序HelloWorld.py 
+
+
+```python
+# 第一小程序的准备
+#注释用#
+# print() #打印内容显示在屏幕上
+print('ehbio')
+a = 5
+print(a)  # 打印变量
+```
+
+    ehbio
+
+
+
+```python
+myName = input()
+```
+
+    a
+
+
+
+```python
+myName = input('please type your name！\n')
+```
+
+    please type your name！
+    ehbio
+
+
+
+```python
+#len()查看字符串的个数
+len('hello')
+len('hell o')
+```
+
+
+
+
+    6
+
+
+
+
+```python
+##类型转换的函数
+str()
+int()
+float()
+```
+
+
+
+
+    0.0
+
+
+
+
+```python
+str(8)
+```
+
+
+
+
+    '8'
+
+
+
+
+```python
+int(2.5)
+```
+
+
+
+
+    2
+
+
+
+
+```python
+float(2)
+```
+
+
+
+
+    2.0
+
+
+
+
+```python
+42 == '42' #字符和数字不同
+```
+
+
+
+
+    False
+
+
+
+
+```python
+#特殊的值None,函数部分会再次提及此值
+type(None)
+```
+
+
+
+
+    NoneType
+
+
+
+
+```python
+None == 42
+```
+
+
+
+
+    False
+
+
+
+
+```python
+#This is my second python pargram！
+
+myName=input('What is your name?')
+print ('It is  good to meet you,' + myName)
+print ('The length of your name is '+ str(len(myName)))
+
+print('What is your age?')
+myAge=input()
+print ('You will be ' + str( int( myAge)+1 )+ ' in a year.')
+```
+
+    What is your name?wang
+    It is  good to meet you,wang
+    The length of your name is 4
+    What is your age?
+    2
+    You will be 3 in a year.
+
+
+
+```python
+#如上是在交互模式下的运行，那写好脚本如何运行呢？
+import os
+os.getcwd()
+```
+
+
+
+
+    'F:\\mega\\ehbio\\python'
+
+
+
+
+```python
+os.chdir('F:\\mega\\ehbio\\python')
+os.getcwd()
+```
+
+
+
+
+    'F:\\mega\\ehbio\\python'
+
+
+
+
+```python
+#同时展示IPython模式下运行程序
+%run helloworld.py
+```
+
+## 逻辑和比较操作
+
+### 布尔逻辑值
+
+
+```python
+a = False
+a
+```
+
+
+
+
+    False
+
+
+
+
+```python
+b = True
+b
+```
+
+
+
+
+    True
+
+
+
+### 比较操作符
+
+
+```python
+42 == 21
+```
+
+
+
+
+    False
+
+
+
+
+```python
+42 == '42'
+```
+
+
+
+
+    False
+
+
+
+
+```python
+2 != 1
+```
+
+
+
+
+    True
+
+
+
+
+```python
+a = 'hello'
+a == 'hello'
+```
+
+
+
+
+    True
+
+
+
+
+```python
+a == 'goodbye'
+```
+
+
+
+
+    False
+
+
+
+### 布尔操作符 and or not
+
+
+```python
+True and True
+```
+
+
+
+
+    True
+
+
+
+
+```python
+True & False
+```
+
+
+
+
+    False
+
+
+
+
+```python
+not False
+```
+
+
+
+
+    True
+
+
+
+
+```python
+not not True
+```
+
+
+
+
+    True
+
+
+
+### 布尔操作和比较操作符
+
+
+```python
+( 3 > 2 ) and ( 5 < 6 )
+```
+
+
+
+
+    True
+
+
+
+
+```python
+( 3 < 2 ) or ( 5 < 6 )
+```
+
+
+
+
+    True
+
+
+
+## 控制流
+
+
+```python
+# 条件
+name = input('Please enter a name\n')
+if name == 'ehbio':
+    print('hello ehbio')
+else:
+    print('You are not ehbio')
+```
+
+    Please enter a name
+    ehbio
+    hello ehbio
+
+
+### if 语句
+if 条件（True or False） ：
+
+    代码块1
+    
+else ：
+
+    代码块2
+
+### elif 否则如果
+elif 条件 ：
+    
+    代码块
+
+
+```python
+age = int(input('please enter your age!\n'))  # input()从屏幕中录入的内容，属于字符串类型
+if age < 18:
+    print('Hi, kids')
+elif 40 >= age >= 12:
+    print('Hi, young man')
+elif age > 40:
+    print('Hi, old man')
+```
+
+    please enter your age!
+    34
+    Hi, young man
+
+
+### while循环
+
+
+```python
+a = 0
+if a < 5:
+    print('Hello, world')
+    a = a + 1
+```
+
+    Hello, world
+
+
+
+```python
+a = 0
+while a < 5:
+    print('Hello, world')
+    a = a + 1
+```
+
+    Hello, world
+    Hello, world
+    Hello, world
+    Hello, world
+    Hello, world
+
+
+
+```python
+name = ''
+while name != 'Your name':
+    name = input('Enter your name\n')
+print('Thank you')
+```
+
+    Enter your name
+    your name
+    Thank you
+
+
+### break和continue
+
+
+```python
+while True:
+    name = input('Please enter your name!\n')
+    if name == 'Your name':
+        break  # 跳出循环
+print('You are right!')
+```
+
+    Please enter your name!
+    Your name
+    You are right!
+
+
+
+```python
+# 模拟登陆账号
+while True:
+    name = input('Who are you?\n')
+    if name != 'Bob':
+        continue  # 将程序跳转到开头
+    print('Hello, Bob. What is your password?')
+    password = input()
+    if password == 'fish':
+        break
+print('Access granted!')
+```
+
+    Who are you?
+    Bob
+    Hello, Bob. What is your password?
+    fish
+    Acess granted!
+
+
+### for 和 range（）函数
+
+
+```python
+# for 和 range（）实现固定的循环次数
+for i in range(5):
+    print(i)
+    print('Hello world')
+```
+
+    0
+    Hello world
+    1
+    Hello world
+    2
+    Hello world
+    3
+    Hello world
+    4
+    Hello world
+
+
+
+```python
+# 等价的while循环
+i = 0
+while i < 5:
+    print(i)
+    print('Hello world')
+    i = i + 1
+```
+
+    0
+    Hello world
+    1
+    Hello world
+    2
+    Hello world
+    3
+    Hello world
+    4
+    Hello world
+
+
+
+```python
+# 高斯的1+2+3+...+100=?
+total = 0
+for i in range(101):
+    total = total + i
+print(total)
+```
+
+    5050
+
+
+
+```python
+# 高斯的1+2+3+...+100=?
+total = 0
+for i in range(101):
+    total += i
+print(total)
+```
+
+    5050
+
+
+### range()函数（开始，停止，步长）
+
+
+```python
+for i in range(1, 10, 2):
+    print(i)
+```
+
+    1
+    3
+    5
+    7
+    9
+
+
+
+```python
+help(range)
+```
+
+    Help on class range in module builtins:
+    
+    class range(object)
+     |  range(stop) -> range object
+     |  range(start, stop[, step]) -> range object
+     |  
+     |  Return an object that produces a sequence of integers from start (inclusive)
+     |  to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+     |  start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+     |  These are exactly the valid indices for a list of 4 elements.
+     |  When step is given, it specifies the increment (or decrement).
+     |  
+     |  Methods defined here:
+     |  
+     |  __contains__(self, key, /)
+     |      Return key in self.
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __getitem__(self, key, /)
+     |      Return self[key].
+     |  
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __iter__(self, /)
+     |      Implement iter(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |  
+     |  __len__(self, /)
+     |      Return len(self).
+     |  
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  __reduce__(...)
+     |      helper for pickle
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __reversed__(...)
+     |      Return a reverse iterator.
+     |  
+     |  count(...)
+     |      rangeobject.count(value) -> integer -- return number of occurrences of value
+     |  
+     |  index(...)
+     |      rangeobject.index(value, [start, [stop]]) -> integer -- return index of value.
+     |      Raise ValueError if the value is not present.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  start
+     |  
+     |  step
+     |  
+     |  stop
+    
+
+
+
+```python
+for i in range(5, -1, -1):
+    print(i)
+```
+
+    5
+    4
+    3
+    2
+    1
+    0
+
+
+
+```python
+# 脑筋急转弯，题目如下
+# 100元钱，5元铅笔盒，3元一只笔，0.5元一块橡皮，将100元花完，同时三种物品的个数和为100，请用编程解决
+
+# 假设铅笔盒为x个，笔为y只，橡皮z个
+print("x y z")
+for x in range(1, 101):
+    for y in range(1, 101):
+        for z in range(1, 101):
+            if x + y + z == 100 and 5 * x + 3 * y + 0.5 * z == 100:
+                print(x, y, z)
+```
+
+    x y z
+    5 11 84
+    10 2 88
+
+
+## 导入模块
+
+
+```python
+import random  # 当多个模块时，用逗号隔开
+for i in range(5):
+    print(random.randint(1, 10))
+```
+
+    2
+    9
+    2
+    4
+    10
+
+
+
+```python
+import random as rd
+for i in range(5):
+    print(rd.randint(1, 10))
+```
+
+    2
+    8
+    5
+    7
+    7
+
+
+
+```python
+from random import randint
+for i in range(5):
+    print(randint(1, 10))
+```
+
+    6
+    8
+    5
+    6
+    2
+
+
+
+```python
+import sys
+import os
+import math
+```
+
+
+```python
+# 综合小例子，控制流的结束，执行完成本身即可结束
+import sys
+while True:
+    print('type exit to exit.')
+    response = input()
+    if response == 'exit':
+        sys.exit()  # 退出Python程序
+    print('Let us have a short break!')
+```
+
+    type exit to exit.
+    exit
+
+
+
+    An exception has occurred, use %tb to see the full traceback.
+
+
+    SystemExit
+
+
+
+    C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py:2870: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.
+      warn("To exit: use 'exit', 'quit', or Ctrl-D.", stacklevel=1)
+
+
+## 函数： 内置函数、自定义函数
+
+### 函数print（），len （）,input （），int（），str（）均为内置函数
+
+
+```python
+help(print)
+```
+
+    Help on built-in function print in module builtins:
+    
+    print(...)
+        print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+        
+        Prints the values to a stream, or to sys.stdout by default.
+        Optional keyword arguments:
+        file:  a file-like object (stream); defaults to the current sys.stdout.
+        sep:   string inserted between values, default a space.
+        end:   string appended after the last value, default a newline.
+        flush: whether to forcibly flush the stream.
+    
+
+
+
+```python
+print('a', 'b')
+```
+
+    a b
+
+
+
+```python
+# 自定义函数
+def sum(a, b):
+    c = a + b
+    print(c)
+
+
+sum(3, 4)
+```
+
+    7
+
+
+
+```python
+def sum(a, b):  # a,b为自定义函数中的两个参数
+    c = a + b
+    return c
+
+
+sum(1, 3)
+```
+
+
+
+
+    4
+
+
+
+
+```python
+import random
+
+
+def getAnswer(answerNumber):
+    if answerNumber == 1:
+        return 'It is certain'
+    elif answerNumber == 2:
+        return 'It is decidely so'
+    elif answerNumber == 3:
+        return 'Yes'
+    elif answerNumber == 4:
+        return 'Reply hazy try again'
+    elif answerNumber == 5:
+        return 'Ask again later'
+    elif answerNumber == 6:
+        return 'Concentrate and ask again'
+    elif answerNumber == 7:
+        return 'My reply is no'
+    elif answerNumber == 8:
+        return 'Outlook not so good'
+    elif answerNumber == 9:
+        return 'Very doubtful'
+
+
+r = random.randint(1, 9)
+fortune = getAnswer(r)
+print(r, fortune)
+```
+
+    8 Outlook not so good
+
+
+
+```python
+# 关于None的值
+print()  # 打印内容为空，所以为None，其他编程语言可能为NA，null等
+```
+
+    
+
+
+
+```python
+print('cat', 'dog', 'mice')  # 位置参数
+```
+
+    cat dog mice
+
+
+
+```python
+print('cat', 'dog', 'mice', sep='*', end='88888')  # end，sep就是关键字参数
+```
+
+    cat*dog*mice88888
+
+## 局部和全局作用域
+
+全局作用：函数之外。
+
+局部作用：函数之内。
+
+局部可以访问全局变量，而全局不能使用局部变量。
+
+
+```python
+def spam():
+    eggs = 1000
+    return eggs
+
+
+spam()
+```
+
+
+
+
+    1000
+
+
+
+
+```python
+eggs #报错：eggs未被定义，因为eggs是自定义函数spam()中的局部变量
+```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-90-6eaa7316e4ae> in <module>()
+    ----> 1 eggs
+    
+
+    NameError: name 'eggs' is not defined
+
+
+
+```python
+# 同理局部变量不能使用其他局部变量
+def ehbio():
+    eggs = 99
+    spam()
+    print(eggs)
+
+
+def spam():
+    eggs = 0
+    return eggs
+
+
+ehbio()
+```
+
+    99
+
+
+
+```python
+spam()
+```
+
+
+
+
+    0
+
+
+
+
+```python
+# 全局变量在局部作用域中使用
+def spam():
+    print(eggs)
+
+
+eggs = 28
+spam()
+```
+
+    28
+
+
+
+```python
+print(eggs)
+```
+
+    28
+
+
+
+```python
+# 尽量避免名称相同的局部变量和全局变量
+def spam():
+    eggs = 'spam local'
+    print(eggs)  # 输出spam local
+
+
+def bacon():
+    eggs = 'bacon local'
+    print(eggs)  # 输出bacon local
+    spam()
+    print(eggs)  # 输出bacon local
+
+
+eggs = 'global'
+bacon()
+```
+
+    bacon local
+    spam local
+    bacon local
+
+
+
+```python
+print(eggs)
+```
+
+    global
+
+
+## 声明为全局变量global
+
+
+```python
+# 在函数内修改全局变量
+def spam():
+    global eggs  # 声明为全局变量
+    eggs = 5
+
+
+eggs = 7
+spam()  # 调用自定义函数spam()
+print(eggs)
+```
+
+    5
+
+
+
+```python
+def spam():
+    global eggs  # this is the global
+    eggs = 'spam'
+
+
+def bacon():
+    eggs = 'bacon'  # this is a local
+
+
+def ham():
+    print(eggs)  # this is the global
+
+
+eggs = 42  # this is the global
+spam()
+print(eggs)
+```
+
+    spam
+
+
+## 异常的处理
+
+自定义函数可能报错，报错的处理
+
+
+```python
+def spam(divideBy):
+    return 21 / divideBy
+
+
+spam(3)
+spam(7)
+```
+
+
+
+
+    3.0
+
+
+
+
+```python
+spam(0)  # 如果是0，则会报错
+```
+
+
+    ---------------------------------------------------------------------------
+
+    ZeroDivisionError                         Traceback (most recent call last)
+
+    <ipython-input-107-b3fca5f67bd4> in <module>()
+    ----> 1 spam(0)
+    
+
+    <ipython-input-106-f3d08c8e42a5> in spam(divideBy)
+          1 def spam(divideBy):
+    ----> 2     return 21/divideBy
+          3 spam(3)
+          4 spam(7)
+
+
+    ZeroDivisionError: division by zero
+
+
+
+```python
+# 此时，我们可以借助try 和 except解决
+def spam(divideBy):
+    try:
+        return 21 / divideBy
+    except ZeroDivisionError:
+        print('Error: invalid argument')
+
+
+spam(0)
+spam(3)
+```
+
+    Error: invalid argument
+
+
+
+
+
+    7.0
+
+
+
+
+```python
+# 以上为知道报错内容，如果不知道报错内容呢？
+def spam(divideBy):
+    try:
+        return 21 / divideBy
+    except:
+        print('Error: invalid argument')
+
+
+spam(0)
+```
+
+    Error: invalid argument
+
+
+
+```python
+import traceback
+
+
+def spam(divideBy):
+    try:
+        return 21 / divideBy
+    except:
+        traceback.print_exc()
+
+
+spam(0)
+```
+
+    Traceback (most recent call last):
+      File "<ipython-input-115-9238a8901fff>", line 4, in spam
+        return 21/ divideBy
+    ZeroDivisionError: division by zero
+
+
+
+```python
+# 用sys模块
+import sys
+
+
+def spam(divideBy):
+    try:
+        return 21 / divideBy
+    except:
+        info = sys.exc_info()
+        #print (info)
+        print(info[0], ":", info[1])
+
+
+spam(0)
+```
+
+    <class 'ZeroDivisionError'> : division by zero
+
+
+
+```python
+# 只有6次机会的猜字游戏
+# This is a guess the number game.
+import random
+secretNumber = random.randint(1, 20)
+print('I am thinking of a number between 1 and 20.')
+
+# Ask the player to guess 6 times.
+for guessesTaken in range(1, 7):
+    print('Take a guess.')
+    guess = int(input())
+
+    if guess < secretNumber:
+        print('Your guess is too low.')
+    elif guess > secretNumber:
+        print('Your guess is too high.')
+    else:
+        break  # This condition is the correct guess!
+
+if guess == secretNumber:
+    print('Good job! You guessed my number in ' +
+          str(guessesTaken) + ' guesses!')
+else:
+    print('Nope. The number I was thinking of was ' + str(secretNumber))
+```
+
+    I am thinking of a number between 1 and 20.
+    Take a guess.
+    1
+    Your guess is too low.
+    Take a guess.
+    6
+    Your guess is too low.
+    Take a guess.
+    5
+    Your guess is too low.
+    Take a guess.
+    3
+    Your guess is too low.
+    Take a guess.
+    4
+    Your guess is too low.
+    Take a guess.
+    6
+    Your guess is too low.
+    Nope. The number I was thinking of was 7
+
+
+
+```python
+# collatz序列，如果是偶数则打印n//2， 如果是奇数则打印3*n+1
+def collatz(n):
+    print(n)
+    if n % 2 == 1 and n > 1:
+        collatz(3 * n + 1)
+    elif n % 2 == 0:
+        collatz(n // 2)
+
+
+n = input('enter a number:')
+n = int(n)
+collatz(n)
+```
+
+    enter a number:4
+    4
+    2
+    1
+
+
+## 列表
+
+“列表”是一个值，比如[1,3,3,'cat']
+
+
+```python
+type([1, 2, 'a'])
+```
+
+
+
+
+    list
+
+
+
+
+```python
+a = [1, 2, 3, 4, 'a', 'b']
+a
+```
+
+
+
+
+    [1, 2, 3, 4, 'a', 'b']
+
+
+
+
+```python
+b = [a, 3, 4]  # 列表可以嵌套列表，字典等
+b
+```
+
+
+
+
+    [[1, 2, 3, 4, 'a', 'b'], 3, 4]
+
+
+
+取列表中单个值
+
+
+```python
+a = [i for i in range(5)]
+a
+```
+
+
+
+
+    [0, 1, 2, 3, 4]
+
+
+
+
+```python
+a[0]  # 用元素的下标取值
+```
+
+
+
+
+    0
+
+
+
+
+```python
+a[3]
+```
+
+
+
+
+    3
+
+
+
+
+```python
+zoo = ['cat', 'dog', 'rat', 'elephant']
+zoo[3]
+```
+
+
+
+
+    'elephant'
+
+
+
+
+```python
+zoo[0:2]
+```
+
+
+
+
+    ['cat', 'dog']
+
+
+
+
+```python
+'hello ' + zoo[3]
+```
+
+
+
+
+    'hello elephant'
+
+
+
+负数下标
+
+
+```python
+zoo[-1]
+```
+
+
+
+
+    'elephant'
+
+
+
+
+```python
+a = ['b', 'c', 'd']
+zoo = ['cat', 'dog', 'rat', 'elephant']
+total = [a, zoo]
+```
+
+
+```python
+total
+```
+
+
+
+
+    [['b', 'c', 'd'], ['cat', 'dog', 'rat', 'elephant']]
+
+
+
+
+```python
+total[0][1]
+```
+
+
+
+
+    'c'
+
+
+
+
+```python
+total[1][0]
+```
+
+
+
+
+    'cat'
+
+
+
+zoo[0] 列表和下标
+zoo[0:2]列表和切片
+
+
+```python
+zoo[0:2]
+```
+
+
+
+
+    ['cat', 'dog']
+
+
+
+
+```python
+zoo[100] #超出后报错
+```
+
+
+    ---------------------------------------------------------------------------
+
+    IndexError                                Traceback (most recent call last)
+
+    <ipython-input-13-034b9400bdc5> in <module>()
+    ----> 1 zoo[100]
+    
+
+    IndexError: list index out of range
+
+
+查看列表长度
+
+
+```python
+len(zoo)
+```
+
+
+
+
+    4
+
+
+
+
+```python
+# 用下标更改列表的值
+zoo = ['cat', 'dog', 'rat', 'elephant']
+zoo
+```
+
+
+
+
+    ['cat', 'dog', 'rat', 'elephant']
+
+
+
+
+```python
+zoo[0] = 'five'
+```
+
+
+```python
+zoo
+```
+
+
+
+
+    ['five', 'dog', 'rat', 'elephant']
+
+
+
+列表的连接和复制
+
+
+```python
+a = [i for i in range(5)]
+a
+```
+
+
+
+
+    [0, 1, 2, 3, 4]
+
+
+
+
+```python
+b = [i for i in range(3, 10, 2)]
+b
+```
+
+
+
+
+    [3, 5, 7, 9]
+
+
+
+
+```python
+a + b
+```
+
+
+
+
+    [0, 1, 2, 3, 4, 3, 5, 7, 9]
+
+
+
+
+```python
+a * 3  # 列表的复制
+```
+
+
+
+
+    [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4]
+
+
+
+删除某个元素
+
+
+```python
+del a[0] #删除运行中的某个变量
+```
+
+
+```python
+a
+```
+
+
+
+
+    [1, 2, 3, 4]
+
+
+
+
+```python
+del a[2]
+```
+
+
+```python
+a
+```
+
+
+
+
+    [1, 2, 4]
+
+
+
+
+```python
+# 应用列表的实例
+bookNames = []
+while True:
+    print('Enter the name of books' +
+          str(len(bookNames) + 1) + 'Or enter nothing to stop')
+    name = input()
+    if name == '':
+        break
+    bookNames = bookNames + [name]
+print('The books are:\n')
+for name in bookNames:
+    print(' ' + name)
+```
+
+    enter the name of books1Or enter nothing to stop
+    lives
+    enter the name of books2Or enter nothing to stop
+    python
+    enter the name of books3Or enter nothing to stop
+    linux
+    enter the name of books4Or enter nothing to stop
+    
+    The books are:
+    
+     lives
+     python
+     linux
+
+
+列表在循环中的应用
+
+
+```python
+for i in range(5):
+    print(i)
+```
+
+    0
+    1
+    2
+    3
+    4
+
+
+
+```python
+for i in [0, 1, 2, 3, 4]:
+    print(i)
+```
+
+    0
+    1
+    2
+    3
+    4
+
+
+in 和 not in操作
+
+
+```python
+tool = ['python', 'R', 'perl', 'java']
+'python' in tool
+```
+
+
+
+
+    True
+
+
+
+
+```python
+'C' not in tool
+```
+
+
+
+
+    True
+
+
+
+应用列表多重赋值
+
+
+```python
+tool = ['python', 'R', 'perl', 'java']
+first = tool[0]
+second = tool[1]
+third = tool[2]
+forth = tool[3]
+print(first, second, third, forth)
+```
+
+    python R perl java
+
+
+
+```python
+# 另一种方式
+tool = ['python', 'R', 'perl', 'java']
+first, second, third, forth = tool
+print(first, second, third, forth)
+```
+
+    python R perl java
+
+
+增强的赋值操作
+
+```
+### +=     -=    *=     %=  注意：+= *=可以完成字符串连接和复制
+```
+
+```python
+a = 32
+a += 1  # 等价于a = a + 1
+a
+```
+
+
+
+
+    33
+
+
+
+方法和函数是一回事，每个数据类型都有一些自己的一组方法。列表数据：查找、添加、删除或操作列表值
+
+
+```python
+tool = ['python', 'R', 'perl', 'java']
+tool.index('R')
+```
+
+
+
+
+    1
+
+
+
+
+```python
+tool.index('perl')
+```
+
+
+
+
+    2
+
+
+
+
+```python
+tool.index('C')  # 没有在list中的情况
+```
+
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-44-385ebd06ddfe> in <module>()
+    ----> 1 tool.index('C')
+    
+
+    ValueError: 'C' is not in list
+
+
+
+```python
+# 添加
+tool = ['python', 'R', 'perl', 'java']
+tool.append('C')  # 没执行一次就多一个
+tool
+```
+
+
+
+
+    ['python', 'R', 'perl', 'java', 'C']
+
+
+
+
+```python
+# 插入
+tool = ['python', 'R', 'perl', 'java']
+tool.insert(1, 'C')
+tool
+```
+
+
+
+
+    ['python', 'C', 'R', 'perl', 'java']
+
+
+
+
+```python
+# 插入和添加，只能在列表上用 'str' object has no attribute 'append'
+eggs = 'hello'
+eggs.append('o')
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AttributeError                            Traceback (most recent call last)
+
+    <ipython-input-51-f76c80edd988> in <module>()
+          1 #插入和添加，只能在列表上用
+          2 eggs='hello'
+    ----> 3 eggs.append('o')
+    
+
+    AttributeError: 'str' object has no attribute 'append'
+
+
+
+```python
+# 插入和添加，只能在列表上用 'str' object has no attribute 'insert'
+eggs = 'hello'
+eggs.insert(1, 'o')
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AttributeError                            Traceback (most recent call last)
+
+    <ipython-input-52-21aceb5fda09> in <module>()
+          1 #插入和添加，只能在列表上用 'str' object has no attribute 'append'
+          2 eggs='hello'
+    ----> 3 eggs.insert(1,'o')
+    
+
+    AttributeError: 'str' object has no attribute 'insert'
+
+
+
+```python
+# 删除
+tool = ['python', 'R', 'perl', 'java']
+tool.remove('java')
+tool
+```
+
+
+
+
+    ['python', 'R', 'perl']
+
+
+
+
+```python
+# 删除不存在的值将报错
+tool = ['python', 'R', 'perl', 'java']
+tool.remove("C")
+```
+
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-54-c1e62b8d0701> in <module>()
+          1 #删除不存在的值将报错
+          2 tool = ['python', 'R', 'perl', 'java' ]
+    ----> 3 tool.remove("C")
+    
+
+    ValueError: list.remove(x): x not in list
+
+
+
+```python
+# 对列表的值进行排序
+lt = [1, 32, 4, 7, 5]
+lt.sort()
+lt
+```
+
+
+
+
+    [1, 4, 5, 7, 32]
+
+
+
+
+```python
+lt.sort(reverse=True)
+lt
+```
+
+
+
+
+    [32, 7, 5, 4, 1]
+
+
+
+
+```python
+lt = [1, 9, 2, 'a']  # 不同类型不可排序,sort()使用ASCII码进行排序，因此小写a在Z之前
+lt.sort()
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-89-69cf80e7b764> in <module>()
+          1 lt=[1,9,2,'a']#不同类型不可排序,sort()使用ASCII码进行排序，因此小写a在Z之前
+    ----> 2 lt.sort()
+    
+
+    TypeError: '<' not supported between instances of 'str' and 'int'
+
+
+## 字符串和元组
+
+
+```python
+name = 'python'
+name[0:2]
+```
+
+
+
+
+    'py'
+
+
+
+
+```python
+name[-1]
+```
+
+
+
+
+    'n'
+
+
+
+
+```python
+'p' in name
+```
+
+
+
+
+    True
+
+
+
+
+```python
+'p' not in name
+```
+
+
+
+
+    False
+
+
+
+
+```python
+for i in name:
+    print (i)
+```
+
+    p
+    y
+    t
+    h
+    o
+    n
+
+
+
+```python
+# 元组tuple,不可修改
+eggs = (1, 2, 'a')
+type(eggs)
+```
+
+
+
+
+    tuple
+
+
+
+
+```python
+# 不可修改
+eggs[1] = 'python'
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-71-d14153220c16> in <module>()
+    ----> 1 eggs[1]='python'
+    
+
+    TypeError: 'tuple' object does not support item assignment
+
+
+
+```python
+eggs[1]
+```
+
+
+
+
+    2
+
+
+
+
+```python
+#元组用（），列表[]，注意区分如下情况
+type(('hello'))
+```
+
+
+
+
+    str
+
+
+
+
+```python
+type(('hello',)) #逗号在元组中其“重要作用”
+```
+
+
+
+
+    tuple
+
+
+
+
+```python
+tool = ['python', 'R', 'perl', 'java']
+tuple(tool)
+```
+
+
+
+
+    ('python', 'R', 'perl', 'java')
+
+
+
+
+```python
+a = (1, 3, 4)
+list(a)
+```
+
+
+
+
+    [1, 3, 4]
+
+
+
+## 引用
+
+
+```python
+a = 42
+b = a
+a = 100
+a
+```
+
+
+
+
+    100
+
+
+
+
+```python
+b
+```
+
+
+
+
+    42
+
+
+
+列表的引用
+
+
+```python
+a = [i for i in range(5)]
+a
+```
+
+
+
+
+    [0, 1, 2, 3, 4]
+
+
+
+
+```python
+b = a
+b
+```
+
+
+
+
+    [0, 1, 2, 3, 4]
+
+
+
+
+```python
+a[0] = 'hello'
+a
+```
+
+
+
+
+    ['hello', 1, 2, 3, 4]
+
+
+
+
+```python
+b
+```
+
+
+
+
+    ['hello', 1, 2, 3, 4]
+
+
+
+
+```python
+import copy  # 列表的复制
+a = ['b', 'c', 'd', 'e']
+a
+```
+
+
+
+
+    ['b', 'c', 'd', 'e']
+
+
+
+
+```python
+f = copy.copy(a)
+f
+```
+
+
+
+
+    ['b', 'c', 'd', 'e']
+
+
+
+
+```python
+f[0] = 'python'
+```
+
+
+```python
+f
+```
+
+
+
+
+    ['python', 'c', 'd', 'e']
+
+
+
+
+```python
+a
+```
+
+
+
+
+    ['b', 'c', 'd', 'e']
+
+
+
+deep.copy()如果列表中包含了列表，使用deepcopy()
+
+
+```python
+a = [1, 2, 4, 6, [7, 9]]
+b = copy.copy(a)
+b
+```
+
+
+
+
+    [1, 2, 4, 6, [7, 9]]
+
+
+
+
+```python
+a[-1][0] = 70
+b
+```
+
+
+
+
+    [1, 2, 4, 6, [70, 9]]
+
+
+
+
+```python
+a = [1, 2, 4, 6, [7, 9]]
+b = copy.deepcopy(a)
+b
+```
+
+
+
+
+    [1, 2, 4, 6, [7, 9]]
+
+
+
+
+```python
+a[-1][0] = 111
+a
+```
+
+
+
+
+    [1, 2, 4, 6, [111, 9]]
+
+
+
+
+```python
+b
+```
+
+
+
+
+    [1, 2, 4, 6, [7, 9]]
+
+
+
+## 字典 键：值 对
+
+
+```python
+myTool = {'first': 'python', 'second': 'R', 'third': 'linux', 'forth': 'perl'}
+myTool
+```
+
+
+
+
+    {'first': 'python', 'forth': 'perl', 'second': 'R', 'third': 'linux'}
+
+
+
+
+```python
+myTool['first']
+```
+
+
+
+
+    'python'
+
+
+
+## 字典与列表
+
+
+```python
+# 默认字典是不排序的,不能应用下标或者切片取出，而列表是有序列的
+a = [1, 2, 3]
+b = [2, 1, 3]
+a == b
+```
+
+
+
+
+    False
+
+
+
+
+```python
+myTool1 = {'first': 'python', 'second': 'R', 'third': 'linux', 'forth': 'perl'}
+myTool2 = {'first': 'python', 'third': 'linux', 'second': 'R', 'forth': 'perl'}
+myTool1 == myTool2
+```
+
+
+
+
+    True
+
+
+
+
+```python
+#取值通过键
+myTool['second']
+```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-27-ac22a2f1a4f0> in <module>()
+          1 #取值通过键
+    ----> 2 myTool['second']
+    
+
+    NameError: name 'myTool' is not defined
+
+
+
+```python
+# 综合小程序
+birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+
+while True:
+    print('Enter a name: (blank to quit)')
+    name = input()
+    if name == '':
+        break
+
+    if name in birthdays:
+        print(birthdays[name] + ' is the birthday of ' + name)
+    else:
+        print('I do not have birthday information for ' + name)
+        print('What is their birthday?')
+        bday = input()
+        birthdays[name] = bday
+        print('Birthday database updated.')
+```
+
+    Enter a name: (blank to quit)
+    Alice
+    Apr 1 is the birthday of Alice
+    Enter a name: (blank to quit)
+    wang
+    I do not have birthday information for wang
+    What is their birthday?
+    Oct 1
+    Birthday database updated.
+    Enter a name: (blank to quit)
+    wang
+    Oct 1 is the birthday of wang
+    Enter a name: (blank to quit)
+
+
+### keys()、values（）和items( )
+
+
+```python
+myTool = {'first': 'python', 'second': 'R', 'third': 'linux', 'forth': 'perl'}
+for k in myTool.keys():
+    print(k)
+```
+
+    first
+    second
+    third
+    forth
+
+
+
+```python
+for v in myTool.values():
+    print(v)
+```
+
+    python
+    R
+    linux
+    perl
+
+
+
+```python
+myTool.items()
+```
+
+
+
+
+    dict_items([('first', 'python'), ('second', 'R'), ('third', 'linux'), ('forth', 'perl')])
+
+
+
+
+```python
+for k, v in myTool.items():
+    print('Key: ' + k + ' Value: ' + v)
+```
+
+    Key: first Value: python
+    Key: second Value: R
+    Key: third Value: linux
+    Key: forth Value: perl
+
+
+
+```python
+#检查字典中是否存在键
+'first' in  myTool
+```
+
+
+
+
+    True
+
+
+
+
+```python
+'hello' in myTool
+```
+
+
+
+
+    False
+
+
+
+
+```python
+# get()，两个参数分别为“键”，如果没有该键，返回的值
+myTool = {'first': 'python', 'second': 'R', 'third': 'linux', 'forth': 'perl'}
+myTool.get('first', 0)
+```
+
+
+
+
+    'python'
+
+
+
+
+```python
+myTool.get('hello', 0)
+```
+
+
+
+
+    0
+
+
+
+
+```python
+#不使用get()时,如果该键不存在，则报错
+myTool['hello']
+```
+
+
+    ---------------------------------------------------------------------------
+
+    KeyError                                  Traceback (most recent call last)
+
+    <ipython-input-14-72a3aef6d23a> in <module>()
+          1 #不使用get()时
+    ----> 2 myTool['hello']
+    
+
+    KeyError: 'hello'
+
+
+setdefault()如果没有该键，则添加
+
+
+```python
+# 写循环实现
+myTool = {'first': 'python', 'second': 'R', 'third': 'linux', 'forth': 'perl'}
+if 'fifth' not in myTool:
+    myTool['fifth'] = 'C'
+myTool
+```
+
+
+
+
+    {'fifth': 'C',
+     'first': 'python',
+     'forth': 'perl',
+     'second': 'R',
+     'third': 'linux'}
+
+
+
+
+```python
+# setdefault()
+myTool = {'first': 'python', 'second': 'R', 'third': 'linux', 'forth': 'perl'}
+myTool.setdefault('fifth', 'C')
+```
+
+
+
+
+    'C'
+
+
+
+
+```python
+myTool
+```
+
+
+
+
+    {'fifth': 'C',
+     'first': 'python',
+     'forth': 'perl',
+     'second': 'R',
+     'third': 'linux'}
+
+
+
+
+```python
+sequece = 'life is short, I use python'
+count = {}
+
+for character in sequece:
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+
+print(count)
+```
+
+    {'l': 1, 'i': 3, 'f': 1, 'e': 2, ' ': 5, 's': 3, 'h': 2, 'o': 2, 'r': 1, 't': 2, ',': 1, 'u': 1, 'p': 1, 'y': 1, 'n': 1}
+
+
+
+```python
+sequece = 'life is short, I use python'
+count = {}
+
+for character in sequece:
+    count[character] = count.get(character,0) + 1
+
+print(count)
+```
+
+    {'l': 1, 'i': 2, 'f': 1, 'e': 2, ' ': 5, 's': 3, 'h': 2, 'o': 2, 'r': 1, 't': 2, ',': 1, 'I': 1, 'u': 1, 'p': 1, 'y': 1, 'n': 1}
+
+
+
+```python
+# 简单序列计数
+sequece = 'TCGAAATTCGGGCATGGAG'
+count = {}
+
+for character in sequece:
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+for k, v in count.items():
+    print(k + ' ' + str(v))
+```
+
+    T 4
+    C 3
+    G 7
+    A 5
+
+
+## 字符串操作
+
+
+```python
+#一个错误开始
+'This is Bob's book'
+```
+
+
+      File "<ipython-input-26-9caaf6a74585>", line 2
+        'This is Bob's book'
+                     ^
+    SyntaxError: invalid syntax
+
+
+
+双引号 字符串可以使用双引号，双引号之间可以使用单引号
+
+
+```python
+"This is Bob's book" 
+```
+
+
+
+
+    "This is Bob's book"
+
+
+
+转义符 `\n`换行 `\'`单引号 `\"`双引号 `\\`倒斜杠 `\t`制表符
+
+
+```python
+print("Life is short,\n I use python")
+```
+
+    Life is short,
+     I use python
+
+
+原始字符串： 忽略转义符号
+
+
+```python
+print(r"Life is short,\n I use python")
+```
+
+    Life is short,\n I use python
+
+
+三重引号多行字符串
+
+
+```python
+print('''Life is short,\n I use python!
+do you like python
+yes''')
+```
+
+    Life is short,
+     I use python!
+    do you like python
+    yes
+
+
+多行注释"""  """
+
+
+```python
+"""
+简单序列计数
+多行注释
+
+"""
+sequece = 'TCGAAATTCGGGCATGGAG'
+count = {}
+
+for character in sequece:
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+for k, v in count.items():
+    print(k + ' ' + str(v))
+```
+
+    T 4
+    C 3
+    G 7
+    A 5
+
+
+字符串切片
+
+
+```python
+a = "life is short, i use python"
+a
+```
+
+
+
+
+    'life is short, i use python'
+
+
+
+
+```python
+a[1:5]
+```
+
+
+
+
+    'ife '
+
+
+
+
+```python
+a[-5:-3]
+```
+
+
+
+
+    'yt'
+
+
+
+
+```python
+a[-3:]
+```
+
+
+
+
+    'hon'
+
+
+
+
+```python
+'python' in a
+```
+
+
+
+
+    True
+
+
+
+字符串方法
+
+
+```python
+a = 'Hello world'
+a.upper()
+```
+
+
+
+
+    'HELLO WORLD'
+
+
+
+
+```python
+b = 'NI HAO'
+b.lower()
+```
+
+
+
+
+    'ni hao'
+
+
+
+
+```python
+b.isupper()
+```
+
+
+
+
+    True
+
+
+
+
+```python
+a.isupper()
+```
+
+
+
+
+    False
+
+
+
+
+```python
+# 简单介绍了验证码为什么不用区分大小写
+feeling = input('How are you?\n')
+if feeling.lower == 'great':
+    print('I feel great too.')
+else:
+    print('I hope you happy')
+```
+
+    How are you?
+    Great
+    I hope you happy
+
+
+is.X字符串方法 isalpha()是否只含字母 isalnum()是否只是字母或数字 isdecimal()是否只有数字 isspace()是否只有空格制表符换行
+istitle()是否字符串为大写开头，后面均为小写字母
+
+
+```python
+a = 'b1'
+a.isalpha()
+```
+
+
+
+
+    False
+
+
+
+
+```python
+a = 'b c'
+a.isalpha()
+```
+
+
+
+
+    False
+
+
+
+
+```python
+a = 'bc1'
+a.isalnum()
+```
+
+
+
+
+    True
+
+
+
+
+```python
+a = '1a'
+a.isalnum()
+```
+
+
+
+
+    True
+
+
+
+
+```python
+while True:
+    print('Enter your age:')
+    age = input()
+    if age.isdecimal():
+        break
+    print('Please enter a number for your age.')
+
+while True:
+    print('Select a new password (letters or numbers only):')
+    password = input()
+    if password.isalnum():
+        break
+    print('Passwords can only have letters or numbers.')
+```
+
+    Enter your age:
+    2
+    Select a new password (letters or numbers only):
+    +
+    Passwords can only have letters or numbers.
+    Select a new password (letters or numbers only):
+    2e
+
+
+startswith() 和 endswith()
+
+
+```python
+seq = '>0001\nTCGATTACGG'
+if seq.startswith('>'):
+    print(seq)
+```
+
+    >0001
+    TCGATTACGG
+
+
+join() 和 split()
+
+
+```python
+','.join(['i', 'love', 'python'])
+```
+
+
+
+
+    'i,love,python'
+
+
+
+
+```python
+'***'.join(['i', 'love', 'python'])
+```
+
+
+
+
+    'i***love***python'
+
+
+
+
+```python
+"linux R perl C python".split()
+```
+
+
+
+
+    ['linux', 'R', 'perl', 'C', 'python']
+
+
+
+
+```python
+'i***love***python'.split('***')
+```
+
+
+
+
+    ['i', 'love', 'python']
+
+
+
+文本对齐rjust() ljust() center()
+
+
+```python
+'hello'.rjust(10)
+```
+
+
+
+
+    '     hello'
+
+
+
+
+```python
+'hello'.rjust(20,'*')
+```
+
+
+
+
+    '***************hello'
+
+
+
+
+```python
+'hello'.center(20,'-')
+```
+
+
+
+
+    '-------hello--------'
+
+
+
+
+```python
+def printPicnic(itemsDict, leftWidth, rightWidth):
+    print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+    for k, v in itemsDict.items():
+        print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))
+
+
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+printPicnic(picnicItems, 20, 6)
+```
+
+    ---PICNIC ITEMS--
+    sandwiches..    4
+    apples......   12
+    cups........    4
+    cookies..... 8000
+    -------PICNIC ITEMS-------
+    sandwiches..........     4
+    apples..............    12
+    cups................     4
+    cookies.............  8000
+
+
+strip(),rstrip(),lstrip() 删除空白字符
+
+
+```python
+spam = '    hello    '
+spam
+```
+
+
+
+
+    '    hello    '
+
+
+
+
+```python
+spam.strip()
+```
+
+
+
+
+    'hello'
+
+
+
+
+```python
+spam.rstrip()
+```
+
+
+
+
+    '    hello'
+
+
+
+
+```python
+spam.lstrip()
+```
+
+
+
+
+    'hello    '
+
+
+
+
+```python
+a = 'Hello world, welcome to python world'
+a.strip('d')
+```
+
+
+
+
+    'Hello world, welcome to python worl'
+
+
+
+FINISH

@@ -1,0 +1,1057 @@
+# Python实战 {#Py3_pratcise_ct}
+
+欢迎访问我们的视频课程 <https://bioinfo.ke.qq.com>。
+
+## Python实战
+
+### ID转换
+
+不同数据库的名字互相转换，比如NCBI的ENTEZ ID转Gene symbol，ENSEMBL编号转ENTREZ ID。
+
+ID转换一般需要2个文件，一个文件是要转换的ID，另外一个文件是ID的对应关系。
+
+
+以我们的测试文件 (**GRCh38.idmap**)为例，第一列为`ENSEMBLE ID`，第二列为`Gene symbol`，第三列为`Entrez ID`。
+
+```
+Gene ID Associated Gene Name    EntrezGene ID
+ENSG00000252303 RNU6-280P       
+ENSG00000281771 Y_RNA      
+ENSG00000281876 RP11-399E6.4    101929901
+ENSG00000281766 RYBP    23429
+ENSG00000281518 FOXO6   100132074
+ENSG00000281614 INPP5D  3635
+ENSG00000280584 OBP2B   29989
+ENSG00000281230 SERTAD4 56256
+ENSG00000281917 SLC16A1 6566
+```
+
+待转换的文件 (**ensm.id**)内容为，期望转换为`Gene symbol`。
+
+```
+ENSG00000252303
+ENSG00000281771
+ENSG00000281256
+ENSG00000283272
+ENSG00000280864
+ENSG00000280792
+ENSG00000282878
+ENSG00000283276
+ENSG00000281822
+ENSG00000281384
+ENSG00000280505
+ENSG00000281764
+ENSG00000281316
+ENSG00000280963
+ENSG00000280775
+ENSG00000281876
+ENSG00000281766
+ENSG00000281518
+ENSG00000281614
+ENSG00000280584
+ENSG00000281230
+ENSG00000281917
+```
+
+我们怎么做呢？ 直观看起来也比较简单，一个个的去比较、匹配、提取就可以了。
+
+
+```python
+idD = {}
+for line in open("data/GRCh38.idmap"):
+    lineL = line.strip().split("\t")
+    ensm_id = lineL[0]
+    symbol  = lineL[1]
+    idD[ensm_id] = symbol
+#--------------------------------
+for line in open("data/ensm.id"):
+    ensm = line.strip()
+    print(ensm,idD[ensm],sep=": ")
+```
+
+    ENSG00000252303: RNU6-280P
+    ENSG00000281771: Y_RNA
+    ENSG00000281256: RP11-222G7.2
+    ENSG00000283272: Clostridiales-1
+    ENSG00000280864: RP11-654C22.2
+    ENSG00000280792: RP11-315F22.1
+    ENSG00000282878: RP11-399E6.1
+    ENSG00000283276: ABBA01000934.1
+    ENSG00000281822: RNU1-62P
+    ENSG00000281384: AC093802.1
+    ENSG00000280505: RP11-654C22.1
+    ENSG00000281764: RP11-399E6.2
+    ENSG00000281316: DPPA2P2
+    ENSG00000280963: SERTAD4-AS1
+    ENSG00000280775: RNA5SP136
+    ENSG00000281876: RP11-399E6.4
+    ENSG00000281766: RYBP
+    ENSG00000281518: FOXO6
+    ENSG00000281614: INPP5D
+    ENSG00000280584: OBP2B
+    ENSG00000281230: SERTAD4
+    ENSG00000281917: SLC16A1
+
+
+
+```python
+# 首先读入GRCh38.idmap文件
+
+# 定义3个变量，文件名，ensembl_id所在列(0-start, source_col), symbol所在列 (1,target_col)
+# 提前定义的好处是，修改起来会比较方便。
+map_file = "data/GRCh38.idmap"
+source_col = 0
+target_col = 1
+aDict = {}
+for line in open(map_file):
+    lineL = line.strip().split("\t")
+    source = lineL[source_col]
+    target = lineL[target_col]
+    aDict[source] = target
+
+# 读入ensm.id文件
+# 边读边处理
+
+id_file = "data/ensm.id"
+for line in open(id_file):
+    source_id = line.strip()
+    map_id = aDict.get(source_id, source_id)
+    print(map_id)
+
+# 输出到文件
+
+with open("data/symbol.id","w") as fh:
+    id_file = "data/ensm.id"
+    for line in open(id_file):
+        source_id = line.strip()
+        map_id = aDict.get(source_id, source_id)
+        print(map_id, file=fh)
+```
+
+    RNU6-280P
+    Y_RNA
+    RP11-222G7.2
+    Clostridiales-1
+    RP11-654C22.2
+    RP11-315F22.1
+    RP11-399E6.1
+    ABBA01000934.1
+    RNU1-62P
+    AC093802.1
+    RP11-654C22.1
+    RP11-399E6.2
+    DPPA2P2
+    SERTAD4-AS1
+    RNA5SP136
+    RP11-399E6.4
+    RYBP
+    FOXO6
+    INPP5D
+    OBP2B
+    SERTAD4
+    SLC16A1
+
+
+### 每条染色体基因数目统计
+
+GTF文件存储基因的注释信息。
+
+1. seqname - name of the chromosome or scaffold; chromosome names can be given with or without the 'chr' prefix. Important note: the seqname must be one used within Ensembl, i.e. a standard chromosome name or an Ensembl identifier such as a scaffold ID, without any additional content such as species or assembly. See the example GFF output below.
+2. source - name of the program that generated this feature, or the data source (database or project name)
+3. feature - feature type name, e.g. Gene, Variation, Similarity
+4. start - Start position of the feature, with sequence numbering starting at 1.
+5. end - End position of the feature, with sequence numbering starting at 1.
+6. score - A floating point value.
+7. strand - defined as + (forward) or - (reverse).
+8. frame - One of '0', '1' or '2'. '0' indicates that the first base of the feature is the first base of a codon, '1' that the second base is the first base of a codon, and so on..
+9. attribute - A semicolon-separated list of tag-value pairs, providing additional information about each feature.
+
+```
+chr1	HAVANA	gene	11869	14409	.	+	.	gene_id "ENSG00000223972.5"; gene_type "transcribed_unprocessed_pseudogene"; gene_status "KNOWN"; gene_name "DDX11L1";  level 2; havana_gene "OTTHUMG00000000961.2";
+chr1	HAVANA	gene	14404	29570	.	-	.	gene_id "ENSG00000227232.5"; gene_type "unprocessed_pseudogene"; gene_status "KNOWN"; gene_name "WASH7P";  level 2; havana_gene "OTTHUMG00000000958.1";
+chr1	ENSEMBL	gene	17369	17436	.	-	.	gene_id "ENSG00000278267.1"; gene_type "miRNA"; gene_status "KNOWN"; gene_name "MIR6859-3";  level 3;
+```
+
+如果统计每条染色体基因数目，只需要读第一列和第三列就可以了。
+
+
+```python
+chr_gene_cntD = {}
+for line in open("data/gencode.gene.gtf"):
+    lineL = line.strip().split("\t")
+    chrName = lineL[0]
+    regionType = lineL[2]
+    if (regionType == "gene"):
+        if chrName not in chr_gene_cntD:
+            chr_gene_cntD[chrName] = 1
+        else:
+            chr_gene_cntD[chrName] += 1
+#---------------------------------
+for chrName, cnt in list(chr_gene_cntD.items()):
+    print(chrName,"has",cnt,'genes.')
+```
+
+    chr1 has 5397 genes.
+    chr2 has 4150 genes.
+    chr3 has 3163 genes.
+    chr4 has 2633 genes.
+    chr5 has 2993 genes.
+    chr6 has 3001 genes.
+    chr7 has 2980 genes.
+    chr8 has 2444 genes.
+    chr9 has 2350 genes.
+    chr10 has 2306 genes.
+    chr11 has 3381 genes.
+    chr12 has 3047 genes.
+    chr13 has 1383 genes.
+    chr14 has 2289 genes.
+    chr15 has 2247 genes.
+    chr16 has 2597 genes.
+    chr17 has 3111 genes.
+    chr18 has 1206 genes.
+    chr19 has 2997 genes.
+    chr20 has 1436 genes.
+    chr21 has 880 genes.
+    chr22 has 1385 genes.
+    chrX has 2476 genes.
+    chrY has 594 genes.
+    chrM has 37 genes.
+
+
+
+```python
+gtf_file = "data/gencode.gene.gtf"
+
+# 一般字典命名，会在行尾加一个大写的D，作为类型代表
+chr_gene_cntD = {}
+
+for line in open(gtf_file):
+    # 每行按TAB键分成4份
+    lineL = line.split('\t',3)
+    chr_name = lineL[0]
+    feature  = lineL[2]
+    if feature == "gene":
+        # 如果chr_name已经出现过，则获取其值，然后加1
+        # 若没出现过，获取0，加1，表示第一次出现
+        chr_gene_cntD[chr_name] = chr_gene_cntD.get(chr_name,0) + 1
+#--------------------------------------
+for chr_name, count in chr_gene_cntD.items():
+    print(chr_name, count)
+```
+
+    chr1 5397
+    chr2 4150
+    chr3 3163
+    chr4 2633
+    chr5 2993
+    chr6 3001
+    chr7 2980
+    chr8 2444
+    chr9 2350
+    chr10 2306
+    chr11 3381
+    chr12 3047
+    chr13 1383
+    chr14 2289
+    chr15 2247
+    chr16 2597
+    chr17 3111
+    chr18 1206
+    chr19 2997
+    chr20 1436
+    chr21 880
+    chr22 1385
+    chrX 2476
+    chrY 594
+    chrM 37
+
+
+### 所有外显子总长度统计
+
+bed12格式 (前3列必须，其它可选)
+
+1. chrom - The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. scaffold10671).
+2. chromStart - The starting position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0.
+3. chromEnd - The ending position of the feature in the chromosome or scaffold. The chromEnd base is not included in the display of the feature. 
+4. name - Defines the name of the BED line. This label is displayed to the left of the BED line in the Genome Browser window when the track is open to full display mode or directly to the left of the item in pack mode.
+5. score - A score between 0 and 1000. If the track line useScore attribute is set to 1 for this annotation data set, the score value will determine the level of gray in which this feature is displayed (higher numbers = darker gray). This table shows the Genome Browser's translation of BED score values into shades of gray:
+
+5. thickStart - The starting position at which the feature is drawn thickly (for example, the start codon in gene displays). When there is no thick part, thickStart and thickEnd are usually set to the chromStart position.
+6. thickEnd - The ending position at which the feature is drawn thickly (for example the stop codon in gene displays).
+7. itemRgb - An RGB value of the form R,G,B (e.g. 255,0,0). If the track line itemRgb attribute is set to "On", this RBG value will determine the display color of the data contained in this BED line. NOTE: It is recommended that a simple color scheme (eight colors or less) be used with this attribute to avoid overwhelming the color resources of the Genome Browser and your Internet browser.
+8. blockCount - The number of blocks (exons) in the BED line.
+9. blockSizes - A comma-separated list of the block sizes. The number of items in this list should correspond to blockCount.
+10. blockStarts - A comma-separated list of block starts. All of the blockStart positions should be calculated relative to chromStart. The number of items in this list should correspond to blockCount.
+
+基因注释bed12格式
+
+```
+chr1	11868	14409	ENST00000456328.2	0	+	14409	14409	0	3	359,109,1189,	0,744,1352,
+chr1	12009	13670	ENST00000450305.2	0	+	13670	13670	0	6	48,49,85,78,154,218,	0,169,603,965,1211,1443,
+chr1	17368	17436	ENST00000619216.1	0	-	17436	17436	0	1	68,	0,
+chr1	29553	31097	ENST00000473358.1	0	+	31097	31097	0	3	486,104,122,	0,1010,1422,
+chr1	30266	31109	ENST00000469289.1	0	+	31109	31109	0	2	401,134,	0,709,
+chr1	30365	30503	ENST00000607096.1	0	+	30503	30503	0	1	138,	0,
+```
+
+第十列是外显子的大小，所有我们只需要把他们加在一起就好了。
+
+**Note**：实际计算时需要考虑不同转录本之间存在重叠，需要对bed文件预处理，只保留唯一的外显子位置，然后再加和。
+
+
+```python
+exonSizeSum = 0
+for line in open("data/gencode.gene.bed12"):
+    lineL = line.split()
+    exonSize = lineL[10]
+    exonSizeL = exonSize.strip(',').split(',')
+    for i in exonSizeL:
+        exonSizeSum += int(i)
+print(exonSizeSum)
+```
+
+    291762517
+
+
+
+```python
+bed12 = "data/gencode.gene.bed12"
+
+total_exon_sum = 0
+
+for line in open(bed12):
+    # 从右侧分割为3个元素的列表
+    # 关注的元素在第二位，索引为1
+    # 去掉末尾的逗号
+    lineL = line.rsplit("\t",2)
+    exonSize = lineL[1].strip(',')
+    exonSizeL = [int(i) for i in exonSize.split(',')]
+    exonSum = sum(exonSizeL)
+    
+    total_exon_sum += exonSum
+print("Total exon size is", total_exon_sum, "nt.")
+
+# 更清晰展示数字大小
+print("Total exon size is", "{:,}".format(total_exon_sum), "nt.")
+```
+
+    Total exon size is 291762517 nt.
+    Total exon size is 291,762,517 nt.
+
+
+
+```python
+print("{a[a]}".format(a={'a':"ehbio"}))
+```
+
+    ehbio
+
+
+## Python小技巧
+
+链似比较
+
+
+```python
+x = 5
+print("1 < x < 10 is", 1 < x < 10)
+print("10 > x <= 9", 10 > x <= 9)
+```
+
+    1 < x < 10 is True
+    10 > x <= 9 True
+
+
+解释正则表达式
+
+
+```python
+import re
+re.compile("^[a-z]*$", re.DEBUG)
+```
+
+    AT AT_BEGINNING
+    MAX_REPEAT 0 MAXREPEAT
+      IN
+        RANGE (97, 122)
+    AT AT_END
+
+
+
+
+
+    re.compile(r'^[a-z]*$', re.UNICODE|re.DEBUG)
+
+
+
+
+```python
+re.compile("^[a-z][0-9]+$", re.DEBUG)
+```
+
+    AT AT_BEGINNING
+    IN
+      RANGE (97, 122)
+    MAX_REPEAT 1 MAXREPEAT
+      IN
+        RANGE (48, 57)
+    AT AT_END
+
+
+
+
+
+    re.compile(r'^[a-z][0-9]+$', re.UNICODE|re.DEBUG)
+
+
+
+
+```python
+re.compile("^[a-z]([0-9]+)$", re.DEBUG)
+```
+
+    AT AT_BEGINNING
+    IN
+      RANGE (97, 122)
+    SUBPATTERN 1 0 0
+      MAX_REPEAT 1 MAXREPEAT
+        IN
+          RANGE (48, 57)
+    AT AT_END
+
+
+
+
+
+    re.compile(r'^[a-z]([0-9]+)$', re.UNICODE|re.DEBUG)
+
+
+
+enumerate (不再使用len)
+
+
+```python
+a = ['s','x','b','d']
+
+# Preferred way
+for index, item in enumerate(a):
+    print(index,item)
+
+print("\n")
+
+# Old way
+for i in range(len(a)):
+    print(i,a[i])
+    
+```
+
+    0 s
+    1 x
+    2 b
+    3 d
+    
+    
+    0 s
+    1 x
+    2 b
+    3 d
+
+
+列表解析、字典解析、元组解析
+
+
+```python
+# 获得系列坐标点
+a = ((i,j) for i in range(3) for j in range(2))
+a
+```
+
+
+
+
+    <generator object <genexpr> at 0x7fa8d04d7fc0>
+
+
+
+
+```python
+for i in a:
+    print(i)
+```
+
+    (0, 0)
+    (0, 1)
+    (1, 0)
+    (1, 1)
+    (2, 0)
+    (2, 1)
+
+
+
+```python
+str1 = "I love sheng xin bao dian"
+print([i for i in str1.split() if i.endswith('n')])
+```
+
+    ['xin', 'dian']
+
+
+
+```python
+a = {i:i*2 for i in range(5)}
+a
+```
+
+
+
+
+    {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}
+
+
+
+
+```python
+[(x, y) for x in range(4) if x % 2 == 1 for y in range(4)]
+```
+
+
+
+
+    [(1, 0), (1, 1), (1, 2), (1, 3), (3, 0), (3, 1), (3, 2), (3, 3)]
+
+
+
+列表索引，反序
+
+
+```python
+a = [1,2,3,4,5]
+a[::2]
+```
+
+
+
+
+    [1, 3, 5]
+
+
+
+
+```python
+a[::-1]
+```
+
+
+
+
+    [5, 4, 3, 2, 1]
+
+
+
+for..else;若`for`循环中未执行`break`,则`else`会被执行
+
+
+```python
+found = False
+for i in range(2,5):
+    if i == 1:
+        found = True
+        break
+if not found: 
+    print("i was never 1")
+```
+
+    i was never 1
+
+
+
+```python
+for i in range(2,5):
+    if i == 1:
+        break
+else:
+    print("i was never 1")
+```
+
+    i was never 1
+
+
+原位替换
+
+
+```python
+a = 5
+b = 6
+c = 7
+a, b = b,a
+print("a is",a)
+print("b is",b)
+```
+
+    a is 6
+    b is 5
+
+
+
+```python
+a, (b,c) = c, (a,b)
+print("a is",a)
+print("b is",b)
+print("c is",c)
+```
+
+    a is 7
+    b is 6
+    c is 5
+
+
+
+```python
+first, *middle_all, last = (1,2,3,4,5,6)
+middle_all
+```
+
+
+
+
+    [2, 3, 4, 5]
+
+
+
+集合操作
+
+
+```python
+a = set(["sheng", "xin", "bao","dian","best","tutotials"])
+b = set(["hong", "ji", "yin","zu","best","tutotials"])
+a | b  # union
+```
+
+
+
+
+    {'bao', 'best', 'dian', 'hong', 'ji', 'sheng', 'tutotials', 'xin', 'yin', 'zu'}
+
+
+
+
+```python
+a & b # intersection
+```
+
+
+
+
+    {'best', 'tutotials'}
+
+
+
+
+```python
+a ^ b # Symmetric Difference
+```
+
+
+
+
+    {'bao', 'dian', 'hong', 'ji', 'sheng', 'xin', 'yin', 'zu'}
+
+
+
+Negative round
+
+
+```python
+print("round整数:",str(round(1234.5678, -2)))
+
+print("round小数:",str(round(1234.5678, 2)))
+```
+
+    round整数: 1200.0
+    round小数: 1234.57
+
+
+多行字符串的嵌套
+
+
+```python
+# \可以，但是第二行需要起头
+system_command = "s-plot pheatmap -f matrix \
+-t heatmap -a TRUE"
+print(system_command)
+```
+
+    s-plot pheatmap -f matrix -t heatmap -a TRUE
+
+
+
+```python
+# 字符串中包含换行符
+# 切第二行要起头，不然会有较多空格
+system_command = """s-plot pheatmap -f matrix
+-t heatmap -a TRUE""" 
+print(system_command)
+print(system_command.replace('\n', ' '))
+```
+
+    s-plot pheatmap -f matrix 
+    -t heatmap -a TRUE
+    s-plot pheatmap -f matrix  -t heatmap -a TRUE
+
+
+
+```python
+# 类元组的写法，既可以跨行，又可以自由格式
+# 需要注意2点
+   # 类元组，无逗号
+   # 字符串连接时不会自动加空格，空格需要保存在字符串里面 
+system_command = ("s-plot pheatmap -f matrix "
+                  "-t heatmap -a TRUE")
+print(system_command)
+```
+
+    s-plot pheatmap -f matrix -t heatmap -a TRUE
+
+
+
+```python
+# 多一步join；
+system_command = ["s-plot pheatmap -f matrix",
+                  "-t heatmap -a TRUE"]
+print(' '.join(system_command))
+```
+
+    s-plot pheatmap -f matrix -t heatmap -a TRUE
+
+
+矩阵转置
+
+
+```python
+a = [(1,2), (3,4), (5,6)]
+b = zip(*a)
+for i in b:
+    print(i)
+```
+
+    (1, 3, 5)
+    (2, 4, 6)
+
+
+zip转换两个列表为字典
+
+
+```python
+keyL = [1,2,3]
+valueL = ['a','b','v']
+for i ,j in zip(keyL, valueL):
+    print(i,j)
+```
+
+    1 a
+    2 b
+    3 v
+
+
+
+```python
+import pprint
+pprint.pprint(dict(zip(keyL, valueL)))
+```
+
+    {1: 'a', 2: 'b', 3: 'v'}
+
+
+
+```python
+dict([(i,j) for i ,j in zip(keyL, valueL)])
+```
+
+
+
+
+    {1: 'a', 2: 'b', 3: 'v'}
+
+
+
+重复
+
+
+```python
+'xyz' * 3
+```
+
+
+
+
+    'xyzxyzxyz'
+
+
+
+
+```python
+3 * 'xyz'
+```
+
+
+
+
+    'xyzxyzxyz'
+
+
+
+
+```python
+[1,2] * 3
+```
+
+
+
+
+    [1, 2, 1, 2, 1, 2]
+
+
+
+启动网络服务器，用于文件预览或传输
+
+
+```python
+# run in commang line
+# python -m http.server 8000
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+```
+
+sum的另一用法，二维数组秒变1维
+
+
+```python
+aList = [[1, 2, 3], [4, 5], [6], [7, 8, 9]]
+sum(aList, [])
+```
+
+
+
+
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+打开一个关于Python漫画的网站
+
+
+```python
+#import antigravity
+```
+
+
+```python
+print('\n'.join([''.join([('Love'[(x-y) % len('Love')] if ((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3 <= 0 else ' ') for x in range(-30, 30)]) for y in range(30, -30, -1)]))
+```
+
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                    veLoveLov           veLoveLov               
+                eLoveLoveLoveLove   eLoveLoveLoveLove           
+              veLoveLoveLoveLoveLoveLoveLoveLoveLoveLov         
+             veLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveL        
+            veLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLov       
+            eLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLove       
+            LoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveL       
+            oveLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLo       
+            veLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLov       
+            eLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLove       
+             oveLoveLoveLoveLoveLoveLoveLoveLoveLoveLove        
+              eLoveLoveLoveLoveLoveLoveLoveLoveLoveLove         
+              LoveLoveLoveLoveLoveLoveLoveLoveLoveLoveL         
+                eLoveLoveLoveLoveLoveLoveLoveLoveLove           
+                 oveLoveLoveLoveLoveLoveLoveLoveLove            
+                  eLoveLoveLoveLoveLoveLoveLoveLove             
+                    veLoveLoveLoveLoveLoveLoveLov               
+                      oveLoveLoveLoveLoveLoveLo                 
+                        LoveLoveLoveLoveLoveL                   
+                           LoveLoveLoveLov                      
+                              LoveLoveL                         
+                                 Lov                            
+                                  v                             
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+                                                                
+
+
+曼德勃罗集合
+
+
+```python
+print('\n'.join([''.join(['*'if abs((lambda a:lambda z,c,n:a(a,z,c,n))(lambda s,z,c,n:z if n==0else s(s,z*z+c,c,n-1))(0,0.02*x+0.05j*y,40))<2 else' 'for x in range(-80,20)])for y in range(-20,20)]))
+```
+
+                                                                                    *                   
+                                                                                                        
+                                                                                                        
+                                                                              **                        
+                                                                         ***********                    
+                                                                        ************                    
+                                                                          *********                     
+                                                                *    * ************  * *                
+                                                        ****** * *************************** *          
+                                                        *************************************** *****   
+                                                         *******************************************    
+                                                   *** ******************************************** *   
+                                                    **************************************************  
+                                                 *******************************************************
+                          *        *              ***************************************************** 
+                         **** ******* *          *******************************************************
+                          *****************     ******************************************************* 
+                       *********************** *********************************************************
+                       *********************** ******************************************************** 
+                 **** ********************************************************************************  
+    *********************************************************************************************       
+                 **** ********************************************************************************  
+                       *********************** ******************************************************** 
+                       *********************** *********************************************************
+                          *****************     ******************************************************* 
+                         **** ******* *          *******************************************************
+                          *        *              ***************************************************** 
+                                                 *******************************************************
+                                                    **************************************************  
+                                                   *** ******************************************** *   
+                                                         *******************************************    
+                                                        *************************************** *****   
+                                                        ****** * *************************** *          
+                                                                *    * ************  * *                
+                                                                          *********                     
+                                                                        ************                    
+                                                                         ***********                    
+                                                                              **                        
+                                                                                                        
+                                                                                                        
+
+
+python打印九九乘法表
+
+
+```python
+print('\n'.join([' '.join(['%s*%s=%-2s' % (y,x,x*y) for y in range(1,x+1)]) for x in range(1,10)]))
+```
+
+    1*1=1 
+    1*2=2  2*2=4 
+    1*3=3  2*3=6  3*3=9 
+    1*4=4  2*4=8  3*4=12 4*4=16
+    1*5=5  2*5=10 3*5=15 4*5=20 5*5=25
+    1*6=6  2*6=12 3*6=18 4*6=24 5*6=30 6*6=36
+    1*7=7  2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49
+    1*8=8  2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64
+    1*9=9  2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81
+
+
+`map`, `filter`
+
+
+```python
+# 过滤大于4的元素
+a = [3,4,5]
+[i for i in a if i<4]
+```
+
+
+
+
+    [3]
+
+
+
+
+```python
+list(filter(lambda x: x<4, a))
+```
+
+
+
+
+    [5]
+
+
+
+
+```python
+# 每个元素加2
+[i+2 for i in a]
+```
+
+
+
+
+    [5, 6, 7]
+
+
+
+
+```python
+map(lambda x: x+2, a)
+```
+
+
+
+
+    <map at 0x7fa8d0502358>
+
+
+
+
+```python
+list(map(lambda x: x+2, a))
+```
+
+
+
+
+    [5, 6, 7]
+
+
+
+算2的1000次方的各位数之和
+
+
+```python
+sum(map(int, str(2**1000)))
+```
+
+
+
+
+    1366
+
+

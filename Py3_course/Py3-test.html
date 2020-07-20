@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Python3学习教程</title>
+  <meta name="description" content="Python3学习教程">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Python3学习教程" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Python3学习教程" />
+  
+  
+  
+
+<meta name="author" content="易生信培训团队">
+<meta name="author" content="联系我们: train@ehbio.com">
+<meta name="author" content="抱歉，转成PDF后部分格式问题还未解决，会继续更新调整">
+
+
+<meta name="date" content="2018-05-09">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="numpy-scipy.html">
+<link rel="next" href="references.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://www.ehbio.com"><img src="http://www.ehbio.com/logos/ehbio_gitbook_logo.png" width="95%"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>EHBIO Gene Technology</a></li>
+<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a><ul>
+<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
+<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#pythonintfloatstr"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
+<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
+<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
+<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#helloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
+<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
+<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
+<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
+<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.4"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 控制流</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
+<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
+<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
+<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#breakcontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
+<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for--range"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
+<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.8"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
+<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#printlen-input-intstr"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.10"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
+<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#global"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
+<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.12"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
+<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.13"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
+<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.14"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
+<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.15"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
+<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#--"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
+<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.17"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a><ul>
+<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvaluesitems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
+</ul></li>
+<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.18"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="py3-ct.html"><a href="py3-ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a><ul>
+<li class="chapter" data-level="2.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
+<li class="chapter" data-level="2.1.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
+<li class="chapter" data-level="2.1.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
+<li class="chapter" data-level="2.1.4" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
+<li class="chapter" data-level="2.1.6" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
+<li class="chapter" data-level="2.1.7" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
+<li class="chapter" data-level="2.1.8" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
+<li class="chapter" data-level="2.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3</b> Python语法</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
+<li class="chapter" data-level="2.3.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
+<li class="chapter" data-level="2.3.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.1"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
+<li class="chapter" data-level="2.4.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
+<li class="chapter" data-level="2.5.2" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6.1"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="py3-ct.html"><a href="py3-ct.html#section-2.7"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
+<li class="chapter" data-level="2.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8.1"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.1"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
+<li class="chapter" data-level="2.9.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.2"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
+<li class="chapter" data-level="2.9.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.3"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
+<li class="chapter" data-level="2.9.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.4"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
+<li class="chapter" data-level="2.9.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.5"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
+<li class="chapter" data-level="2.9.6" data-path="py3-ct.html"><a href="py3-ct.html#lambda-map-filer-reduce-"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
+<li class="chapter" data-level="2.9.7" data-path="py3-ct.html"><a href="py3-ct.html#exec-eval-python-"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
+<li class="chapter" data-level="2.9.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.8"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
+<li class="chapter" data-level="2.11" data-path="py3-ct.html"><a href="py3-ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a><ul>
+<li class="chapter" data-level="3.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#figuresubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#subplot-1"><i class="fa fa-check"></i><b>3.1.2</b> 调整subplot周围间距</a></li>
+<li class="chapter" data-level="3.1.3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#--1"><i class="fa fa-check"></i><b>3.1.3</b> 颜色 标记和线型</a></li>
+<li class="chapter" data-level="3.1.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.4</b> 刻度、标签和图例</a></li>
+<li class="chapter" data-level="3.1.5" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#legend-1"><i class="fa fa-check"></i><b>3.1.5</b> 添加图例legend</a></li>
+<li class="chapter" data-level="3.1.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.6</b> 注解</a></li>
+<li class="chapter" data-level="3.1.7" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.7</b> 图片保存</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
+<li class="chapter" data-level="3.2.2" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
+<li class="chapter" data-level="3.2.3" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
+<li class="chapter" data-level="3.2.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
+<li class="chapter" data-level="3.2.5" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
+<li class="chapter" data-level="3.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
+<li class="chapter" data-level="3.2.7" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2.7"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.1</b> Python实战</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#id"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.2"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.3"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a><ul>
+<li class="chapter" data-level="5.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
+<li class="chapter" data-level="5.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.1"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
+<li class="chapter" data-level="5.2.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
+<li class="chapter" data-level="5.2.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.3"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
+<li class="chapter" data-level="5.2.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.4"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
+<li class="chapter" data-level="5.2.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.5"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
+<li class="chapter" data-level="5.2.6" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.6"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
+<li class="chapter" data-level="5.2.7" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.7"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
+<li class="chapter" data-level="5.2.8" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.8"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
+<li class="chapter" data-level="5.2.9" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.9"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
+<li class="chapter" data-level="5.2.10" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#meta-data"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
+<li class="chapter" data-level="5.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#seaborn"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numpy-scipy.html"><a href="numpy-scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a><ul>
+<li class="chapter" data-level="6.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
+<li class="chapter" data-level="6.1.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
+<li class="chapter" data-level="6.1.3" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpymath"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.1"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
+<li class="chapter" data-level="6.2.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Py3-test.html"><a href="Py3-test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a><ul>
+<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#section-8.1.1"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
+<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
+<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#section-8.1.3"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
+<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#section-8.1.4"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
+<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#section-8.1.5"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
+<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#section-8.1.6"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
+<li class="chapter" data-level="8.1.7" data-path="references.html"><a href="references.html#linux"><i class="fa fa-check"></i><b>8.1.7</b> Linux</a></li>
+<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
+<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
+<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#section-8.1.10"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
+<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#section-8.1.11"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
+<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#section-8.1.13"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
+<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python-1"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
+<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
+<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
+<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#section-8.1.17"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
+<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#section-8.1.18"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
+<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#section-8.1.19"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
+<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#section-8.1.20"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
+<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#section-8.1.21"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
+<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
+<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#section-8.2.3"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
+<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#section-8.2.4"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
+<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#section-8.2.5"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
+<li class="chapter" data-level="8.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
+<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#section-8.2.8"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
+<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#section-8.2.9"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
+<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#section-8.2.10"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
+<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#section-8.2.11"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
+<li class="chapter" data-level="8.2.12" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
+<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#section-8.2.13"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="company-intro.html"><a href="company-intro.html"><i class="fa fa-check"></i><b>9</b> 公司简介</a></li>
+<li class="divider"></li>
+<li><a href="mailto:ct@ehbio.com" target="blank">ct@ehbio.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python3学习教程</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Py3_test" class="section level1">
+<h1><span class="header-section-number">7</span> 易生信Python培训练习和考核题目</h1>
+<p>欢迎访问我们的视频课程 <a href="https://bioinfo.ke.qq.com" class="uri">https://bioinfo.ke.qq.com</a>。</p>
+<ol style="list-style-type: decimal">
+<li><code>3*2**2</code>的输出是多少？(1分)</li>
+<li><code>8 % 4</code>的输出是多少？(1分)</li>
+<li><code>32 + '32'</code>的输出是什么？(1分)</li>
+<li><code>32 &gt; '32'</code>的输出是什么？(1分)</li>
+<li><code>'Sheng Xin Bao Dian'.find('x')</code>和<code>'Sheng Xin Bao Dian'.find('X')</code>的输出分别是？(2分)</li>
+<li>一句话计算<code>'Sheng Xin Bao Dian'</code>字符串中<code>n</code>的数目？(1分)</li>
+<li>写出下面10段程序的输出？(1分/段)</li>
+</ol>
+<p><code>aList = [1, 2, 3]    bList = aList    bList.append(4)    aList</code></p>
+<p><code>aList = [1, 2, 3]    cList = aList[:]    cList.append(4)    aList</code></p>
+<p><code>aList = [1,1,2,2,3,5,4,3]    aSet = set(aList)    aSet</code></p>
+<p><code>[1, 2, 3] * 2</code></p>
+<p><code>[i**2 for i in [1,2,3]]</code></p>
+<p><code>dict([(i, i**2) for i in range(5)])</code></p>
+<p><code>import re    re.findall(&quot;[Ii]mageGP&quot;, &quot;www.ehbio.com/ImageGP&quot;)</code></p>
+<p><code>' '.join([&quot;Sheng&quot;, &quot;Xin&quot;, &quot;Bao&quot;, &quot;Dian&quot;])</code></p>
+<p><code>def sumNumber(a, b):        return a + b    sumNumber(2,3)</code></p>
+<p><code>def sumNumber(a, b):        return a + b    print(sumNumber(2,3))</code></p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>写程序以下面列表中每个元素为<code>key</code>，元素出现的次数为<code>value</code>，构建一个字典，并遍历字典按元素的ASCII码顺序输出？(5分)</p>
+<pre><code>aList = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;d&#39;,&#39;e&#39;, &#39;A&#39;]</code></pre></li>
+<li>对教案中脑筋急转弯问题的解法进行优化; 问题是：<code>现有100元钱，需要买100个物品，其中铅笔盒单价5元，笔单价3元，橡皮单价0.5元，怎么组合可以把100元花完，同时三种物品的个数和为100，请用编程解决。</code> (3分)</li>
+<li>写程序用高斯的计算方式计算<code>1+2+3+...+100</code>的加和。(3分)</li>
+<li><p>指出下面每个程序运行时可能会出现的错误。(1分/段)</p>
+<pre><code>aList = [1,2,3]
+aDict = {}
+aDict[aList] = 1
+b = aDict[&#39;a&#39;]</code></pre>
+<pre><code>if 1:
+print(&quot;Sheng xin bao dian great!&quot;)</code></pre>
+<pre><code>32 + &#39;32&#39;</code></pre>
+<pre><code>aList = [1, 2, 3]
+aList.add(4)</code></pre>
+<pre><code>aList = [1, 2, 3]
+&#39;&#39;.join(aList)</code></pre>
+<pre><code>int(&#39;a&#39;)</code></pre>
+<pre><code>3 / 0</code></pre>
+<pre><code>for i in range(10)
+print(L)</code></pre>
+<pre><code>&#39;Sheng Xin * 3</code></pre>
+<pre><code>type = 1</code></pre></li>
+<li>Python文件读写函数<code>open</code>的<code>mode</code>参数中<code>r</code>, <code>w</code>, <code>a</code>, <code>t</code>, <code>b</code>, <code>x</code>分别是什么意思？(3分)</li>
+<li>Python中如何获取当前所在的工作目录? 如何修改工作目录？(3分)</li>
+<li>Python中连接多个字符串的方法有哪些？优缺点是什么？(3分)</li>
+<li><code>print(&quot;%.2f%%&quot; % (1/3))</code>的输出是什么？(2分)</li>
+<li>描述下语句<code>import pandas as pd</code>做了什么操作？(2分)</li>
+<li>教案中IDmap程序用pandas实现 (<code>GRCh38.idmap</code>,<code>ensm.id</code>)。(5分)</li>
+<li>Jupyter中<code>%%writefile</code>, <code>%%run</code> 宏命令的用途是什么？(2分)</li>
+<li>找出教案中TP53 mRNA序列中的ORF (<code>human_TP53_mRNA.fa</code>)。(5分)</li>
+<li>列出教案中大肠杆菌基因组中限制性内切酶SecI的切割位置 (<code>Ecoli.fa</code>)。(5分)</li>
+<li>计算<code>data/test1.fa</code>中每条序列的GC含量。(5分)</li>
+<li>不使用pandas，写Python脚本处理Pandas教案中的TPM表达矩阵的提取和合并？(ENCFF060LPA.tsv, ENCFF262OBL.tsv, ENCFF289HGQ.tsv, ENCFF673KYR.tsv) (8分)</li>
+<li>给定FASTA格式的文件(test1.fa 和 test2.fa)，写一个程序 <code>cat.py</code> 读入文件，并输出到屏幕 (2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>open(file)</li>
+<li>for .. in loop</li>
+<li>print()</li>
+<li>strip() function</li>
+</ul></li>
+</ul></li>
+<li>给定FASTQ格式的文件(test1.fq), 写一个程序 <code>cat.py</code> 读入文件，并输出到屏幕 (2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>同上</li>
+</ul></li>
+</ul></li>
+<li>写程序 <code>splitName.py</code>, 读入test2.fa, 并取原始序列名字第一个空格前的名字为处理后的序列名字，输出到屏幕 (2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>split</li>
+<li>字符串的索引</li>
+</ul></li>
+<li><p>输出格式为：</p>
+<pre><code>&gt;NM_001011874
+gcggcggcgggcgagcgggcgctggagtaggagctg.......</code></pre></li>
+</ul></li>
+<li>写程序 <code>formatFasta.py</code>, 读入test2.fa，把每条FASTA序列连成一行然后输出 (2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>join</li>
+<li>strip<br />
+</li>
+</ul></li>
+<li><p>输出格式为:</p>
+<pre><code>&gt;NM_001011874
+gcggcggcgggc......TCCGCTG......GCGTTCACC......CGGGGTCCGGAG</code></pre></li>
+</ul></li>
+<li>写程序 <code>formatFasta-2.py</code>, 读入test2.fa，把每条FASTA序列分割成80个字母一行的序列 (2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>字符串切片操作</li>
+<li>range</li>
+</ul></li>
+<li><p>输出格式为</p>
+<pre><code>&gt;NM_001011874
+gcggcggcgc.(60个字母).TCCGCTGACG #(每行80个字母)
+acgtgctacg.(60个字母).GCGTTCACCC
+ACGTACGATG(最后一行可不足80个字母)</code></pre></li>
+</ul></li>
+<li>写程序 <code>sortFasta.py</code>, 读入test2.fa, 并取原始序列名字第一个空格前的名字为处理后的序列名字，排序后输出 (2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>sort</li>
+<li>dict</li>
+<li>aDict[key] = []</li>
+<li>aDict[key].append(value)</li>
+</ul></li>
+</ul></li>
+<li>提取给定名字的序列 (2分)
+<ul>
+<li>写程序 <code>grepFasta.py</code>, 提取fasta.name中名字对应的test2.fa的序列，并输出到屏幕。</li>
+<li>写程序 <code>grepFastq.py</code>, 提取fastq.name中名字对应的test1.fq的序列，并输出到文件。
+<ul>
+<li>用到的知识点
+<ul>
+<li>print &gt;&gt;fh, or fh.write()</li>
+<li>取模运算，4 % 2 == 0</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>写程序 <code>screenResult.py</code>, 筛选test.expr中foldChange大于2的基因并且padj小于0.05的基，可以输出整行或只输出基因名字。(4分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>逻辑与操作符 and</li>
+<li>文件中读取的内容都为字符串，需要用int转换为整数，float转换为浮点数</li>
+</ul></li>
+</ul></li>
+<li>写程序 <code>transferMultipleColumToMatrix.py</code> 将文件(multipleColExpr.txt)中基因在多个组织中的表达数据转换为矩阵形式，并绘制热图。(6分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>aDict[‘key’] = {}</li>
+<li>aDict[‘key’][‘key2’] = value</li>
+<li>if key not in aDict</li>
+<li>aDict = {‘ENSG00000000003’: {“A-431”: 21.3, “A-549”, 32.5,…},“ENSG00000000003”:{},}</li>
+</ul></li>
+<li><p>输入格式(只需要前3列就可以)</p>
+<pre><code>Gene    Sample  Value   Unit    Abundance
+ENSG00000000003 A-431   21.3    FPKM    Medium
+ENSG00000000003 A-549   32.5    FPKM    Medium
+ENSG00000000003 AN3-CA  38.2    FPKM    Medium
+ENSG00000000003 BEWO    31.4    FPKM    Medium
+ENSG00000000003 CACO-2  63.9    FPKM    High
+ENSG00000000005 A-431   0.0     FPKM    Not detected
+ENSG00000000005 A-549   0.0     FPKM    Not detected
+ENSG00000000005 AN3-CA  0.0     FPKM    Not detected
+ENSG00000000005 BEWO    0.0     FPKM    Not detected
+ENSG00000000005 CACO-2  0.0     FPKM    Not detected</code></pre></li>
+<li><p>输出格式</p>
+<pre><code>Name    A-431   A-549   AN3-CA  BEWO    CACO-2
+ENSG00000000460 25.2    14.2    10.6    24.4    14.2
+ENSG00000000938 0.0 0.0 0.0 0.0 0.0
+ENSG00000001084 19.1    155.1   24.4    12.6    23.5
+ENSG00000000457 2.8 3.4 3.8 5.8 2.9</code></pre></li>
+</ul></li>
+<li>写程序 <code>reverseComplementary.py</code>计算序列 <code>ACGTACGTACGTCACGTCAGCTAGAC</code>的反向互补序列。(2分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>reverse</li>
+<li>list(seq)</li>
+</ul></li>
+</ul></li>
+<li>写程序 <code>collapsemiRNAreads.py</code>转换smRNA-Seq的测序数据。(5分)
+<ul>
+<li><p>输入文件格式(mir.collapse, tab-分割的两列文件，第一列为序列，第二列为序列被测到的次数)</p>
+<pre><code>ID_REF        VALUE
+ACTGCCCTAAGTGCTCCTTCTGGC        2
+ATAAGGTGCATCTAGTGCAGATA        25
+TGAGGTAGTAGTTTGTGCTGTTT        100
+TCCTACGAGTTGCATGGATTC        4</code></pre></li>
+<li><p>输出文件格式 (mir.collapse.fa, 名字的前3个字母为样品的特异标示，中间的数字表示第几条序列，是序列名字的唯一标示，第三部分是x加每个reads被测到的次数。三部分用下划线连起来作为fasta序列的名字。)</p>
+<pre><code>&gt;ESB_1_x2
+ACTGCCCTAAGTGCTCCTTCTGGC
+&gt;ESB_2_x25
+ATAAGGTGCATCTAGTGCAGATA
+&gt;ESB_3_x100
+TGAGGTAGTAGTTTGTGCTGTTT
+&gt;ESB_4_x4
+TCCTACGAGTTGCATGGATTC</code></pre></li>
+</ul></li>
+<li>简化的短序列匹配程序 (map.py) 把short.fa中的序列比对到ref.fa, 输出短序列匹配到ref.fa文件中哪些序列的哪些位置。(10分)
+<ul>
+<li>用到的知识点
+<ul>
+<li>find</li>
+</ul></li>
+<li>输出格式 (输出格式为bed格式，第一列为匹配到的染色体，第二列和第三列为匹配到染色体序列的起始终止位置（位置标记以0为起始，代表第一个位置；终止位置不包含在内，第一个例子中所示序列的位置是(199,208](前闭后开，实际是chr1染色体第199-206的序列，0起始). 第4列为短序列自身的序列.)。</li>
+<li><p>附加要求：可以只匹配到给定的模板链，也可以考虑匹配到模板链的互补链。这时第5列可以为短序列的名字，第六列为链的信息，匹配到模板链为’+‘，匹配到互补链为’-’。注意匹配到互补链时起始位置也是从模板链的5’端算起的。</p>
+<pre><code>chr1    199 208 TGGCGTTCA
+chr1    207 216 ACCCCGCTG
+chr2    63  70  AAATTGC
+chr3    0   7   AATAAAT</code></pre></li>
+</ul></li>
+<li>备注：
+<ul>
+<li>每个提到提到的“用到的知识点”为相对于前面的题目新增的知识点，请综合考虑。此外，对于不同的思路并不是所有提到的知识点都会用着，而且也可能会用到未提到的知识点。但是所有知识点都在前面的讲义部分有介绍。</li>
+<li>每个程序对于你身边会写的人来说都很简单，因此你一定要克制住，独立去把答案做出，多看错误提示，多比对程序输出结果和预期结果的差异。</li>
+<li>学习锻炼“读程序”，即对着文件模拟整个的读入、处理过程来发现可能的逻辑问题。</li>
+<li>程序运行没有错误不代表你写的程序完成了你的需求，你要去查验输出结果是不是你想要的。</li>
+</ul></li>
+<li>关于程序调试
+<ul>
+<li>在初写程序时，可能会出现各种各样的错误，常见的有缩进不一致，变量名字拼写错误，丢失冒号，文件名未加引号等，这时要根据错误提示查看错误类型是什么，出错的是哪一行来定位错误。当然，有的时候报错的行自身不一定有错，可能是其前面或后面的行出现了错误。</li>
+<li><strong>用脑袋运行程序</strong>：当程序写作完成后，自己尝试对着数据文件，一行一行的执行程序，来看程序的运行是否与自己想干的活一致，有没有纰漏。</li>
+<li>当结果不符合预期时，要学会<strong>使用print来查看每步的操作是否正确</strong>，比如我读入了字典，我就打印下字典，看看读入的是不是我想要的，是否含有不该存在的字符；或者<strong>在每个判断句、函数调入的情况下打印个字符，来跟踪程序的运行轨迹</strong></li>
+</ul></li>
+<li><p>如果视频或文档中没有答案的或者有错误的，请提交题目和自己的答案到 <a href="http://www.ehbio.com/Esx" class="uri">http://www.ehbio.com/Esx</a> 提问寻求解答。</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> re
+re.findall(<span class="st">&quot;[Ii]mageGP&quot;</span>, <span class="st">&quot;www.ehbio.com/ImageGP&quot;</span>)</code></pre></div>
+<pre><code>[&#39;ImageGP&#39;]</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">&#39; &#39;</span>.join([<span class="st">&quot;Sheng&quot;</span>, <span class="st">&quot;Xin&quot;</span>, <span class="st">&quot;Bao&quot;</span>, <span class="st">&quot;Dian&quot;</span>])</code></pre></div>
+<pre><code>&#39;Sheng Xin Bao Dian&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 写程序以下面列表中每个元素为key，元素出现的次数为value，</span>
+<span class="co"># 构建一个字典，并遍历字典按元素的ASCII码顺序输出？</span>
+aList <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>, <span class="st">&#39;A&#39;</span>]
+aDict <span class="op">=</span> {}
+uniqList <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(aList))
+aDict <span class="op">=</span> <span class="bu">dict</span>([(i,aList.count(i)) <span class="cf">for</span> i <span class="op">in</span> uniqList])
+uniqList.sort()
+
+<span class="cf">for</span> key <span class="op">in</span> uniqList:
+    <span class="bu">print</span>(key, aDict[key], sep<span class="op">=</span><span class="st">&quot;--&gt;&quot;</span>)
+<span class="co">#for item in uniqList:</span>
+<span class="co">#    aDict[item] = aDict.get(item,0) + 1</span></code></pre></div>
+<pre><code>A--&gt;1
+a--&gt;2
+b--&gt;1
+c--&gt;1
+d--&gt;1
+e--&gt;1</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 写程序以下面列表中每个元素为key，元素出现的次数为value，</span>
+<span class="co"># 构建一个字典，并遍历字典按元素的ASCII码顺序输出？</span>
+aList <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>, <span class="st">&#39;A&#39;</span>]
+aDict <span class="op">=</span> {}
+<span class="cf">for</span> item <span class="op">in</span> aList:
+    aDict[item] <span class="op">=</span> aDict.get(item,<span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span>
+
+keyL <span class="op">=</span> <span class="bu">list</span>(aDict.keys())
+keyL.sort()
+
+<span class="cf">for</span> key <span class="op">in</span> keyL:
+    <span class="bu">print</span>(key, aDict[key], sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>A   1
+a   2
+b   1
+c   1
+d   1
+e   1</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aList <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;d&#39;</span>, <span class="st">&#39;e&#39;</span>, <span class="st">&#39;A&#39;</span>]
+aDict <span class="op">=</span> {}
+<span class="cf">for</span> i <span class="op">in</span> aList:
+    aDict.setdefault(i, <span class="dv">0</span>)
+    aDict[i] <span class="op">+=</span> <span class="dv">1</span>
+<span class="bu">print</span>(aDict)</code></pre></div>
+<pre><code>{&#39;a&#39;: 2, &#39;b&#39;: 1, &#39;c&#39;: 1, &#39;d&#39;: 1, &#39;e&#39;: 1, &#39;A&#39;: 1}</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aDict <span class="op">=</span> {}
+aList <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>, <span class="st">&#39;A&#39;</span>]
+<span class="co">#uniL = list(set(aList))</span>
+<span class="cf">for</span> i <span class="op">in</span> aList:
+    aDict[i] <span class="op">=</span> aDict.get(i,<span class="dv">0</span>)<span class="op">+</span><span class="dv">1</span>
+    <span class="co">#aDict += 1 </span>
+    <span class="co">#break</span>
+<span class="bu">print</span>(aDict)</code></pre></div>
+<pre><code>{&#39;a&#39;: 2, &#39;b&#39;: 1, &#39;c&#39;: 1, &#39;d&#39;: 1, &#39;e&#39;: 1, &#39;A&#39;: 1}</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aList <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>, <span class="st">&#39;A&#39;</span>]
+aSet <span class="op">=</span> <span class="bu">set</span>(aList)
+aSet
+<span class="cf">for</span> i <span class="op">in</span> aSet:
+    <span class="bu">print</span> (i,aList.count(i))</code></pre></div>
+<pre><code>a 2
+d 1
+A 1
+b 1
+e 1
+c 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">list</span> <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>, <span class="st">&#39;A&#39;</span>]
+dic <span class="op">=</span> {}
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">list</span>:
+    dic[i] <span class="op">=</span> <span class="bu">list</span>.count(i)
+<span class="bu">print</span>(dic)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#写程序用高斯的计算方式计算1+2+3+...+100的加和</span>
+n <span class="op">=</span> <span class="dv">100</span>
+(<span class="dv">1</span><span class="op">+</span>n) <span class="op">*</span> (n<span class="op">/</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>5050.0</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">n <span class="op">=</span> <span class="dv">99</span>
+(<span class="dv">1</span><span class="op">+</span>n) <span class="op">*</span> (n<span class="op">/</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>4950.0</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
+idmap <span class="op">=</span> pd.read_table(<span class="st">&quot;data/GRCh38.idmap&quot;</span>, 
+                      header<span class="op">=</span><span class="dv">0</span>, index_col<span class="op">=</span><span class="dv">0</span>)
+ensmL <span class="op">=</span> [line.strip() <span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/ensm.id&quot;</span>)]
+idmap <span class="op">=</span> idmap[idmap.index.isin(ensmL)]
+idmap[<span class="st">&quot;Associated Gene Name&quot;</span>]</code></pre></div>
+<pre><code>Gene ID
+ENSG00000252303          RNU6-280P
+ENSG00000281771              Y_RNA
+ENSG00000281256       RP11-222G7.2
+ENSG00000283272    Clostridiales-1
+ENSG00000280864      RP11-654C22.2
+ENSG00000280792      RP11-315F22.1
+ENSG00000282878       RP11-399E6.1
+ENSG00000283276     ABBA01000934.1
+ENSG00000281822           RNU1-62P
+ENSG00000281384         AC093802.1
+ENSG00000280505      RP11-654C22.1
+ENSG00000281764       RP11-399E6.2
+ENSG00000281316            DPPA2P2
+ENSG00000280963        SERTAD4-AS1
+ENSG00000280775          RNA5SP136
+ENSG00000281876       RP11-399E6.4
+ENSG00000281766               RYBP
+ENSG00000281518              FOXO6
+ENSG00000281614             INPP5D
+ENSG00000280584              OBP2B
+ENSG00000281230            SERTAD4
+ENSG00000281917            SLC16A1
+Name: Associated Gene Name, dtype: object</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mRNA <span class="op">=</span> []
+<span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/human_TP53_mRNA.fa&quot;</span>):
+    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">==</span> <span class="st">&quot;&gt;&quot;</span>:
+        <span class="cf">continue</span>
+    <span class="cf">else</span>:
+        mRNA.append(line.strip())
+<span class="co">#--------------------------------</span>
+mRNA <span class="op">=</span> <span class="st">&#39;&#39;</span>.join(mRNA)
+orf <span class="op">=</span> re.<span class="bu">compile</span>(<span class="st">&quot;(A[TU]G(...){99,}?([TU]AA|[TU]AG|[TU]GA))&quot;</span>)
+<span class="cf">for</span> i <span class="op">in</span> orf.findall(mRNA):
+    <span class="bu">print</span>(i[<span class="dv">0</span>])
+    </code></pre></div>
+<pre><code>ATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCGACATAGTGTGGTGGTGCCCTATGAGCCGCCTGAGGTTGGCTCTGACTGTACCACCATCCACTACAACTACATGTGTAACAGTTCCTGCATGGGCGGCATGAACCGGAGGCCCATCCTCACCATCATCACACTGGAAGACTCCAGTGGTAATCTACTGGGACGGAACAGCTTTGAGGTGCGTGTTTGTGCCTGTCCTGGGAGAGACCGGCGCACAGAGGAAGAGAATCTCCGCAAGAAAGGGGAGCCTCACCACGAGCTGCCCCCAGGGAGCACTAAGCGAGCACTGCCCAACAACACCAGCTCCTCTCCCCAGCCAAAGAAGAAACCACTGGATGGAGAATATTTCACCCTTCAGATCCGTGGGCGTGAGCGCTTCGAGATGTTCCGAGAGCTGAATGAGGCCTTGGAACTCAAGGATGCCCAGGCTGGGAAGGAGCCAGGGGGGAGCAGGGCTCACTCCAGCCACCTGAAGTCCAAAAAGGGTCAGTCTACCTCCCGCCATAAAAAACTCATGTTCAAGACAGAAGGGCCTGACTCAGACTGA
+ATGGGGAGTAGGACATACCAGCTTAGATTTTAAGGTTTTTACTGTGAGGGATGTTTGGGAGATGTAAGAAATGTTCTTGCAGTTAAGGGTTAGTTTACAATCAGCCACATTCTAGGTAGGGGCCCACTTCACCGTACTAACCAGGGAAGCTGTCCCTCACTGTTGAATTTTCTCTAACTTCAAGGCCCATATCTGTGAAATGCTGGCATTTGCACCTACCTCACAGAGTGCATTGTGAGGGTTAATGAAATAATGTACATCTGGCCTTGAAACCACCTTTTATTACATGGGGTCTAGAACTTGACCCCCTTGAGGGTGCTTGTTCCCTCTCCCTGTTGGTCGGTGGGTTGGTAG
+ATGATGATCTGGATCCACCAAGACTTGTTTTATGCTCAGGGTCAATTTCTTTTTTCTTTTTTTTTTTTTTTTTTCTTTTTCTTTGAGACTGGGTCTCGCTTTGTTGCCCAGGCTGGAGTGGAGTGGCGTGATCTTGGCTTACTGCAGCCTTTGCCTCCCCGGCTCGAGCAGTCCTGCCTCAGCCTCCGGAGTAGCTGGGACCACAGGTTCATGCCACCATGGCCAGCCAACTTTTGCATGTTTTGTAGAGATGGGGTCTCACAGTGTTGCCCAGGCTGGTCTCAAACTCCTGGGCTCAGGCGATCCACCTGTCTCAGCCTCCCAGAGTGCTGGGATTACAATTGTGAGCCACCACGTCCAGCTGGAAGGGTCAACATCTTTTACATTCTGCAAGCACATCTGCATTTTCACCCCACCCTTCCCCTCCTTCTCCCTTTTTATATCCCATTTTTATATCGATCTCTTATTTTACAATAA</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#SecI识别CCNNGG</span>
+ecoli <span class="op">=</span> []
+<span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/Ecoli.fa&quot;</span>):
+    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">!=</span> <span class="st">&#39;&gt;&#39;</span>:
+        ecoli.append(line.strip())
+    <span class="co">#print(line.strip())</span>
+<span class="co">#---------------</span>
+ecoli <span class="op">=</span> <span class="st">&#39;&#39;</span>.join(ecoli)
+    
+secI <span class="op">=</span> re.<span class="bu">compile</span>(<span class="st">&quot;CC..GG&quot;</span>)
+<span class="cf">for</span> i <span class="op">in</span> secI.finditer(ecoli):
+    <span class="bu">print</span>(i.start())</code></pre></div>
+<pre><code>174
+299
+556</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">lineL <span class="op">=</span> []
+<span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/Ecoli.fa&quot;</span>):
+    line <span class="op">=</span> line.strip()
+    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">==</span> <span class="st">&quot;&gt;&quot;</span>:
+        <span class="cf">continue</span>
+    <span class="cf">else</span>:
+        lineL.append(line)
+<span class="co">#---------------------------</span>
+seq <span class="op">=</span> <span class="st">&#39;&#39;</span>.join(lineL)
+
+seci <span class="op">=</span> re.<span class="bu">compile</span>(<span class="st">&quot;CC[ATGC]GG&quot;</span>)
+<span class="bu">print</span>(seci)</code></pre></div>
+<pre><code>re.compile(&#39;CC[ATGC]GG&#39;)</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">help</span>(re.finditer)</code></pre></div>
+<pre><code>Help on function finditer in module re:
+
+finditer(pattern, string, flags=0)
+    Return an iterator over all non-overlapping matches in the
+    string.  For each match, the iterator returns a match object.
+    
+    Empty matches are included in the result.</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">gc_cnt <span class="op">=</span> <span class="dv">0</span>
+seqLen <span class="op">=</span> <span class="dv">0</span>
+<span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/test1.fa&quot;</span>):
+    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">==</span> <span class="st">&#39;&gt;&#39;</span>:
+        <span class="cf">if</span> seqLen:
+            gc_percent <span class="op">=</span> gc_cnt <span class="op">/</span> seqLen <span class="op">*</span> <span class="dv">100</span>
+            <span class="bu">print</span>(key, <span class="bu">round</span>(gc_percent,<span class="dv">2</span>),<span class="st">&quot;%&quot;</span>)
+            gc_cnt <span class="op">=</span> seqLen <span class="op">=</span> <span class="dv">0</span>
+        key <span class="op">=</span> line.split()[<span class="dv">0</span>][<span class="dv">1</span>:]
+    <span class="cf">else</span>:
+        line <span class="op">=</span> line.strip().upper()
+        gc_cnt <span class="op">+=</span> line.count(<span class="st">&#39;C&#39;</span>) <span class="op">+</span> line.count(<span class="st">&#39;G&#39;</span>)
+        seqLen <span class="op">+=</span> <span class="bu">len</span>(line)
+<span class="co">#-------------------------------</span>
+<span class="cf">if</span> seqLen:
+    gc_percent <span class="op">=</span> gc_cnt <span class="op">/</span> seqLen <span class="op">*</span> <span class="dv">100</span>
+    <span class="bu">print</span>(key, <span class="bu">round</span>(gc_percent,<span class="dv">2</span>),<span class="st">&quot;%&quot;</span>)</code></pre></div>
+<pre><code>NM_001011874 81.43 %
+NM_001195662 42.86 %
+NM_0112835 37.14 %
+NM_011283 37.14 %</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/test1.fa&quot;</span>):
+    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">==</span> <span class="st">&quot;&gt;&quot;</span>:
+        <span class="cf">continue</span>
+    <span class="cf">else</span>:
+        line <span class="op">=</span> line.strip().upper()
+        gc_cnt <span class="op">=</span> line.count(<span class="st">&quot;G&quot;</span>) <span class="op">+</span> line.count(<span class="st">&quot;C&quot;</span>)
+        total_len <span class="op">=</span> <span class="bu">len</span>(line)
+        gc_per <span class="op">=</span> gc_cnt <span class="op">/</span> total_len <span class="op">*</span> <span class="dv">100</span>
+        <span class="bu">print</span>(<span class="bu">round</span>(gc_per,<span class="dv">2</span>))</code></pre></div>
+<pre><code>81.43
+42.86
+37.14
+37.14</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">count <span class="op">=</span> <span class="dv">5</span>
+<span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/ENCFF060LPA.tsv&quot;</span>):
+    <span class="cf">if</span> count <span class="op">==</span> <span class="dv">0</span>:
+        <span class="cf">break</span>
+    <span class="bu">print</span>(line)
+    count <span class="op">-=</span> <span class="dv">1</span></code></pre></div>
+<pre><code>gene_id transcript_id(s)    length  effective_length    expected_count  TPM FPKM
+
+ENSG00000000003.14  ENST00000373020.8,ENST00000494424.1,ENST00000496771.5,ENST00000612152.4,ENST00000614008.4   2240.53 2020.49 5126.00 6.64    18.24
+
+ENSG00000000005.5   ENST00000373031.4,ENST00000485971.1 940.50  720.47  0.00    0.00    0.00
+
+ENSG00000000419.12  ENST00000371582.8,ENST00000371584.8,ENST00000371588.9,ENST00000413082.1,ENST00000466152.5,ENST00000494752.1 1072.03 851.99  3222.00 9.91    27.19
+
+ENSG00000000457.13  ENST00000367770.5,ENST00000367771.10,ENST00000367772.8,ENST00000423670.1,ENST00000470238.1  3527.59 3307.55 1092.00 0.86    2.37</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">fileL <span class="op">=</span> [<span class="st">&quot;data/ENCFF060LPA.tsv&quot;</span>, <span class="st">&quot;data/ENCFF262OBL.tsv&quot;</span>, 
+         <span class="co">&quot;data/ENCFF289HGQ.tsv&quot;</span>, <span class="st">&quot;data/ENCFF673KYR.tsv&quot;</span>]
+<span class="co">&#39;&#39;&#39;</span>
+<span class="co">aDict = {</span>
+<span class="co">    &#39;ENCFF060LPA&#39;: {&#39;a&#39;: 5, &#39;b&#39;: 3},</span>
+<span class="co">    &#39;ENCFF289HGQ&#39;: {&#39;a&#39;: 3, &#39;c&#39;: 5},</span>
+<span class="co">}</span>
+
+<span class="co">aDict = {</span>
+<span class="co">    &#39;a&#39;: {&#39;ENCFF060LPA&#39;: 5, &#39;ENCFF289HGQ&#39;:3},</span>
+<span class="co">    &#39;b&#39;: {&#39;ENCFF060LPA&#39;: 3},</span>
+<span class="co">    &#39;c&#39;: {&#39;ENCFF289HGQ&#39;: 5}</span>
+<span class="co">}</span>
+<span class="co">&#39;&#39;&#39;</span>
+aDict <span class="op">=</span> {}
+labelL <span class="op">=</span> []
+
+<span class="cf">for</span> file_name <span class="op">in</span> fileL:
+    label <span class="op">=</span> file_name.replace(<span class="st">&#39;data/&#39;</span>,<span class="st">&#39;&#39;</span>)
+    label <span class="op">=</span> label.replace(<span class="st">&#39;.tsv&#39;</span>,<span class="st">&#39;&#39;</span>)
+    labelL.append(label)
+    <span class="co">#print(label)</span>
+    header <span class="op">=</span> <span class="dv">1</span>
+    count <span class="op">=</span> <span class="dv">3</span>
+    <span class="co">#print(label)</span>
+    <span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(file_name):
+        <span class="cf">if</span> header <span class="op">==</span> <span class="dv">1</span>:
+            header <span class="op">-=</span> <span class="dv">1</span>
+            <span class="cf">continue</span>
+        <span class="co">#--------------------</span>
+        lineL <span class="op">=</span> line.strip().split(<span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>)
+        gene  <span class="op">=</span> lineL[<span class="dv">0</span>]
+        FPKM  <span class="op">=</span> lineL[<span class="op">-</span><span class="dv">1</span>]
+        aDict.setdefault(gene, {})
+        aDict[gene][label] <span class="op">=</span> FPKM
+        <span class="co">#if count:</span>
+        <span class="co">#    print(&quot;\t&quot;,aDict)</span>
+        <span class="co">#    count -= 1</span>
+<span class="co">#--------------------------------------</span>
+<span class="bu">print</span>(<span class="st">&quot;GeneName&quot;</span>, <span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>.join(labelL), sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)
+
+count <span class="op">=</span> <span class="dv">5</span>
+<span class="cf">for</span> gene,exprD <span class="op">in</span> <span class="bu">list</span>(aDict.items()):
+    exprL <span class="op">=</span> [exprD.get(label, <span class="st">&#39;0&#39;</span>) <span class="cf">for</span> label <span class="op">in</span> labelL]
+    exprL <span class="op">=</span> [gene] <span class="op">+</span> exprL
+    <span class="co">#if count:</span>
+    <span class="bu">print</span>(<span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>.join(exprL))
+    <span class="co">#    count -= 1</span></code></pre></div>
+<pre><code>GeneName    ENCFF060LPA ENCFF262OBL ENCFF289HGQ ENCFF673KYR
+ENSG00000000003.14  18.24   26.74   10.84   15.07
+ENSG00000000005.5   0.00    0.00    0.00    0.00
+ENSG00000000419.12  27.19   29.44   15.23   11.17
+ENSG00000000457.13  2.37    3.87    2.53    2.37
+ENSG00000000460.16  4.14    8.37    2.70    0.98</code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> line <span class="op">in</span> <span class="bu">open</span>(<span class="st">&quot;data/test2.fa&quot;</span>):
+    <span class="cf">if</span> line[<span class="dv">0</span>] <span class="op">==</span> <span class="st">&#39;&gt;&#39;</span>:</code></pre></div>
+<pre><code>&gt;NM_001011874 gene=Xkr4 CDS=151-2091
+gcggcggcgggcgagcgggcgctggagtaggagctggggagcggcgcggccggggaaggaagccagggcg
+aggcgaggaggtggcgggaggaggagacagcagggacaggTGTCAGATAAAGGAGTGCTCTCCTCCGCTG
+CCGAGGCATCATGGCCGCTAAGTCAGACGGGAGGCTGAAGATGAAGAAGAGCAGCGACGTGGCGTTCACC
+CCGCTGCAGAACTCGGACAATTCGGGCTCTGTGCAAGGACTGGCTCCAGGCTTGCCGTCGGGGTCCGGAG
+&gt;NM_001195662 gene=Rp1 CDS=55-909
+AAGCTCAGCCTTTGCTCAGATTCTCCTCTTGATGAAACAAAGGGATTTCTGCACATGCTTGAGAAATTGC
+AGGTCTCACCCAAAATGAGTGACACACCTTCTACTAGTTTCTCCATGATTCATCTGACTTCTGAAGGTCA
+AGTTCCTTCCCCTCGCCATTCAAATATCACTCATCCTGTAGTGGCTAAACGCATCAGTTTCTATAAGAGT
+GGAGACCCACAGTTTGGCGGCGTTCGGGTGGTGGTCAACCCTCGTTCCTTTAAGACTTTTGACGCTCTGC
+TGGACAGTTTATCCAGGAAGGTACCCCTGCCCTTTGGGGTAAGGAACATCAGCACGCCCCGTGGACGACA
+CAGCATCACCAGGCTGGAGGAGCTAGAGGACGGCAAGTCTTATGTGTGCTCCCACAATAAGAAGGTGCTG
+&gt;NM_011283 gene=Rp1 CDS=128-6412
+AATAAATCCAAAGACATTTGTTTACGTGAAACAAGCAGGTTGCATATCCAGTGACGTTTATACAGACCAC
+ACAAACTATTTACTCTTTTCTTCGTAAGGAAAGGTTCAACTTCTGGTCTCACCCAAAATGAGTGACACAC
+CTTCTACTAGTTTCTCCATGATTCATCTGACTTCTGAAGGTCAAGTTCCTTCCCCTCGCCATTCAAATAT
+CACTCATCCTGTAGTGGCTAAACGCATCAGTTTCTATAAGAGTGGAGACCCACAGTTTGGCGGCGTTCGG
+GTGGTGGTCAACCCTCGTTCCTTTAAGACTTTTGACGCTCTGCTGGACAGTTTATCCAGGAAGGTACCCC
+TGCCCTTTGGGGTAAGGAACATCAGCACGCCCCGTGGACGACACAGCATCACCAGGCTGGAGGAGCTAGA
+GGACGGCAAGTCTTATGTGTGCTCCCACAATAAGAAGGTGCTGCCAGTTGACCTGGACAAGGCCCGCAGG
+CGCCCTCGGCCCTGGCTGAGTAGTCGCTCCATAAGCACGCATGTGCAGCTCTGTCCTGCAACTGCCAATA
+TGTCCACCATGGCACCTGGCATGCTCCGTGCCCCAAGGAGGCTCGTGGTCTTCCGGAATGGTGACCCGAA
+&gt;NM_0112835 gene=Rp1 CDS=128-6412
+AATAAATCCAAAGACATTTGTTTACGTGAAACAAGCAGGTTGCATATCCAGTGACGTTTATACAGACCAC
+ACAAACTATTTACTCTTTTCTTCGTAAGGAAAGGTTCAACTTCTGGTCTCACCCAAAATGAGTGACACAC
+CTTCTACTAGTTTCTCCATGATTCATCTGACTTCTGAAGGTCAAGTTCCTTCCCCTCGCCATTCAAATAT
+CACTCATCCTGTAGTGGCTAAACGCATCAGTTTCTATAAGAGTGGAGACCCACAGTTTGGCGGCGTTCGG
+GTGGTGGTCAACCCTCGTTCCTTTAAGACTTTTGACGCTCTGCTGGACAGTTTATCCAGGAAGGTACCCC
+TGCCCTTTGGGGTAAGGAACATCAGCACGCCCCGTGGACGACACAGCATCACCAGGCTGGAGGAGCTAGA
+GGACGGCAAGTCTTATGTGTGCTCCCACAATAAGAAGGTGCTGCCAGTTGACCTGGACAAGGCCCGCAGG
+CGCCCTCGGCCCTGGCTGAGTAGTCGCTCCATAAGCACGCATGTGCAGCTCTGTCCTGCAACTGCCAATA
+TGTCCACCATGGCACCTGGCATGCTCCGTGCCCCAAGGAGGCTCGTGGTCTTCCGGAATGGTGACCCGAA</code></pre>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="numpy-scipy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Py3_course.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

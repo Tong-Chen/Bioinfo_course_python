@@ -1,0 +1,16 @@
+[/MPATHB/training/python_course/Py3_course] 53263  [2018-05-09 19:39:39][ct][218.241.208.209]cd Py3_course; python -m SimpleHTTPServer 11521
+[/MPATHB/training/python_course/Py3_course] 53268  [2018-05-09 20:18:21][ct][218.241.208.209]cd Py3_course; python -m SimpleHTTPServer 11521
+[/MPATHB/training/python_course/Py3_course] 53327  [2018-05-09 22:44:54][ct][211.144.7.44]cd /MPATHB/training/python_course/Py3_course
+[/MPATHB/training/python_course/Py3_course] 53328  [2018-05-09 22:44:55][ct][211.144.7.44]ltr
+[/MPATHB/training/python_course/Py3_course] 53329  [2018-05-09 22:47:07][ct][211.144.7.44]python -m simpleHTTPserver 11521
+[/MPATHB/training/python_course/Py3_course] 53330  [2018-05-09 22:47:11][ct][211.144.7.44]python -m simpleHTTPServer 11521
+[/MPATHB/training/python_course/Py3_course] 53327  [2018-05-09 22:49:14][ct][211.144.7.44]cd /MPATHB/training/python_course/Py3_course
+[/MPATHB/training/python_course/Py3_course] 53328  [2018-05-09 22:49:15][ct][211.144.7.44]ltr
+[/MPATHB/training/python_course/Py3_course] 53327  [2018-05-09 22:49:32][ct][211.144.7.44]cd /MPATHB/training/python_course/Py3_course
+[/MPATHB/training/python_course/Py3_course] 53328  [2018-05-09 22:49:39][ct][211.144.7.44]python -m SimpleHTTPServer 11521
+[/MPATHB/training/python_course/Py3_course] 53329  [2018-05-09 22:49:58][ct][211.144.7.44]ps auwx | grep 'SimpleHTTPServer'
+[/MPATHB/training/python_course/Py3_course] 53330  [2018-05-09 22:50:03][ct][211.144.7.44]kill 11145
+[/MPATHB/training/python_course/Py3_course] 53331  [2018-05-09 22:47:15][ct][211.144.7.44]python -m SimpleHTTPServer 11521
+[/MPATHB/training/python_course/Py3_course] 53331  [2018-05-09 22:50:06][ct][211.144.7.44]python -m SimpleHTTPServer 11521
+[/MPATHB/training/python_course/Py3_course] 57589  [2018-08-27 16:02:04][ct][141.70.80.5]cd Py3_course
+[/MPATHB/training/python_course/Py3_course] 57590  [2018-08-27 16:02:06][ct][141.70.80.5]ls
