@@ -208,9 +208,9 @@ $endfor$
 }
 \fancyhf{}
 \fancyhead[L]{\leftmark}
-%\fancyhead[C]{www.ehbio.com}
+
 \fancyhead[R]{
-\href{http://www.ehbio.com}{\Oldincludegraphics[width=6cm]{/MPATHB/self/pandoc/ehbio_logo.png}}
+
 }
 \fancyfoot[R]{\thepage}
 
@@ -233,7 +233,6 @@ $if(title)$
 \begin{titlepage}
   \centering{
 
-  \Oldincludegraphics[width=0.8\textwidth]{/MPATHB/self/pandoc/ehbio_logo.png}
   
 
   \vspace{4cm}
@@ -242,7 +241,7 @@ $if(title)$
 
   \vspace{4cm}
   }
-  \begin{minipage}{0.8\linewidth}
+  \begin{minipage}{0.6\linewidth}
   %\centering{
   %\begin{flushleft}
   $if(subtitle)${\scshape\huge $subtitle$ \par}$endif$

@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Python3学习教程</title>
-  <meta name="description" content="Python3学习教程">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 生信教程文章集锦 | Python3学习教程</title>
+  <meta name="description" content="8 生信教程文章集锦 | Python3学习教程" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Python3学习教程" />
+  <meta property="og:title" content="8 生信教程文章集锦 | Python3学习教程" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Python3学习教程" />
+  <meta name="twitter:title" content="8 生信教程文章集锦 | Python3学习教程" />
   
   
   
 
-<meta name="author" content="易生信培训团队">
-<meta name="author" content="联系我们: train@ehbio.com">
-<meta name="author" content="抱歉，转成PDF后部分格式问题还未解决，会继续更新调整">
+<meta name="author" content="陈同" />
+<meta name="author" content="chentong_biology@163.com" />
 
 
-<meta name="date" content="2018-05-09">
+<meta name="date" content="2025-11-03" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="Py3-test.html">
-<link rel="next" href="company-intro.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="Py3_test.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -49,44 +49,81 @@
 
 
 
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -105,190 +142,215 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://www.ehbio.com"><img src="http://www.ehbio.com/logos/ehbio_gitbook_logo.png" width="95%"></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>EHBIO Gene Technology</a></li>
-<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a><ul>
-<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
-<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#pythonintfloatstr"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
-<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
-<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
-<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#helloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
-<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.1"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
-<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.2"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
-<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
-<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.6.4"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Hello</a></li>
+<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E4%B8%8B%E8%A1%A8%E8%BE%BE%E5%BC%8F"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
+<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%95%B4%E6%95%B0int%E6%B5%AE%E7%82%B9float%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2str"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
+<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BF%9E%E6%8E%A5%E5%92%8C%E5%A4%8D%E5%88%B6"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
+<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%8F%98%E9%87%8F"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
+<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#%E7%AC%AC%E4%B8%80%E5%B0%8F%E7%A8%8B%E5%BA%8Fhelloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
+<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#%E9%80%BB%E8%BE%91%E5%92%8C%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E5%80%BC"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
+<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E7%AC%A6"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
+<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B8%83%E5%B0%94%E6%93%8D%E4%BD%9C%E7%AC%A6-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
+<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B8%83%E5%B0%94%E6%93%8D%E4%BD%9C%E5%92%8C%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E7%AC%A6"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
 </ul></li>
-<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.7"><i class="fa fa-check"></i><b>1.7</b> 控制流</a><ul>
-<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
-<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
-<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
-<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#breakcontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
-<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for--range"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
-<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
+<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#%E6%8E%A7%E5%88%B6%E6%B5%81"><i class="fa fa-check"></i><b>1.7</b> 控制流</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-%E8%AF%AD%E5%8F%A5"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
+<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-%E5%90%A6%E5%88%99%E5%A6%82%E6%9E%9C"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
+<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while%E5%BE%AA%E7%8E%AF"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
+<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#break%E5%92%8Ccontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
+<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for-%E5%92%8C-range%E5%87%BD%E6%95%B0"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
+<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range%E5%87%BD%E6%95%B0%E5%BC%80%E5%A7%8B%E5%81%9C%E6%AD%A2%E6%AD%A5%E9%95%BF"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
 </ul></li>
-<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.8"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
-<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a><ul>
-<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#printlen-input-intstr"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
+<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
+<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%87%BD%E6%95%B0-%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%87%BD%E6%95%B0printlen-input-intstr%E5%9D%87%E4%B8%BA%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
 </ul></li>
-<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.10"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
-<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#global"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
-<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.12"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
-<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.13"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
-<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.14"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
-<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.15"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
-<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#--"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
-<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.17"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a><ul>
-<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvaluesitems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
+<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E4%BD%9C%E7%94%A8%E5%9F%9F"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
+<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%A3%B0%E6%98%8E%E4%B8%BA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8Fglobal"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
+<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
+<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%88%97%E8%A1%A8"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
+<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%85%83%E7%BB%84"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
+<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%BC%95%E7%94%A8"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
+<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E5%85%B8-%E9%94%AE%E5%80%BC-%E5%AF%B9"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
+<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E5%85%B8%E4%B8%8E%E5%88%97%E8%A1%A8"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a>
+<ul>
+<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvalues%E5%92%8Citems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
 </ul></li>
-<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#section-1.18"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
+<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="py3-ct.html"><a href="py3-ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a><ul>
-<li class="chapter" data-level="2.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
-<li class="chapter" data-level="2.1.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
-<li class="chapter" data-level="2.1.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
-<li class="chapter" data-level="2.1.4" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
-<li class="chapter" data-level="2.1.5" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
-<li class="chapter" data-level="2.1.6" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
-<li class="chapter" data-level="2.1.7" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
-<li class="chapter" data-level="2.1.8" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
+<li class="chapter" data-level="2" data-path="py3_ct.html"><a href="py3_ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="py3_ct.html"><a href="py3_ct.html#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="py3_ct.html"><a href="py3_ct.html#%E7%BC%96%E7%A8%8B%E5%BC%80%E7%AF%87"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
+<li class="chapter" data-level="2.1.2" data-path="py3_ct.html"><a href="py3_ct.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E4%B9%A0python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
+<li class="chapter" data-level="2.1.3" data-path="py3_ct.html"><a href="py3_ct.html#python%E5%B8%B8%E7%94%A8%E5%8C%85"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
+<li class="chapter" data-level="2.1.4" data-path="py3_ct.html"><a href="py3_ct.html#%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="py3_ct.html"><a href="py3_ct.html#python%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
+<li class="chapter" data-level="2.1.6" data-path="py3_ct.html"><a href="py3_ct.html#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
+<li class="chapter" data-level="2.1.7" data-path="py3_ct.html"><a href="py3_ct.html#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8Cpython%E5%91%BD%E4%BB%A4%E5%92%8C%E8%84%9A%E6%9C%AC"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
+<li class="chapter" data-level="2.1.8" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E7%BC%96%E8%BE%91%E5%99%A8%E5%86%99python%E8%84%9A%E6%9C%AC"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
-<li class="chapter" data-level="2.3" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3</b> Python语法</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.1"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
-<li class="chapter" data-level="2.3.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
-<li class="chapter" data-level="2.3.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.3.3"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
+<li class="chapter" data-level="2.2" data-path="py3_ct.html"><a href="py3_ct.html#python%E7%A8%8B%E5%BA%8F%E4%BA%8B%E4%BE%8B"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
+<li class="chapter" data-level="2.3" data-path="py3_ct.html"><a href="py3_ct.html#python%E8%AF%AD%E6%B3%95"><i class="fa fa-check"></i><b>2.3</b> Python语法</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="py3_ct.html"><a href="py3_ct.html#%E5%B1%82%E7%BA%A7%E7%BC%A9%E8%BF%9B"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
+<li class="chapter" data-level="2.3.2" data-path="py3_ct.html"><a href="py3_ct.html#python%E4%BD%9C%E4%B8%BA%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
+<li class="chapter" data-level="2.3.3" data-path="py3_ct.html"><a href="py3_ct.html#%E5%8F%98%E9%87%8F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.1"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
-<li class="chapter" data-level="2.4.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
+<li class="chapter" data-level="2.4" data-path="py3_ct.html"><a href="py3_ct.html#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
+<li class="chapter" data-level="2.4.2" data-path="py3_ct.html"><a href="py3_ct.html#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
-<li class="chapter" data-level="2.5.2" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
+<li class="chapter" data-level="2.5" data-path="py3_ct.html"><a href="py3_ct.html#%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0%E4%B8%80"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="py3_ct.html"><a href="py3_ct.html#%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
+<li class="chapter" data-level="2.5.2" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%9C%E4%B8%9A-%E4%B8%80"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.6.1"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
+<li class="chapter" data-level="2.6" data-path="py3_ct.html"><a href="py3_ct.html#%E5%87%BD%E6%95%B0%E6%93%8D%E4%BD%9C"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%9C%E4%B8%9A%E4%BA%8C"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="py3-ct.html"><a href="py3-ct.html#section-2.7"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
-<li class="chapter" data-level="2.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.8.1"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
+<li class="chapter" data-level="2.7" data-path="py3_ct.html"><a href="py3_ct.html#%E6%A8%A1%E5%9D%97"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
+<li class="chapter" data-level="2.8" data-path="py3_ct.html"><a href="py3_ct.html#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%9C%E4%B8%9A%E4%B8%89"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a><ul>
-<li class="chapter" data-level="2.9.1" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.1"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
-<li class="chapter" data-level="2.9.2" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.2"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
-<li class="chapter" data-level="2.9.3" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.3"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
-<li class="chapter" data-level="2.9.4" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.4"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
-<li class="chapter" data-level="2.9.5" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.5"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
-<li class="chapter" data-level="2.9.6" data-path="py3-ct.html"><a href="py3-ct.html#lambda-map-filer-reduce-"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
-<li class="chapter" data-level="2.9.7" data-path="py3-ct.html"><a href="py3-ct.html#exec-eval-python-"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
-<li class="chapter" data-level="2.9.8" data-path="py3-ct.html"><a href="py3-ct.html#section-2.9.8"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
+<li class="chapter" data-level="2.9" data-path="py3_ct.html"><a href="py3_ct.html#%E6%9B%B4%E5%A4%9Apython%E5%86%85%E5%AE%B9"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="py3_ct.html"><a href="py3_ct.html#%E5%8D%95%E8%AF%AD%E5%8F%A5%E5%9D%97"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
+<li class="chapter" data-level="2.9.2" data-path="py3_ct.html"><a href="py3_ct.html#%E5%88%97%E8%A1%A8%E8%A7%A3%E6%9E%90"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
+<li class="chapter" data-level="2.9.3" data-path="py3_ct.html"><a href="py3_ct.html#%E5%AD%97%E5%85%B8%E8%A7%A3%E6%9E%90"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
+<li class="chapter" data-level="2.9.4" data-path="py3_ct.html"><a href="py3_ct.html#%E6%96%AD%E8%A8%80"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
+<li class="chapter" data-level="2.9.5" data-path="py3_ct.html"><a href="py3_ct.html#%E6%9B%B4%E5%A4%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
+<li class="chapter" data-level="2.9.6" data-path="py3_ct.html"><a href="py3_ct.html#lambda-map-filer-reduce-%E4%BF%9D%E7%95%99%E8%8A%82%E7%9B%AE"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
+<li class="chapter" data-level="2.9.7" data-path="py3_ct.html"><a href="py3_ct.html#exec-eval-%E6%89%A7%E8%A1%8C%E5%AD%97%E7%AC%A6%E4%B8%B2python%E8%AF%AD%E5%8F%A5-%E4%BF%9D%E7%95%99%E8%8A%82%E7%9B%AE"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
+<li class="chapter" data-level="2.9.8" data-path="py3_ct.html"><a href="py3_ct.html#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
 </ul></li>
-<li class="chapter" data-level="2.10" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
-<li class="chapter" data-level="2.11" data-path="py3-ct.html"><a href="py3-ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
+<li class="chapter" data-level="2.10" data-path="py3_ct.html"><a href="py3_ct.html#python%E7%94%BB%E5%9B%BE"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
+<li class="chapter" data-level="2.11" data-path="py3_ct.html"><a href="py3_ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a><ul>
-<li class="chapter" data-level="3.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#figuresubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
-<li class="chapter" data-level="3.1.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#subplot-1"><i class="fa fa-check"></i><b>3.1.2</b> 调整subplot周围间距</a></li>
-<li class="chapter" data-level="3.1.3" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#--1"><i class="fa fa-check"></i><b>3.1.3</b> 颜色 标记和线型</a></li>
-<li class="chapter" data-level="3.1.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.4</b> 刻度、标签和图例</a></li>
-<li class="chapter" data-level="3.1.5" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#legend-1"><i class="fa fa-check"></i><b>3.1.5</b> 添加图例legend</a></li>
-<li class="chapter" data-level="3.1.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.6</b> 注解</a></li>
-<li class="chapter" data-level="3.1.7" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.1.7</b> 图片保存</a></li>
+<li class="chapter" data-level="3" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#figure%E5%92%8Csubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E9%A2%9C%E8%89%B2-%E6%A0%87%E8%AE%B0%E5%92%8C%E7%BA%BF%E5%9E%8B-1"><i class="fa fa-check"></i><b>3.1.2</b> 颜色 标记和线型</a></li>
+<li class="chapter" data-level="3.1.3" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E5%88%BB%E5%BA%A6%E6%A0%87%E7%AD%BE%E5%92%8C%E5%9B%BE%E4%BE%8B-1"><i class="fa fa-check"></i><b>3.1.3</b> 刻度、标签和图例</a></li>
+<li class="chapter" data-level="3.1.4" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E4%BE%8Blegend-1"><i class="fa fa-check"></i><b>3.1.4</b> 添加图例legend</a></li>
+<li class="chapter" data-level="3.1.5" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E6%B3%A8%E8%A7%A3-1"><i class="fa fa-check"></i><b>3.1.5</b> 注解</a></li>
+<li class="chapter" data-level="3.1.6" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E5%9B%BE%E7%89%87%E4%BF%9D%E5%AD%98-1"><i class="fa fa-check"></i><b>3.1.6</b> 图片保存</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
-<li class="chapter" data-level="3.2.2" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
-<li class="chapter" data-level="3.2.3" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
-<li class="chapter" data-level="3.2.4" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
-<li class="chapter" data-level="3.2.5" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
-<li class="chapter" data-level="3.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
-<li class="chapter" data-level="3.2.7" data-path="Python-plot-WXN.html"><a href="Python-plot-WXN.html#section-3.2.7"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a><ul>
-<li class="chapter" data-level="4.1" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.1</b> Python实战</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#id"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
-<li class="chapter" data-level="4.1.2" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.2"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
-<li class="chapter" data-level="4.1.3" data-path="Py3-pratcise-ct.html"><a href="Py3-pratcise-ct.html#section-4.1.3"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="py3-ct.html"><a href="py3-ct.html#python"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a><ul>
-<li class="chapter" data-level="5.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
-<li class="chapter" data-level="5.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.1"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
-<li class="chapter" data-level="5.2.2" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.2"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
-<li class="chapter" data-level="5.2.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.3"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
-<li class="chapter" data-level="5.2.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.4"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
-<li class="chapter" data-level="5.2.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.5"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
-<li class="chapter" data-level="5.2.6" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.6"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
-<li class="chapter" data-level="5.2.7" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.7"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
-<li class="chapter" data-level="5.2.8" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.8"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
-<li class="chapter" data-level="5.2.9" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.2.9"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
-<li class="chapter" data-level="5.2.10" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#meta-data"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#section-5.3.1"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#pandas"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
-<li class="chapter" data-level="5.5" data-path="py3-pandas-ct.html"><a href="py3-pandas-ct.html#seaborn"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="numpy-scipy.html"><a href="numpy-scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a><ul>
-<li class="chapter" data-level="6.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
-<li class="chapter" data-level="6.1.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
-<li class="chapter" data-level="6.1.3" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpy"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
-<li class="chapter" data-level="6.1.4" data-path="numpy-scipy.html"><a href="numpy-scipy.html#numpymath"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.1"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
-<li class="chapter" data-level="6.2.2" data-path="numpy-scipy.html"><a href="numpy-scipy.html#section-6.2.2"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+<li class="chapter" data-level="3.2" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%9B%BE%E5%AE%9E%E4%BE%8B"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
+<li class="chapter" data-level="3.2.2" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E6%8A%98%E7%BA%BF%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
+<li class="chapter" data-level="3.2.3" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%9B%B4%E6%96%B9%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
+<li class="chapter" data-level="3.2.4" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%9B%B4%E6%9D%A1%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
+<li class="chapter" data-level="3.2.5" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%AE%B1%E7%BA%BF%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
+<li class="chapter" data-level="3.2.6" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E9%A5%BC%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
+<li class="chapter" data-level="3.2.7" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%88%B6%E5%9F%BA%E5%9B%A0%E7%9F%A9%E9%98%B5%E7%9A%84%E7%83%AD%E5%9B%BE"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="Py3-test.html"><a href="Py3-test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
-<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a><ul>
-<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#section-8.1"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#section-8.1.1"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
-<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
-<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#section-8.1.3"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
-<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#section-8.1.4"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
-<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#section-8.1.5"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
-<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#section-8.1.6"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
+<li class="chapter" data-level="4" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#python%E5%AE%9E%E6%88%98"><i class="fa fa-check"></i><b>4.1</b> Python实战</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#id%E8%BD%AC%E6%8D%A2"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#%E6%AF%8F%E6%9D%A1%E6%9F%93%E8%89%B2%E4%BD%93%E5%9F%BA%E5%9B%A0%E6%95%B0%E7%9B%AE%E7%BB%9F%E8%AE%A1"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#%E6%89%80%E6%9C%89%E5%A4%96%E6%98%BE%E5%AD%90%E6%80%BB%E9%95%BF%E5%BA%A6%E7%BB%9F%E8%AE%A1"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#python%E5%B0%8F%E6%8A%80%E5%B7%A7"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
+<li class="chapter" data-level="5.2" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#pandas%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%8E%B7%E5%8F%96%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
+<li class="chapter" data-level="5.2.2" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E6%9F%A5%E7%9C%8B%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%92%8C%E6%A0%BC%E5%BC%8F"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
+<li class="chapter" data-level="5.2.3" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%AF%BB%E5%8F%96%E4%B8%A4%E5%88%97%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
+<li class="chapter" data-level="5.2.4" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E7%B4%A2%E5%BC%95"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
+<li class="chapter" data-level="5.2.5" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%AF%BB%E5%8F%96%E5%A4%9A%E5%88%97%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
+<li class="chapter" data-level="5.2.6" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E9%80%89%E5%8F%96%E5%A4%9A%E5%88%97%E6%95%B0%E6%8D%AE"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
+<li class="chapter" data-level="5.2.7" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E9%87%8D%E5%91%BD%E5%90%8D%E5%88%97%E5%90%8D%E5%AD%97"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
+<li class="chapter" data-level="5.2.8" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E5%90%88%E5%B9%B6%E7%9F%A9%E9%98%B5"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
+<li class="chapter" data-level="5.2.9" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E7%9F%A9%E9%98%B5%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
+<li class="chapter" data-level="5.2.10" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%AF%BB%E5%8F%96meta-data%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#pandas%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E5%86%99%E5%85%A5%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#pandas%E7%9F%A9%E9%98%B5%E7%9A%84%E5%B0%8F%E5%BA%94%E7%94%A8"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
+<li class="chapter" data-level="5.5" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#seaborn%E7%BB%98%E5%9B%BE"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numpy_scipy.html"><a href="numpy_scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy%E6%95%B0%E7%BB%84"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
+<li class="chapter" data-level="6.1.2" data-path="numpy_scipy.html"><a href="numpy_scipy.html#%E5%B8%83%E5%B0%94%E8%AF%AD%E5%8F%A5%E5%92%8Cnumpy%E6%95%B0%E7%BB%84"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
+<li class="chapter" data-level="6.1.3" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy%E7%9A%84math%E6%A8%A1%E5%9D%97"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="numpy_scipy.html"><a href="numpy_scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="numpy_scipy.html"><a href="numpy_scipy.html#%E6%9C%80%E4%BC%98%E5%8C%96%E5%92%8C%E6%9C%80%E5%B0%8F%E5%8C%96"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
+<li class="chapter" data-level="6.2.2" data-path="numpy_scipy.html"><a href="numpy_scipy.html#%E6%8F%92%E5%80%BC"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Py3_test.html"><a href="Py3_test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E5%AE%9D%E5%85%B8"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
+<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E8%AF%84%E4%BC%B0"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
+<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%95%99%E7%A8%8B"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
+<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#%E7%B3%BB%E5%88%97%E5%AE%A3%E4%BC%A0"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
+<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E7%94%9F%E7%89%A9%E7%9F%A5%E8%AF%86"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
+<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
 <li class="chapter" data-level="8.1.7" data-path="references.html"><a href="references.html#linux"><i class="fa fa-check"></i><b>8.1.7</b> Linux</a></li>
-<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
-<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
-<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#section-8.1.10"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
-<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#section-8.1.11"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
-<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
-<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#section-8.1.13"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
-<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python-1"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
-<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
-<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
-<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#section-8.1.17"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
-<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#section-8.1.18"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
-<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#section-8.1.19"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
-<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#section-8.1.20"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
-<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#section-8.1.21"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
+<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos%E7%B3%BB%E5%88%97"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
+<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r%E7%BB%9F%E8%AE%A1%E5%92%8C%E4%BD%9C%E5%9B%BE"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
+<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#%E6%89%A9%E5%A2%9E%E5%AD%90%E4%B8%89%E6%AD%A5%E6%9B%B2"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
+<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%88%86%E6%9E%90%E4%B8%93%E9%A2%98"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs%E5%9F%BA%E7%A1%80"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
+<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#%E7%99%8C%E7%97%87%E6%95%B0%E6%8D%AE%E5%BA%93"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
+<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
+<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs%E8%BD%AF%E4%BB%B6"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
+<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape%E7%BD%91%E7%BB%9C%E5%9B%BE"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
+<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
+<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E5%AE%9D%E5%85%B8%E4%B9%8B%E5%82%BB%E7%93%9C%E5%BC%8F"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
+<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E4%BA%BA%E5%86%99%E7%A8%8B%E5%BA%8F"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
+<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#%E5%B0%8F%E6%8A%80%E5%B7%A7%E7%B3%BB%E5%88%97"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
+<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#%E6%8B%9B%E8%81%98"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#section-8.2"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
-<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
-<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#section-8.2.3"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
-<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#section-8.2.4"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
-<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#section-8.2.5"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
-<li class="chapter" data-level="8.2.6" data-path="py3-ct.html"><a href="py3-ct.html#-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
-<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
-<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#section-8.2.8"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
-<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#section-8.2.9"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
-<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#section-8.2.10"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
-<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#section-8.2.11"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
-<li class="chapter" data-level="8.2.12" data-path="pythonbasic.html"><a href="pythonbasic.html#-"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
-<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#section-8.2.13"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
+<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#%E7%B2%BE%E9%80%89%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
+<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#%E5%9F%B9%E8%AE%AD%E4%BC%9A%E8%AE%AE%E5%BE%81%E7%A8%BF%E6%8B%9B%E8%81%98"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
+<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#%E7%A7%91%E7%A0%94%E7%BB%8F%E9%AA%8C"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
+<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#%E8%BD%AF%E4%BB%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
+<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#%E6%89%A9%E5%A2%9E%E5%AD%90%E5%AD%A6%E4%B9%A0%E4%B8%89%E6%AD%A5%E6%9B%B2"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
+<li class="chapter" data-level="8.2.6" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%88%86%E6%9E%90%E4%B8%93%E9%A2%98-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r%E7%BB%9F%E8%AE%A1%E7%BB%98%E5%9B%BE"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
+<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%8A%80%E6%9C%AF"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
+<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
+<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#%E5%BF%85%E8%AF%BB%E7%BB%BC%E8%BF%B0"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
+<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#%E9%AB%98%E5%88%86%E6%96%87%E7%AB%A0%E5%A5%97%E8%B7%AF%E8%A7%A3%E8%AF%BB"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
+<li class="chapter" data-level="8.2.12" data-path="references.html"><a href="references.html#%E7%A7%91%E6%99%AE%E8%A7%86%E9%A2%91-%E5%AF%93%E6%95%99%E4%BA%8E%E4%B9%90"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
+<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#%E5%8F%8B%E5%86%9B%E6%96%87%E7%AB%A0%E6%B1%87%E6%80%BB%E6%8E%A8%E8%8D%90"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="company-intro.html"><a href="company-intro.html"><i class="fa fa-check"></i><b>9</b> 公司简介</a></li>
 <li class="divider"></li>
 <li><a href="mailto:ct@ehbio.com" target="blank">ct@ehbio.com</a></li>
 
@@ -309,18 +371,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1">
-<h1><span class="header-section-number">8</span> 生信教程文章集锦</h1>
-<div id="section-8.1" class="section level2">
-<h2><span class="header-section-number">8.1</span> 生信宝典</h2>
+<div id="references" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> 生信教程文章集锦<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="生信宝典" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> 生信宝典<a href="references.html#%E7%94%9F%E4%BF%A1%E5%AE%9D%E5%85%B8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>生信的作用越来越大，想学的人越来越多，不管是为了以后发展，还是为了解决眼下的问题。但生信学习不是一朝一夕就可以完成的事情，也许你可以很短时间学会一个交互式软件的操作，却不能看完程序教学视频后就直接写程序。也许你可以跟着一个测序分析流程完成操作，但不懂得背后的原理，不知道什么参数需要修改，结果可以出来，却把我不住对还是错。</p>
 <p>学习生信从来就不是一个简单的事，需要做好持久战的心理准备。</p>
 <p>在学习时，我们都希望由浅入深的逐步深入，不断地练习和实践，这就是为什么我们需要一本书，因为书很系统。但生信发展的历史短于计算机编程的历史，如果想要一门程序设计的入门数据，每种语言都可以找到几本。但想要一个囊括生信的书，就有些难了。本身生信跨领域，需要多学科的知识，而其内部又有不少分子，都囊括了太大，包括的少又有些隔靴搔痒的感觉。</p>
 <p>我们当时都是零基础下自学Linux, 自学Python，自学R，自学高通量测序；这些学习经历，之前都零星地记录在博客里。现在回头去看几年前自己记录的东西，觉得好简单，而当时却费了很大的力气。这些零星的随手记，当时也只是为了自己看，到现在确实只有自己能看得懂，不便惠及更多的人。</p>
 <p>因此我们创建了生信宝典，希望从不同的角度传播知识。这个不同有三点含义，一是形式上的不同，摒弃之前主编们单人作战想写啥就写啥，而是有组织有计划的内容聚合，提供一系列的教程，由入门到提高。二是内容的不同，不去用网上现有教程的通用数据做例子，而是拿实际生物数据，讲述如何解释生信中普遍碰到的问题，讲述如何处理自己的数据。三是立足点不同。在写作时，我们回到了当年，在回忆中用整个阶段的学习去指导当初的那个小白，从那些会了的人觉得微不足道而不会的人又迈不过的坎入手，直击痛点。知识点的收录依据不是是否炫酷，是否难，而是是否必要。如果必要，再简单，也要提及；如果不必要，再炫酷，也暂不纳入。</p>
 <p>通过大量的生信例子、关键的注释和浓缩的语句形成下面的一系列学习教程。每一篇内容都不多，可以当做小说阅读，也可以跟着去练，反复几遍，每读一次都会有不同的收获和体会。</p>
-<div id="section-8.1.1" class="section level3">
-<h3><span class="header-section-number">8.1.1</span> 系列教程</h3>
+<div id="系列教程" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> 系列教程<a href="references.html#%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/xoLBg0pI9seEksa0hMXi0A">生物信息之程序</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483955&amp;idx=1&amp;sn=946438376f94af6e8861b2b42701914e&amp;chksm=ec0dc7b9db7a4eafbef28fac1fb260f6f876f0ba674828784ac827dd23f9317f5a2d59d38bc0#rd">如何优雅的提问</a></li>
@@ -339,16 +401,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/JKn4kRiXYz6RKzQbTMVYlg">教育部推出首批490门“国家精品在线开放课程</a></li>
 </ul>
 </div>
-<div id="ngs" class="section level3">
-<h3><span class="header-section-number">8.1.2</span> NGS分析工具评估</h3>
+<div id="ngs分析工具评估" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> NGS分析工具评估<a href="references.html#ngs%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E8%AF%84%E4%BC%B0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484106&amp;idx=1&amp;sn=687a0def51f6ea91a335754eb3dc9ca9&amp;chksm=ec0dc740db7a4e564e5b1e93a36e5d9447581e262eec9c2983d1d4e76788d673c9c07dec8f8e#rd">39个转录组分析工具，120种组合评估(转录组分析工具哪家强-导读版)</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484106&amp;idx=2&amp;sn=a09fa127d625c4072ae0343795346c56&amp;chksm=ec0dc740db7a4e56821f32f60700027c85db46e81089721d1bbe23ceefa86160d9661c2f2d4c#rd">39个转录组分析工具，120种组合评估(转录组分析工具大比拼 （完整翻译版）)</a></li>
 <li><a href="http://mp.weixin.qq.com/s/4HANWJY4oL7jGziroHfEpQ">无参转录组分析工具评估和流程展示</a></li>
 </ul>
 </div>
-<div id="section-8.1.3" class="section level3">
-<h3><span class="header-section-number">8.1.3</span> 宏基因组教程</h3>
+<div id="宏基因组教程" class="section level3 hasAnchor" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> 宏基因组教程<a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%95%99%E7%A8%8B" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/sQyl5EctXFB95Oxg8YIasg">微生物组入门必读+宏基因组实操课程</a></li>
 <li><a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">扩增子图表解读-理解文章思路</a></li>
@@ -358,8 +420,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/li7SdZVaCEyFQF8h6MMh2A">4500元的微生物组培训资料</a></li>
 </ul>
 </div>
-<div id="section-8.1.4" class="section level3">
-<h3><span class="header-section-number">8.1.4</span> 系列宣传</h3>
+<div id="系列宣传" class="section level3 hasAnchor" number="8.1.4">
+<h3><span class="header-section-number">8.1.4</span> 系列宣传<a href="references.html#%E7%B3%BB%E5%88%97%E5%AE%A3%E4%BC%A0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/Kx0gaU2x4pWjBq2I2Ffe6Q">转录组分析的正确姿势</a></li>
 <li><a href="http://mp.weixin.qq.com/s/BmtIOcIzIutufFilbJIgEA">120分的转录组考题，你能得多少</a></li>
@@ -377,29 +439,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://mp.weixin.qq.com/s/kD-x7K4hI5KMgGXikyLt0Q">3分和30分文章差距在哪里？</a></li>
 </ul>
 </div>
-<div id="section-8.1.5" class="section level3">
-<h3><span class="header-section-number">8.1.5</span> 生信生物知识</h3>
+<div id="生信生物知识" class="section level3 hasAnchor" number="8.1.5">
+<h3><span class="header-section-number">8.1.5</span> 生信生物知识<a href="references.html#%E7%94%9F%E4%BF%A1%E7%94%9F%E7%89%A9%E7%9F%A5%E8%AF%86" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/JQBZv6snTkZzFwEG12riWw">生物研究中不可缺少的数字概念，多少，多大，多快</a></li>
 </ul>
 </div>
-<div id="section-8.1.6" class="section level3">
-<h3><span class="header-section-number">8.1.6</span> 文献精读</h3>
+<div id="文献精读" class="section level3 hasAnchor" number="8.1.6">
+<h3><span class="header-section-number">8.1.6</span> 文献精读<a href="references.html#%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/brx-i-Bbgp-XYwn5SkQLwA">CRISPR-CAS9发展历程小记</a></li>
 <li><a href="http://mp.weixin.qq.com/s/T9Q6CUCt-wBoUCEwSBZALg">一场大病引起的诺贝尔2017年生理学奖角逐</a></li>
 <li><a href="https://mp.weixin.qq.com/s/zymhxusKNDZ9XynNGAlRcA">Science搞反狗脑 - 人脑和狗脑一样？</a></li>
-<li><a href="http://mp.weixin.qq.com/s/OgAhb_UGUp7tZvQARbmLLg">一篇压根不存在的文献被引用400次？！揭开&quot; 幽灵文献&quot; 的真面目</a></li>
+<li><a href="http://mp.weixin.qq.com/s/OgAhb_UGUp7tZvQARbmLLg">一篇压根不存在的文献被引用400次？！揭开” 幽灵文献” 的真面目</a></li>
 <li><a href="http://mp.weixin.qq.com/s/ikU0mVyX6BQNgljD1jCrRA">基于人工智能的文献检索，导师查找，更聪明</a></li>
 <li><a href="http://mp.weixin.qq.com/s/hc8g64aHN7qv8YhVfrsuvQ">GeenMedical：文献查询、筛选、引用排序、相似文献、全文下载、杂志分区、影响因子、结果导出、杂志评述、直接投稿，一站服务</a></li>
 <li><a href="http://mp.weixin.qq.com/s/fZ2Nm7Wck5mZLiESHcPusA">YANDEX搜索，不翻墙稳定使用近谷歌搜索</a></li>
 <li><a href="http://mp.weixin.qq.com/s/NMpqbKfXy002eMz9b9y1zg">Nature我的研究对后人毫无用途：21%的学术论文自发布后从未被引用</a></li>
 <li><a href="https://mp.weixin.qq.com/s/NGsFlVb0fN1O37ecaYwxsA">SCI-HUB镜像, SSH隧道访问学校内网</a></li>
-<li><a href="http://mp.weixin.qq.com/s/fFO6MX6Ttijx0bfYS5eQ-Q">为了速成生物学，一位程序员探索了“爆款”基因背后的秘密</a></li>
+<li><a href="http://mp.weixin.qq.com/s/fFO6MX6Ttijx0bfYS5eQ-Q">为了速成生物学，一位程序员探索了”爆款”基因背后的秘密</a></li>
 </ul>
 </div>
-<div id="linux" class="section level3">
-<h3><span class="header-section-number">8.1.7</span> Linux</h3>
+<div id="linux" class="section level3 hasAnchor" number="8.1.7">
+<h3><span class="header-section-number">8.1.7</span> Linux<a href="references.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/hEYU80fPf1eD5OWL3fO4Bg">Linux-总目录</a></li>
 <li><a href="http://mp.weixin.qq.com/s/yKP1Kboji9N4p2Sl1Ovj0Q">Linux-文件和目录</a></li>
@@ -421,8 +483,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/lWNp_6W_jLiogmtlk9nO2A">Bash概论 - Linux系列教程补充篇</a></li>
 </ul>
 </div>
-<div id="circos" class="section level3">
-<h3><span class="header-section-number">8.1.8</span> CIRCOS系列</h3>
+<div id="circos系列" class="section level3 hasAnchor" number="8.1.8">
+<h3><span class="header-section-number">8.1.8</span> CIRCOS系列<a href="references.html#circos%E7%B3%BB%E5%88%97" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/OEBJU3BiQdQOeN_tD2o7sA">CIRCOS圈图绘制 - circos安装</a></li>
 <li><a href="http://mp.weixin.qq.com/s/2E1Y5-cEdptkQGVm0bxKbQ">CIRCOS圈图绘制 - 最简单绘图和解释</a></li>
@@ -430,8 +492,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/6L8wmsy0eOxtiAEs3hYgCA">CIRCOS增加热图、点图、线图和区块属性</a></li>
 </ul>
 </div>
-<div id="r" class="section level3">
-<h3><span class="header-section-number">8.1.9</span> R统计和作图</h3>
+<div id="r统计和作图" class="section level3 hasAnchor" number="8.1.9">
+<h3><span class="header-section-number">8.1.9</span> R统计和作图<a href="references.html#r%E7%BB%9F%E8%AE%A1%E5%92%8C%E4%BD%9C%E5%9B%BE" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/x3tWrQPriLRFXO8ZaD93EQ">在R中赞扬下努力工作的你，奖励一份CheatShet</a></li>
 <li><a href="http://mp.weixin.qq.com/s/u8WfC4xQ562Uekhs4WVBoQ">别人的电子书，你的电子书，都在bookdown</a></li>
@@ -462,8 +524,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://mp.weixin.qq.com/s/rK5SolI0xGisvBCIcb448A">network3D 交互式网络生成</a></li>
 </ul>
 </div>
-<div id="section-8.1.10" class="section level3">
-<h3><span class="header-section-number">8.1.10</span> 扩增子三步曲</h3>
+<div id="扩增子三步曲" class="section level3 hasAnchor" number="8.1.10">
+<h3><span class="header-section-number">8.1.10</span> 扩增子三步曲<a href="references.html#%E6%89%A9%E5%A2%9E%E5%AD%90%E4%B8%89%E6%AD%A5%E6%9B%B2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">1图表解读-理解文章思路</a><br />
 </li>
@@ -476,8 +538,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">3统计绘图-冲击高分文章</a></li>
 </ul>
 </div>
-<div id="section-8.1.11" class="section level3">
-<h3><span class="header-section-number">8.1.11</span> 宏基因组分析专题</h3>
+<div id="宏基因组分析专题" class="section level3 hasAnchor" number="8.1.11">
+<h3><span class="header-section-number">8.1.11</span> 宏基因组分析专题<a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%88%86%E6%9E%90%E4%B8%93%E9%A2%98" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/jASOBPzpwYCL-fWNUJJp8g">1背景知识-Shell入门与本地blast实战</a></li>
 <li><a href="http://mp.weixin.qq.com/s/3O01eNMe79J_kUTaJjP6ag">2数据质控fastqc, Trimmomatic, MultiQC, khmer</a></li>
@@ -492,8 +554,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/xSjFGwcr1XIAZKdByJAWmQ">MetaPhlAn2分析有参宏基因组</a></li>
 </ul>
 </div>
-<div id="ngs" class="section level3">
-<h3><span class="header-section-number">8.1.12</span> NGS基础</h3>
+<div id="ngs基础" class="section level3 hasAnchor" number="8.1.12">
+<h3><span class="header-section-number">8.1.12</span> NGS基础<a href="references.html#ngs%E5%9F%BA%E7%A1%80" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484047&amp;idx=1&amp;sn=3e2a79d9f56040a57ac2e16cf1923b54&amp;chksm=ec0dc705db7a4e133e6e91de9ac11a6c0690f03d7b3b760b358e9b0d1a2d57974599419d9fff#rd">NGS基础 - FASTQ格式解释和质量评估</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484034&amp;idx=1&amp;sn=e7680ee935f8603214227b37eeb2c567&amp;chksm=ec0dc708db7a4e1eca4e38845381f328c49c84a90ad6580c3ba3761511772636e5ec0f185931#rd">NGS基础 - 高通量测序原理</a></li>
@@ -508,16 +570,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/4a5U8GdBoNFXkykL6m2EeA">生信软件系列 - NCBI使用</a></li>
 </ul>
 </div>
-<div id="section-8.1.13" class="section level3">
-<h3><span class="header-section-number">8.1.13</span> 癌症数据库</h3>
+<div id="癌症数据库" class="section level3 hasAnchor" number="8.1.13">
+<h3><span class="header-section-number">8.1.13</span> 癌症数据库<a href="references.html#%E7%99%8C%E7%97%87%E6%95%B0%E6%8D%AE%E5%BA%93" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484383&amp;idx=1&amp;sn=09c58de206f409fa375fb7af94d0084c&amp;chksm=ec0dc655db7a4f438cb7e53f281cb5c6bf2484619b3c72d7eafe064ea6a342f69587353531af#rd">UCSC XENA - 集大成者(TCGA, ICGC)</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484378&amp;idx=1&amp;sn=eb6a0f890326898b2fb0867c58f0cf90&amp;chksm=ec0dc650db7a4f46a0a265ec96b73f367d45f86318087507eef7dde117a369cb7ad427bebb1e#rd">ICGC数据库使用</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484304&amp;idx=1&amp;sn=6ad44dafdc7613e33e13aac48edb32aa&amp;chksm=ec0dc61adb7a4f0c504f3aeb207132aef479572ea756ce15868cbc57f88e9ea25102752b646a#rd">TCGA数据库在线使用</a></li>
 </ul>
 </div>
-<div id="python-1" class="section level3">
-<h3><span class="header-section-number">8.1.14</span> Python</h3>
+<div id="python" class="section level3 hasAnchor" number="8.1.14">
+<h3><span class="header-section-number">8.1.14</span> Python<a href="references.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://mp.weixin.qq.com/s/zhr251PCTDGBO1YxYB-P6Q">Python学习 - 可视化变量赋值、循环、程序运行过程</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483866&amp;idx=1&amp;sn=310341a1c8d348958c304df03dfd06a0&amp;chksm=ec0dc450db7a4d46e369637cd2867b0e56389bf4f2e1d0dce409bba38882e61e5063308a13af#rd">Python极简教程 （一）</a></li>
@@ -534,8 +596,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/JHDvdqq3Z-7uDmsyroblNQ">关于Python中的__main__和编程模板</a></li>
 </ul>
 </div>
-<div id="ngs" class="section level3">
-<h3><span class="header-section-number">8.1.15</span> NGS软件</h3>
+<div id="ngs软件" class="section level3 hasAnchor" number="8.1.15">
+<h3><span class="header-section-number">8.1.15</span> NGS软件<a href="references.html#ngs%E8%BD%AF%E4%BB%B6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/5OIRHA22ZLr5Z8bEhDiBqg">Rfam 12.0+本地使用 （最新版教程）</a></li>
 <li><a href="http://mp.weixin.qq.com/s/zn654JqG9OeO71rJUTDr2Q">轻松绘制各种Venn图</a></li>
@@ -545,16 +607,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://mp.weixin.qq.com/s/l6j2encDfEQkt2UeNCMFhg">去东方，最好用的在线GO富集分析工具</a></li>
 </ul>
 </div>
-<div id="cytoscape" class="section level3">
-<h3><span class="header-section-number">8.1.16</span> Cytoscape网络图</h3>
+<div id="cytoscape网络图" class="section level3 hasAnchor" number="8.1.16">
+<h3><span class="header-section-number">8.1.16</span> Cytoscape网络图<a href="references.html#cytoscape%E7%BD%91%E7%BB%9C%E5%9B%BE" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/m9uJm8GwSXb3xaRxtod08Q">Cytoscape教程1</a></li>
 <li><a href="http://mp.weixin.qq.com/s/ZSoW7-qWs3BuSB7bkDnfmA">Cytoscape之操作界面介绍</a></li>
 <li><a href="http://mp.weixin.qq.com/s/sKEy_Pn9qnWw4W-aXraA5g">新出炉的Cytoscape视频教程</a></li>
 </ul>
 </div>
-<div id="section-8.1.17" class="section level3">
-<h3><span class="header-section-number">8.1.17</span> 分子对接</h3>
+<div id="分子对接" class="section level3 hasAnchor" number="8.1.17">
+<h3><span class="header-section-number">8.1.17</span> 分子对接<a href="references.html#%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/asAJDttAvsCLGd3PPU2agQ">来一场蛋白和小分子的风花雪月</a></li>
 <li><a href="http://mp.weixin.qq.com/s/VDN1qAZGIMol6prwQW4umw">不是原配也可以-对接非原生配体</a></li>
@@ -562,8 +624,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/5a5-6pXHfvyDc2Kfp4xDeQ">你需要知道的那些前奏</a></li>
 </ul>
 </div>
-<div id="section-8.1.18" class="section level3">
-<h3><span class="header-section-number">8.1.18</span> 生信宝典之傻瓜式</h3>
+<div id="生信宝典之傻瓜式" class="section level3 hasAnchor" number="8.1.18">
+<h3><span class="header-section-number">8.1.18</span> 生信宝典之傻瓜式<a href="references.html#%E7%94%9F%E4%BF%A1%E5%AE%9D%E5%85%B8%E4%B9%8B%E5%82%BB%E7%93%9C%E5%BC%8F" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/5bNdHkl3QDFmCNmrht3VWA">生信宝典之傻瓜式 (一) 如何提取指定位置的基因组序列</a></li>
 <li><a href="http://mp.weixin.qq.com/s/LPWaxbKuS-XlvzkSE-MupQ">生信宝典之傻瓜式 (二) 如何快速查找指定基因的调控网络</a></li>
@@ -572,33 +634,33 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/DQ4fjCL777D2iEcPTnd-rA">生信宝典之傻瓜式 (五) 文献挖掘查找指定基因调控网络</a></li>
 </ul>
 </div>
-<div id="section-8.1.19" class="section level3">
-<h3><span class="header-section-number">8.1.19</span> 生信人写程序</h3>
+<div id="生信人写程序" class="section level3 hasAnchor" number="8.1.19">
+<h3><span class="header-section-number">8.1.19</span> 生信人写程序<a href="references.html#%E7%94%9F%E4%BF%A1%E4%BA%BA%E5%86%99%E7%A8%8B%E5%BA%8F" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483837&amp;idx=1&amp;sn=660358a38b7fa6d3de2c95280f7a4535&amp;chksm=ec0dc437db7a4d21368b312ac43ceae552e1544570639c949e96bf488113a55f67fa2306008e#rd">生信人写程序1. Perl语言模板及配置</a></li>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247483910&amp;idx=1&amp;sn=7813eaa4841d90b0bfc3982bb901de81&amp;chksm=ec0dc78cdb7a4e9a866f3e0cade3096a13366cac18c873820434f066fdba9bd22a7b5b3d210d#rd">生信人写程序2. Editplus添加Perl, Shell, R, markdown模板和语法高亮</a></li>
 </ul>
 </div>
-<div id="section-8.1.20" class="section level3">
-<h3><span class="header-section-number">8.1.20</span> 小技巧系列</h3>
+<div id="小技巧系列" class="section level3 hasAnchor" number="8.1.20">
+<h3><span class="header-section-number">8.1.20</span> 小技巧系列<a href="references.html#%E5%B0%8F%E6%8A%80%E5%B7%A7%E7%B3%BB%E5%88%97" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/Diwevx-TVe0Vq_rdgzIkrw">参考文献中杂志名字格式混乱问题一次解决</a></li>
 </ul>
 </div>
-<div id="section-8.1.21" class="section level3">
-<h3><span class="header-section-number">8.1.21</span> 招聘</h3>
+<div id="招聘" class="section level3 hasAnchor" number="8.1.21">
+<h3><span class="header-section-number">8.1.21</span> 招聘<a href="references.html#%E6%8B%9B%E8%81%98" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s?__biz=MzI5MTcwNjA4NQ==&amp;mid=2247484036&amp;idx=5&amp;sn=bb1007d2c3d60e7a2bcf2d6fc7a9a2bb&amp;chksm=ec0dc70edb7a4e185bafd0f49440bf1a032915c7e8d8fc2cb37c70a81ce3446a4ae990df89a5#rd">易汉博欢迎您加入</a></li>
 </ul>
 </div>
 </div>
-<div id="section-8.2" class="section level2">
-<h2><span class="header-section-number">8.2</span> 宏基因组</h2>
+<div id="宏基因组" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> 宏基因组<a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="http://mp.weixin.qq.com/s/5jQspEvH5_4Xmart22gjMA" class="uri">http://mp.weixin.qq.com/s/5jQspEvH5_4Xmart22gjMA</a></p>
 <p>宏基因组/微生物组是当今世界科研最热门的研究领域之一，为加强本领域的技术交流与传播，推动中国微生物组计划发展，中科院青年科研人员创立“宏基因组”公众号，目标为打造本领域纯干货技术及思想交流平台。</p>
 <p>本公众号每日推送，工作日分享宏基因组领域科研思路、实验和分析技术，理论过硬实战强；周末科普和生活专栏，轻松读文看片涨姿势。目前经过近半年发展，分享过百篇原创文章，已有14000+小伙伴在这里一起交流学习，感兴趣的赶快关注吧。</p>
-<div id="section-8.2.1" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> 精选文章推荐</h3>
+<div id="精选文章推荐" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> 精选文章推荐<a href="references.html#%E7%B2%BE%E9%80%89%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>5000+</strong></p>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/sQyl5EctXFB95Oxg8YIasg">微生物组入门必读+宏基因组实操课程</a></li>
@@ -640,15 +702,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://mp.weixin.qq.com/s/9sUOcZTsfOXBjj03OHGy6Q">2017年发展简史和十大热文盘点</a></li>
 </ul>
 </div>
-<div id="section-8.2.2" class="section level3">
-<h3><span class="header-section-number">8.2.2</span> 培训、会议、征稿、招聘</h3>
+<div id="培训会议征稿招聘" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> 培训、会议、征稿、招聘<a href="references.html#%E5%9F%B9%E8%AE%AD%E4%BC%9A%E8%AE%AE%E5%BE%81%E7%A8%BF%E6%8B%9B%E8%81%98" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/xxBC2VMpB7uz_rJFBSb5mQ">3月10-19日，北京，微生物组——扩增子分析专题培训</a></li>
 <li><a href="http://mp.weixin.qq.com/s/b_ron-vL6n-0CDJW87l2rQ">5月11-13日，北京，中国肠道大会</a></li>
 </ul>
 </div>
-<div id="section-8.2.3" class="section level3">
-<h3><span class="header-section-number">8.2.3</span> 科研经验</h3>
+<div id="科研经验" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> 科研经验<a href="references.html#%E7%A7%91%E7%A0%94%E7%BB%8F%E9%AA%8C" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/H9gkepap0hy3NNskOkO44w">如何优雅的提问</a></li>
 <li><a href="http://mp.weixin.qq.com/s/wn2bqIPgT5UD-GP1qzkJFA">公众号搜索方法大全</a></li>
@@ -663,8 +725,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/9Sj5tI8RRa3uv2BgNarhxw">整个世界都是你的已知条件</a></li>
 </ul>
 </div>
-<div id="section-8.2.4" class="section level3">
-<h3><span class="header-section-number">8.2.4</span> 软件和数据库使用</h3>
+<div id="软件和数据库使用" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> 软件和数据库使用<a href="references.html#%E8%BD%AF%E4%BB%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>SILVAngs:16S/18S在线分析<a href="http://mp.weixin.qq.com/s/R4fzOl1JX097rxi18vfePw">1</a> <a href="http://mp.weixin.qq.com/s/2mv_w-RG50v54iojii7kuA">2</a></li>
 <li><a href="http://mp.weixin.qq.com/s/kVrMGI8mtkJkltCpAbwUiw">METAGENassist帮你搞定宏基因分析的所有图形需求</a></li>
@@ -692,25 +754,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/vVamtB4mBAauqjpEFBg70A">RepeatMasker：基因组重复序列注释</a></li>
 </ul>
 </div>
-<div id="section-8.2.5" class="section level3">
-<h3><span class="header-section-number">8.2.5</span> 扩增子学习三步曲</h3>
-<div id="-" class="section level4">
-<h4><span class="header-section-number">8.2.5.1</span> <a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">1图表解读-理解文章思路</a></h4>
+<div id="扩增子学习三步曲" class="section level3 hasAnchor" number="8.2.5">
+<h3><span class="header-section-number">8.2.5</span> 扩增子学习三步曲<a href="references.html#%E6%89%A9%E5%A2%9E%E5%AD%90%E5%AD%A6%E4%B9%A0%E4%B8%89%E6%AD%A5%E6%9B%B2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="图表解读-理解文章思路" class="section level4 hasAnchor" number="8.2.5.1">
+<h4><span class="header-section-number">8.2.5.1</span> <a href="http://mp.weixin.qq.com/s/oiVHO2S1JgYrKXPDU6fH2g">1图表解读-理解文章思路</a><a href="references.html#%E5%9B%BE%E8%A1%A8%E8%A7%A3%E8%AF%BB-%E7%90%86%E8%A7%A3%E6%96%87%E7%AB%A0%E6%80%9D%E8%B7%AF" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="-" class="section level4">
-<h4><span class="header-section-number">8.2.5.2</span> <a href="http://mp.weixin.qq.com/s/KrYyy3jjzAL0rQzVfV6h4A">2分析流程-把握分析细节</a></h4>
+<div id="分析流程-把握分析细节" class="section level4 hasAnchor" number="8.2.5.2">
+<h4><span class="header-section-number">8.2.5.2</span> <a href="http://mp.weixin.qq.com/s/KrYyy3jjzAL0rQzVfV6h4A">2分析流程-把握分析细节</a><a href="references.html#%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B-%E6%8A%8A%E6%8F%A1%E5%88%86%E6%9E%90%E7%BB%86%E8%8A%82" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/SxWl0qBJgg8ziZUFDmKvpQ">扩展1：视频教程-夯实分析思路</a><br />
 </li>
 <li><a href="http://mp.weixin.qq.com/s/wkn-91BVOSWZLRvlcaaEgg">扩展2：QIIME2教程-了解分析趋势</a></li>
 </ul>
 </div>
-<div id="-" class="section level4">
-<h4><span class="header-section-number">8.2.5.3</span> <a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">3统计绘图-冲击高分文章</a></h4>
+<div id="统计绘图-冲击高分文章" class="section level4 hasAnchor" number="8.2.5.3">
+<h4><span class="header-section-number">8.2.5.3</span> <a href="http://mp.weixin.qq.com/s/6tNePiaDsPPzEBZjiCXIRg">3统计绘图-冲击高分文章</a><a href="references.html#%E7%BB%9F%E8%AE%A1%E7%BB%98%E5%9B%BE-%E5%86%B2%E5%87%BB%E9%AB%98%E5%88%86%E6%96%87%E7%AB%A0" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
 </div>
-<div id="-1" class="section level3">
-<h3><span class="header-section-number">8.2.6</span> 宏基因组分析专题</h3>
+<div id="宏基因组分析专题-1" class="section level3 hasAnchor" number="8.2.6">
+<h3><span class="header-section-number">8.2.6</span> 宏基因组分析专题<a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%88%86%E6%9E%90%E4%B8%93%E9%A2%98-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/jASOBPzpwYCL-fWNUJJp8g">1背景知识-Shell入门与本地blast实战</a></li>
 <li><a href="http://mp.weixin.qq.com/s/3O01eNMe79J_kUTaJjP6ag">2数据质控fastqc, Trimmomatic, MultiQC, khmer</a></li>
@@ -725,8 +787,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/xSjFGwcr1XIAZKdByJAWmQ">MetaPhlAn2分析有参宏基因组</a></li>
 </ul>
 </div>
-<div id="r" class="section level3">
-<h3><span class="header-section-number">8.2.7</span> R统计绘图</h3>
+<div id="r统计绘图" class="section level3 hasAnchor" number="8.2.7">
+<h3><span class="header-section-number">8.2.7</span> R统计绘图<a href="references.html#r%E7%BB%9F%E8%AE%A1%E7%BB%98%E5%9B%BE" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/XOZD4ftYLPZjM2IVLYgUpA">视频教程：R语言recharts包绘制交互式图形</a></li>
 <li><a href="https://mp.weixin.qq.com/s/9EChqbVmFrNWi_Siu4hdqQ">R语言聚类分析–cluster, factoextra</a></li>
@@ -734,8 +796,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/AEfPqWO3S0mRnDZ_Ws9fnw">R相关矩阵可视化包ggcorrplot</a></li>
 </ul>
 </div>
-<div id="section-8.2.8" class="section level3">
-<h3><span class="header-section-number">8.2.8</span> 实验设计与技术</h3>
+<div id="实验设计与技术" class="section level3 hasAnchor" number="8.2.8">
+<h3><span class="header-section-number">8.2.8</span> 实验设计与技术<a href="references.html#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%8A%80%E6%9C%AF" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/L1XxsGDFt9wKk-4pSRwUUQ">微生物样本取样及微生物基因组DNA提取建议</a></li>
 <li>样品生物学重复数据选择 <a href="https://mp.weixin.qq.com/s/_qqeKbncKZmovajvPbskpA">1必要性</a> <a href="http://mp.weixin.qq.com/s/_qqeKbncKZmovajvPbskpA">2需要多少重复？</a></li>
@@ -747,8 +809,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/vUtQmuj1vIoH9L0J-YT5fQ">Nat. Biotechnol.扩增子测序革命—用16S及18S rRNA全长进行微生物多样性研究</a></li>
 </ul>
 </div>
-<div id="section-8.2.9" class="section level3">
-<h3><span class="header-section-number">8.2.9</span> 基础知识</h3>
+<div id="基础知识" class="section level3 hasAnchor" number="8.2.9">
+<h3><span class="header-section-number">8.2.9</span> 基础知识<a href="references.html#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/kBbWD6ircc4UHE-ma-6a1Q">Microbiota, metagenome, microbiome区别</a></li>
 <li><a href="http://mp.weixin.qq.com/s/yDmUgRzgJDtxdiJqwpGM1A">16S测序，不知道OTU你就out了！</a></li>
@@ -767,8 +829,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/p7PMqo2Ld0Kbm8_3IgRuuQ">简单读懂微生物基因组的泛基因组学</a></li>
 </ul>
 </div>
-<div id="section-8.2.10" class="section level3">
-<h3><span class="header-section-number">8.2.10</span> 必读综述</h3>
+<div id="必读综述" class="section level3 hasAnchor" number="8.2.10">
+<h3><span class="header-section-number">8.2.10</span> 必读综述<a href="references.html#%E5%BF%85%E8%AF%BB%E7%BB%BC%E8%BF%B0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/CcDuohwezquBRhBW3FvMSg">Nature：宏基因组关联分析</a></li>
 <li><a href="http://mp.weixin.qq.com/s/K3t7BpJ3LZvi4RNf69cJeA">Nature：肠道菌群如何划分肠型</a></li>
@@ -797,8 +859,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/MwEHXbPdpkKO5tuNKjqI8Q">原核转录组非编码RNA研究</a></li>
 </ul>
 </div>
-<div id="section-8.2.11" class="section level3">
-<h3><span class="header-section-number">8.2.11</span> 高分文章套路解读</h3>
+<div id="高分文章套路解读" class="section level3 hasAnchor" number="8.2.11">
+<h3><span class="header-section-number">8.2.11</span> 高分文章套路解读<a href="references.html#%E9%AB%98%E5%88%86%E6%96%87%E7%AB%A0%E5%A5%97%E8%B7%AF%E8%A7%A3%E8%AF%BB" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/_xaxicmV5cyKfnYoKHQQbg">Nature: 培养组学—高通量细菌分离培养鉴定</a></li>
 <li><a href="https://mp.weixin.qq.com/s/_DjxjlXH3URKpZN50zPqWQ">SR: 真菌培养组学同揭示人类肠道真菌群落结构</a></li>
@@ -832,8 +894,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/ipBhAagpEPn1EIKXDUlGRw">SR: 土壤细菌定量方法结合相对丰度分析揭示种群的真实变化</a></li>
 </ul>
 </div>
-<div id="-" class="section level3">
-<h3><span class="header-section-number">8.2.12</span> 科普视频-寓教于乐</h3>
+<div id="科普视频-寓教于乐" class="section level3 hasAnchor" number="8.2.12">
+<h3><span class="header-section-number">8.2.12</span> 科普视频-寓教于乐<a href="references.html#%E7%A7%91%E6%99%AE%E8%A7%86%E9%A2%91-%E5%AF%93%E6%95%99%E4%BA%8E%E4%B9%90" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="http://mp.weixin.qq.com/s/M35ebWAelDIK5Iqib06JzA">BBC人体奥秘之细胞的暗战</a></li>
 <li><a href="https://mp.weixin.qq.com/s/xlCdN8il1hcutkYK-42fAQ">BBC人体奥秘 Inside.the.Human.Body</a></li>
@@ -852,8 +914,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="http://mp.weixin.qq.com/s/XfeuKLLg3ruXUCFnFAisog">梅毒狂想曲</a></li>
 </ul>
 </div>
-<div id="section-8.2.13" class="section level3">
-<h3><span class="header-section-number">8.2.13</span> 友军文章汇总推荐</h3>
+<div id="友军文章汇总推荐" class="section level3 hasAnchor" number="8.2.13">
+<h3><span class="header-section-number">8.2.13</span> 友军文章汇总推荐<a href="references.html#%E5%8F%8B%E5%86%9B%E6%96%87%E7%AB%A0%E6%B1%87%E6%80%BB%E6%8E%A8%E8%8D%90" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://mp.weixin.qq.com/s/VguRtaGpEcaNzmZEi48gLg">学习生信的系列教程</a>——纯生信一作发IF&gt;20的大神</li>
 </ul>
@@ -866,43 +928,57 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="Py3-test.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="company-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Py3_test.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": false,
-"twitter": false,
-"google": false,
-"weibo": false,
-"instapper": false,
-"vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"download": ["Py3_course.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Py3_course.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>

@@ -1,6 +1,6 @@
 # 易生信Python培训练习和考核题目 {#Py3_test}
 
-欢迎访问我们的视频课程 <https://bioinfo.ke.qq.com>。
+B 站视频课程 （生信宝典知乎号、视频号同步更新）<https://space.bilibili.com/362709786/lists/1988354?type=season>
 
 1. `3*2**2`的输出是多少？(1分)
 2. `8 % 4`的输出是多少？(1分)

@@ -1,6 +1,6 @@
 # Python实战 {#Py3_pratcise_ct}
 
-欢迎访问我们的视频课程 <https://bioinfo.ke.qq.com>。
+B 站视频课程 （生信宝典知乎号、视频号同步更新）<https://space.bilibili.com/362709786/lists/1988354?type=season>
 
 ## Python实战
 

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Python实战 | Python3学习教程</title>
+  <meta name="description" content="4 Python实战 | Python3学习教程" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Python实战 | Python3学习教程" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Python实战 | Python3学习教程" />
+  
+  
+  
+
+<meta name="author" content="陈同" />
+<meta name="author" content="chentong_biology@163.com" />
+
+
+<meta name="date" content="2025-11-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Python_plot_WXN.html"/>
+<link rel="next" href="py3_pandas_ct.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://www.ehbio.com"><img src="http://www.ehbio.com/logos/ehbio_gitbook_logo.png" width="95%"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Hello</a></li>
+<li class="chapter" data-level="1" data-path="pythonbasic.html"><a href="pythonbasic.html"><i class="fa fa-check"></i><b>1</b> Python基础</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="pythonbasic.html"><a href="pythonbasic.html#%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E4%B8%8B%E8%A1%A8%E8%BE%BE%E5%BC%8F"><i class="fa fa-check"></i><b>1.1</b> 交互模式下表达式</a></li>
+<li class="chapter" data-level="1.2" data-path="pythonbasic.html"><a href="pythonbasic.html#python%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%95%B4%E6%95%B0int%E6%B5%AE%E7%82%B9float%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2str"><i class="fa fa-check"></i><b>1.2</b> Python中的数据类型：整数（int）、浮点（float）和字符串（str）</a></li>
+<li class="chapter" data-level="1.3" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BF%9E%E6%8E%A5%E5%92%8C%E5%A4%8D%E5%88%B6"><i class="fa fa-check"></i><b>1.3</b> 字符串的连接和复制</a></li>
+<li class="chapter" data-level="1.4" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%8F%98%E9%87%8F"><i class="fa fa-check"></i><b>1.4</b> 变量</a></li>
+<li class="chapter" data-level="1.5" data-path="pythonbasic.html"><a href="pythonbasic.html#%E7%AC%AC%E4%B8%80%E5%B0%8F%E7%A8%8B%E5%BA%8Fhelloworld.py"><i class="fa fa-check"></i><b>1.5</b> 第一小程序HelloWorld.py</a></li>
+<li class="chapter" data-level="1.6" data-path="pythonbasic.html"><a href="pythonbasic.html#%E9%80%BB%E8%BE%91%E5%92%8C%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C"><i class="fa fa-check"></i><b>1.6</b> 逻辑和比较操作</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E5%80%BC"><i class="fa fa-check"></i><b>1.6.1</b> 布尔逻辑值</a></li>
+<li class="chapter" data-level="1.6.2" data-path="pythonbasic.html"><a href="pythonbasic.html#%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E7%AC%A6"><i class="fa fa-check"></i><b>1.6.2</b> 比较操作符</a></li>
+<li class="chapter" data-level="1.6.3" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B8%83%E5%B0%94%E6%93%8D%E4%BD%9C%E7%AC%A6-and-or-not"><i class="fa fa-check"></i><b>1.6.3</b> 布尔操作符 and or not</a></li>
+<li class="chapter" data-level="1.6.4" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B8%83%E5%B0%94%E6%93%8D%E4%BD%9C%E5%92%8C%E6%AF%94%E8%BE%83%E6%93%8D%E4%BD%9C%E7%AC%A6"><i class="fa fa-check"></i><b>1.6.4</b> 布尔操作和比较操作符</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="pythonbasic.html"><a href="pythonbasic.html#%E6%8E%A7%E5%88%B6%E6%B5%81"><i class="fa fa-check"></i><b>1.7</b> 控制流</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="pythonbasic.html"><a href="pythonbasic.html#if-%E8%AF%AD%E5%8F%A5"><i class="fa fa-check"></i><b>1.7.1</b> if 语句</a></li>
+<li class="chapter" data-level="1.7.2" data-path="pythonbasic.html"><a href="pythonbasic.html#elif-%E5%90%A6%E5%88%99%E5%A6%82%E6%9E%9C"><i class="fa fa-check"></i><b>1.7.2</b> elif 否则如果</a></li>
+<li class="chapter" data-level="1.7.3" data-path="pythonbasic.html"><a href="pythonbasic.html#while%E5%BE%AA%E7%8E%AF"><i class="fa fa-check"></i><b>1.7.3</b> while循环</a></li>
+<li class="chapter" data-level="1.7.4" data-path="pythonbasic.html"><a href="pythonbasic.html#break%E5%92%8Ccontinue"><i class="fa fa-check"></i><b>1.7.4</b> break和continue</a></li>
+<li class="chapter" data-level="1.7.5" data-path="pythonbasic.html"><a href="pythonbasic.html#for-%E5%92%8C-range%E5%87%BD%E6%95%B0"><i class="fa fa-check"></i><b>1.7.5</b> for 和 range（）函数</a></li>
+<li class="chapter" data-level="1.7.6" data-path="pythonbasic.html"><a href="pythonbasic.html#range%E5%87%BD%E6%95%B0%E5%BC%80%E5%A7%8B%E5%81%9C%E6%AD%A2%E6%AD%A5%E9%95%BF"><i class="fa fa-check"></i><b>1.7.6</b> range()函数（开始，停止，步长）</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97"><i class="fa fa-check"></i><b>1.8</b> 导入模块</a></li>
+<li class="chapter" data-level="1.9" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%87%BD%E6%95%B0-%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><i class="fa fa-check"></i><b>1.9</b> 函数： 内置函数、自定义函数</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%87%BD%E6%95%B0printlen-input-intstr%E5%9D%87%E4%B8%BA%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><i class="fa fa-check"></i><b>1.9.1</b> 函数print（），len （）,input （），int（），str（）均为内置函数</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E4%BD%9C%E7%94%A8%E5%9F%9F"><i class="fa fa-check"></i><b>1.10</b> 局部和全局作用域</a></li>
+<li class="chapter" data-level="1.11" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%A3%B0%E6%98%8E%E4%B8%BA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8Fglobal"><i class="fa fa-check"></i><b>1.11</b> 声明为全局变量global</a></li>
+<li class="chapter" data-level="1.12" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><i class="fa fa-check"></i><b>1.12</b> 异常的处理</a></li>
+<li class="chapter" data-level="1.13" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%88%97%E8%A1%A8"><i class="fa fa-check"></i><b>1.13</b> 列表</a></li>
+<li class="chapter" data-level="1.14" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%85%83%E7%BB%84"><i class="fa fa-check"></i><b>1.14</b> 字符串和元组</a></li>
+<li class="chapter" data-level="1.15" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%BC%95%E7%94%A8"><i class="fa fa-check"></i><b>1.15</b> 引用</a></li>
+<li class="chapter" data-level="1.16" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E5%85%B8-%E9%94%AE%E5%80%BC-%E5%AF%B9"><i class="fa fa-check"></i><b>1.16</b> 字典 键：值 对</a></li>
+<li class="chapter" data-level="1.17" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E5%85%B8%E4%B8%8E%E5%88%97%E8%A1%A8"><i class="fa fa-check"></i><b>1.17</b> 字典与列表</a>
+<ul>
+<li class="chapter" data-level="1.17.1" data-path="pythonbasic.html"><a href="pythonbasic.html#keysvalues%E5%92%8Citems"><i class="fa fa-check"></i><b>1.17.1</b> keys()、values（）和items( )</a></li>
+</ul></li>
+<li class="chapter" data-level="1.18" data-path="pythonbasic.html"><a href="pythonbasic.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C"><i class="fa fa-check"></i><b>1.18</b> 字符串操作</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="py3_ct.html"><a href="py3_ct.html"><i class="fa fa-check"></i><b>2</b> Python 教程</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="py3_ct.html"><a href="py3_ct.html#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><i class="fa fa-check"></i><b>2.1</b> 背景介绍</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="py3_ct.html"><a href="py3_ct.html#%E7%BC%96%E7%A8%8B%E5%BC%80%E7%AF%87"><i class="fa fa-check"></i><b>2.1.1</b> 编程开篇</a></li>
+<li class="chapter" data-level="2.1.2" data-path="py3_ct.html"><a href="py3_ct.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E4%B9%A0python"><i class="fa fa-check"></i><b>2.1.2</b> 为什么学习Python</a></li>
+<li class="chapter" data-level="2.1.3" data-path="py3_ct.html"><a href="py3_ct.html#python%E5%B8%B8%E7%94%A8%E5%8C%85"><i class="fa fa-check"></i><b>2.1.3</b> Python常用包</a></li>
+<li class="chapter" data-level="2.1.4" data-path="py3_ct.html"><a href="py3_ct.html#%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0python"><i class="fa fa-check"></i><b>2.1.4</b> 怎么学习Python</a></li>
+<li class="chapter" data-level="2.1.5" data-path="py3_ct.html"><a href="py3_ct.html#python%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5"><i class="fa fa-check"></i><b>2.1.5</b> Python学习的几个阶段</a></li>
+<li class="chapter" data-level="2.1.6" data-path="py3_ct.html"><a href="py3_ct.html#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python"><i class="fa fa-check"></i><b>2.1.6</b> 如何安装Python</a></li>
+<li class="chapter" data-level="2.1.7" data-path="py3_ct.html"><a href="py3_ct.html#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8Cpython%E5%91%BD%E4%BB%A4%E5%92%8C%E8%84%9A%E6%9C%AC"><i class="fa fa-check"></i><b>2.1.7</b> 如何运行Python命令和脚本</a></li>
+<li class="chapter" data-level="2.1.8" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E7%BC%96%E8%BE%91%E5%99%A8%E5%86%99python%E8%84%9A%E6%9C%AC"><i class="fa fa-check"></i><b>2.1.8</b> 使用什么编辑器写Python脚本</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="py3_ct.html"><a href="py3_ct.html#python%E7%A8%8B%E5%BA%8F%E4%BA%8B%E4%BE%8B"><i class="fa fa-check"></i><b>2.2</b> Python程序事例</a></li>
+<li class="chapter" data-level="2.3" data-path="py3_ct.html"><a href="py3_ct.html#python%E8%AF%AD%E6%B3%95"><i class="fa fa-check"></i><b>2.3</b> Python语法</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="py3_ct.html"><a href="py3_ct.html#%E5%B1%82%E7%BA%A7%E7%BC%A9%E8%BF%9B"><i class="fa fa-check"></i><b>2.3.1</b> 层级缩进</a></li>
+<li class="chapter" data-level="2.3.2" data-path="py3_ct.html"><a href="py3_ct.html#python%E4%BD%9C%E4%B8%BA%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><i class="fa fa-check"></i><b>2.3.2</b> Python作为计算器的使用</a></li>
+<li class="chapter" data-level="2.3.3" data-path="py3_ct.html"><a href="py3_ct.html#%E5%8F%98%E9%87%8F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><i class="fa fa-check"></i><b>2.3.3</b> 变量、数据结构、流程控制</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="py3_ct.html"><a href="py3_ct.html#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><i class="fa fa-check"></i><b>2.4</b> 输入输出</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><i class="fa fa-check"></i><b>2.4.1</b> 交互式输入输出</a></li>
+<li class="chapter" data-level="2.4.2" data-path="py3_ct.html"><a href="py3_ct.html#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><i class="fa fa-check"></i><b>2.4.2</b> 文件读写</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="py3_ct.html"><a href="py3_ct.html#%E5%AE%9E%E6%88%98%E7%BB%83%E4%B9%A0%E4%B8%80"><i class="fa fa-check"></i><b>2.5</b> 实战练习（一）</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="py3_ct.html"><a href="py3_ct.html#%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86"><i class="fa fa-check"></i><b>2.5.1</b> 背景知识</a></li>
+<li class="chapter" data-level="2.5.2" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%9C%E4%B8%9A-%E4%B8%80"><i class="fa fa-check"></i><b>2.5.2</b> 作业 (一)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="py3_ct.html"><a href="py3_ct.html#%E5%87%BD%E6%95%B0%E6%93%8D%E4%BD%9C"><i class="fa fa-check"></i><b>2.6</b> 函数操作</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%9C%E4%B8%9A%E4%BA%8C"><i class="fa fa-check"></i><b>2.6.1</b> 作业（二）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="py3_ct.html"><a href="py3_ct.html#%E6%A8%A1%E5%9D%97"><i class="fa fa-check"></i><b>2.7</b> 模块</a></li>
+<li class="chapter" data-level="2.8" data-path="py3_ct.html"><a href="py3_ct.html#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><i class="fa fa-check"></i><b>2.8</b> 命令行参数</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="py3_ct.html"><a href="py3_ct.html#%E4%BD%9C%E4%B8%9A%E4%B8%89"><i class="fa fa-check"></i><b>2.8.1</b> 作业（三）</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="py3_ct.html"><a href="py3_ct.html#%E6%9B%B4%E5%A4%9Apython%E5%86%85%E5%AE%B9"><i class="fa fa-check"></i><b>2.9</b> 更多Python内容</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="py3_ct.html"><a href="py3_ct.html#%E5%8D%95%E8%AF%AD%E5%8F%A5%E5%9D%97"><i class="fa fa-check"></i><b>2.9.1</b> <strong>单语句块</strong></a></li>
+<li class="chapter" data-level="2.9.2" data-path="py3_ct.html"><a href="py3_ct.html#%E5%88%97%E8%A1%A8%E8%A7%A3%E6%9E%90"><i class="fa fa-check"></i><b>2.9.2</b> 列表解析</a></li>
+<li class="chapter" data-level="2.9.3" data-path="py3_ct.html"><a href="py3_ct.html#%E5%AD%97%E5%85%B8%E8%A7%A3%E6%9E%90"><i class="fa fa-check"></i><b>2.9.3</b> 字典解析</a></li>
+<li class="chapter" data-level="2.9.4" data-path="py3_ct.html"><a href="py3_ct.html#%E6%96%AD%E8%A8%80"><i class="fa fa-check"></i><b>2.9.4</b> 断言</a></li>
+<li class="chapter" data-level="2.9.5" data-path="py3_ct.html"><a href="py3_ct.html#%E6%9B%B4%E5%A4%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95"><i class="fa fa-check"></i><b>2.9.5</b> 更多字符串方法</a></li>
+<li class="chapter" data-level="2.9.6" data-path="py3_ct.html"><a href="py3_ct.html#lambda-map-filer-reduce-%E4%BF%9D%E7%95%99%E8%8A%82%E7%9B%AE"><i class="fa fa-check"></i><b>2.9.6</b> lambda, map, filer, reduce (保留节目)</a></li>
+<li class="chapter" data-level="2.9.7" data-path="py3_ct.html"><a href="py3_ct.html#exec-eval-%E6%89%A7%E8%A1%8C%E5%AD%97%E7%AC%A6%E4%B8%B2python%E8%AF%AD%E5%8F%A5-%E4%BF%9D%E7%95%99%E8%8A%82%E7%9B%AE"><i class="fa fa-check"></i><b>2.9.7</b> <strong>exec, eval (执行字符串python语句, 保留节目)</strong></a></li>
+<li class="chapter" data-level="2.9.8" data-path="py3_ct.html"><a href="py3_ct.html#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><i class="fa fa-check"></i><b>2.9.8</b> 正则表达式</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="py3_ct.html"><a href="py3_ct.html#python%E7%94%BB%E5%9B%BE"><i class="fa fa-check"></i><b>2.10</b> Python画图</a></li>
+<li class="chapter" data-level="2.11" data-path="py3_ct.html"><a href="py3_ct.html#reference"><i class="fa fa-check"></i><b>2.11</b> Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html"><i class="fa fa-check"></i><b>3</b> Python作图</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%9B%BE%E5%9F%BA%E7%A1%80"><i class="fa fa-check"></i><b>3.1</b> 绘图基础</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#figure%E5%92%8Csubplot-1"><i class="fa fa-check"></i><b>3.1.1</b> Figure和Subplot</a></li>
+<li class="chapter" data-level="3.1.2" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E9%A2%9C%E8%89%B2-%E6%A0%87%E8%AE%B0%E5%92%8C%E7%BA%BF%E5%9E%8B-1"><i class="fa fa-check"></i><b>3.1.2</b> 颜色 标记和线型</a></li>
+<li class="chapter" data-level="3.1.3" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E5%88%BB%E5%BA%A6%E6%A0%87%E7%AD%BE%E5%92%8C%E5%9B%BE%E4%BE%8B-1"><i class="fa fa-check"></i><b>3.1.3</b> 刻度、标签和图例</a></li>
+<li class="chapter" data-level="3.1.4" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E4%BE%8Blegend-1"><i class="fa fa-check"></i><b>3.1.4</b> 添加图例legend</a></li>
+<li class="chapter" data-level="3.1.5" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E6%B3%A8%E8%A7%A3-1"><i class="fa fa-check"></i><b>3.1.5</b> 注解</a></li>
+<li class="chapter" data-level="3.1.6" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E5%9B%BE%E7%89%87%E4%BF%9D%E5%AD%98-1"><i class="fa fa-check"></i><b>3.1.6</b> 图片保存</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%9B%BE%E5%AE%9E%E4%BE%8B"><i class="fa fa-check"></i><b>3.2</b> 绘图实例</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.1</b> 绘制散点图</a></li>
+<li class="chapter" data-level="3.2.2" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E6%8A%98%E7%BA%BF%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.2</b> 折线图</a></li>
+<li class="chapter" data-level="3.2.3" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%9B%B4%E6%96%B9%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.3</b> 直方图</a></li>
+<li class="chapter" data-level="3.2.4" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%9B%B4%E6%9D%A1%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.4</b> 直条图</a></li>
+<li class="chapter" data-level="3.2.5" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%AE%B1%E7%BA%BF%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.5</b> 箱线图</a></li>
+<li class="chapter" data-level="3.2.6" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E9%A5%BC%E5%9B%BE-1"><i class="fa fa-check"></i><b>3.2.6</b> 饼图</a></li>
+<li class="chapter" data-level="3.2.7" data-path="Python_plot_WXN.html"><a href="Python_plot_WXN.html#%E7%BB%98%E5%88%B6%E5%9F%BA%E5%9B%A0%E7%9F%A9%E9%98%B5%E7%9A%84%E7%83%AD%E5%9B%BE"><i class="fa fa-check"></i><b>3.2.7</b> 绘制基因矩阵的热图</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html"><i class="fa fa-check"></i><b>4</b> Python实战</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#python%E5%AE%9E%E6%88%98"><i class="fa fa-check"></i><b>4.1</b> Python实战</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#id%E8%BD%AC%E6%8D%A2"><i class="fa fa-check"></i><b>4.1.1</b> ID转换</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#%E6%AF%8F%E6%9D%A1%E6%9F%93%E8%89%B2%E4%BD%93%E5%9F%BA%E5%9B%A0%E6%95%B0%E7%9B%AE%E7%BB%9F%E8%AE%A1"><i class="fa fa-check"></i><b>4.1.2</b> 每条染色体基因数目统计</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#%E6%89%80%E6%9C%89%E5%A4%96%E6%98%BE%E5%AD%90%E6%80%BB%E9%95%BF%E5%BA%A6%E7%BB%9F%E8%AE%A1"><i class="fa fa-check"></i><b>4.1.3</b> 所有外显子总长度统计</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Py3_pratcise_ct.html"><a href="Py3_pratcise_ct.html#python%E5%B0%8F%E6%8A%80%E5%B7%A7"><i class="fa fa-check"></i><b>4.2</b> Python小技巧</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html"><i class="fa fa-check"></i><b>5</b> Pandas 学习教程</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#what-is-pandas"><i class="fa fa-check"></i><b>5.1</b> What is pandas</a></li>
+<li class="chapter" data-level="5.2" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#pandas%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2</b> Pandas读取文件</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%8E%B7%E5%8F%96%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.1</b> 获取目标文件</a></li>
+<li class="chapter" data-level="5.2.2" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E6%9F%A5%E7%9C%8B%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%92%8C%E6%A0%BC%E5%BC%8F"><i class="fa fa-check"></i><b>5.2.2</b> 查看目标文件内容和格式</a></li>
+<li class="chapter" data-level="5.2.3" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%AF%BB%E5%8F%96%E4%B8%A4%E5%88%97%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.3</b> 读取两列文件</a></li>
+<li class="chapter" data-level="5.2.4" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E7%B4%A2%E5%BC%95"><i class="fa fa-check"></i><b>5.2.4</b> 数据表的索引</a></li>
+<li class="chapter" data-level="5.2.5" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%AF%BB%E5%8F%96%E5%A4%9A%E5%88%97%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.5</b> 读取多列文件</a></li>
+<li class="chapter" data-level="5.2.6" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E9%80%89%E5%8F%96%E5%A4%9A%E5%88%97%E6%95%B0%E6%8D%AE"><i class="fa fa-check"></i><b>5.2.6</b> 选取多列数据</a></li>
+<li class="chapter" data-level="5.2.7" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E9%87%8D%E5%91%BD%E5%90%8D%E5%88%97%E5%90%8D%E5%AD%97"><i class="fa fa-check"></i><b>5.2.7</b> 重命名列名字</a></li>
+<li class="chapter" data-level="5.2.8" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E5%90%88%E5%B9%B6%E7%9F%A9%E9%98%B5"><i class="fa fa-check"></i><b>5.2.8</b> 合并矩阵</a></li>
+<li class="chapter" data-level="5.2.9" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E7%9F%A9%E9%98%B5%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96"><i class="fa fa-check"></i><b>5.2.9</b> 矩阵数据提取</a></li>
+<li class="chapter" data-level="5.2.10" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E8%AF%BB%E5%8F%96meta-data%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.2.10</b> 读取META data文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#pandas%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.3</b> Pandas写入文件</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#%E5%86%99%E5%85%A5%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>5.3.1</b> 写入文本文件</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#pandas%E7%9F%A9%E9%98%B5%E7%9A%84%E5%B0%8F%E5%BA%94%E7%94%A8"><i class="fa fa-check"></i><b>5.4</b> PANDAS矩阵的小应用</a></li>
+<li class="chapter" data-level="5.5" data-path="py3_pandas_ct.html"><a href="py3_pandas_ct.html#seaborn%E7%BB%98%E5%9B%BE"><i class="fa fa-check"></i><b>5.5</b> Seaborn绘图</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numpy_scipy.html"><a href="numpy_scipy.html"><i class="fa fa-check"></i><b>6</b> Python科学计算</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy"><i class="fa fa-check"></i><b>6.1</b> NumPy</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy%E6%95%B0%E7%BB%84"><i class="fa fa-check"></i><b>6.1.1</b> NumPy数组</a></li>
+<li class="chapter" data-level="6.1.2" data-path="numpy_scipy.html"><a href="numpy_scipy.html#%E5%B8%83%E5%B0%94%E8%AF%AD%E5%8F%A5%E5%92%8Cnumpy%E6%95%B0%E7%BB%84"><i class="fa fa-check"></i><b>6.1.2</b> 布尔语句和NumPy数组</a></li>
+<li class="chapter" data-level="6.1.3" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6"><i class="fa fa-check"></i><b>6.1.3</b> NumPy读写文件</a></li>
+<li class="chapter" data-level="6.1.4" data-path="numpy_scipy.html"><a href="numpy_scipy.html#numpy%E7%9A%84math%E6%A8%A1%E5%9D%97"><i class="fa fa-check"></i><b>6.1.4</b> NumPy的Math模块</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="numpy_scipy.html"><a href="numpy_scipy.html#scipy"><i class="fa fa-check"></i><b>6.2</b> SciPy</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="numpy_scipy.html"><a href="numpy_scipy.html#%E6%9C%80%E4%BC%98%E5%8C%96%E5%92%8C%E6%9C%80%E5%B0%8F%E5%8C%96"><i class="fa fa-check"></i><b>6.2.1</b> 最优化和最小化</a></li>
+<li class="chapter" data-level="6.2.2" data-path="numpy_scipy.html"><a href="numpy_scipy.html#%E6%8F%92%E5%80%BC"><i class="fa fa-check"></i><b>6.2.2</b> 插值</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Py3_test.html"><a href="Py3_test.html"><i class="fa fa-check"></i><b>7</b> 易生信Python培训练习和考核题目</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> 生信教程文章集锦</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E5%AE%9D%E5%85%B8"><i class="fa fa-check"></i><b>8.1</b> 生信宝典</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="references.html"><a href="references.html#%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B"><i class="fa fa-check"></i><b>8.1.1</b> 系列教程</a></li>
+<li class="chapter" data-level="8.1.2" data-path="references.html"><a href="references.html#ngs%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E8%AF%84%E4%BC%B0"><i class="fa fa-check"></i><b>8.1.2</b> NGS分析工具评估</a></li>
+<li class="chapter" data-level="8.1.3" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%95%99%E7%A8%8B"><i class="fa fa-check"></i><b>8.1.3</b> 宏基因组教程</a></li>
+<li class="chapter" data-level="8.1.4" data-path="references.html"><a href="references.html#%E7%B3%BB%E5%88%97%E5%AE%A3%E4%BC%A0"><i class="fa fa-check"></i><b>8.1.4</b> 系列宣传</a></li>
+<li class="chapter" data-level="8.1.5" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E7%94%9F%E7%89%A9%E7%9F%A5%E8%AF%86"><i class="fa fa-check"></i><b>8.1.5</b> 生信生物知识</a></li>
+<li class="chapter" data-level="8.1.6" data-path="references.html"><a href="references.html#%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB"><i class="fa fa-check"></i><b>8.1.6</b> 文献精读</a></li>
+<li class="chapter" data-level="8.1.7" data-path="references.html"><a href="references.html#linux"><i class="fa fa-check"></i><b>8.1.7</b> Linux</a></li>
+<li class="chapter" data-level="8.1.8" data-path="references.html"><a href="references.html#circos%E7%B3%BB%E5%88%97"><i class="fa fa-check"></i><b>8.1.8</b> CIRCOS系列</a></li>
+<li class="chapter" data-level="8.1.9" data-path="references.html"><a href="references.html#r%E7%BB%9F%E8%AE%A1%E5%92%8C%E4%BD%9C%E5%9B%BE"><i class="fa fa-check"></i><b>8.1.9</b> R统计和作图</a></li>
+<li class="chapter" data-level="8.1.10" data-path="references.html"><a href="references.html#%E6%89%A9%E5%A2%9E%E5%AD%90%E4%B8%89%E6%AD%A5%E6%9B%B2"><i class="fa fa-check"></i><b>8.1.10</b> 扩增子三步曲</a></li>
+<li class="chapter" data-level="8.1.11" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%88%86%E6%9E%90%E4%B8%93%E9%A2%98"><i class="fa fa-check"></i><b>8.1.11</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.1.12" data-path="references.html"><a href="references.html#ngs%E5%9F%BA%E7%A1%80"><i class="fa fa-check"></i><b>8.1.12</b> NGS基础</a></li>
+<li class="chapter" data-level="8.1.13" data-path="references.html"><a href="references.html#%E7%99%8C%E7%97%87%E6%95%B0%E6%8D%AE%E5%BA%93"><i class="fa fa-check"></i><b>8.1.13</b> 癌症数据库</a></li>
+<li class="chapter" data-level="8.1.14" data-path="references.html"><a href="references.html#python"><i class="fa fa-check"></i><b>8.1.14</b> Python</a></li>
+<li class="chapter" data-level="8.1.15" data-path="references.html"><a href="references.html#ngs%E8%BD%AF%E4%BB%B6"><i class="fa fa-check"></i><b>8.1.15</b> NGS软件</a></li>
+<li class="chapter" data-level="8.1.16" data-path="references.html"><a href="references.html#cytoscape%E7%BD%91%E7%BB%9C%E5%9B%BE"><i class="fa fa-check"></i><b>8.1.16</b> Cytoscape网络图</a></li>
+<li class="chapter" data-level="8.1.17" data-path="references.html"><a href="references.html#%E5%88%86%E5%AD%90%E5%AF%B9%E6%8E%A5"><i class="fa fa-check"></i><b>8.1.17</b> 分子对接</a></li>
+<li class="chapter" data-level="8.1.18" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E5%AE%9D%E5%85%B8%E4%B9%8B%E5%82%BB%E7%93%9C%E5%BC%8F"><i class="fa fa-check"></i><b>8.1.18</b> 生信宝典之傻瓜式</a></li>
+<li class="chapter" data-level="8.1.19" data-path="references.html"><a href="references.html#%E7%94%9F%E4%BF%A1%E4%BA%BA%E5%86%99%E7%A8%8B%E5%BA%8F"><i class="fa fa-check"></i><b>8.1.19</b> 生信人写程序</a></li>
+<li class="chapter" data-level="8.1.20" data-path="references.html"><a href="references.html#%E5%B0%8F%E6%8A%80%E5%B7%A7%E7%B3%BB%E5%88%97"><i class="fa fa-check"></i><b>8.1.20</b> 小技巧系列</a></li>
+<li class="chapter" data-level="8.1.21" data-path="references.html"><a href="references.html#%E6%8B%9B%E8%81%98"><i class="fa fa-check"></i><b>8.1.21</b> 招聘</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84"><i class="fa fa-check"></i><b>8.2</b> 宏基因组</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="references.html"><a href="references.html#%E7%B2%BE%E9%80%89%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90"><i class="fa fa-check"></i><b>8.2.1</b> 精选文章推荐</a></li>
+<li class="chapter" data-level="8.2.2" data-path="references.html"><a href="references.html#%E5%9F%B9%E8%AE%AD%E4%BC%9A%E8%AE%AE%E5%BE%81%E7%A8%BF%E6%8B%9B%E8%81%98"><i class="fa fa-check"></i><b>8.2.2</b> 培训、会议、征稿、招聘</a></li>
+<li class="chapter" data-level="8.2.3" data-path="references.html"><a href="references.html#%E7%A7%91%E7%A0%94%E7%BB%8F%E9%AA%8C"><i class="fa fa-check"></i><b>8.2.3</b> 科研经验</a></li>
+<li class="chapter" data-level="8.2.4" data-path="references.html"><a href="references.html#%E8%BD%AF%E4%BB%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8"><i class="fa fa-check"></i><b>8.2.4</b> 软件和数据库使用</a></li>
+<li class="chapter" data-level="8.2.5" data-path="references.html"><a href="references.html#%E6%89%A9%E5%A2%9E%E5%AD%90%E5%AD%A6%E4%B9%A0%E4%B8%89%E6%AD%A5%E6%9B%B2"><i class="fa fa-check"></i><b>8.2.5</b> 扩增子学习三步曲</a></li>
+<li class="chapter" data-level="8.2.6" data-path="references.html"><a href="references.html#%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%88%86%E6%9E%90%E4%B8%93%E9%A2%98-1"><i class="fa fa-check"></i><b>8.2.6</b> 宏基因组分析专题</a></li>
+<li class="chapter" data-level="8.2.7" data-path="references.html"><a href="references.html#r%E7%BB%9F%E8%AE%A1%E7%BB%98%E5%9B%BE"><i class="fa fa-check"></i><b>8.2.7</b> R统计绘图</a></li>
+<li class="chapter" data-level="8.2.8" data-path="references.html"><a href="references.html#%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%8A%80%E6%9C%AF"><i class="fa fa-check"></i><b>8.2.8</b> 实验设计与技术</a></li>
+<li class="chapter" data-level="8.2.9" data-path="references.html"><a href="references.html#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><i class="fa fa-check"></i><b>8.2.9</b> 基础知识</a></li>
+<li class="chapter" data-level="8.2.10" data-path="references.html"><a href="references.html#%E5%BF%85%E8%AF%BB%E7%BB%BC%E8%BF%B0"><i class="fa fa-check"></i><b>8.2.10</b> 必读综述</a></li>
+<li class="chapter" data-level="8.2.11" data-path="references.html"><a href="references.html#%E9%AB%98%E5%88%86%E6%96%87%E7%AB%A0%E5%A5%97%E8%B7%AF%E8%A7%A3%E8%AF%BB"><i class="fa fa-check"></i><b>8.2.11</b> 高分文章套路解读</a></li>
+<li class="chapter" data-level="8.2.12" data-path="references.html"><a href="references.html#%E7%A7%91%E6%99%AE%E8%A7%86%E9%A2%91-%E5%AF%93%E6%95%99%E4%BA%8E%E4%B9%90"><i class="fa fa-check"></i><b>8.2.12</b> 科普视频-寓教于乐</a></li>
+<li class="chapter" data-level="8.2.13" data-path="references.html"><a href="references.html#%E5%8F%8B%E5%86%9B%E6%96%87%E7%AB%A0%E6%B1%87%E6%80%BB%E6%8E%A8%E8%8D%90"><i class="fa fa-check"></i><b>8.2.13</b> 友军文章汇总推荐</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="mailto:ct@ehbio.com" target="blank">ct@ehbio.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python3学习教程</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Py3_pratcise_ct" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Python实战<a href="Py3_pratcise_ct.html#Py3_pratcise_ct" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>B 站视频课程 （生信宝典知乎号、视频号同步更新）<a href="https://space.bilibili.com/362709786/lists/1988354?type=season" class="uri">https://space.bilibili.com/362709786/lists/1988354?type=season</a></p>
+<div id="python实战" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Python实战<a href="Py3_pratcise_ct.html#python%E5%AE%9E%E6%88%98" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="id转换" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> ID转换<a href="Py3_pratcise_ct.html#id%E8%BD%AC%E6%8D%A2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>不同数据库的名字互相转换，比如NCBI的ENTEZ ID转Gene symbol，ENSEMBL编号转ENTREZ ID。</p>
+<p>ID转换一般需要2个文件，一个文件是要转换的ID，另外一个文件是ID的对应关系。</p>
+<p>以我们的测试文件 (<strong>GRCh38.idmap</strong>)为例，第一列为<code>ENSEMBLE ID</code>，第二列为<code>Gene symbol</code>，第三列为<code>Entrez ID</code>。</p>
+<pre><code>Gene ID Associated Gene Name    EntrezGene ID
+ENSG00000252303 RNU6-280P       
+ENSG00000281771 Y_RNA      
+ENSG00000281876 RP11-399E6.4    101929901
+ENSG00000281766 RYBP    23429
+ENSG00000281518 FOXO6   100132074
+ENSG00000281614 INPP5D  3635
+ENSG00000280584 OBP2B   29989
+ENSG00000281230 SERTAD4 56256
+ENSG00000281917 SLC16A1 6566</code></pre>
+<p>待转换的文件 (<strong>ensm.id</strong>)内容为，期望转换为<code>Gene symbol</code>。</p>
+<pre><code>ENSG00000252303
+ENSG00000281771
+ENSG00000281256
+ENSG00000283272
+ENSG00000280864
+ENSG00000280792
+ENSG00000282878
+ENSG00000283276
+ENSG00000281822
+ENSG00000281384
+ENSG00000280505
+ENSG00000281764
+ENSG00000281316
+ENSG00000280963
+ENSG00000280775
+ENSG00000281876
+ENSG00000281766
+ENSG00000281518
+ENSG00000281614
+ENSG00000280584
+ENSG00000281230
+ENSG00000281917</code></pre>
+<p>我们怎么做呢？ 直观看起来也比较简单，一个个的去比较、匹配、提取就可以了。</p>
+<div class="sourceCode" id="cb859"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb859-1"><a href="Py3_pratcise_ct.html#cb859-1" tabindex="-1"></a>idD <span class="op">=</span> {}</span>
+<span id="cb859-2"><a href="Py3_pratcise_ct.html#cb859-2" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;data/GRCh38.idmap&quot;</span>):</span>
+<span id="cb859-3"><a href="Py3_pratcise_ct.html#cb859-3" tabindex="-1"></a>    lineL <span class="op">=</span> line.strip().split(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb859-4"><a href="Py3_pratcise_ct.html#cb859-4" tabindex="-1"></a>    ensm_id <span class="op">=</span> lineL[<span class="dv">0</span>]</span>
+<span id="cb859-5"><a href="Py3_pratcise_ct.html#cb859-5" tabindex="-1"></a>    symbol  <span class="op">=</span> lineL[<span class="dv">1</span>]</span>
+<span id="cb859-6"><a href="Py3_pratcise_ct.html#cb859-6" tabindex="-1"></a>    idD[ensm_id] <span class="op">=</span> symbol</span>
+<span id="cb859-7"><a href="Py3_pratcise_ct.html#cb859-7" tabindex="-1"></a><span class="co">#--------------------------------</span></span>
+<span id="cb859-8"><a href="Py3_pratcise_ct.html#cb859-8" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;data/ensm.id&quot;</span>):</span>
+<span id="cb859-9"><a href="Py3_pratcise_ct.html#cb859-9" tabindex="-1"></a>    ensm <span class="op">=</span> line.strip()</span>
+<span id="cb859-10"><a href="Py3_pratcise_ct.html#cb859-10" tabindex="-1"></a>    <span class="bu">print</span>(ensm,idD[ensm],sep<span class="op">=</span><span class="st">&quot;: &quot;</span>)</span></code></pre></div>
+<pre><code>ENSG00000252303: RNU6-280P
+ENSG00000281771: Y_RNA
+ENSG00000281256: RP11-222G7.2
+ENSG00000283272: Clostridiales-1
+ENSG00000280864: RP11-654C22.2
+ENSG00000280792: RP11-315F22.1
+ENSG00000282878: RP11-399E6.1
+ENSG00000283276: ABBA01000934.1
+ENSG00000281822: RNU1-62P
+ENSG00000281384: AC093802.1
+ENSG00000280505: RP11-654C22.1
+ENSG00000281764: RP11-399E6.2
+ENSG00000281316: DPPA2P2
+ENSG00000280963: SERTAD4-AS1
+ENSG00000280775: RNA5SP136
+ENSG00000281876: RP11-399E6.4
+ENSG00000281766: RYBP
+ENSG00000281518: FOXO6
+ENSG00000281614: INPP5D
+ENSG00000280584: OBP2B
+ENSG00000281230: SERTAD4
+ENSG00000281917: SLC16A1</code></pre>
+<div class="sourceCode" id="cb861"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb861-1"><a href="Py3_pratcise_ct.html#cb861-1" tabindex="-1"></a><span class="co"># 首先读入GRCh38.idmap文件</span></span>
+<span id="cb861-2"><a href="Py3_pratcise_ct.html#cb861-2" tabindex="-1"></a></span>
+<span id="cb861-3"><a href="Py3_pratcise_ct.html#cb861-3" tabindex="-1"></a><span class="co"># 定义3个变量，文件名，ensembl_id所在列(0-start, source_col), symbol所在列 (1,target_col)</span></span>
+<span id="cb861-4"><a href="Py3_pratcise_ct.html#cb861-4" tabindex="-1"></a><span class="co"># 提前定义的好处是，修改起来会比较方便。</span></span>
+<span id="cb861-5"><a href="Py3_pratcise_ct.html#cb861-5" tabindex="-1"></a>map_file <span class="op">=</span> <span class="st">&quot;data/GRCh38.idmap&quot;</span></span>
+<span id="cb861-6"><a href="Py3_pratcise_ct.html#cb861-6" tabindex="-1"></a>source_col <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb861-7"><a href="Py3_pratcise_ct.html#cb861-7" tabindex="-1"></a>target_col <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb861-8"><a href="Py3_pratcise_ct.html#cb861-8" tabindex="-1"></a>aDict <span class="op">=</span> {}</span>
+<span id="cb861-9"><a href="Py3_pratcise_ct.html#cb861-9" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(map_file):</span>
+<span id="cb861-10"><a href="Py3_pratcise_ct.html#cb861-10" tabindex="-1"></a>    lineL <span class="op">=</span> line.strip().split(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb861-11"><a href="Py3_pratcise_ct.html#cb861-11" tabindex="-1"></a>    source <span class="op">=</span> lineL[source_col]</span>
+<span id="cb861-12"><a href="Py3_pratcise_ct.html#cb861-12" tabindex="-1"></a>    target <span class="op">=</span> lineL[target_col]</span>
+<span id="cb861-13"><a href="Py3_pratcise_ct.html#cb861-13" tabindex="-1"></a>    aDict[source] <span class="op">=</span> target</span>
+<span id="cb861-14"><a href="Py3_pratcise_ct.html#cb861-14" tabindex="-1"></a></span>
+<span id="cb861-15"><a href="Py3_pratcise_ct.html#cb861-15" tabindex="-1"></a><span class="co"># 读入ensm.id文件</span></span>
+<span id="cb861-16"><a href="Py3_pratcise_ct.html#cb861-16" tabindex="-1"></a><span class="co"># 边读边处理</span></span>
+<span id="cb861-17"><a href="Py3_pratcise_ct.html#cb861-17" tabindex="-1"></a></span>
+<span id="cb861-18"><a href="Py3_pratcise_ct.html#cb861-18" tabindex="-1"></a>id_file <span class="op">=</span> <span class="st">&quot;data/ensm.id&quot;</span></span>
+<span id="cb861-19"><a href="Py3_pratcise_ct.html#cb861-19" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(id_file):</span>
+<span id="cb861-20"><a href="Py3_pratcise_ct.html#cb861-20" tabindex="-1"></a>    source_id <span class="op">=</span> line.strip()</span>
+<span id="cb861-21"><a href="Py3_pratcise_ct.html#cb861-21" tabindex="-1"></a>    map_id <span class="op">=</span> aDict.get(source_id, source_id)</span>
+<span id="cb861-22"><a href="Py3_pratcise_ct.html#cb861-22" tabindex="-1"></a>    <span class="bu">print</span>(map_id)</span>
+<span id="cb861-23"><a href="Py3_pratcise_ct.html#cb861-23" tabindex="-1"></a></span>
+<span id="cb861-24"><a href="Py3_pratcise_ct.html#cb861-24" tabindex="-1"></a><span class="co"># 输出到文件</span></span>
+<span id="cb861-25"><a href="Py3_pratcise_ct.html#cb861-25" tabindex="-1"></a></span>
+<span id="cb861-26"><a href="Py3_pratcise_ct.html#cb861-26" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;data/symbol.id&quot;</span>,<span class="st">&quot;w&quot;</span>) <span class="im">as</span> fh:</span>
+<span id="cb861-27"><a href="Py3_pratcise_ct.html#cb861-27" tabindex="-1"></a>    id_file <span class="op">=</span> <span class="st">&quot;data/ensm.id&quot;</span></span>
+<span id="cb861-28"><a href="Py3_pratcise_ct.html#cb861-28" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(id_file):</span>
+<span id="cb861-29"><a href="Py3_pratcise_ct.html#cb861-29" tabindex="-1"></a>        source_id <span class="op">=</span> line.strip()</span>
+<span id="cb861-30"><a href="Py3_pratcise_ct.html#cb861-30" tabindex="-1"></a>        map_id <span class="op">=</span> aDict.get(source_id, source_id)</span>
+<span id="cb861-31"><a href="Py3_pratcise_ct.html#cb861-31" tabindex="-1"></a>        <span class="bu">print</span>(map_id, <span class="bu">file</span><span class="op">=</span>fh)</span></code></pre></div>
+<pre><code>RNU6-280P
+Y_RNA
+RP11-222G7.2
+Clostridiales-1
+RP11-654C22.2
+RP11-315F22.1
+RP11-399E6.1
+ABBA01000934.1
+RNU1-62P
+AC093802.1
+RP11-654C22.1
+RP11-399E6.2
+DPPA2P2
+SERTAD4-AS1
+RNA5SP136
+RP11-399E6.4
+RYBP
+FOXO6
+INPP5D
+OBP2B
+SERTAD4
+SLC16A1</code></pre>
+</div>
+<div id="每条染色体基因数目统计" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> 每条染色体基因数目统计<a href="Py3_pratcise_ct.html#%E6%AF%8F%E6%9D%A1%E6%9F%93%E8%89%B2%E4%BD%93%E5%9F%BA%E5%9B%A0%E6%95%B0%E7%9B%AE%E7%BB%9F%E8%AE%A1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>GTF文件存储基因的注释信息。</p>
+<ol style="list-style-type: decimal">
+<li>seqname - name of the chromosome or scaffold; chromosome names can be given with or without the ‘chr’ prefix. Important note: the seqname must be one used within Ensembl, i.e. a standard chromosome name or an Ensembl identifier such as a scaffold ID, without any additional content such as species or assembly. See the example GFF output below.</li>
+<li>source - name of the program that generated this feature, or the data source (database or project name)</li>
+<li>feature - feature type name, e.g. Gene, Variation, Similarity</li>
+<li>start - Start position of the feature, with sequence numbering starting at 1.</li>
+<li>end - End position of the feature, with sequence numbering starting at 1.</li>
+<li>score - A floating point value.</li>
+<li>strand - defined as + (forward) or - (reverse).</li>
+<li>frame - One of ‘0’, ‘1’ or ‘2’. ‘0’ indicates that the first base of the feature is the first base of a codon, ‘1’ that the second base is the first base of a codon, and so on..</li>
+<li>attribute - A semicolon-separated list of tag-value pairs, providing additional information about each feature.</li>
+</ol>
+<pre><code>chr1    HAVANA  gene    11869   14409   .   +   .   gene_id &quot;ENSG00000223972.5&quot;; gene_type &quot;transcribed_unprocessed_pseudogene&quot;; gene_status &quot;KNOWN&quot;; gene_name &quot;DDX11L1&quot;;  level 2; havana_gene &quot;OTTHUMG00000000961.2&quot;;
+chr1    HAVANA  gene    14404   29570   .   -   .   gene_id &quot;ENSG00000227232.5&quot;; gene_type &quot;unprocessed_pseudogene&quot;; gene_status &quot;KNOWN&quot;; gene_name &quot;WASH7P&quot;;  level 2; havana_gene &quot;OTTHUMG00000000958.1&quot;;
+chr1    ENSEMBL gene    17369   17436   .   -   .   gene_id &quot;ENSG00000278267.1&quot;; gene_type &quot;miRNA&quot;; gene_status &quot;KNOWN&quot;; gene_name &quot;MIR6859-3&quot;;  level 3;</code></pre>
+<p>如果统计每条染色体基因数目，只需要读第一列和第三列就可以了。</p>
+<div class="sourceCode" id="cb864"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb864-1"><a href="Py3_pratcise_ct.html#cb864-1" tabindex="-1"></a>chr_gene_cntD <span class="op">=</span> {}</span>
+<span id="cb864-2"><a href="Py3_pratcise_ct.html#cb864-2" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;data/gencode.gene.gtf&quot;</span>):</span>
+<span id="cb864-3"><a href="Py3_pratcise_ct.html#cb864-3" tabindex="-1"></a>    lineL <span class="op">=</span> line.strip().split(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb864-4"><a href="Py3_pratcise_ct.html#cb864-4" tabindex="-1"></a>    chrName <span class="op">=</span> lineL[<span class="dv">0</span>]</span>
+<span id="cb864-5"><a href="Py3_pratcise_ct.html#cb864-5" tabindex="-1"></a>    regionType <span class="op">=</span> lineL[<span class="dv">2</span>]</span>
+<span id="cb864-6"><a href="Py3_pratcise_ct.html#cb864-6" tabindex="-1"></a>    <span class="cf">if</span> (regionType <span class="op">==</span> <span class="st">&quot;gene&quot;</span>):</span>
+<span id="cb864-7"><a href="Py3_pratcise_ct.html#cb864-7" tabindex="-1"></a>        <span class="cf">if</span> chrName <span class="kw">not</span> <span class="kw">in</span> chr_gene_cntD:</span>
+<span id="cb864-8"><a href="Py3_pratcise_ct.html#cb864-8" tabindex="-1"></a>            chr_gene_cntD[chrName] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb864-9"><a href="Py3_pratcise_ct.html#cb864-9" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb864-10"><a href="Py3_pratcise_ct.html#cb864-10" tabindex="-1"></a>            chr_gene_cntD[chrName] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb864-11"><a href="Py3_pratcise_ct.html#cb864-11" tabindex="-1"></a><span class="co">#---------------------------------</span></span>
+<span id="cb864-12"><a href="Py3_pratcise_ct.html#cb864-12" tabindex="-1"></a><span class="cf">for</span> chrName, cnt <span class="kw">in</span> <span class="bu">list</span>(chr_gene_cntD.items()):</span>
+<span id="cb864-13"><a href="Py3_pratcise_ct.html#cb864-13" tabindex="-1"></a>    <span class="bu">print</span>(chrName,<span class="st">&quot;has&quot;</span>,cnt,<span class="st">&#39;genes.&#39;</span>)</span></code></pre></div>
+<pre><code>chr1 has 5397 genes.
+chr2 has 4150 genes.
+chr3 has 3163 genes.
+chr4 has 2633 genes.
+chr5 has 2993 genes.
+chr6 has 3001 genes.
+chr7 has 2980 genes.
+chr8 has 2444 genes.
+chr9 has 2350 genes.
+chr10 has 2306 genes.
+chr11 has 3381 genes.
+chr12 has 3047 genes.
+chr13 has 1383 genes.
+chr14 has 2289 genes.
+chr15 has 2247 genes.
+chr16 has 2597 genes.
+chr17 has 3111 genes.
+chr18 has 1206 genes.
+chr19 has 2997 genes.
+chr20 has 1436 genes.
+chr21 has 880 genes.
+chr22 has 1385 genes.
+chrX has 2476 genes.
+chrY has 594 genes.
+chrM has 37 genes.</code></pre>
+<div class="sourceCode" id="cb866"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb866-1"><a href="Py3_pratcise_ct.html#cb866-1" tabindex="-1"></a>gtf_file <span class="op">=</span> <span class="st">&quot;data/gencode.gene.gtf&quot;</span></span>
+<span id="cb866-2"><a href="Py3_pratcise_ct.html#cb866-2" tabindex="-1"></a></span>
+<span id="cb866-3"><a href="Py3_pratcise_ct.html#cb866-3" tabindex="-1"></a><span class="co"># 一般字典命名，会在行尾加一个大写的D，作为类型代表</span></span>
+<span id="cb866-4"><a href="Py3_pratcise_ct.html#cb866-4" tabindex="-1"></a>chr_gene_cntD <span class="op">=</span> {}</span>
+<span id="cb866-5"><a href="Py3_pratcise_ct.html#cb866-5" tabindex="-1"></a></span>
+<span id="cb866-6"><a href="Py3_pratcise_ct.html#cb866-6" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(gtf_file):</span>
+<span id="cb866-7"><a href="Py3_pratcise_ct.html#cb866-7" tabindex="-1"></a>    <span class="co"># 每行按TAB键分成4份</span></span>
+<span id="cb866-8"><a href="Py3_pratcise_ct.html#cb866-8" tabindex="-1"></a>    lineL <span class="op">=</span> line.split(<span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>,<span class="dv">3</span>)</span>
+<span id="cb866-9"><a href="Py3_pratcise_ct.html#cb866-9" tabindex="-1"></a>    chr_name <span class="op">=</span> lineL[<span class="dv">0</span>]</span>
+<span id="cb866-10"><a href="Py3_pratcise_ct.html#cb866-10" tabindex="-1"></a>    feature  <span class="op">=</span> lineL[<span class="dv">2</span>]</span>
+<span id="cb866-11"><a href="Py3_pratcise_ct.html#cb866-11" tabindex="-1"></a>    <span class="cf">if</span> feature <span class="op">==</span> <span class="st">&quot;gene&quot;</span>:</span>
+<span id="cb866-12"><a href="Py3_pratcise_ct.html#cb866-12" tabindex="-1"></a>        <span class="co"># 如果chr_name已经出现过，则获取其值，然后加1</span></span>
+<span id="cb866-13"><a href="Py3_pratcise_ct.html#cb866-13" tabindex="-1"></a>        <span class="co"># 若没出现过，获取0，加1，表示第一次出现</span></span>
+<span id="cb866-14"><a href="Py3_pratcise_ct.html#cb866-14" tabindex="-1"></a>        chr_gene_cntD[chr_name] <span class="op">=</span> chr_gene_cntD.get(chr_name,<span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb866-15"><a href="Py3_pratcise_ct.html#cb866-15" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb866-16"><a href="Py3_pratcise_ct.html#cb866-16" tabindex="-1"></a><span class="cf">for</span> chr_name, count <span class="kw">in</span> chr_gene_cntD.items():</span>
+<span id="cb866-17"><a href="Py3_pratcise_ct.html#cb866-17" tabindex="-1"></a>    <span class="bu">print</span>(chr_name, count)</span></code></pre></div>
+<pre><code>chr1 5397
+chr2 4150
+chr3 3163
+chr4 2633
+chr5 2993
+chr6 3001
+chr7 2980
+chr8 2444
+chr9 2350
+chr10 2306
+chr11 3381
+chr12 3047
+chr13 1383
+chr14 2289
+chr15 2247
+chr16 2597
+chr17 3111
+chr18 1206
+chr19 2997
+chr20 1436
+chr21 880
+chr22 1385
+chrX 2476
+chrY 594
+chrM 37</code></pre>
+</div>
+<div id="所有外显子总长度统计" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> 所有外显子总长度统计<a href="Py3_pratcise_ct.html#%E6%89%80%E6%9C%89%E5%A4%96%E6%98%BE%E5%AD%90%E6%80%BB%E9%95%BF%E5%BA%A6%E7%BB%9F%E8%AE%A1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>bed12格式 (前3列必须，其它可选)</p>
+<ol style="list-style-type: decimal">
+<li><p>chrom - The name of the chromosome (e.g. chr3, chrY, chr2_random) or scaffold (e.g. scaffold10671).</p></li>
+<li><p>chromStart - The starting position of the feature in the chromosome or scaffold. The first base in a chromosome is numbered 0.</p></li>
+<li><p>chromEnd - The ending position of the feature in the chromosome or scaffold. The chromEnd base is not included in the display of the feature.</p></li>
+<li><p>name - Defines the name of the BED line. This label is displayed to the left of the BED line in the Genome Browser window when the track is open to full display mode or directly to the left of the item in pack mode.</p></li>
+<li><p>score - A score between 0 and 1000. If the track line useScore attribute is set to 1 for this annotation data set, the score value will determine the level of gray in which this feature is displayed (higher numbers = darker gray). This table shows the Genome Browser’s translation of BED score values into shades of gray:</p></li>
+<li><p>thickStart - The starting position at which the feature is drawn thickly (for example, the start codon in gene displays). When there is no thick part, thickStart and thickEnd are usually set to the chromStart position.</p></li>
+<li><p>thickEnd - The ending position at which the feature is drawn thickly (for example the stop codon in gene displays).</p></li>
+<li><p>itemRgb - An RGB value of the form R,G,B (e.g. 255,0,0). If the track line itemRgb attribute is set to “On”, this RBG value will determine the display color of the data contained in this BED line. NOTE: It is recommended that a simple color scheme (eight colors or less) be used with this attribute to avoid overwhelming the color resources of the Genome Browser and your Internet browser.</p></li>
+<li><p>blockCount - The number of blocks (exons) in the BED line.</p></li>
+<li><p>blockSizes - A comma-separated list of the block sizes. The number of items in this list should correspond to blockCount.</p></li>
+<li><p>blockStarts - A comma-separated list of block starts. All of the blockStart positions should be calculated relative to chromStart. The number of items in this list should correspond to blockCount.</p></li>
+</ol>
+<p>基因注释bed12格式</p>
+<pre><code>chr1    11868   14409   ENST00000456328.2   0   +   14409   14409   0   3   359,109,1189,   0,744,1352,
+chr1    12009   13670   ENST00000450305.2   0   +   13670   13670   0   6   48,49,85,78,154,218,    0,169,603,965,1211,1443,
+chr1    17368   17436   ENST00000619216.1   0   -   17436   17436   0   1   68, 0,
+chr1    29553   31097   ENST00000473358.1   0   +   31097   31097   0   3   486,104,122,    0,1010,1422,
+chr1    30266   31109   ENST00000469289.1   0   +   31109   31109   0   2   401,134,    0,709,
+chr1    30365   30503   ENST00000607096.1   0   +   30503   30503   0   1   138,    0,</code></pre>
+<p>第十列是外显子的大小，所有我们只需要把他们加在一起就好了。</p>
+<p><strong>Note</strong>：实际计算时需要考虑不同转录本之间存在重叠，需要对bed文件预处理，只保留唯一的外显子位置，然后再加和。</p>
+<div class="sourceCode" id="cb869"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb869-1"><a href="Py3_pratcise_ct.html#cb869-1" tabindex="-1"></a>exonSizeSum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb869-2"><a href="Py3_pratcise_ct.html#cb869-2" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&quot;data/gencode.gene.bed12&quot;</span>):</span>
+<span id="cb869-3"><a href="Py3_pratcise_ct.html#cb869-3" tabindex="-1"></a>    lineL <span class="op">=</span> line.split()</span>
+<span id="cb869-4"><a href="Py3_pratcise_ct.html#cb869-4" tabindex="-1"></a>    exonSize <span class="op">=</span> lineL[<span class="dv">10</span>]</span>
+<span id="cb869-5"><a href="Py3_pratcise_ct.html#cb869-5" tabindex="-1"></a>    exonSizeL <span class="op">=</span> exonSize.strip(<span class="st">&#39;,&#39;</span>).split(<span class="st">&#39;,&#39;</span>)</span>
+<span id="cb869-6"><a href="Py3_pratcise_ct.html#cb869-6" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> exonSizeL:</span>
+<span id="cb869-7"><a href="Py3_pratcise_ct.html#cb869-7" tabindex="-1"></a>        exonSizeSum <span class="op">+=</span> <span class="bu">int</span>(i)</span>
+<span id="cb869-8"><a href="Py3_pratcise_ct.html#cb869-8" tabindex="-1"></a><span class="bu">print</span>(exonSizeSum)</span></code></pre></div>
+<pre><code>291762517</code></pre>
+<div class="sourceCode" id="cb871"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb871-1"><a href="Py3_pratcise_ct.html#cb871-1" tabindex="-1"></a>bed12 <span class="op">=</span> <span class="st">&quot;data/gencode.gene.bed12&quot;</span></span>
+<span id="cb871-2"><a href="Py3_pratcise_ct.html#cb871-2" tabindex="-1"></a></span>
+<span id="cb871-3"><a href="Py3_pratcise_ct.html#cb871-3" tabindex="-1"></a>total_exon_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb871-4"><a href="Py3_pratcise_ct.html#cb871-4" tabindex="-1"></a></span>
+<span id="cb871-5"><a href="Py3_pratcise_ct.html#cb871-5" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(bed12):</span>
+<span id="cb871-6"><a href="Py3_pratcise_ct.html#cb871-6" tabindex="-1"></a>    <span class="co"># 从右侧分割为3个元素的列表</span></span>
+<span id="cb871-7"><a href="Py3_pratcise_ct.html#cb871-7" tabindex="-1"></a>    <span class="co"># 关注的元素在第二位，索引为1</span></span>
+<span id="cb871-8"><a href="Py3_pratcise_ct.html#cb871-8" tabindex="-1"></a>    <span class="co"># 去掉末尾的逗号</span></span>
+<span id="cb871-9"><a href="Py3_pratcise_ct.html#cb871-9" tabindex="-1"></a>    lineL <span class="op">=</span> line.rsplit(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>,<span class="dv">2</span>)</span>
+<span id="cb871-10"><a href="Py3_pratcise_ct.html#cb871-10" tabindex="-1"></a>    exonSize <span class="op">=</span> lineL[<span class="dv">1</span>].strip(<span class="st">&#39;,&#39;</span>)</span>
+<span id="cb871-11"><a href="Py3_pratcise_ct.html#cb871-11" tabindex="-1"></a>    exonSizeL <span class="op">=</span> [<span class="bu">int</span>(i) <span class="cf">for</span> i <span class="kw">in</span> exonSize.split(<span class="st">&#39;,&#39;</span>)]</span>
+<span id="cb871-12"><a href="Py3_pratcise_ct.html#cb871-12" tabindex="-1"></a>    exonSum <span class="op">=</span> <span class="bu">sum</span>(exonSizeL)</span>
+<span id="cb871-13"><a href="Py3_pratcise_ct.html#cb871-13" tabindex="-1"></a>    </span>
+<span id="cb871-14"><a href="Py3_pratcise_ct.html#cb871-14" tabindex="-1"></a>    total_exon_sum <span class="op">+=</span> exonSum</span>
+<span id="cb871-15"><a href="Py3_pratcise_ct.html#cb871-15" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Total exon size is&quot;</span>, total_exon_sum, <span class="st">&quot;nt.&quot;</span>)</span>
+<span id="cb871-16"><a href="Py3_pratcise_ct.html#cb871-16" tabindex="-1"></a></span>
+<span id="cb871-17"><a href="Py3_pratcise_ct.html#cb871-17" tabindex="-1"></a><span class="co"># 更清晰展示数字大小</span></span>
+<span id="cb871-18"><a href="Py3_pratcise_ct.html#cb871-18" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Total exon size is&quot;</span>, <span class="st">&quot;</span><span class="sc">{:,}</span><span class="st">&quot;</span>.<span class="bu">format</span>(total_exon_sum), <span class="st">&quot;nt.&quot;</span>)</span></code></pre></div>
+<pre><code>Total exon size is 291762517 nt.
+Total exon size is 291,762,517 nt.</code></pre>
+<div class="sourceCode" id="cb873"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb873-1"><a href="Py3_pratcise_ct.html#cb873-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{a[a]}</span><span class="st">&quot;</span>.<span class="bu">format</span>(a<span class="op">=</span>{<span class="st">&#39;a&#39;</span>:<span class="st">&quot;ehbio&quot;</span>}))</span></code></pre></div>
+<pre><code>ehbio</code></pre>
+</div>
+</div>
+<div id="python小技巧" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Python小技巧<a href="Py3_pratcise_ct.html#python%E5%B0%8F%E6%8A%80%E5%B7%A7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>链似比较</p>
+<div class="sourceCode" id="cb875"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb875-1"><a href="Py3_pratcise_ct.html#cb875-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb875-2"><a href="Py3_pratcise_ct.html#cb875-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;1 &lt; x &lt; 10 is&quot;</span>, <span class="dv">1</span> <span class="op">&lt;</span> x <span class="op">&lt;</span> <span class="dv">10</span>)</span>
+<span id="cb875-3"><a href="Py3_pratcise_ct.html#cb875-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;10 &gt; x &lt;= 9&quot;</span>, <span class="dv">10</span> <span class="op">&gt;</span> x <span class="op">&lt;=</span> <span class="dv">9</span>)</span></code></pre></div>
+<pre><code>1 &lt; x &lt; 10 is True
+10 &gt; x &lt;= 9 True</code></pre>
+<p>解释正则表达式</p>
+<div class="sourceCode" id="cb877"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb877-1"><a href="Py3_pratcise_ct.html#cb877-1" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb877-2"><a href="Py3_pratcise_ct.html#cb877-2" tabindex="-1"></a>re.<span class="bu">compile</span>(<span class="st">&quot;^[a-z]*$&quot;</span>, re.DEBUG)</span></code></pre></div>
+<pre><code>AT AT_BEGINNING
+MAX_REPEAT 0 MAXREPEAT
+  IN
+    RANGE (97, 122)
+AT AT_END
+
+
+
+
+
+re.compile(r&#39;^[a-z]*$&#39;, re.UNICODE|re.DEBUG)</code></pre>
+<div class="sourceCode" id="cb879"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb879-1"><a href="Py3_pratcise_ct.html#cb879-1" tabindex="-1"></a>re.<span class="bu">compile</span>(<span class="st">&quot;^[a-z][0-9]+$&quot;</span>, re.DEBUG)</span></code></pre></div>
+<pre><code>AT AT_BEGINNING
+IN
+  RANGE (97, 122)
+MAX_REPEAT 1 MAXREPEAT
+  IN
+    RANGE (48, 57)
+AT AT_END
+
+
+
+
+
+re.compile(r&#39;^[a-z][0-9]+$&#39;, re.UNICODE|re.DEBUG)</code></pre>
+<div class="sourceCode" id="cb881"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb881-1"><a href="Py3_pratcise_ct.html#cb881-1" tabindex="-1"></a>re.<span class="bu">compile</span>(<span class="st">&quot;^[a-z]([0-9]+)$&quot;</span>, re.DEBUG)</span></code></pre></div>
+<pre><code>AT AT_BEGINNING
+IN
+  RANGE (97, 122)
+SUBPATTERN 1 0 0
+  MAX_REPEAT 1 MAXREPEAT
+    IN
+      RANGE (48, 57)
+AT AT_END
+
+
+
+
+
+re.compile(r&#39;^[a-z]([0-9]+)$&#39;, re.UNICODE|re.DEBUG)</code></pre>
+<p>enumerate (不再使用len)</p>
+<div class="sourceCode" id="cb883"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb883-1"><a href="Py3_pratcise_ct.html#cb883-1" tabindex="-1"></a>a <span class="op">=</span> [<span class="st">&#39;s&#39;</span>,<span class="st">&#39;x&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;d&#39;</span>]</span>
+<span id="cb883-2"><a href="Py3_pratcise_ct.html#cb883-2" tabindex="-1"></a></span>
+<span id="cb883-3"><a href="Py3_pratcise_ct.html#cb883-3" tabindex="-1"></a><span class="co"># Preferred way</span></span>
+<span id="cb883-4"><a href="Py3_pratcise_ct.html#cb883-4" tabindex="-1"></a><span class="cf">for</span> index, item <span class="kw">in</span> <span class="bu">enumerate</span>(a):</span>
+<span id="cb883-5"><a href="Py3_pratcise_ct.html#cb883-5" tabindex="-1"></a>    <span class="bu">print</span>(index,item)</span>
+<span id="cb883-6"><a href="Py3_pratcise_ct.html#cb883-6" tabindex="-1"></a></span>
+<span id="cb883-7"><a href="Py3_pratcise_ct.html#cb883-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb883-8"><a href="Py3_pratcise_ct.html#cb883-8" tabindex="-1"></a></span>
+<span id="cb883-9"><a href="Py3_pratcise_ct.html#cb883-9" tabindex="-1"></a><span class="co"># Old way</span></span>
+<span id="cb883-10"><a href="Py3_pratcise_ct.html#cb883-10" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(a)):</span>
+<span id="cb883-11"><a href="Py3_pratcise_ct.html#cb883-11" tabindex="-1"></a>    <span class="bu">print</span>(i,a[i])</span>
+<span id="cb883-12"><a href="Py3_pratcise_ct.html#cb883-12" tabindex="-1"></a>    </span></code></pre></div>
+<pre><code>0 s
+1 x
+2 b
+3 d
+
+
+0 s
+1 x
+2 b
+3 d</code></pre>
+<p>列表解析、字典解析、元组解析</p>
+<div class="sourceCode" id="cb885"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb885-1"><a href="Py3_pratcise_ct.html#cb885-1" tabindex="-1"></a><span class="co"># 获得系列坐标点</span></span>
+<span id="cb885-2"><a href="Py3_pratcise_ct.html#cb885-2" tabindex="-1"></a>a <span class="op">=</span> ((i,j) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>) <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>))</span>
+<span id="cb885-3"><a href="Py3_pratcise_ct.html#cb885-3" tabindex="-1"></a>a</span></code></pre></div>
+<pre><code>&lt;generator object &lt;genexpr&gt; at 0x7fa8d04d7fc0&gt;</code></pre>
+<div class="sourceCode" id="cb887"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb887-1"><a href="Py3_pratcise_ct.html#cb887-1" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> a:</span>
+<span id="cb887-2"><a href="Py3_pratcise_ct.html#cb887-2" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<pre><code>(0, 0)
+(0, 1)
+(1, 0)
+(1, 1)
+(2, 0)
+(2, 1)</code></pre>
+<div class="sourceCode" id="cb889"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb889-1"><a href="Py3_pratcise_ct.html#cb889-1" tabindex="-1"></a>str1 <span class="op">=</span> <span class="st">&quot;I love sheng xin bao dian&quot;</span></span>
+<span id="cb889-2"><a href="Py3_pratcise_ct.html#cb889-2" tabindex="-1"></a><span class="bu">print</span>([i <span class="cf">for</span> i <span class="kw">in</span> str1.split() <span class="cf">if</span> i.endswith(<span class="st">&#39;n&#39;</span>)])</span></code></pre></div>
+<pre><code>[&#39;xin&#39;, &#39;dian&#39;]</code></pre>
+<div class="sourceCode" id="cb891"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb891-1"><a href="Py3_pratcise_ct.html#cb891-1" tabindex="-1"></a>a <span class="op">=</span> {i:i<span class="op">*</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)}</span>
+<span id="cb891-2"><a href="Py3_pratcise_ct.html#cb891-2" tabindex="-1"></a>a</span></code></pre></div>
+<pre><code>{0: 0, 1: 2, 2: 4, 3: 6, 4: 8}</code></pre>
+<div class="sourceCode" id="cb893"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb893-1"><a href="Py3_pratcise_ct.html#cb893-1" tabindex="-1"></a>[(x, y) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span> <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span></code></pre></div>
+<pre><code>[(1, 0), (1, 1), (1, 2), (1, 3), (3, 0), (3, 1), (3, 2), (3, 3)]</code></pre>
+<p>列表索引，反序</p>
+<div class="sourceCode" id="cb895"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb895-1"><a href="Py3_pratcise_ct.html#cb895-1" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb895-2"><a href="Py3_pratcise_ct.html#cb895-2" tabindex="-1"></a>a[::<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>[1, 3, 5]</code></pre>
+<div class="sourceCode" id="cb897"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb897-1"><a href="Py3_pratcise_ct.html#cb897-1" tabindex="-1"></a>a[::<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
+<pre><code>[5, 4, 3, 2, 1]</code></pre>
+<p>for..else;若<code>for</code>循环中未执行<code>break</code>,则<code>else</code>会被执行</p>
+<div class="sourceCode" id="cb899"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb899-1"><a href="Py3_pratcise_ct.html#cb899-1" tabindex="-1"></a>found <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb899-2"><a href="Py3_pratcise_ct.html#cb899-2" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">5</span>):</span>
+<span id="cb899-3"><a href="Py3_pratcise_ct.html#cb899-3" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb899-4"><a href="Py3_pratcise_ct.html#cb899-4" tabindex="-1"></a>        found <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb899-5"><a href="Py3_pratcise_ct.html#cb899-5" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb899-6"><a href="Py3_pratcise_ct.html#cb899-6" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> found: </span>
+<span id="cb899-7"><a href="Py3_pratcise_ct.html#cb899-7" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;i was never 1&quot;</span>)</span></code></pre></div>
+<pre><code>i was never 1</code></pre>
+<div class="sourceCode" id="cb901"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb901-1"><a href="Py3_pratcise_ct.html#cb901-1" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">5</span>):</span>
+<span id="cb901-2"><a href="Py3_pratcise_ct.html#cb901-2" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb901-3"><a href="Py3_pratcise_ct.html#cb901-3" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb901-4"><a href="Py3_pratcise_ct.html#cb901-4" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb901-5"><a href="Py3_pratcise_ct.html#cb901-5" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;i was never 1&quot;</span>)</span></code></pre></div>
+<pre><code>i was never 1</code></pre>
+<p>原位替换</p>
+<div class="sourceCode" id="cb903"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb903-1"><a href="Py3_pratcise_ct.html#cb903-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb903-2"><a href="Py3_pratcise_ct.html#cb903-2" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb903-3"><a href="Py3_pratcise_ct.html#cb903-3" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb903-4"><a href="Py3_pratcise_ct.html#cb903-4" tabindex="-1"></a>a, b <span class="op">=</span> b,a</span>
+<span id="cb903-5"><a href="Py3_pratcise_ct.html#cb903-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;a is&quot;</span>,a)</span>
+<span id="cb903-6"><a href="Py3_pratcise_ct.html#cb903-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;b is&quot;</span>,b)</span></code></pre></div>
+<pre><code>a is 6
+b is 5</code></pre>
+<div class="sourceCode" id="cb905"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb905-1"><a href="Py3_pratcise_ct.html#cb905-1" tabindex="-1"></a>a, (b,c) <span class="op">=</span> c, (a,b)</span>
+<span id="cb905-2"><a href="Py3_pratcise_ct.html#cb905-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;a is&quot;</span>,a)</span>
+<span id="cb905-3"><a href="Py3_pratcise_ct.html#cb905-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;b is&quot;</span>,b)</span>
+<span id="cb905-4"><a href="Py3_pratcise_ct.html#cb905-4" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;c is&quot;</span>,c)</span></code></pre></div>
+<pre><code>a is 7
+b is 6
+c is 5</code></pre>
+<div class="sourceCode" id="cb907"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb907-1"><a href="Py3_pratcise_ct.html#cb907-1" tabindex="-1"></a>first, <span class="op">*</span>middle_all, last <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)</span>
+<span id="cb907-2"><a href="Py3_pratcise_ct.html#cb907-2" tabindex="-1"></a>middle_all</span></code></pre></div>
+<pre><code>[2, 3, 4, 5]</code></pre>
+<p>集合操作</p>
+<div class="sourceCode" id="cb909"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb909-1"><a href="Py3_pratcise_ct.html#cb909-1" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">set</span>([<span class="st">&quot;sheng&quot;</span>, <span class="st">&quot;xin&quot;</span>, <span class="st">&quot;bao&quot;</span>,<span class="st">&quot;dian&quot;</span>,<span class="st">&quot;best&quot;</span>,<span class="st">&quot;tutotials&quot;</span>])</span>
+<span id="cb909-2"><a href="Py3_pratcise_ct.html#cb909-2" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">set</span>([<span class="st">&quot;hong&quot;</span>, <span class="st">&quot;ji&quot;</span>, <span class="st">&quot;yin&quot;</span>,<span class="st">&quot;zu&quot;</span>,<span class="st">&quot;best&quot;</span>,<span class="st">&quot;tutotials&quot;</span>])</span>
+<span id="cb909-3"><a href="Py3_pratcise_ct.html#cb909-3" tabindex="-1"></a>a <span class="op">|</span> b  <span class="co"># union</span></span></code></pre></div>
+<pre><code>{&#39;bao&#39;, &#39;best&#39;, &#39;dian&#39;, &#39;hong&#39;, &#39;ji&#39;, &#39;sheng&#39;, &#39;tutotials&#39;, &#39;xin&#39;, &#39;yin&#39;, &#39;zu&#39;}</code></pre>
+<div class="sourceCode" id="cb911"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb911-1"><a href="Py3_pratcise_ct.html#cb911-1" tabindex="-1"></a>a <span class="op">&amp;</span> b <span class="co"># intersection</span></span></code></pre></div>
+<pre><code>{&#39;best&#39;, &#39;tutotials&#39;}</code></pre>
+<div class="sourceCode" id="cb913"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb913-1"><a href="Py3_pratcise_ct.html#cb913-1" tabindex="-1"></a>a <span class="op">^</span> b <span class="co"># Symmetric Difference</span></span></code></pre></div>
+<pre><code>{&#39;bao&#39;, &#39;dian&#39;, &#39;hong&#39;, &#39;ji&#39;, &#39;sheng&#39;, &#39;xin&#39;, &#39;yin&#39;, &#39;zu&#39;}</code></pre>
+<p>Negative round</p>
+<div class="sourceCode" id="cb915"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb915-1"><a href="Py3_pratcise_ct.html#cb915-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;round整数:&quot;</span>,<span class="bu">str</span>(<span class="bu">round</span>(<span class="fl">1234.5678</span>, <span class="op">-</span><span class="dv">2</span>)))</span>
+<span id="cb915-2"><a href="Py3_pratcise_ct.html#cb915-2" tabindex="-1"></a></span>
+<span id="cb915-3"><a href="Py3_pratcise_ct.html#cb915-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;round小数:&quot;</span>,<span class="bu">str</span>(<span class="bu">round</span>(<span class="fl">1234.5678</span>, <span class="dv">2</span>)))</span></code></pre></div>
+<pre><code>round整数: 1200.0
+round小数: 1234.57</code></pre>
+<p>多行字符串的嵌套</p>
+<div class="sourceCode" id="cb917"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb917-1"><a href="Py3_pratcise_ct.html#cb917-1" tabindex="-1"></a><span class="co"># \可以，但是第二行需要起头</span></span>
+<span id="cb917-2"><a href="Py3_pratcise_ct.html#cb917-2" tabindex="-1"></a>system_command <span class="op">=</span> <span class="st">&quot;s-plot pheatmap -f matrix </span><span class="op">\</span></span>
+<span id="cb917-3"><a href="Py3_pratcise_ct.html#cb917-3" tabindex="-1"></a><span class="st">-t heatmap -a TRUE&quot;</span></span>
+<span id="cb917-4"><a href="Py3_pratcise_ct.html#cb917-4" tabindex="-1"></a><span class="bu">print</span>(system_command)</span></code></pre></div>
+<pre><code>s-plot pheatmap -f matrix -t heatmap -a TRUE</code></pre>
+<div class="sourceCode" id="cb919"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb919-1"><a href="Py3_pratcise_ct.html#cb919-1" tabindex="-1"></a><span class="co"># 字符串中包含换行符</span></span>
+<span id="cb919-2"><a href="Py3_pratcise_ct.html#cb919-2" tabindex="-1"></a><span class="co"># 切第二行要起头，不然会有较多空格</span></span>
+<span id="cb919-3"><a href="Py3_pratcise_ct.html#cb919-3" tabindex="-1"></a>system_command <span class="op">=</span> <span class="st">&quot;&quot;&quot;s-plot pheatmap -f matrix</span></span>
+<span id="cb919-4"><a href="Py3_pratcise_ct.html#cb919-4" tabindex="-1"></a><span class="st">-t heatmap -a TRUE&quot;&quot;&quot;</span> </span>
+<span id="cb919-5"><a href="Py3_pratcise_ct.html#cb919-5" tabindex="-1"></a><span class="bu">print</span>(system_command)</span>
+<span id="cb919-6"><a href="Py3_pratcise_ct.html#cb919-6" tabindex="-1"></a><span class="bu">print</span>(system_command.replace(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>, <span class="st">&#39; &#39;</span>))</span></code></pre></div>
+<pre><code>s-plot pheatmap -f matrix 
+-t heatmap -a TRUE
+s-plot pheatmap -f matrix  -t heatmap -a TRUE</code></pre>
+<div class="sourceCode" id="cb921"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb921-1"><a href="Py3_pratcise_ct.html#cb921-1" tabindex="-1"></a><span class="co"># 类元组的写法，既可以跨行，又可以自由格式</span></span>
+<span id="cb921-2"><a href="Py3_pratcise_ct.html#cb921-2" tabindex="-1"></a><span class="co"># 需要注意2点</span></span>
+<span id="cb921-3"><a href="Py3_pratcise_ct.html#cb921-3" tabindex="-1"></a>   <span class="co"># 类元组，无逗号</span></span>
+<span id="cb921-4"><a href="Py3_pratcise_ct.html#cb921-4" tabindex="-1"></a>   <span class="co"># 字符串连接时不会自动加空格，空格需要保存在字符串里面 </span></span>
+<span id="cb921-5"><a href="Py3_pratcise_ct.html#cb921-5" tabindex="-1"></a>system_command <span class="op">=</span> (<span class="st">&quot;s-plot pheatmap -f matrix &quot;</span></span>
+<span id="cb921-6"><a href="Py3_pratcise_ct.html#cb921-6" tabindex="-1"></a>                  <span class="st">&quot;-t heatmap -a TRUE&quot;</span>)</span>
+<span id="cb921-7"><a href="Py3_pratcise_ct.html#cb921-7" tabindex="-1"></a><span class="bu">print</span>(system_command)</span></code></pre></div>
+<pre><code>s-plot pheatmap -f matrix -t heatmap -a TRUE</code></pre>
+<div class="sourceCode" id="cb923"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb923-1"><a href="Py3_pratcise_ct.html#cb923-1" tabindex="-1"></a><span class="co"># 多一步join；</span></span>
+<span id="cb923-2"><a href="Py3_pratcise_ct.html#cb923-2" tabindex="-1"></a>system_command <span class="op">=</span> [<span class="st">&quot;s-plot pheatmap -f matrix&quot;</span>,</span>
+<span id="cb923-3"><a href="Py3_pratcise_ct.html#cb923-3" tabindex="-1"></a>                  <span class="st">&quot;-t heatmap -a TRUE&quot;</span>]</span>
+<span id="cb923-4"><a href="Py3_pratcise_ct.html#cb923-4" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39; &#39;</span>.join(system_command))</span></code></pre></div>
+<pre><code>s-plot pheatmap -f matrix -t heatmap -a TRUE</code></pre>
+<p>矩阵转置</p>
+<div class="sourceCode" id="cb925"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb925-1"><a href="Py3_pratcise_ct.html#cb925-1" tabindex="-1"></a>a <span class="op">=</span> [(<span class="dv">1</span>,<span class="dv">2</span>), (<span class="dv">3</span>,<span class="dv">4</span>), (<span class="dv">5</span>,<span class="dv">6</span>)]</span>
+<span id="cb925-2"><a href="Py3_pratcise_ct.html#cb925-2" tabindex="-1"></a>b <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>a)</span>
+<span id="cb925-3"><a href="Py3_pratcise_ct.html#cb925-3" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> b:</span>
+<span id="cb925-4"><a href="Py3_pratcise_ct.html#cb925-4" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code></pre></div>
+<pre><code>(1, 3, 5)
+(2, 4, 6)</code></pre>
+<p>zip转换两个列表为字典</p>
+<div class="sourceCode" id="cb927"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb927-1"><a href="Py3_pratcise_ct.html#cb927-1" tabindex="-1"></a>keyL <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb927-2"><a href="Py3_pratcise_ct.html#cb927-2" tabindex="-1"></a>valueL <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;v&#39;</span>]</span>
+<span id="cb927-3"><a href="Py3_pratcise_ct.html#cb927-3" tabindex="-1"></a><span class="cf">for</span> i ,j <span class="kw">in</span> <span class="bu">zip</span>(keyL, valueL):</span>
+<span id="cb927-4"><a href="Py3_pratcise_ct.html#cb927-4" tabindex="-1"></a>    <span class="bu">print</span>(i,j)</span></code></pre></div>
+<pre><code>1 a
+2 b
+3 v</code></pre>
+<div class="sourceCode" id="cb929"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb929-1"><a href="Py3_pratcise_ct.html#cb929-1" tabindex="-1"></a><span class="im">import</span> pprint</span>
+<span id="cb929-2"><a href="Py3_pratcise_ct.html#cb929-2" tabindex="-1"></a>pprint.pprint(<span class="bu">dict</span>(<span class="bu">zip</span>(keyL, valueL)))</span></code></pre></div>
+<pre><code>{1: &#39;a&#39;, 2: &#39;b&#39;, 3: &#39;v&#39;}</code></pre>
+<div class="sourceCode" id="cb931"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb931-1"><a href="Py3_pratcise_ct.html#cb931-1" tabindex="-1"></a><span class="bu">dict</span>([(i,j) <span class="cf">for</span> i ,j <span class="kw">in</span> <span class="bu">zip</span>(keyL, valueL)])</span></code></pre></div>
+<pre><code>{1: &#39;a&#39;, 2: &#39;b&#39;, 3: &#39;v&#39;}</code></pre>
+<p>重复</p>
+<div class="sourceCode" id="cb933"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb933-1"><a href="Py3_pratcise_ct.html#cb933-1" tabindex="-1"></a><span class="co">&#39;xyz&#39;</span> <span class="op">*</span> <span class="dv">3</span></span></code></pre></div>
+<pre><code>&#39;xyzxyzxyz&#39;</code></pre>
+<div class="sourceCode" id="cb935"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb935-1"><a href="Py3_pratcise_ct.html#cb935-1" tabindex="-1"></a><span class="dv">3</span> <span class="op">*</span> <span class="st">&#39;xyz&#39;</span></span></code></pre></div>
+<pre><code>&#39;xyzxyzxyz&#39;</code></pre>
+<div class="sourceCode" id="cb937"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb937-1"><a href="Py3_pratcise_ct.html#cb937-1" tabindex="-1"></a>[<span class="dv">1</span>,<span class="dv">2</span>] <span class="op">*</span> <span class="dv">3</span></span></code></pre></div>
+<pre><code>[1, 2, 1, 2, 1, 2]</code></pre>
+<p>启动网络服务器，用于文件预览或传输</p>
+<div class="sourceCode" id="cb939"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb939-1"><a href="Py3_pratcise_ct.html#cb939-1" tabindex="-1"></a><span class="co"># run in commang line</span></span>
+<span id="cb939-2"><a href="Py3_pratcise_ct.html#cb939-2" tabindex="-1"></a><span class="co"># python -m http.server 8000</span></span>
+<span id="cb939-3"><a href="Py3_pratcise_ct.html#cb939-3" tabindex="-1"></a>Serving HTTP on <span class="fl">0.0.0.0</span> port <span class="dv">8000</span> (http:<span class="op">//</span><span class="fl">0.0.0.0</span>:<span class="dv">8000</span><span class="op">/</span>) ...</span></code></pre></div>
+<p>sum的另一用法，二维数组秒变1维</p>
+<div class="sourceCode" id="cb940"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb940-1"><a href="Py3_pratcise_ct.html#cb940-1" tabindex="-1"></a>aList <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>], [<span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]]</span>
+<span id="cb940-2"><a href="Py3_pratcise_ct.html#cb940-2" tabindex="-1"></a><span class="bu">sum</span>(aList, [])</span></code></pre></div>
+<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+<p>打开一个关于Python漫画的网站</p>
+<div class="sourceCode" id="cb942"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb942-1"><a href="Py3_pratcise_ct.html#cb942-1" tabindex="-1"></a><span class="co">#import antigravity</span></span></code></pre></div>
+<div class="sourceCode" id="cb943"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb943-1"><a href="Py3_pratcise_ct.html#cb943-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>.join([<span class="st">&#39;&#39;</span>.join([(<span class="st">&#39;Love&#39;</span>[(x<span class="op">-</span>y) <span class="op">%</span> <span class="bu">len</span>(<span class="st">&#39;Love&#39;</span>)] <span class="cf">if</span> ((x<span class="op">*</span><span class="fl">0.05</span>)<span class="op">**</span><span class="dv">2</span><span class="op">+</span>(y<span class="op">*</span><span class="fl">0.1</span>)<span class="op">**</span><span class="dv">2</span><span class="op">-</span><span class="dv">1</span>)<span class="op">**</span><span class="dv">3</span><span class="op">-</span>(x<span class="op">*</span><span class="fl">0.05</span>)<span class="op">**</span><span class="dv">2</span><span class="op">*</span>(y<span class="op">*</span><span class="fl">0.1</span>)<span class="op">**</span><span class="dv">3</span> <span class="op">&lt;=</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">&#39; &#39;</span>) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">30</span>, <span class="dv">30</span>)]) <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>, <span class="op">-</span><span class="dv">30</span>, <span class="op">-</span><span class="dv">1</span>)]))</span></code></pre></div>
+<pre><code>                veLoveLov           veLoveLov               
+            eLoveLoveLoveLove   eLoveLoveLoveLove           
+          veLoveLoveLoveLoveLoveLoveLoveLoveLoveLov         
+         veLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveL        
+        veLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLov       
+        eLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLove       
+        LoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveL       
+        oveLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLo       
+        veLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLov       
+        eLoveLoveLoveLoveLoveLoveLoveLoveLoveLoveLove       
+         oveLoveLoveLoveLoveLoveLoveLoveLoveLoveLove        
+          eLoveLoveLoveLoveLoveLoveLoveLoveLoveLove         
+          LoveLoveLoveLoveLoveLoveLoveLoveLoveLoveL         
+            eLoveLoveLoveLoveLoveLoveLoveLoveLove           
+             oveLoveLoveLoveLoveLoveLoveLoveLove            
+              eLoveLoveLoveLoveLoveLoveLoveLove             
+                veLoveLoveLoveLoveLoveLoveLov               
+                  oveLoveLoveLoveLoveLoveLo                 
+                    LoveLoveLoveLoveLoveL                   
+                       LoveLoveLoveLov                      
+                          LoveLoveL                         
+                             Lov                            
+                              v                             
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            </code></pre>
+<p>曼德勃罗集合</p>
+<div class="sourceCode" id="cb945"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb945-1"><a href="Py3_pratcise_ct.html#cb945-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>.join([<span class="st">&#39;&#39;</span>.join([<span class="st">&#39;*&#39;</span><span class="cf">if</span> <span class="bu">abs</span>((<span class="kw">lambda</span> a:<span class="kw">lambda</span> z,c,n:a(a,z,c,n))(<span class="kw">lambda</span> s,z,c,n:z <span class="cf">if</span> n<span class="op">==</span><span class="dv">0</span><span class="er">else</span> s(s,z<span class="op">*</span>z<span class="op">+</span>c,c,n<span class="op">-</span><span class="dv">1</span>))(<span class="dv">0</span>,<span class="fl">0.02</span><span class="op">*</span>x<span class="op">+</span><span class="ot">0.05j</span><span class="op">*</span>y,<span class="dv">40</span>))<span class="op">&lt;</span><span class="dv">2</span> <span class="cf">else</span><span class="st">&#39; &#39;</span><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">80</span>,<span class="dv">20</span>)])<span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">20</span>,<span class="dv">20</span>)]))</span></code></pre></div>
+<pre><code>                                                                                *                   
+                                                                                                    
+                                                                                                    
+                                                                          **                        
+                                                                     ***********                    
+                                                                    ************                    
+                                                                      *********                     
+                                                            *    * ************  * *                
+                                                    ****** * *************************** *          
+                                                    *************************************** *****   
+                                                     *******************************************    
+                                               *** ******************************************** *   
+                                                **************************************************  
+                                             *******************************************************
+                      *        *              ***************************************************** 
+                     **** ******* *          *******************************************************
+                      *****************     ******************************************************* 
+                   *********************** *********************************************************
+                   *********************** ******************************************************** 
+             **** ********************************************************************************  
+*********************************************************************************************       
+             **** ********************************************************************************  
+                   *********************** ******************************************************** 
+                   *********************** *********************************************************
+                      *****************     ******************************************************* 
+                     **** ******* *          *******************************************************
+                      *        *              ***************************************************** 
+                                             *******************************************************
+                                                **************************************************  
+                                               *** ******************************************** *   
+                                                     *******************************************    
+                                                    *************************************** *****   
+                                                    ****** * *************************** *          
+                                                            *    * ************  * *                
+                                                                      *********                     
+                                                                    ************                    
+                                                                     ***********                    
+                                                                          **                        
+                                                                                                    
+                                                                                                    </code></pre>
+<p>python打印九九乘法表</p>
+<div class="sourceCode" id="cb947"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb947-1"><a href="Py3_pratcise_ct.html#cb947-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>.join([<span class="st">&#39; &#39;</span>.join([<span class="st">&#39;</span><span class="sc">%s</span><span class="st">*</span><span class="sc">%s</span><span class="st">=</span><span class="sc">%-2s</span><span class="st">&#39;</span> <span class="op">%</span> (y,x,x<span class="op">*</span>y) <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,x<span class="op">+</span><span class="dv">1</span>)]) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>)]))</span></code></pre></div>
+<pre><code>1*1=1 
+1*2=2  2*2=4 
+1*3=3  2*3=6  3*3=9 
+1*4=4  2*4=8  3*4=12 4*4=16
+1*5=5  2*5=10 3*5=15 4*5=20 5*5=25
+1*6=6  2*6=12 3*6=18 4*6=24 5*6=30 6*6=36
+1*7=7  2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49
+1*8=8  2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64
+1*9=9  2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81</code></pre>
+<p><code>map</code>, <code>filter</code></p>
+<div class="sourceCode" id="cb949"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb949-1"><a href="Py3_pratcise_ct.html#cb949-1" tabindex="-1"></a><span class="co"># 过滤大于4的元素</span></span>
+<span id="cb949-2"><a href="Py3_pratcise_ct.html#cb949-2" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb949-3"><a href="Py3_pratcise_ct.html#cb949-3" tabindex="-1"></a>[i <span class="cf">for</span> i <span class="kw">in</span> a <span class="cf">if</span> i<span class="op">&lt;</span><span class="dv">4</span>]</span></code></pre></div>
+<pre><code>[3]</code></pre>
+<div class="sourceCode" id="cb951"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb951-1"><a href="Py3_pratcise_ct.html#cb951-1" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> x: x<span class="op">&lt;</span><span class="dv">4</span>, a))</span></code></pre></div>
+<pre><code>[5]</code></pre>
+<div class="sourceCode" id="cb953"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb953-1"><a href="Py3_pratcise_ct.html#cb953-1" tabindex="-1"></a><span class="co"># 每个元素加2</span></span>
+<span id="cb953-2"><a href="Py3_pratcise_ct.html#cb953-2" tabindex="-1"></a>[i<span class="op">+</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> a]</span></code></pre></div>
+<pre><code>[5, 6, 7]</code></pre>
+<div class="sourceCode" id="cb955"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb955-1"><a href="Py3_pratcise_ct.html#cb955-1" tabindex="-1"></a><span class="bu">map</span>(<span class="kw">lambda</span> x: x<span class="op">+</span><span class="dv">2</span>, a)</span></code></pre></div>
+<pre><code>&lt;map at 0x7fa8d0502358&gt;</code></pre>
+<div class="sourceCode" id="cb957"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb957-1"><a href="Py3_pratcise_ct.html#cb957-1" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x<span class="op">+</span><span class="dv">2</span>, a))</span></code></pre></div>
+<pre><code>[5, 6, 7]</code></pre>
+<p>算2的1000次方的各位数之和</p>
+<div class="sourceCode" id="cb959"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb959-1"><a href="Py3_pratcise_ct.html#cb959-1" tabindex="-1"></a><span class="bu">sum</span>(<span class="bu">map</span>(<span class="bu">int</span>, <span class="bu">str</span>(<span class="dv">2</span><span class="op">**</span><span class="dv">1000</span>)))</span></code></pre></div>
+<pre><code>1366</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Python_plot_WXN.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="py3_pandas_ct.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Py3_course.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -8,7 +8,7 @@
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.
 
-欢迎访问我们的视频课程 <https://bioinfo.ke.qq.com>。
+B 站视频课程 （生信宝典知乎号、视频号同步更新）<https://space.bilibili.com/362709786/lists/1988354?type=season>
 
 ## 背景介绍
 
@@ -22,7 +22,6 @@ A：沈从文的那本啊。
 
 B：……
 
-<img src="D:/project/GitHub/PBR_training/Image/biancheng.jpg"></img>
 
 ---
 
