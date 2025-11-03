@@ -372,7 +372,6 @@ print("Hello", myname)
 
 我们先看一个动图展示内存中变量的赋值、存储、值的改变和程序的运行。
 
-点击访问动图 <http://www.ehbio.com/ehbio_resource/python_tutor.gif>
 
 * 常量，指固定的数字或字符串，如`2`, `2.9`, `"Hello world"`等。 
 
@@ -692,15 +691,15 @@ else ：
 ```python
 ##条件
 name = input('Please enter a name and click Enter\n')
-if name == 'ehbio':
-    print ('hello ehbio')
+if name == 'Haha':
+    print ('hello Haha')
 else :
-    print ('You are not ehbio')
+    print ('You are not Haha')
 ```
 
     Please enter a name and click Enter
     CT
-    You are not ehbio
+    You are not Haha
 
 
 #### While循环
@@ -1223,7 +1222,7 @@ print('''从文件或命令行参数中取出的数字都是字符串形式出�
 
 ```python
 print("字符串倍增")
-a = "ehbio "
+a = "Haha "
 a * 4
 ```
 
@@ -1233,7 +1232,7 @@ a * 4
 
 
 
-    'ehbio ehbio ehbio ehbio '
+    'Haha Haha Haha Haha '
 
 
 

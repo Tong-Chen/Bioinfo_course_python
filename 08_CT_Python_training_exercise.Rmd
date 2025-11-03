@@ -44,7 +44,7 @@ B 站视频课程 （生信宝典知乎号、视频号同步更新）<https://sp
    
    ```
    import re
-   re.findall("[Ii]mageGP", "www.ehbio.com/ImageGP")
+   re.findall("[Ii]mageGP", "www.bic.ac.cn/ImageGP")
    ```
    
    ```
@@ -264,12 +264,11 @@ ENSG00000000457	2.8	3.4	3.8	5.8	2.9
     * **用脑袋运行程序**：当程序写作完成后，自己尝试对着数据文件，一行一行的执行程序，来看程序的运行是否与自己想干的活一致，有没有纰漏。
     * 当结果不符合预期时，要学会**使用print来查看每步的操作是否正确**，比如我读入了字典，我就打印下字典，看看读入的是不是我想要的，是否含有不该存在的字符；或者**在每个判断句、函数调入的情况下打印个字符，来跟踪程序的运行轨迹**
  
-12. 如果视频或文档中没有答案的或者有错误的，请提交题目和自己的答案到 http://www.ehbio.com/Esx 提问寻求解答。
 
 
 ```python
 import re
-re.findall("[Ii]mageGP", "www.ehbio.com/ImageGP")
+re.findall("[Ii]mageGP", "www.bic.ac.cn/ImageGP")
 ```
 
 

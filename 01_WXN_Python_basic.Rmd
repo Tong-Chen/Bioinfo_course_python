@@ -313,12 +313,12 @@ look_like_this = 'a'
 # 第一小程序的准备
 #注释用#
 # print() #打印内容显示在屏幕上
-print('ehbio')
+print('python')
 a = 5
 print(a)  # 打印变量
 ```
 
-    ehbio
+    python
 
 
 
@@ -335,7 +335,7 @@ myName = input('please type your name！\n')
 ```
 
     please type your name！
-    ehbio
+    python
 
 
 
@@ -471,20 +471,20 @@ os.getcwd()
 
 
 
-    'F:\\mega\\ehbio\\python'
+    'F:\\mega\\python\\python'
 
 
 
 
 ```python
-os.chdir('F:\\mega\\ehbio\\python')
+os.chdir('F:\\mega\\python\\python')
 os.getcwd()
 ```
 
 
 
 
-    'F:\\mega\\ehbio\\python'
+    'F:\\mega\\python\\python'
 
 
 
@@ -669,15 +669,15 @@ not not True
 ```python
 # 条件
 name = input('Please enter a name\n')
-if name == 'ehbio':
-    print('hello ehbio')
+if name == 'python':
+    print('hello python')
 else:
-    print('You are not ehbio')
+    print('You are not python')
 ```
 
     Please enter a name
-    ehbio
-    hello ehbio
+    python
+    hello python
 
 
 ### if 语句
@@ -1233,7 +1233,7 @@ eggs #报错：eggs未被定义，因为eggs是自定义函数spam()中的局部
 
 ```python
 # 同理局部变量不能使用其他局部变量
-def ehbio():
+def python():
     eggs = 99
     spam()
     print(eggs)
@@ -1244,7 +1244,7 @@ def spam():
     return eggs
 
 
-ehbio()
+python()
 ```
 
     99

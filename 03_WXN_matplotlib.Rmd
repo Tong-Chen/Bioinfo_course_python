@@ -895,25 +895,25 @@ knitr::include_graphics("03_WXN_matplotlib_files/03_WXN_matplotlib_50_0.png")
 
 
 ```python
-%cd F: \mega\ehbio\python\python课程包\merge
+%cd F: \mega\hello\python\python课程包\merge
 import os
 os.getcwd()
 ```
 
-    F:\mega\ehbio\python\python课程包\merge
+    F:\mega\hello\python\python课程包\merge
 
 
 
 
 
-    'F:\\mega\\ehbio\\python\\python课程包\\merge'
+    'F:\\mega\\hello\\python\\python课程包\\merge'
 
 
 
 
 ```python
 import pandas as pd
-df = pd.read_table("ehbio.xls", sep="\t", index_col=0, header=0)
+df = pd.read_table("hello.xls", sep="\t", index_col=0, header=0)
 df.head(5)
 ```
 

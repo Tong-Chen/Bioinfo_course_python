@@ -341,10 +341,10 @@ print("Total exon size is", "{:,}".format(total_exon_sum), "nt.")
 
 
 ```python
-print("{a[a]}".format(a={'a':"ehbio"}))
+print("{a[a]}".format(a={'a':"world"}))
 ```
 
-    ehbio
+    world
 
 
 ## Python小技巧
